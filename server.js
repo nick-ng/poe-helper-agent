@@ -28,7 +28,12 @@ const rateLimited = () => {
   if (newCounter < MAX_REQUESTS) {
     limit.counter = newCounter + 1;
     limit.lastUpdate = now;
-    console.log("limit hit", newCounter, MAX_REQUESTS);
+    console.log(
+      new Date().toLocaleTimeString(),
+      "limit hit",
+      newCounter,
+      MAX_REQUESTS
+    );
     return false;
   }
   return true;
