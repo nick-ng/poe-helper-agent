@@ -1,2 +1,1 @@
-TITLE "poe-helper-agent"
-npm start
+npm run poe-helper-agent

@@ -5,8 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --delay 2 ./server.js",
-    "start": "node --max-old-space-size=8 ./server.js"
+    "poe-helper-agent": "node --max-old-space-size=8 ./server.js",
+    "start": "nodemon --delay 2 ./server.js"
   },
   "repository": {
     "type": "git",
