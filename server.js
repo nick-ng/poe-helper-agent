@@ -6,6 +6,8 @@ import compression from "compression";
 import cors from "cors";
 import fetch from "node-fetch";
 
+import { makeChaosFilter } from "./loot-filter/index.js";
+
 const MS_PER = process.env.MS_PER
   ? Math.max(parseInt(process.env.MS_PER, 10), 200)
   : 1000;
@@ -48,6 +50,24 @@ app.use(cors());
 
 app.get("/", async (_req, res, _next) => {
   res.sendStatus(200);
+});
+
+app.post("/chaos-filter", async (req, res, _next) => {
+  console.log("req.body", req.body);
+  makeChaosFilter(
+    {
+      body: 0,
+      gloves: 0,
+      boots: 0,
+      helm: 0,
+      ring: 0,
+      amulet: 0,
+      belt: 0,
+      weapon: 0,
+      ...req.body,
+    },
+    process.env.POE_SETTINGS_PATH
+  );
 });
 
 app.post("/", async (req, res, _next) => {
