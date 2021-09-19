@@ -57,8 +57,8 @@ app.post("/chaos-filter", async (req, res, _next) => {
   makeChaosFilter(
     {
       body: 0,
-      gloves: 0,
-      boots: 0,
+      glove: 0,
+      boot: 0,
       helm: 0,
       ring: 0,
       amulet: 0,

@@ -13,8 +13,8 @@ import {
  * @typedef ItemCounts
  * @type {object}
  * @property {number} body
- * @property {number} gloves
- * @property {number} boots
+ * @property {number} glove
+ * @property {number} boot
  * @property {number} helm
  * @property {number} ring
  * @property {number} amulet
@@ -26,15 +26,15 @@ import {
  * @return {string} item filter fragment
  */
 export const getChaosFilter = (itemCounts) => {
-  const { body, gloves, boots, helm, ring, amulet, belt, weapon } = itemCounts;
+  const { body, glove, boot, helm, ring, amulet, belt, weapon } = itemCounts;
 
   return [
     `############################
 #### Chaos Filter Start ####
 ############################`,
     makeBodyFilter(body),
-    makeGlovesFilter(gloves),
-    makeBootsFilter(boots),
+    makeGlovesFilter(glove),
+    makeBootsFilter(boot),
     makeHelmFilter(helm),
     makeRingFilter(ring),
     makeAmuletFilter(amulet),
