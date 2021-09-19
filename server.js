@@ -68,6 +68,8 @@ app.post("/chaos-filter", async (req, res, _next) => {
     },
     process.env.POE_SETTINGS_PATH
   );
+
+  res.sendStatus(200);
 });
 
 app.post("/", async (req, res, _next) => {
