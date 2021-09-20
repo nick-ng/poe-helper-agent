@@ -10,7 +10,7 @@ import {
 } from "./filters.js";
 
 /**
- * @typedef ItemCounts
+ * @typedef ItemSizes
  * @type {object}
  * @property {number} body
  * @property {number} glove
@@ -21,12 +21,12 @@ import {
  * @property {number} belt
  * @property {number} weapon
  *
- * @param {ItemCounts} itemCounts
+ * @param {ItemSizes} itemSizes
  *
  * @return {string} item filter fragment
  */
-export const getChaosFilter = (itemCounts) => {
-  const { body, glove, boot, helm, ring, amulet, belt, weapon } = itemCounts;
+export const getChaosFilter = (itemSizes) => {
+  const { body, glove, boot, helm, ring, amulet, belt, weapon } = itemSizes;
 
   return [
     `############################

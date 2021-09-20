@@ -1,32 +1,9 @@
-const LOW_ITEM_THRESHOLD = 3;
-const HIGH_ITEM_THRESHOLD = 8;
-const LOW_FONT_SIZE = 15;
-const HIGH_FONT_SIZE = 45;
-
 /**
- * @param {number} count
- * @return {number} size
+ * @param {number} size
  */
-const getSize = (count) => {
-  if (count < LOW_ITEM_THRESHOLD) {
-    return HIGH_FONT_SIZE;
-  }
-
-  const sizeDiff = HIGH_FONT_SIZE - LOW_FONT_SIZE;
-  const countDiff = HIGH_ITEM_THRESHOLD - LOW_ITEM_THRESHOLD;
-  const sizePerCount = sizeDiff / countDiff;
-
-  const count2 = HIGH_ITEM_THRESHOLD - count;
-
-  return Math.floor(LOW_FONT_SIZE + count2 * sizePerCount);
-};
-
-/**
- * @param {number} count
- */
-export const makeBodyFilter = (count) => {
-  if (count > HIGH_ITEM_THRESHOLD) {
-    return `# Body: ${count}`;
+export const makeBodyFilter = (size) => {
+  if (size <= 0) {
+    return `# Body: ${Math.ceil(size)}`;
   }
   return `Show
     Class "Body Armour"
@@ -38,15 +15,15 @@ export const makeBodyFilter = (count) => {
     LinkedSockets < 5
     SetBackgroundColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}`;
+    SetFontSize ${Math.ceil(size)}`;
 };
 
 /**
- * @param {number} count
+ * @param {number} size
  */
-export const makeGlovesFilter = (count) => {
-  if (count > HIGH_ITEM_THRESHOLD) {
-    return `# Gloves: ${count}`;
+export const makeGlovesFilter = (size) => {
+  if (size <= 0) {
+    return `# Gloves: ${Math.ceil(size)}`;
   }
   return `Show
     Class "Gloves"
@@ -56,15 +33,15 @@ export const makeGlovesFilter = (count) => {
     Identified False
     SetBackgroundColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}`;
+    SetFontSize ${Math.ceil(size)}`;
 };
 
 /**
- * @param {number} count
+ * @param {number} size
  */
-export const makeBootsFilter = (count) => {
-  if (count > HIGH_ITEM_THRESHOLD) {
-    return `# Boots: ${count}`;
+export const makeBootsFilter = (size) => {
+  if (size <= 0) {
+    return `# Boots: ${Math.ceil(size)}`;
   }
   return `Show
     Class "Boots"
@@ -74,15 +51,15 @@ export const makeBootsFilter = (count) => {
     Identified False
     SetBackgroundColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}`;
+    SetFontSize ${Math.ceil(size)}`;
 };
 
 /**
- * @param {number} count
+ * @param {number} size
  */
-export const makeHelmFilter = (count) => {
-  if (count > HIGH_ITEM_THRESHOLD) {
-    return `# Helm: ${count}`;
+export const makeHelmFilter = (size) => {
+  if (size <= 0) {
+    return `# Helm: ${Math.ceil(size)}`;
   }
   return ` Show
     Class "Helm"
@@ -92,15 +69,15 @@ export const makeHelmFilter = (count) => {
     Identified False
     SetBackgroundColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}`;
+    SetFontSize ${Math.ceil(size)}`;
 };
 
 /**
- * @param {number} count
+ * @param {number} size
  */
-export const makeRingFilter = (count) => {
-  if (count > HIGH_ITEM_THRESHOLD) {
-    return `# Ring: ${count}`;
+export const makeRingFilter = (size) => {
+  if (size <= 0) {
+    return `# Ring: ${Math.ceil(size)}`;
   }
   return `Show
     Class "Ring"
@@ -110,15 +87,15 @@ export const makeRingFilter = (count) => {
     Identified False
     SetBackgroundColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}`;
+    SetFontSize ${Math.ceil(size)}`;
 };
 
 /**
- * @param {number} count
+ * @param {number} size
  */
-export const makeAmuletFilter = (count) => {
-  if (count > HIGH_ITEM_THRESHOLD) {
-    return `# Amulet: ${count}`;
+export const makeAmuletFilter = (size) => {
+  if (size <= 0) {
+    return `# Amulet: ${Math.ceil(size)}`;
   }
   return `Show
     Class "Amulet"
@@ -128,15 +105,15 @@ export const makeAmuletFilter = (count) => {
     Identified False
     SetBackgroundColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}`;
+    SetFontSize ${Math.ceil(size)}`;
 };
 
 /**
- * @param {number} count
+ * @param {number} size
  */
-export const makeBeltFilter = (count) => {
-  if (count > HIGH_ITEM_THRESHOLD) {
-    return `# Belt: ${count}`;
+export const makeBeltFilter = (size) => {
+  if (size <= 0) {
+    return `# Belt: ${Math.ceil(size)}`;
   }
   return `Show
     Class "Belt"
@@ -146,15 +123,15 @@ export const makeBeltFilter = (count) => {
     Identified False
     SetBackgroundColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}`;
+    SetFontSize ${Math.ceil(size)}`;
 };
 
 /**
- * @param {number} count
+ * @param {number} size
  */
-export const makeWeaponFilter = (count) => {
-  if (count > HIGH_ITEM_THRESHOLD) {
-    return `# Weapon: ${count}`;
+export const makeWeaponFilter = (size) => {
+  if (size <= 0) {
+    return `# Weapon: ${Math.ceil(size)}`;
   }
   return `Show
     ItemLevel >= 60
@@ -168,7 +145,7 @@ export const makeWeaponFilter = (count) => {
     SetBackgroundColor 0 0 0
     SetBorderColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}
+    SetFontSize ${Math.ceil(size)}
 
 Show
     ItemLevel >= 60
@@ -179,5 +156,5 @@ Show
     SetBackgroundColor 0 0 0
     SetBorderColor 0 0 0
     SetTextColor 255 255 119
-    SetFontSize ${getSize(count)}`;
+    SetFontSize ${Math.ceil(size)}`;
 };

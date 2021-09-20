@@ -56,14 +56,14 @@ app.post("/chaos-filter", async (req, res, _next) => {
   console.log("req.body", req.body);
   makeChaosFilter(
     {
-      body: 0,
-      glove: 0,
-      boot: 0,
-      helm: 0,
-      ring: 0,
-      amulet: 0,
-      belt: 0,
-      weapon: 0,
+      body: 35,
+      glove: 35,
+      boot: 35,
+      helm: 35,
+      ring: 35,
+      amulet: 35,
+      belt: 35,
+      weapon: 35,
       ...req.body,
     },
     process.env.POE_SETTINGS_PATH
