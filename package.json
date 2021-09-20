@@ -8,8 +8,7 @@
     "poe-helper-agent": "node --max-old-space-size=8 ./server.js",
     "start": "nodemon --delay 2 ./server.js",
     "check-style": "pretty-quick --branch main",
-    "pre-commit": "pretty-quick --staged",
-    "prepare": "husky install"
+    "pre-commit": "pretty-quick --staged"
   },
   "repository": {
     "type": "git",
