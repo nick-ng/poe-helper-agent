@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "poe-helper-agent": "node --max-old-space-size=8 ./server.js",
-    "start": "nodemon --delay 2 ./server.js"
+    "start": "nodemon --delay 2 ./server.js",
+    "check-style": "pretty-quick --branch main",
+    "pre-commit": "pretty-quick --staged",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,10 +34,5 @@
     "nodemon": "^2.0.12",
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   }
 }
