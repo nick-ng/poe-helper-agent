@@ -21,6 +21,8 @@ const limit = {
   lastUpdate: Date.now(),
 };
 
+let autoClose = true;
+
 const rateLimited = () => {
   const { counter, lastUpdate } = limit;
   const now = Date.now();
@@ -46,11 +48,12 @@ app.use(json());
 app.use(cors());
 
 app.get("/", async (_req, res, _next) => {
+  autoClose = false;
   res.sendStatus(200);
 });
 
 app.post("/chaos-filter", async (req, res, _next) => {
-  console.log("req.body", req.body);
+  autoClose = false;
   makeChaosFilter(
     {
       body: 35,
@@ -70,6 +73,7 @@ app.post("/chaos-filter", async (req, res, _next) => {
 });
 
 app.post("/", async (req, res, _next) => {
+  autoClose = false;
   if (rateLimited()) {
     res.set({
       "access-control-expose-headers": "X-Ms-Per-Request",
@@ -111,3 +115,10 @@ app.post("/", async (req, res, _next) => {
 server.listen(PORT, () => {
   console.log(`${new Date()} Website server listening on ${PORT}.`);
 });
+
+setTimeout(() => {
+  if (autoClose) {
+    console.log("No requests processed. Closing");
+    server.close();
+  }
+}, 7200000);
