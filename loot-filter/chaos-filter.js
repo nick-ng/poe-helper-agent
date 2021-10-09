@@ -7,6 +7,8 @@ import {
   makeHelmFilter,
   makeRingFilter,
   makeWeaponFilter,
+  makeAllLinkFilters,
+  makeLevelingFilter,
 } from "./filters.js";
 
 /**
@@ -30,6 +32,11 @@ export const getChaosFilter = (itemSizes) => {
 
   return [
     `############################
+#### Leveling Filter Start ####
+############################`,
+    makeLevelingFilter(),
+    makeAllLinkFilters(),
+    `############################
 #### Chaos Filter Start ####
 ############################`,
     makeBodyFilter(body),
@@ -45,5 +52,5 @@ export const getChaosFilter = (itemSizes) => {
 ##########################
 
 `,
-  ].join("\n\n");
+  ].join("\n");
 };

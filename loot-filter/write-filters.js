@@ -15,7 +15,12 @@ export const writeFileSync = (filePath, options) => {
   return _writeFileSync(filePath, options);
 };
 
-export const writeFilters = (filter, outputPath) => {
+/**
+ * @param {string} filter
+ * @param {string} outputPath
+ * @param {boolean} [isDebug=false]
+ */
+export const writeFilters = (filter, outputPath, isDebug = false) => {
   const baseFiltersPath = resolve(".", "base-filters");
   const baseFilters = readdirSync(baseFiltersPath);
 
@@ -29,7 +34,8 @@ export const writeFilters = (filter, outputPath) => {
         resolve(outputPath, `${filterName}_chaos_recipe.filter`.toLowerCase()),
         `${filter}${baseFilter}`
       );
-    } else {
+    }
+    if (!outputPath || isDebug) {
       writeFileSync(
         resolve(
           ".",

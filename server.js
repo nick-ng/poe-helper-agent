@@ -8,6 +8,9 @@ import fetch from "node-fetch";
 
 import { makeChaosFilter } from "./loot-filter/index.js";
 
+const args = process.argv.slice(2);
+const mode = args[0];
+
 const MS_PER = process.env.MS_PER
   ? Math.max(parseInt(process.env.MS_PER, 10), 200)
   : 1000;
@@ -112,13 +115,33 @@ app.post("/", async (req, res, _next) => {
   }
 });
 
-server.listen(PORT, () => {
-  console.log(`${new Date()} Website server listening on ${PORT}.`);
-});
+switch (mode) {
+  case "--chaos-only":
+    console.log("Making chaos-filter then exit");
+    makeChaosFilter(
+      {
+        body: 35,
+        glove: 35,
+        boot: 35,
+        helm: 35,
+        ring: 35,
+        amulet: 35,
+        belt: 35,
+        weapon: 35,
+      },
+      process.env.POE_SETTINGS_PATH,
+      true
+    );
+    break;
+  default:
+    server.listen(PORT, () => {
+      console.log(`${new Date()} Website server listening on ${PORT}.`);
+    });
 
-setTimeout(() => {
-  if (autoClose) {
-    console.log("No requests processed. Closing");
-    server.close();
-  }
-}, 7200000);
+    setTimeout(() => {
+      if (autoClose) {
+        console.log("No requests processed. Closing");
+        server.close();
+      }
+    }, 7200000);
+}
