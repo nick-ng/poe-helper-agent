@@ -27,15 +27,15 @@ import {
  *
  * @return {string} item filter fragment
  */
-export const getChaosFilter = (itemSizes) => {
+export const getChaosFilter = (itemSizes, chaosOnly = false) => {
   const { body, glove, boot, helm, ring, amulet, belt, weapon } = itemSizes;
 
   return [
-    `############################
+    `###############################
 #### Leveling Filter Start ####
-############################`,
-    makeLevelingFilter(),
-    makeAllLinkFilters(),
+###############################`,
+    chaosOnly ? "" : makeLevelingFilter(),
+    chaosOnly ? "" : makeAllLinkFilters(),
     `############################
 #### Chaos Filter Start ####
 ############################`,

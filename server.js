@@ -69,7 +69,9 @@ app.post("/chaos-filter", async (req, res, _next) => {
       weapon: 35,
       ...req.body,
     },
-    process.env.POE_SETTINGS_PATH
+    process.env.POE_SETTINGS_PATH,
+    false,
+    process.env.CHAOS_FILTER_ONLY?.toLowerCase() === "true"
   );
 
   res.sendStatus(200);
@@ -118,6 +120,11 @@ app.post("/", async (req, res, _next) => {
 switch (mode) {
   case "--chaos-only":
     console.log("Making chaos-filter then exit");
+    console.log(
+      "typeof process.env.CHAOS_FILTER_ONLY",
+      typeof process.env.CHAOS_FILTER_ONLY
+    );
+    console.log("typeof process.env.MS_PER", typeof process.env.MS_PER);
     makeChaosFilter(
       {
         body: 35,
@@ -130,7 +137,8 @@ switch (mode) {
         weapon: 35,
       },
       process.env.POE_SETTINGS_PATH,
-      true
+      true,
+      process.env.CHAOS_FILTER_ONLY?.toLowerCase() === "true"
     );
     break;
   default:
