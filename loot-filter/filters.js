@@ -317,5 +317,37 @@ Show
   BaseType "Iron Ring"
   ItemLevel <= 20
   CustomAlertSound "sounds/iron.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 38
+  ItemLevel >= 1
+  BaseType "Ruby Ring" "Sapphire Ring" "Topaz Ring"
+  ItemLevel <= 20
+  CustomAlertSound "sounds/ruby ring.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 38
+  ItemLevel >= 1
+  BaseType "Sapphire Ring"
+  ItemLevel <= 20
+  CustomAlertSound "sounds/sapphire ring.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 38
+  ItemLevel >= 1
+  BaseType "Topaz Ring"
+  ItemLevel <= 20
+  CustomAlertSound "sounds/topaz ring.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 38
+  ItemLevel >= 1
+  BaseType "Rustic Sash"
+  ItemLevel <= 20
+  CustomAlertSound "sounds/rustic sash.mp3"
 `;
 };
