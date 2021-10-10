@@ -120,11 +120,6 @@ app.post("/", async (req, res, _next) => {
 switch (mode) {
   case "--chaos-only":
     console.log("Making chaos-filter then exit");
-    console.log(
-      "typeof process.env.CHAOS_FILTER_ONLY",
-      typeof process.env.CHAOS_FILTER_ONLY
-    );
-    console.log("typeof process.env.MS_PER", typeof process.env.MS_PER);
     makeChaosFilter(
       {
         body: 35,
