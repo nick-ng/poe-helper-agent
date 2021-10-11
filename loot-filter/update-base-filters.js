@@ -21,10 +21,12 @@ const fetchAndSaveFilter = async (fullUrl, filename) => {
 };
 
 export const fetchAndSaveFilters = async () => {
+  console.log("Fetching filters");
   for (const filter of FILTERS) {
     for (const preset of filter.presets) {
       const fullUrl = `${filter.url}&preset=${preset.preset}`;
       await fetchAndSaveFilter(fullUrl, preset.filename);
     }
   }
+  console.log("Finished fetching filters");
 };
