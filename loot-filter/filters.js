@@ -14,7 +14,7 @@ export const makeBodyFilter = (size) => {
     Sockets < 6
     LinkedSockets < 5
     SetBackgroundColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}`;
 };
 
@@ -32,7 +32,7 @@ export const makeGlovesFilter = (size) => {
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}`;
 };
 
@@ -50,7 +50,7 @@ export const makeBootsFilter = (size) => {
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}`;
 };
 
@@ -68,7 +68,7 @@ export const makeHelmFilter = (size) => {
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}`;
 };
 
@@ -86,7 +86,7 @@ export const makeRingFilter = (size) => {
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}`;
 };
 
@@ -104,7 +104,7 @@ export const makeAmuletFilter = (size) => {
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}`;
 };
 
@@ -122,7 +122,7 @@ export const makeBeltFilter = (size) => {
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}`;
 };
 
@@ -144,7 +144,7 @@ export const makeWeaponFilter = (size) => {
     LinkedSockets < 5
     SetBackgroundColor 0 0 0
     SetBorderColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}
 
 Show
@@ -155,7 +155,7 @@ Show
     Identified False
     SetBackgroundColor 0 0 0
     SetBorderColor 0 0 0
-    SetTextColor 255 165 0
+    SetTextColor 255 200 0 # Chaos Recipe
     SetFontSize ${Math.ceil(size)}`;
 };
 
