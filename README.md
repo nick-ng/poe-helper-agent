@@ -6,6 +6,7 @@ Local agent to use with [PoE Helper](https://poe.pux.one)
 
 - Auto-updating Chaos loot filter
 - Optional leveling filter (item links, vendor recipe ingredients)
+- Keeps filters up to date with [FilterBlast's API](https://filterblast.xyz/filterblast-api.html)
 
 ## Instructions
 
