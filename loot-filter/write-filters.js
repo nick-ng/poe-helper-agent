@@ -6,13 +6,13 @@ import {
 } from "fs";
 import { resolve, dirname, basename } from "path";
 
-export const writeFileSync = (filePath, options) => {
+export const writeFileSync = (filePath, fileContents) => {
   const dirName = dirname(filePath);
   mkdirSync(dirName, {
     recursive: true,
   });
 
-  return _writeFileSync(filePath, options);
+  return _writeFileSync(filePath, fileContents);
 };
 
 /**

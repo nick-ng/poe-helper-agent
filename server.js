@@ -7,6 +7,7 @@ import cors from "cors";
 import fetch from "node-fetch";
 
 import { makeChaosFilter } from "./loot-filter/index.js";
+import { fetchAndSaveFilters } from "./loot-filter/update-base-filters.js";
 
 const args = process.argv.slice(2);
 const mode = args[0];
@@ -117,9 +118,32 @@ app.post("/", async (req, res, _next) => {
   }
 });
 
+const updateFilters = async () => {
+  console.log("Updating base filters and making chaos filters");
+  await fetchAndSaveFilters();
+  makeChaosFilter(
+    {
+      body: 35,
+      glove: 35,
+      boot: 35,
+      helm: 35,
+      ring: 35,
+      amulet: 35,
+      belt: 35,
+      weapon: 35,
+    },
+    process.env.POE_SETTINGS_PATH,
+    true,
+    process.env.CHAOS_FILTER_ONLY?.toLowerCase() === "true"
+  );
+};
+
 switch (mode) {
+  case "--update-filters":
+    updateFilters();
+    break;
   case "--chaos-only":
-    console.log("Making chaos-filter then exit");
+    console.log("Making chaos filters");
     makeChaosFilter(
       {
         body: 35,
@@ -139,6 +163,7 @@ switch (mode) {
   default:
     server.listen(PORT, () => {
       console.log(`${new Date()} Website server listening on ${PORT}.`);
+      fetchAndSaveFilters();
     });
 
     setTimeout(() => {
