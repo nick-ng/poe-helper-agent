@@ -165,7 +165,7 @@ Show
     AreaLevel < 45 # < Act 6
     Sockets < 6
     Rarity Normal Magic Rare
-    LinkedSockets = 3
+    LinkedSockets <= 4
     SocketGroup = ${socketGroup}
     Class "${itemClass}"
     SetFontSize 45
@@ -196,6 +196,7 @@ export const makeAllLinkFilters = () => {
     // 4-Links
     // Aura Bot
     make4LinkFilter("RRRB", "3r1b"),
+    make4LinkFilter("RRBB", "2b2r"),
     // Caster, Toxic Rain
     make4LinkFilter("BBBG", "3b1g"),
     make4LinkFilter("GGGB", "3g1b"),
@@ -212,7 +213,7 @@ Show
   SetFontSize 45
   SetBorderColor 200 200 0
   MinimapIcon 0 Orange Pentagon
-  CustomAlertSound "sounds/ding.mp3"
+  PlayAlertSound 2 70
 `,
 
     // 3-Links
@@ -244,7 +245,7 @@ Show
   SetTextColor 0 0 0 255
   SetBorderColor 0 0 0
   SetBackgroundColor 213 159 0 255
-  PlayAlertSound 2 30
+  PlayAlertSound 2 50
   PlayEffect White
   MinimapIcon 2 White Circle
 
