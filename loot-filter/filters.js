@@ -323,7 +323,7 @@ Show
   SetBorderColor 200 0 0
   SetFontSize 38
   ItemLevel >= 1
-  BaseType "Ruby Ring" "Sapphire Ring" "Topaz Ring"
+  BaseType "Ruby Ring"
   ItemLevel <= 20
   CustomAlertSound "sounds/ruby ring.mp3"
 
@@ -350,5 +350,14 @@ Show
   BaseType "Rustic Sash"
   ItemLevel <= 20
   CustomAlertSound "sounds/rustic sash.mp3"
+
+Show
+  AreaLevel < 35
+  Sockets < 6
+  LinkedSockets < 4
+  Rarity Magic Rare
+  SetFontSize 38
+  SetBackgroundColor 0 0 0 255
+  SetBorderColor 40 40 40
 `;
 };
