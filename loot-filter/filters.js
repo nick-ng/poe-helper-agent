@@ -160,6 +160,25 @@ Show
 };
 
 const make3LinkFilter = (socketGroup, itemClass, sound) => {
+  let shape = "Pentagon";
+
+  switch (itemClass) {
+    case "Wand":
+      shape = "Cross";
+      break;
+    case "Helmets":
+      shape = "Circle";
+      break;
+    case "Gloves":
+      shape = "Triangle";
+      break;
+    case "Boots":
+      shape = "Square";
+      break;
+    default:
+      shape = "Pentagon";
+  }
+
   return `
 Show
     AreaLevel < 45 # < Act 6
@@ -170,7 +189,7 @@ Show
     Class "${itemClass}"
     SetFontSize 45
     SetBorderColor 200 0 0
-    MinimapIcon 0 Cyan Pentagon
+    MinimapIcon 0 Cyan ${shape}
     CustomAlertSound "sounds/${sound}.mp3"
 `;
 };
@@ -212,7 +231,7 @@ Show
   Class "Bow"
   SetFontSize 45
   SetBorderColor 200 200 0
-  MinimapIcon 0 Orange Pentagon
+  MinimapIcon 0 Orange Cross
   PlayAlertSound 2 70
 `,
 
