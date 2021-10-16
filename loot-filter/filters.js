@@ -289,6 +289,8 @@ Show
   SetBorderColor 0 0 0
   SetFontSize 42
   BaseType "Portal Scroll"
+  MinimapIcon 2 Grey Star
+  PlayEffect Grey
   AreaLevel <= 31
   CustomAlertSound "sounds/portal.mp3"
 
@@ -297,9 +299,11 @@ Show
   Class Currency
   BaseType "Blacksmith's Whetstone"
   SetFontSize 45
-  SetTextColor 170 158 130
-  SetBorderColor 190 178 135 180
-  SetBackgroundColor 0 0 0 255
+  SetTextColor 190 178 135 255
+	SetBackgroundColor 0 0 0 255
+	SetBorderColor 190 178 135 255
+  MinimapIcon 2 Grey Cross
+  PlayEffect Grey
   CustomAlertSound "sounds/whetstone.mp3"
 
 Show
@@ -307,9 +311,11 @@ Show
   Class Currency
   BaseType "Orb of Transmutation"
   SetFontSize 45
-  SetTextColor 170 158 130 220
-  SetBorderColor 75 75 75 255
-  SetBackgroundColor 0 0 0 255
+  SetTextColor 190 178 135 255
+	SetBackgroundColor 0 0 0 255
+	SetBorderColor 190 178 135 255
+  MinimapIcon 2 Grey Cross
+  PlayEffect Grey
   CustomAlertSound "sounds/transmute.mp3"
 
 Show
@@ -317,9 +323,11 @@ Show
   Class Currency
   BaseType "Orb of Alteration"
   SetFontSize 45
-  SetTextColor 170 158 130 220
-  SetBorderColor 30 50 100 255
-  SetBackgroundColor 0 0 0 255
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 210 178 135 255
+	SetBorderColor 0 0 0 255
+	MinimapIcon 2 Grey Circle
+	PlayEffect Grey
   CustomAlertSound "sounds/alteration.mp3"
 
 Show
@@ -327,16 +335,16 @@ Show
   Class "Currency"
   BaseType "Orb of Chance"
   SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 210 178 135 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 2 Grey Circle
-  PlayEffect Grey
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 210 178 135 255
+	SetBorderColor 0 0 0 255
+	MinimapIcon 2 Grey Circle
+	PlayEffect Grey
   CustomAlertSound "sounds/chance.mp3"
 
 Show
   SetBorderColor 200 0 0
-  SetFontSize 38
+  SetFontSize 45
   ItemLevel >= 1
   BaseType "Iron Ring"
   ItemLevel <= 20
@@ -344,7 +352,7 @@ Show
 
 Show
   SetBorderColor 200 0 0
-  SetFontSize 38
+  SetFontSize 45
   ItemLevel >= 1
   BaseType "Ruby Ring"
   ItemLevel <= 20
@@ -352,7 +360,7 @@ Show
 
 Show
   SetBorderColor 200 0 0
-  SetFontSize 38
+  SetFontSize 45
   ItemLevel >= 1
   BaseType "Sapphire Ring"
   ItemLevel <= 20
@@ -360,7 +368,7 @@ Show
 
 Show
   SetBorderColor 200 0 0
-  SetFontSize 38
+  SetFontSize 45
   ItemLevel >= 1
   BaseType "Topaz Ring"
   ItemLevel <= 20
@@ -368,7 +376,7 @@ Show
 
 Show
   SetBorderColor 200 0 0
-  SetFontSize 38
+  SetFontSize 45
   ItemLevel >= 1
   BaseType "Rustic Sash"
   ItemLevel <= 20
