@@ -221,13 +221,14 @@ export const makeAllLinkFilters = () => {
     make4LinkFilter("GGGB", "3g1b"),
     make4LinkFilter("GGGG", "4g"),
     make4LinkFilter("BBBB", "4b"),
+    make4LinkFilter("GGGR", "3g1r"),
     `
 Show
-  AreaLevel < 45
+  AreaLevel < 61
   Sockets < 6
   Rarity Normal Magic Rare
   LinkedSockets >= 4
-  SocketGroup = GGGG GGGB
+  SocketGroup = GGGG GGGB GGGR
   Class "Bow"
   SetFontSize 45
   SetBorderColor 200 200 0
@@ -255,6 +256,10 @@ Show
     make3LinkFilter("GGG", "Gloves", "3g gloves"),
     make3LinkFilter("GGG", "Helmets", "3g helm"),
     make3LinkFilter("GGG", "Body Armours", "3g body"),
+    make3LinkFilter("GGR", "Boots", "2g1r"),
+    make3LinkFilter("GGR", "Gloves", "2g1r"),
+    make3LinkFilter("GGR", "Helmets", "2g1r"),
+    make3LinkFilter("GGR", "Body Armours", "2g1r"),
   ].join("\n");
 };
 
