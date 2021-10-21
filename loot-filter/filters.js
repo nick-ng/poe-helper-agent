@@ -221,14 +221,16 @@ export const makeAllLinkFilters = () => {
     make4LinkFilter("GGGB", "3g1b"),
     make4LinkFilter("GGGG", "4g"),
     make4LinkFilter("BBBB", "4b"),
-    make4LinkFilter("GGGR", "3g1r"),
+    make4LinkFilter("RRRG", "ding"),
+    make4LinkFilter("RRRR", "ding"),
+    make4LinkFilter("RRGG", "ding"),
     `
 Show
-  AreaLevel < 61
+  AreaLevel < 40
   Sockets < 6
   Rarity Normal Magic Rare
   LinkedSockets >= 4
-  SocketGroup = GGGG GGGB GGGR
+  SocketGroup = GGGG GGGB
   Class "Bow"
   SetFontSize 45
   SetBorderColor 200 200 0
@@ -260,6 +262,14 @@ Show
     make3LinkFilter("GGR", "Gloves", "2g1r"),
     make3LinkFilter("GGR", "Helmets", "2g1r"),
     make3LinkFilter("GGR", "Body Armours", "2g1r"),
+    make3LinkFilter("RRR", "Boots", "ding"),
+    make3LinkFilter("RRR", "Gloves", "ding"),
+    make3LinkFilter("RRR", "Helmets", "ding"),
+    make3LinkFilter("RRR", "Body Armours", "ding"),
+    make3LinkFilter("RRG", "Boots", "ding"),
+    make3LinkFilter("RRG", "Gloves", "ding"),
+    make3LinkFilter("RRG", "Helmets", "ding"),
+    make3LinkFilter("RRG", "Body Armours", "ding"),
   ].join("\n");
 };
 
@@ -384,7 +394,7 @@ Show
   SetFontSize 45
   ItemLevel >= 1
   BaseType "Rustic Sash"
-  ItemLevel <= 20
+  ItemLevel <= 70
   CustomAlertSound "sounds/rustic sash.mp3"
 
 Show
