@@ -31,6 +31,10 @@ export const writeFilters = (filter, outputPath, isDebug = false) => {
 
     if (outputPath) {
       writeFileSync(
+        resolve(outputPath, `zzz_${filterName}.filter`.toLowerCase()),
+        baseFilter
+      );
+      writeFileSync(
         resolve(outputPath, `${filterName}_chaos_recipe.filter`.toLowerCase()),
         `${filter}${baseFilter}`
       );

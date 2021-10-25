@@ -310,6 +310,16 @@ Show
   CustomAlertSound "sounds/portal.mp3"
 
 Show
+  Class Currency
+  StackSize >= 4
+  SetTextColor 0 0 0
+  SetBackgroundColor 100 200 200
+  SetBorderColor 0 0 0
+  SetFontSize 35
+  BaseType "Portal Scroll"
+  PlayEffect Grey
+
+Show
   AreaLevel <= 61
   Class Currency
   BaseType "Blacksmith's Whetstone"

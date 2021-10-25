@@ -9,6 +9,13 @@ import fetch from "node-fetch";
 import { makeChaosFilter } from "./loot-filter/index.js";
 import { fetchAndSaveFilters } from "./loot-filter/update-base-filters.js";
 
+const sleep = (ms) =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, ms);
+  });
+
 const args = process.argv.slice(2);
 const mode = args[0];
 
@@ -93,6 +100,14 @@ app.post("/", async (req, res, _next) => {
   try {
     const { url, options } = req.body;
 
+    const randomSleep = Math.random() * 500;
+    if (randomSleep > 200) {
+      console.log(
+        `sleeping for ${randomSleep} ms before making request to ${url}`
+      );
+    }
+    await sleep(Math.random() * 500);
+
     const res2 = await fetch(url, options);
 
     if (!res2.ok) {
@@ -165,11 +180,4 @@ switch (mode) {
       console.log(`${new Date()} Website server listening on ${PORT}.`);
       fetchAndSaveFilters();
     });
-
-    setTimeout(() => {
-      if (autoClose) {
-        console.log("No requests processed. Closing");
-        server.close();
-      }
-    }, 7200000);
 }
