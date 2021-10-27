@@ -1,3 +1,36 @@
+export const topUniquesFilter = `
+# Top Uniques
+Show
+  BaseType == "Champion Kite Shield" "Ghastly Eye Jewel" "Silk Gloves" "Blunt Arrow Quiver Piece" "Legion Sword Piece" "Hypnotic Eye Jewel" "Carnal Sceptre" "Archon Kite Shield" "Timeless Jewel" "Runic Crown" "Small Cluster Jewel" "Steel Ring" "Ezomyte Dagger" "Carnal Boots" "Jewelled Foil" "Fluted Bascinet" "Crusader Boots" "Sadist Garb" "Saint's Hauberk" "Prismatic Jewel" "Greatwolf Talisman" "Harlequin Mask" "Assassin's Boots" "Imperial Staff Piece" "Archon Kite Shield Piece" "Callous Mask Piece" "Cloth Belt Piece" "Stealth Boots" "Arcanist Gloves" "Wyrmscale Doublet" "Zodiac Leather" "Glorious Plate" "Exquisite Leather" "Jingling Spirit Shield" "Granite Flask" "Pinnacle Tower Shield" "Ornate Quiver" "Medium Cluster Jewel" "Vaal Rapier" "Blood Raiment" "Siege Axe" "Rawhide Boots" "Occultist's Vestment" "Sapphire Flask" "Ezomyte Tower Shield" "Gladiator Plate" "Royal Burgonet" "Imperial Maul" "Unset Amulet" "Large Cluster Jewel" "Prophecy Wand" "Citadel Bow"
+  Rarity = Unique
+  SetFontSize 45
+  SetTextColor 255 0 0 255
+  SetBackgroundColor 255 255 255 255
+  SetBorderColor 255 0 0 255
+  MinimapIcon 0 Red Star
+  PlayEffect Red
+  PlayAlertSound 6 300
+
+# Unsure Uniques
+Show
+  BaseType == "Goathide Boots" "Ezomyte Burgonet" "Sinner Tricorne" "Cobalt Jewel" "Crimson Jewel" "Vaal Spirit Shield" "Fiend Dagger" "Assassin Bow" "Two-Point Arrow Quiver" "Onyx Amulet" "Paua Amulet" "Judgement Staff" "Turquoise Amulet" "Leather Belt" "Heavy Belt" "Eternal Sword" "Gavel" "Viridian Jewel" "Varnished Coat" "Ebony Tower Shield" "Prophet Crown" "Citrine Amulet" "Nightmare Bascinet" "Imperial Skean" "Sorcerer Boots" "Iron Flask" "Agate Amulet" "Necromancer Silks" "Jade Amulet" "Highborn Staff" "Sage Wand" "Studded Belt" "Stibnite Flask" "Amber Amulet" "Elegant Round Shield"
+  Rarity = Unique
+  SetFontSize 45
+  LinkedSockets < 5
+  SetTextColor 255 0 0 255
+  SetBackgroundColor 200 200 200 255
+  SetBorderColor 255 0 0 255
+  MinimapIcon 0 Red Cross
+  PlayEffect Red
+  PlayAlertSound 2 300
+
+# Hidden Uniques
+Hide
+  BaseType == "Goat's Horn" "Gut Ripper" "Colossal Tower Shield" "Timeworn Claw" "Opal Wand" "Quartz Wand" "Buckskin Tunic" "Amethyst Flask" "Steelscale Gauntlets" "Basket Rapier" "Bronze Sceptre" "Two-Toned Boots" "Slaughter Knife" "Clutching Talisman" "Sanctified Life Flask" "Bone Armour" "Marble Amulet" "Meatgrinder" "War Hammer" "Trapper Boots" "Cutthroat's Garb" "Auric Mace" "Elegant Foil" "Scholar's Robe" "Diamond Flask" "Assassin's Garb" "Silken Hood" "Serrated Arrow Quiver" "Pine Buckler" "Vine Circlet" "Regicide Mask" "Latticed Ringmail" "Plague Mask" "Thresher Claw" "Baroque Round Shield" "Estoc" "Dragonscale Boots" "Karui Sceptre" "Deerskin Boots" "Satin Gloves" "Sage's Robe" "Large Hybrid Flask" "Greater Mana Flask" "Lunaris Circlet" "Royal Bow" "Lion Sword" "Vaal Sceptre" "Cleaver" "Infernal Axe" "Iron Staff" "Grinning Fetish" "Etched Greatsword" "Steel Kite Shield" "Goliath Gauntlets" "Dusk Blade" "Antique Rapier" "Iron Hat" "Strapped Mitts" "Tricorne" "Runic Helm" "Primordial Staff" "Gnarled Branch" "Jagged Foil" "Dream Mace" "Ironscale Gauntlets" "Wild Leather" "Vaal Mask" "Bronze Gauntlets" "Burnished Spiked Shield" "Spiked Club" "Skinning Knife" "Corrugated Buckler" "Velvet Slippers" "Mind Cage" "Royal Skean" "Deicide Mask" "Soldier Helmet" "Ranger Bow" "Sledgehammer" "Samnite Helmet" "Decimation Bow" "Elder Sword" "Supreme Spiked Shield" "Steelhead" "Samite Gloves" "Painted Buckler" "Karui Chopper" "Conquest Chainmail" "Zealot Helmet" "Ezomyte Blade" "Ivory Spirit Shield" "Elegant Sword" "Sanctified Mana Flask" "Festival Mask" "Driftwood Wand" "Ornate Ringmail" "Desert Brigandine" "Bronzescale Boots" "Iron Gauntlets" "Harmonic Spirit Shield" "Compound Spiked Shield" "Fossilised Spirit Shield" "Platinum Kris" "Tribal Circlet" "Steel Circlet" "Runic Gauntlets" "Steel Gauntlets" "Slink Gloves" "Engraved Wand" "Flaying Knife" "Aventail Helmet" "Tomahawk" "Imbued Wand" "Fright Claw" "Enameled Buckler" "Rotfeather Talisman" "Abyssal Axe" "Black Maw Talisman" "Runic Gages" "Strapped Boots" "Harbinger Bow" "Crystal Sceptre" "Demon's Horn" "Lion Pelt" "Wrapped Mitts" "Shagreen Gloves" "Vanguard Belt" "Bone Circlet" "Twilight Blade" "Ornate Sword" "Conjurer Boots" "Riveted Boots" "Ursine Pelt" "Shadow Axe" "Broadhead Arrow Quiver" "Ancient Greaves" "Decorative Axe" "Spike-Point Arrow Quiver" "War Sword" "Shagreen Boots" "Boot Knife" "Great Helmet" "Laminated Kite Shield" "Ezomyte Axe" "Highland Blade" "Quicksilver Flask" "Recurve Bow" "Loricated Ringmail" "Wool Gloves" "Soldier Gloves" "Brass Spirit Shield" "Chain Gloves" "Scholar Boots" "Bastard Sword" "Platinum Sceptre" "Secutor Helm" "Bronzescale Gauntlets" "Copper Plate" "Spidersilk Robe" "Iron Sceptre" "Plated Greaves" "Dragonscale Gauntlets" "Murderous Eye Jewel" "Tiger Sword" "Close Helmet" "Royal Sceptre" "Sharkskin Boots" "Headsman Axe" "Destroyer Regalia" "Studded Round Shield" "Chiming Spirit Shield" "Siege Helmet" "Teak Round Shield" "Whalebone Rapier" "Raven Mask" "Visored Sallet" "Sabre" "Sharkskin Tunic" "Golden Mask" "Throat Stabber" "Vile Staff" "Bismuth Flask" "Simple Robe" "Vaal Buckler" "Reinforced Tower Shield" "Antique Greaves" "Military Staff" "Mesh Gloves" "Cedar Tower Shield" "Searching Eye Jewel" "Eternal Burgonet" "Full Scale Armour" "Conjurer Gloves" "Dread Maul" "Holy Chainmail" "Mesh Boots" "Rotted Round Shield" "Poleaxe" "Boot Blade" "Awl" "Ancient Gauntlets" "Wyrmscale Gauntlets" "Coiled Staff" "Polished Spiked Shield" "Grand Mana Flask" "Silver Flask" "Crystal Wand" "Golden Plate" "Titan Gauntlets" "Goliath Greaves" "Death Bow" "Despot Axe" "Sentinel Jacket" "Maelström Staff" "Velvet Gloves" "Rusted Sword" "Ironscale Boots" "Callous Mask" "Rustic Sash" "Gemstone Sword" "Great Crown" "Quartz Flask" "Ornate Mace" "Leather Hood" "Brass Maul" "Elegant Ringmail" "Ambusher" "Imperial Claw" "Crusader Gloves" "Reaver Sword" "Goathide Gloves" "Legion Sword" "Sharktooth Arrow Quiver" "Titan Greaves" "Terror Maul" "Nailed Fist" "Woodsplitter" "Imperial Bow" "Iron Mask" "Blunt Arrow Quiver" "Lacquered Buckler" "Infernal Sword" "Jagged Maul" "Tornado Wand" "Spine Bow" "Carnal Armour" "Gladius" "Crude Bow" "Plank Kite Shield" "Long Bow" "Vaal Regalia" "Jade Hatchet" "Royal Staff" "Reinforced Greaves"
+  Rarity = Unique
+  LinkedSockets < 5
+`;
+
 /**
  * @param {number} size
  */
@@ -9,6 +42,7 @@ export const makeBodyFilter = (size) => {
     Class "Body Armour"
     SetBorderColor 255 255 255
     ItemLevel >= 60
+    ItemLevel <= 70
     Rarity Rare
     Identified False
     Sockets < 6
@@ -29,6 +63,7 @@ export const makeGlovesFilter = (size) => {
     Class "Gloves"
     SetBorderColor 255 0 0
     ItemLevel >= 60
+    ItemLevel <= 70
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
@@ -47,6 +82,7 @@ export const makeBootsFilter = (size) => {
     Class "Boots"
     SetBorderColor 0 0 255
     ItemLevel >= 60
+    ItemLevel <= 70
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
@@ -65,6 +101,7 @@ export const makeHelmFilter = (size) => {
     Class "Helm"
     SetBorderColor 0 255 0
     ItemLevel >= 60
+    ItemLevel <= 70
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
@@ -83,6 +120,7 @@ export const makeRingFilter = (size) => {
     Class "Ring"
     SetBorderColor 255 0 255
     ItemLevel >= 60
+    ItemLevel <= 70
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
@@ -101,6 +139,7 @@ export const makeAmuletFilter = (size) => {
     Class "Amulet"
     SetBorderColor 255 255 0
     ItemLevel >= 60
+    ItemLevel <= 70
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
@@ -119,6 +158,7 @@ export const makeBeltFilter = (size) => {
     Class "Belt"
     SetBorderColor 0 255 255
     ItemLevel >= 60
+    ItemLevel <= 70
     Rarity Rare
     Identified False
     SetBackgroundColor 0 0 0
@@ -135,6 +175,7 @@ export const makeWeaponFilter = (size) => {
   }
   return `Show
     ItemLevel >= 60
+    ItemLevel <= 70
     Class "Bow"
     Rarity Rare
     Height 3
@@ -149,6 +190,7 @@ export const makeWeaponFilter = (size) => {
 
 Show
     ItemLevel >= 60
+    ItemLevel <= 70
     Rarity Rare
     Height 3
     Width 1
@@ -275,6 +317,8 @@ Show
 
 export const makeLevelingFilter = () => {
   return `
+${topUniquesFilter}
+
 Show
   AreaLevel < 65
   Class Currency
@@ -312,6 +356,17 @@ Show
 Show
   Class Currency
   StackSize >= 4
+  AreaLevel <= 67
+  SetTextColor 0 0 0
+  SetBackgroundColor 100 200 200
+  SetBorderColor 0 0 0
+  SetFontSize 35
+  BaseType "Portal Scroll"
+  PlayEffect Grey
+
+Show
+  Class Currency
+  StackSize >= 6
   SetTextColor 0 0 0
   SetBackgroundColor 100 200 200
   SetBorderColor 0 0 0
@@ -415,5 +470,14 @@ Show
   SetFontSize 38
   SetBackgroundColor 0 0 0 255
   SetBorderColor 40 40 40
+
+Show
+  Rarity = Unique
+	Class "Rings"
+	SetFontSize 45
+  SetTextColor 255 255 255 255
+	SetBackgroundColor 255 0 0 255
+  SetBorderColor 100 100 100 255
+  PlayEffect Red
 `;
 };

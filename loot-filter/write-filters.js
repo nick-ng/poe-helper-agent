@@ -38,6 +38,10 @@ export const writeFilters = (filter, outputPath, isDebug = false) => {
         resolve(outputPath, `${filterName}_chaos_recipe.filter`.toLowerCase()),
         `${filter}${baseFilter}`
       );
+      writeFileSync(
+        resolve(outputPath, `a${filterName}_chaos_recipe.filter`.toLowerCase()),
+        `${filter}${baseFilter}`.replaceAll("PlayEffect", "#bb# PlayEffect")
+      );
     }
     if (!outputPath || isDebug) {
       writeFileSync(
