@@ -20,9 +20,16 @@ export const writeFileSync = (filePath, fileContents) => {
  * @param {string} outputPath
  * @param {boolean} [isDebug=false]
  */
-export const writeFilters = (filter, outputPath, isDebug = false) => {
+export const writeFilters = (
+  filter,
+  outputPath,
+  filenameInfo,
+  isDebug = false
+) => {
   const baseFiltersPath = resolve(".", "base-filters");
   const baseFilters = readdirSync(baseFiltersPath);
+
+  const { prefix, suffix } = filenameInfo;
 
   baseFilters.forEach((baseFilterName) => {
     const baseFilterPath = resolve(baseFiltersPath, baseFilterName);
@@ -35,11 +42,17 @@ export const writeFilters = (filter, outputPath, isDebug = false) => {
         baseFilter
       );
       writeFileSync(
-        resolve(outputPath, `${filterName}_chaos_recipe.filter`.toLowerCase()),
+        resolve(
+          outputPath,
+          `${prefix}${filterName}${suffix}.filter`.toLowerCase()
+        ),
         `${filter}${baseFilter}`
       );
       writeFileSync(
-        resolve(outputPath, `a${filterName}_chaos_recipe.filter`.toLowerCase()),
+        resolve(
+          outputPath,
+          `a${prefix}${filterName}${suffix}.filter`.toLowerCase()
+        ),
         `${filter}${baseFilter}`.replaceAll("PlayEffect", "#bb# PlayEffect")
       );
     }
@@ -48,7 +61,7 @@ export const writeFilters = (filter, outputPath, isDebug = false) => {
         resolve(
           ".",
           "output-filters",
-          `${filterName}_chaos_recipe.filter`.toLowerCase()
+          `${prefix}${filterName}${suffix}.filter`.toLowerCase()
         ),
         `${filter}${baseFilter}`
       );

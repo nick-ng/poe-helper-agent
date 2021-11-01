@@ -6,7 +6,7 @@ import compression from "compression";
 import cors from "cors";
 import fetch from "node-fetch";
 
-import { makeChaosFilter } from "./loot-filter/index.js";
+import { makeChaosFilter, makeGeneralFilter } from "./loot-filter/index.js";
 import { fetchAndSaveFilters } from "./loot-filter/update-base-filters.js";
 
 const sleep = (ms) =>
@@ -151,6 +151,7 @@ const updateFilters = async () => {
     true,
     process.env.CHAOS_FILTER_ONLY?.toLowerCase() === "true"
   );
+  makeGeneralFilter(process.env.POE_SETTINGS_PATH, true);
 };
 
 switch (mode) {
