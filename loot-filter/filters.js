@@ -4,30 +4,22 @@ Show  # %H3 $type->currency->oil $tier->t4
   BaseType == "Clear Oil" "Sepia Oil"
 
 Show
-  BaseType "Granite Flask"
-  SetFontSize 35
-  Rarity <= Magic
-  SetTextColor 255 255 255 255
-  SetBorderColor 255 255 255 255
-  SetBackgroundColor 0 127 0 255
-
-Show
   BaseType "Eternal Mana Flask"
   ItemLevel >= 82
   SetFontSize 35
   Rarity <= Magic
   SetTextColor 255 255 255 255
   SetBorderColor 255 255 255 255
-  SetBackgroundColor 0 0 255 255
+  SetBackgroundColor 0 0 127 255
 
 Show
-  BaseType "Eternal Life Flask" # "Divine Life Flask"
+  BaseType "Eternal Life Flask" "Divine Life Flask"
   ItemLevel >= 82
   SetFontSize 35
   Rarity <= Magic
   SetTextColor 255 255 255 255
   SetBorderColor 255 255 255 255
-  SetBackgroundColor 255 0 0 255
+  SetBackgroundColor 127 0 0 255
 
 Show
   Class "Utility Flask"

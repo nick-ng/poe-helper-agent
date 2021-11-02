@@ -1,0 +1,27 @@
+import { readFileSync, readdirSync, writeFileSync } from "fs";
+import { resolve } from "path";
+
+const fixComments = (filterFragment) => {
+  return filterFragment.toString().replaceAll("//", "#");
+};
+
+export const getShieldLevelingFilter = () => {
+  return (
+    fixComments(
+      readFileSync(resolve(".", "filter-fragments", "shield-leveling.filter"))
+    ) + "\n"
+  );
+};
+
+export const getCustomItemsFilter = () => {
+  const filters = readdirSync(resolve(".", "filter-fragments"));
+
+  const customFilterPath = resolve(".", "filter-fragments", "!custom.filter");
+
+  if (!filters.includes("!custom.filter")) {
+    writeFileSync(customFilterPath, "## Put your custom filter stuff here");
+    return "";
+  }
+
+  return fixComments(readFileSync(customFilterPath));
+};

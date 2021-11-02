@@ -1,0 +1,85 @@
+# https:#www.poewiki.net/wiki/List_of_two_hand_swords
+# https:#www.poewiki.net/wiki/Two-handed_axe
+# https://www.poewiki.net/wiki/Shield#Armour_Shields_.28Strength.29
+
+Show
+  Class == "Two Hand Axes" "Two Hand Swords" "Shields"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 255 255 255 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
+  Continue
+
+# 2-hand axes until level 28
+Show
+  AreaLevel <= 12
+  BaseType == "Longsword"
+
+Show
+  AreaLevel <= 18
+  BaseType == "Woodsplitter" "Bastard Sword"
+
+Show
+  AreaLevel <= 23
+  BaseType == "Poleaxe"
+
+Show
+  AreaLevel <= 28
+  BaseType == "Double Axe"
+
+Show
+  AreaLevel <= 33
+  BaseType == "Gilded Axe"
+
+Show
+  AreaLevel <= 37
+  BaseType == "Shadow Axe"
+
+Show
+  AreaLevel <= 30
+  BaseType == "Copper Tower Shield"
+
+Show
+  AreaLevel <= 47
+  BaseType == "Reinforced Tower Shield" # 287
+
+# Show
+#   AreaLevel <= 43
+#   BaseType == "Painted Tower Shield" # 217
+
+# Show
+#   AreaLevel <= 43
+#   BaseType == "Buckskin Tower Shield" # 177
+
+# Show
+#   AreaLevel <= 47
+#   BaseType == "Mahogany Tower Shield" # 265
+
+Show
+  AreaLevel <= 51
+  BaseType == "Bronze Tower Shield" # 367
+
+Show
+  AreaLevel <= 64
+  BaseType == "Girded Tower Shield" # 481
+
+# Show
+#   AreaLevel <= 58
+#   BaseType == "Crested Tower Shield" # 338
+
+# Show
+#   AreaLevel <= 61
+#   BaseType == "Shagreen Tower Shield" # 261
+
+Show
+  AreaLevel <= 64
+  BaseType == "Ebony Tower Shield" # 412
+
+Show
+  AreaLevel <= 67
+  BaseType == "Ezomyte Tower Shield" # 522
+
+Show
+  BaseType == "Colossal Tower Shield" # 632
