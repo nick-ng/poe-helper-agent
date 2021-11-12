@@ -1,6 +1,8 @@
 import { readFileSync, readdirSync, writeFileSync } from "fs";
 import { resolve } from "path";
 
+import { getUniquesValue } from "./poe-ninja.js";
+
 const fixComments = (filterFragment) => {
   return filterFragment.toString().replaceAll("//", "#");
 };
@@ -24,4 +26,8 @@ export const getCustomItemsFilter = () => {
   }
 
   return fixComments(readFileSync(customFilterPath));
+};
+
+export const getUniquesFilter = () => {
+  getUniquesValue();
 };

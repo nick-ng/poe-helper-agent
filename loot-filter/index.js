@@ -2,6 +2,7 @@ import { topUniquesFilter, lowCurrencyHider, otherHider } from "./filters.js";
 import {
   getCustomItemsFilter,
   getShieldLevelingFilter,
+  getUniquesFilter,
 } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
@@ -29,10 +30,18 @@ export const makeChaosFilter = (
 };
 
 export const makeGeneralFilter = (outputDir, isDebug = false) => {
+  const a = getUniquesFilter();
   writeFilters(
     `${getCustomItemsFilter()}${topUniquesFilter}${lowCurrencyHider}${otherHider}`,
     outputDir,
     { prefix: "b", suffix: "_general" },
+    isDebug
+  );
+
+  writeFilters(
+    `${getCustomItemsFilter()}${lowCurrencyHider}${otherHider}`,
+    outputDir,
+    { prefix: "c", suffix: "_general" },
     isDebug
   );
 };
