@@ -108,5 +108,6 @@ output-filters/*
 base-filters/*
 !base-filters/default.filter
 filter-fragments/!custom.filter
+filter-fragments/!custom*.filter
 
 poe-ninja-uniques.json

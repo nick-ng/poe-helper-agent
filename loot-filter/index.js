@@ -39,7 +39,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    `${getCustomItemsFilter()}${lowCurrencyHider}${otherHider}`,
+    `${getCustomItemsFilter()}${otherHider}`,
     outputDir,
     { prefix: "c", suffix: "_general" },
     isDebug

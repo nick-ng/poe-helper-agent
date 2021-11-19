@@ -1,65 +1,3 @@
-export const customExtras = `
-Show  # %H3 $type->currency->oil $tier->t4
-  Class "Currency"
-  BaseType == "Clear Oil" "Sepia Oil"
-
-Show
-  BaseType "Eternal Mana Flask"
-  ItemLevel >= 82
-  SetFontSize 35
-  Rarity <= Magic
-  SetTextColor 255 255 255 255
-  SetBorderColor 255 255 255 255
-  SetBackgroundColor 0 0 127 255
-
-Show
-  BaseType "Eternal Life Flask" "Divine Life Flask"
-  ItemLevel >= 82
-  SetFontSize 35
-  Rarity <= Magic
-  SetTextColor 255 255 255 255
-  SetBorderColor 255 255 255 255
-  SetBackgroundColor 127 0 0 255
-
-Show
-  Class "Utility Flask"
-  ItemLevel >= 82
-  SetFontSize 35
-  Rarity <= Magic
-  SetTextColor 255 255 255 255
-  SetBorderColor 255 255 255 255
-  SetBackgroundColor 0 127 0 255
-
-Show  # +1 all Physical Gems recipe
-  Quality >= 1
-  Class "Gems"
-  BaseType "Sweep" "Cleave" "Shield Charge" "Added Fire Damage Support" "Melee Physical Damage Support" "Punishment" "Bloodlust Support" "Molten Shell" "Vaal Molten Shell" "Determination" "Iron Grip Support" "Shockwave Totem" "Holy Flame Totem" "Animate Guardian" "Herald of Purity" "Reckoning" "Vengeance" "Summon Stone Golem" "Chance to Bleed Support" "Maim Support" "Brutality Support" "Vulnerability" "War Banner" "Dread Banner" "Perforate" "Pride" "Awakened Added Fire Damage Support" "Awakened Brutality Support" "Awakened Melee Physical Damage Support" "Intimidating Cry" "Exsanguinate" "Corrupting Fever" "Bloodthirst Support" "Reap" "Defiance Banner" "Absolution" "Shield Crush" "Boneshatter" "Blade Flurry" "Double Strike" "Vaal Double Strike" "Lacerate" "Unearth" "Split Arrow" "Blood Rage" "Phase Run" "Puncture" "Bear Trap" "Ethereal Knives" "Cyclone" "Vaal Cyclone" "Spectral Shield Throw" "Animate Weapon" "Vicious Projectiles Support" "Herald of Agony" "Riposte" "Bladefall" "Blade Vortex" "Vaal Blade Vortex" "Explosive Trap" "Seismic Trap" "Withering Touch Support" "Lancing Steel" "Shattering Steel" "Impale Support" "Shrapnel Ballista" "Awakened Vicious Projectiles Support" "Blade Blast" "Splitting Steel" "Tornado" "Storm Burst" "Glacial Cascade" "Physical to Lightning Support" "Purifying Flame" "Wave of Conviction" "Divine Ire" "Summon Carrion Golem" "Penance Brand" "Void Sphere" "Hydrosphere" "Summon Reaper"
-  SetFontSize 45
-  SetTextColor 30 190 190 255
-  SetBorderColor 255 255 255 255
-  MinimapIcon 1 White Triangle
-  PlayEffect Grey
-  PlayAlertSound 2 300
-
-Show  # Physical Large Cluster Jewels
-  EnchantmentPassiveNum = 8
-  ItemLevel >= 50
-  Rarity <= Rare
-  BaseType "Large Cluster Jewel"
-  EnchantmentPassiveNode "Physical Damage"
-  SetFontSize 45
-  SetTextColor 0 200 0 255
-  SetBackgroundColor 255 255 255 255
-  SetBorderColor 0 200 0 255
-  MinimapIcon 1 Green Pentagon
-  PlayEffect Green
-  PlayAlertSound 2 300
-
-Show
-  MapTier <= 5
-  Class "Maps"
-`;
-
 export const topUniquesFilter = `
 # Top Uniques
 Show
@@ -105,7 +43,7 @@ Hide
 
 Hide
   Class "Currency"
-  BaseType == "Orb of Transmutation" "Blacksmith's Whetstone" "Alchemy Shard" "Silver Coin"
+  BaseType == "Orb of Transmutation" "Blacksmith's Whetstone" "Alchemy Shard"
   AreaLevel > 69
   StackSize < 3
 `;

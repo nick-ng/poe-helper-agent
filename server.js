@@ -179,6 +179,6 @@ switch (mode) {
   default:
     server.listen(PORT, () => {
       console.log(`${new Date()} Website server listening on ${PORT}.`);
-      fetchAndSaveFilters();
+      updateFilters();
     });
 }

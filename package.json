@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "poe-helper-agent": "node --max-old-space-size=8 ./server.js",
+    "poe-helper-agent": "node --max-old-space-size=32 ./server.js",
     "start": "nodemon --delay 2 ./server.js",
     "filter-watch": "nodemon --delay 2 -e js,filter --ignore output-filters/ --ignore base-filters ./server.js --update-filters",
     "chaos-only": "node ./server.js --chaos-only",
