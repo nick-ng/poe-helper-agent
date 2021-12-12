@@ -2,84 +2,182 @@
 # https:#www.poewiki.net/wiki/Two-handed_axe
 # https://www.poewiki.net/wiki/Shield#Armour_Shields_.28Strength.29
 
-Show
-  Class == "Two Hand Axes" "Two Hand Swords" "Shields"
-  SetFontSize 45
-  Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 255 255 255 255
-  MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
-  Continue
-
 # 2-hand axes until level 28
 Show
   AreaLevel <= 12
   BaseType == "Longsword"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 18
   BaseType == "Woodsplitter" "Bastard Sword"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 23
   BaseType == "Poleaxe"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 28
   BaseType == "Double Axe"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 33
   BaseType == "Gilded Axe"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 37
   BaseType == "Shadow Axe"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 30
   BaseType == "Copper Tower Shield"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 47
   BaseType == "Reinforced Tower Shield" # 287
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 # Show
 #   AreaLevel <= 43
 #   BaseType == "Painted Tower Shield" # 217
+SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 # Show
 #   AreaLevel <= 43
 #   BaseType == "Buckskin Tower Shield" # 177
+SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 # Show
 #   AreaLevel <= 47
 #   BaseType == "Mahogany Tower Shield" # 265
+SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 51
   BaseType == "Bronze Tower Shield" # 367
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 64
   BaseType == "Girded Tower Shield" # 481
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 # Show
 #   AreaLevel <= 58
 #   BaseType == "Crested Tower Shield" # 338
+SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 # Show
 #   AreaLevel <= 61
 #   BaseType == "Shagreen Tower Shield" # 261
+SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 64
   BaseType == "Ebony Tower Shield" # 412
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 67
   BaseType == "Ezomyte Tower Shield" # 522
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
 
 Show
   BaseType == "Colossal Tower Shield" # 632
+  SetFontSize 45
+  Rarity <= Rare
+  SetBackgroundColor 255 0 255 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  PlayAlertSound 1 300
