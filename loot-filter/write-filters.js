@@ -6,6 +6,8 @@ import {
 } from "fs";
 import { resolve, dirname, basename } from "path";
 
+import { presets } from "./update-base-filters.js";
+
 export const writeFileSync = (filePath, fileContents) => {
   const dirName = dirname(filePath);
   mkdirSync(dirName, {
@@ -13,6 +15,21 @@ export const writeFileSync = (filePath, fileContents) => {
   });
 
   return _writeFileSync(filePath, fileContents);
+};
+
+const isWithinLevelRange = (filterPath, levelRange) => {
+  const a = presets.filter((a) => filterPath.endsWith(a.filename));
+
+  if (a.length === 0) {
+    return;
+  }
+
+  const filterInfo = a.pop();
+
+  return (
+    filterInfo.level >= Math.min(...levelRange) &&
+    filterInfo.level <= Math.max(...levelRange)
+  );
 };
 
 /**
@@ -24,7 +41,8 @@ export const writeFilters = (
   filter,
   outputPath,
   filenameInfo,
-  isDebug = false
+  isDebug = false,
+  levelRange = [-9999, 9999]
 ) => {
   const baseFiltersPath = resolve(".", "base-filters");
   const baseFilters = readdirSync(baseFiltersPath);
@@ -35,6 +53,10 @@ export const writeFilters = (
     const baseFilterPath = resolve(baseFiltersPath, baseFilterName);
     const baseFilter = readFileSync(baseFilterPath);
     const filterName = basename(baseFilterName, ".filter");
+
+    if (!isWithinLevelRange(baseFilterPath, levelRange)) {
+      return;
+    }
 
     if (outputPath) {
       writeFileSync(

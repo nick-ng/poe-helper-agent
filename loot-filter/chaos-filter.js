@@ -31,7 +31,9 @@ export const getChaosFilter = (itemSizes, chaosOnly = false) => {
   const { body, glove, boot, helm, ring, amulet, belt, weapon } = itemSizes;
 
   return [
-    `###############################
+    chaosOnly
+      ? ""
+      : `###############################
 #### Leveling Filter Start ####
 ###############################`,
     chaosOnly ? "" : makeLevelingFilter(),

@@ -11,7 +11,7 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 18
@@ -21,7 +21,7 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 23
@@ -31,7 +31,7 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 28
@@ -41,7 +41,7 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 33
@@ -51,17 +51,16 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 37
   BaseType == "Shadow Axe"
-  SetFontSize 45
+  SetFontSize 35
   Rarity <= Rare
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
 
 Show
   AreaLevel <= 30
@@ -71,7 +70,7 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 47
@@ -81,37 +80,37 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 # Show
 #   AreaLevel <= 43
 #   BaseType == "Painted Tower Shield" # 217
-SetFontSize 45
-  Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+#   SetFontSize 45
+#  Rarity <= Rare
+#  SetBackgroundColor 255 0 255 255
+#  SetBorderColor 0 0 0 255
+#  MinimapIcon 1 Pink Cross
+#  PlayAlertSound 16 200
 
 # Show
 #   AreaLevel <= 43
 #   BaseType == "Buckskin Tower Shield" # 177
-SetFontSize 45
-  Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+#  SetFontSize 45
+#  Rarity <= Rare
+#  SetBackgroundColor 255 0 255 255
+#  SetBorderColor 0 0 0 255
+#  MinimapIcon 1 Pink Cross
+#  PlayAlertSound 16 200
 
 # Show
 #   AreaLevel <= 47
 #   BaseType == "Mahogany Tower Shield" # 265
-SetFontSize 45
-  Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+#SetFontSize 45
+#  Rarity <= Rare
+#  SetBackgroundColor 255 0 255 255
+#  SetBorderColor 0 0 0 255
+#  MinimapIcon 1 Pink Cross
+#  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 51
@@ -121,7 +120,7 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 64
@@ -131,27 +130,27 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 # Show
 #   AreaLevel <= 58
 #   BaseType == "Crested Tower Shield" # 338
-SetFontSize 45
-  Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+# SetFontSize 45
+#   Rarity <= Rare
+#   SetBackgroundColor 255 0 255 255
+#   SetBorderColor 0 0 0 255
+#   MinimapIcon 1 Pink Cross
+#   PlayAlertSound 16 200
 
 # Show
 #   AreaLevel <= 61
 #   BaseType == "Shagreen Tower Shield" # 261
-SetFontSize 45
-  Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+# SetFontSize 45
+#   Rarity <= Rare
+#   SetBackgroundColor 255 0 255 255
+#   SetBorderColor 0 0 0 255
+#   MinimapIcon 1 Pink Cross
+#   PlayAlertSound 16 200
 
 Show
   AreaLevel <= 64
@@ -161,7 +160,7 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   AreaLevel <= 67
@@ -171,7 +170,7 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200
 
 Show
   BaseType == "Colossal Tower Shield" # 632
@@ -180,4 +179,4 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
-  PlayAlertSound 1 300
+  PlayAlertSound 16 200

@@ -221,7 +221,14 @@ Show
     SetFontSize ${Math.ceil(size)}`;
 };
 
-const make3LinkFilter = (socketGroup, itemClass, sound) => {
+export const make3LinkFilter = (
+  socketGroup,
+  itemClass,
+  sound,
+  minLevel,
+  maxLevel = 45
+) => {
+  // Level 45: < Act 6
   let shape = "Pentagon";
 
   switch (itemClass) {
@@ -241,6 +248,26 @@ const make3LinkFilter = (socketGroup, itemClass, sound) => {
       shape = "Pentagon";
   }
 
+  const filterLines = [
+    maxLevel ? `    AreaLevel < ${maxLevel}` : null,
+    minLevel ? `    AreaLevel >= ${minLevel}` : null,
+    "    Sockets < 6",
+    "    Rarity Normal Magic Rare",
+    "    LinkedSockets <= 4",
+    `    SocketGroup = ${socketGroup}`,
+    `    Class "${itemClass}"`,
+    "    SetFontSize 45",
+    "    SetBorderColor 200 0 0",
+    `    MinimapIcon 0 Cyan ${shape}`,
+    `    CustomAlertSound "sounds/${sound}.mp3"`,
+  ].filter((a) => a);
+
+  return ["", "", "Show", ...filterLines, "", ""].join("\n");
+};
+
+export const make3LinkFilterB = (socketGroup, sound) => {
+  let shape = "Pentagon";
+
   return `
 Show
     AreaLevel < 45 # < Act 6
@@ -248,7 +275,7 @@ Show
     Rarity Normal Magic Rare
     LinkedSockets <= 4
     SocketGroup = ${socketGroup}
-    Class "${itemClass}"
+    Class "Body Armours" "Boots" "Gloves" "Helmets"
     SetFontSize 45
     SetBorderColor 200 0 0
     MinimapIcon 0 Cyan ${shape}
@@ -256,19 +283,40 @@ Show
 `;
 };
 
-const make4LinkFilter = (socketGroup, sound) => {
+export const make4LinkFilter = (
+  socketGroup,
+  sound,
+  minLevel,
+  maxLevel = 62
+) => {
+  // Blood Aqueduct: 61
+
+  const filterLines = [
+    maxLevel ? `    AreaLevel < ${maxLevel}` : null,
+    minLevel ? `    AreaLevel >= ${minLevel}` : null,
+    "    Sockets < 6",
+    "    Rarity Normal Magic Rare",
+    "    LinkedSockets >= 4",
+    `    SocketGroup = ${socketGroup}`,
+    '    Class "Body Armours" "Boots" "Gloves" "Helmets"',
+    "    SetFontSize 45",
+    "    SetBorderColor 200 0 0",
+    "    MinimapIcon 0 Orange Pentagon",
+    `    CustomAlertSound "sounds/${sound}.mp3"`,
+  ].filter((a) => a);
+
+  return ["", "", "Show", ...filterLines, "", ""].join("\n");
+};
+
+export const makeColourFilter = (sockets) => {
   return `
 Show
   AreaLevel < 62 # Blood Aqueduct: 61
-  Sockets < 6
+  Sockets < 6${sockets}
   Rarity Normal Magic Rare
-  LinkedSockets >= 4
-  SocketGroup = ${socketGroup}
+  LinkedSockets < 3
   Class "Body Armours" "Boots" "Gloves" "Helmets"
-  SetFontSize 45
-  SetBorderColor 200 200 0
-  MinimapIcon 0 Orange Pentagon
-  CustomAlertSound "sounds/${sound}.mp3"
+  SetFontSize 35
 `;
 };
 
@@ -335,10 +383,7 @@ Show
   ].join("\n");
 };
 
-export const makeLevelingFilter = () => {
-  return `
-${topUniquesFilter}
-
+export const levelingCurrencyFilter = `
 Show
   AreaLevel < 65
   Class Currency
@@ -499,5 +544,12 @@ Show
   SetBackgroundColor 255 0 0 255
   SetBorderColor 100 100 100 255
   PlayEffect Red
+`;
+
+export const makeLevelingFilter = () => {
+  return `
+${topUniquesFilter}
+
+${levelingCurrencyFilter}
 `;
 };
