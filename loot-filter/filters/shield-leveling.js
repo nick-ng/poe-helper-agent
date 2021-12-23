@@ -79,5 +79,12 @@ export default function getFilter() {
     makeColourFilter("RR"),
     makeColourFilter("RG"),
     levelingCurrencyFilter,
+    `Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  ItemLevel >= 1
+  BaseType "Rustic Sash"
+  ItemLevel <= 30
+  CustomAlertSound "sounds/rustic sash.mp3"`,
   ].join("\n\n");
 }

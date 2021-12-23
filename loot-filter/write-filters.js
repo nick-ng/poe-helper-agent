@@ -73,7 +73,7 @@ export const writeFilters = (
       writeFileSync(
         resolve(
           outputPath,
-          `a${prefix}${filterName}${suffix}.filter`.toLowerCase()
+          `zno_effect_${prefix}${filterName}${suffix}.filter`.toLowerCase()
         ),
         `${filter}${baseFilter}`.replaceAll("PlayEffect", "#bb# PlayEffect")
       );

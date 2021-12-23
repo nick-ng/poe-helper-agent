@@ -252,7 +252,7 @@ export const make3LinkFilter = (
     maxLevel ? `    AreaLevel < ${maxLevel}` : null,
     minLevel ? `    AreaLevel >= ${minLevel}` : null,
     "    Sockets < 6",
-    "    Rarity Normal Magic Rare",
+    "    Rarity <= Rare",
     "    LinkedSockets <= 4",
     `    SocketGroup = ${socketGroup}`,
     `    Class "${itemClass}"`,
@@ -272,7 +272,7 @@ export const make3LinkFilterB = (socketGroup, sound) => {
 Show
     AreaLevel < 45 # < Act 6
     Sockets < 6
-    Rarity Normal Magic Rare
+    Rarity <= Rare
     LinkedSockets <= 4
     SocketGroup = ${socketGroup}
     Class "Body Armours" "Boots" "Gloves" "Helmets"
@@ -295,7 +295,7 @@ export const make4LinkFilter = (
     maxLevel ? `    AreaLevel < ${maxLevel}` : null,
     minLevel ? `    AreaLevel >= ${minLevel}` : null,
     "    Sockets < 6",
-    "    Rarity Normal Magic Rare",
+    "    Rarity <= Rare",
     "    LinkedSockets >= 4",
     `    SocketGroup = ${socketGroup}`,
     '    Class "Body Armours" "Boots" "Gloves" "Helmets"',
@@ -311,9 +311,9 @@ export const make4LinkFilter = (
 export const makeColourFilter = (sockets) => {
   return `
 Show
-  AreaLevel < 62 # Blood Aqueduct: 61
+  AreaLevel < 30
   Sockets < 6${sockets}
-  Rarity Normal Magic Rare
+  Rarity <= Rare
   LinkedSockets < 3
   Class "Body Armours" "Boots" "Gloves" "Helmets"
   SetFontSize 35
@@ -338,7 +338,7 @@ export const makeAllLinkFilters = () => {
 Show
   AreaLevel < 40
   Sockets < 6
-  Rarity Normal Magic Rare
+  Rarity <= Rare
   LinkedSockets >= 4
   SocketGroup = GGGG GGGB
   Class "Bow"
@@ -384,6 +384,18 @@ Show
 };
 
 export const levelingCurrencyFilter = `
+Show
+  Class "Life Flask"
+  Rarity <= Rare
+  SetBackgroundColor 200 0 0 255
+  Continue
+
+Show
+  Class "Mana Flask"
+  Rarity <= Rare
+  SetBackgroundColor 0 0 200 255
+  Continue
+
 Show
   AreaLevel < 65
   Class Currency
@@ -520,23 +532,6 @@ Show
   CustomAlertSound "sounds/topaz ring.mp3"
 
 Show
-  SetBorderColor 200 0 0
-  SetFontSize 45
-  ItemLevel >= 1
-  BaseType "Rustic Sash"
-  ItemLevel <= 70
-  CustomAlertSound "sounds/rustic sash.mp3"
-
-Show
-  AreaLevel < 35
-  Sockets < 6
-  LinkedSockets < 4
-  Rarity Magic Rare
-  SetFontSize 38
-  SetBackgroundColor 0 0 0 255
-  SetBorderColor 40 40 40
-
-Show
   Rarity = Unique
   Class "Rings"
   SetFontSize 45
@@ -545,6 +540,14 @@ Show
   SetBorderColor 100 100 100 255
   PlayEffect Red
 `;
+
+export const rusticSash = `Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  ItemLevel >= 1
+  BaseType "Rustic Sash"
+  ItemLevel <= 70
+  CustomAlertSound "sounds/rustic sash.mp3"`;
 
 export const makeLevelingFilter = () => {
   return `
