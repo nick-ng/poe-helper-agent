@@ -8,6 +8,7 @@ import fetch from "node-fetch";
 
 import { makeChaosFilter, makeGeneralFilter } from "./loot-filter/index.js";
 import { fetchAndSaveFilters } from "./loot-filter/update-base-filters.js";
+import trimLogs from "./tools/trim-log.js";
 
 const sleep = (ms) =>
   new Promise((resolve, reject) => {
@@ -154,7 +155,11 @@ const updateFilters = async () => {
   makeGeneralFilter(process.env.POE_SETTINGS_PATH, true);
 };
 
+trimLogs();
+
 switch (mode) {
+  case "--trim-logs":
+    break;
   case "--update-filters":
     updateFilters();
     break;
