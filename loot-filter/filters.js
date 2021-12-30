@@ -61,6 +61,7 @@ export const makeBodyFilter = (size) => {
   return `Show
     Class "Body Armour"
     SetBorderColor 255 255 255
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Rarity Rare
@@ -82,6 +83,7 @@ export const makeGlovesFilter = (size) => {
   return `Show
     Class "Gloves"
     SetBorderColor 255 0 0
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Rarity Rare
@@ -101,6 +103,7 @@ export const makeBootsFilter = (size) => {
   return `Show
     Class "Boots"
     SetBorderColor 0 0 255
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Rarity Rare
@@ -120,6 +123,7 @@ export const makeHelmFilter = (size) => {
   return ` Show
     Class "Helm"
     SetBorderColor 0 255 0
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Rarity Rare
@@ -139,6 +143,7 @@ export const makeRingFilter = (size) => {
   return `Show
     Class "Ring"
     SetBorderColor 255 0 255
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Rarity Rare
@@ -158,6 +163,7 @@ export const makeAmuletFilter = (size) => {
   return `Show
     Class "Amulet"
     SetBorderColor 255 255 0
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Rarity Rare
@@ -177,6 +183,7 @@ export const makeBeltFilter = (size) => {
   return `Show
     Class "Belt"
     SetBorderColor 0 255 255
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Rarity Rare
@@ -194,6 +201,7 @@ export const makeWeaponFilter = (size) => {
     return `# Weapon: ${Math.ceil(size)}`;
   }
   return `Show
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Class "Bow"
@@ -209,6 +217,7 @@ export const makeWeaponFilter = (size) => {
     SetFontSize ${Math.ceil(size)}
 
 Show
+    AreaLevel <= 68
     ItemLevel >= 60
     ItemLevel <= 70
     Rarity Rare
