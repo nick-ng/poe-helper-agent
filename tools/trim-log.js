@@ -28,6 +28,7 @@ const IGNORE_REGEX = [
   /\] send patching protocol version \d+$/i,
   /\] precalc\w+$/i,
   /\] Enumerated adapter: /i,
+  /\] Enumerated \w+ for adapter/i,
   /\] Requesting root contents/i,
   /\] Got file list for "/i,
   /\] Requesting folder Redist/i,
