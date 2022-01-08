@@ -30,6 +30,28 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 214 126 0 255
   MinimapIcon 1 Pink Cross
+
+Show # Bleed chance 1h weapons
+  ItemLevel >= 40
+  AreaLevel <= 60
+  Rarity = Rare
+  Class == "One Hand Axes" "One Hand Maces" "One Hand Swords"
+  SetFontSize 45
+  SetBackgroundColor 255 255 0 255
+  SetBorderColor 214 126 0 255
+  SetTextColor 0 0 0 255
+  MinimapIcon 1 Yellow Star
+
+Show # Bleed chance 1h weapons
+  ItemLevel >= 20
+  AreaLevel < 40
+  Rarity = Rare
+  Class == "One Hand Axes" "One Hand Maces" "One Hand Swords"
+  SetFontSize 35
+  SetBackgroundColor 255 255 0 255
+  SetBorderColor 214 126 0 255
+  SetTextColor 0 0 0 255
+  MinimapIcon 1 Yellow Cross
   `;
 
 const weapons = [
