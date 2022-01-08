@@ -31,14 +31,22 @@ Show
   SetBorderColor 214 126 0 255
   MinimapIcon 1 Pink Cross
 
+Show # Bleed chance fast 1h weapons
+  ItemLevel >= 40
+  BaseType == "Driftwood Club" "Spiked Club" "War Hammer" "Tenderizer" "Phantom Mace" "Battle Hammer" "Barbed Club" "Dream Mace" "Bladed Mace" "Siege Axe" "Tomahawk" "Boarding Axe"
+  SetFontSize 45
+  SetBackgroundColor 255 255 0 255
+  SetBorderColor 255 0 0 255
+  SetTextColor 0 0 0 255
+  MinimapIcon 1 Yellow Star
+
 Show # Bleed chance 1h weapons
   ItemLevel >= 40
-  AreaLevel <= 60
+  AreaLevel <= 55
   Rarity = Rare
   Class == "One Hand Axes" "One Hand Maces" "One Hand Swords"
   SetFontSize 45
   SetBackgroundColor 255 255 0 255
-  SetBorderColor 214 126 0 255
   SetTextColor 0 0 0 255
   MinimapIcon 1 Yellow Star
 
@@ -49,7 +57,6 @@ Show # Bleed chance 1h weapons
   Class == "One Hand Axes" "One Hand Maces" "One Hand Swords"
   SetFontSize 35
   SetBackgroundColor 255 255 0 255
-  SetBorderColor 214 126 0 255
   SetTextColor 0 0 0 255
   MinimapIcon 1 Yellow Cross
   `;
@@ -60,8 +67,8 @@ const weapons = [
   [18, "Bastard Sword", true],
   [23, "Poleaxe", true],
   [33, "Double Axe", true],
-  [33, "Gilded Axe", true],
-  [33, "Shadow Axe", false],
+  [33, "Gilded Axe", false],
+  // [33, "Shadow Axe", false],
   // [41, "Jasper Chopper", true],
   // [41, "Dagger Axe", true],
   // [45, "Timber Axe", true],
