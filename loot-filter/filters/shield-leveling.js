@@ -34,6 +34,7 @@ Show
 Show # Bleed chance fast 1h weapons
   ItemLevel >= 40
   BaseType == "Driftwood Club" "Spiked Club" "War Hammer" "Tenderizer" "Phantom Mace" "Battle Hammer" "Barbed Club" "Dream Mace" "Bladed Mace" "Siege Axe" "Tomahawk" "Boarding Axe"
+  Rarity = Rare
   SetFontSize 45
   SetBackgroundColor 255 255 0 255
   SetBorderColor 255 0 0 255

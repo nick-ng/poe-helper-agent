@@ -34,6 +34,140 @@ Hide
   LinkedSockets < 5
 `;
 
+export const nemThree = `
+Show  # Good Large Cluster Jewels
+  EnchantmentPassiveNum = 8
+  ItemLevel >= 50
+  Rarity <= Rare
+  BaseType "Large Cluster Jewel"
+  EnchantmentPassiveNode "Physical Damage" "Chaos Damage" "Minion Damage" "Cold Damage" "Lightning Damage"
+  SetFontSize 45
+  SetTextColor 0 200 0 255
+  SetBackgroundColor 255 255 255 255
+  SetBorderColor 0 200 0 255
+  MinimapIcon 1 Green Pentagon
+  PlayEffect Green
+  PlayAlertSound 2 300
+
+Show
+  MapTier <= 5
+  AreaLevel >= 77
+  Class "Maps"
+
+Show
+  Class "Currency"
+  BaseType "Simple Sextant" "Cartographer's Chisel"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 249 150 25 255
+  SetBorderColor 255 0 0 255
+  MinimapIcon 2 Pink Circle
+  PlayEffect Pink
+  PlayAlertSound 2 300
+
+Show  # %H5 $type->maps $tier->maps_b_t13
+  MapTier >= 14
+  Rarity <= Rare
+  Class "Maps"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 255 255 255 255
+  MinimapIcon 2 Grey Square
+  PlayAlertSound 5 300
+
+Show  # %H5 $type->maps $tier->maps_b_t13
+  MapTier >= 11
+  Rarity <= Rare
+  Class "Maps"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 200 200 200 255
+  MinimapIcon 2 Grey Square
+
+Show
+  Class "Currency"
+  BaseType "Simple Sextant" "Cartographer's Chisel"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 249 150 25 255
+  SetBorderColor 255 0 0 255
+  MinimapIcon 2 Pink Circle
+  PlayEffect Pink
+  PlayAlertSound 2 300
+
+Show  # %H4 $type->currency $tier->t6chrom
+  Class "Currency"
+  BaseType "Noxious Catalyst" "Orb of Alteration" "Orb of Fusing"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 210 178 135 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 2 Grey Circle
+  PlayEffect Grey
+
+Show  # %H5 $type->currency $tier->t5alchemy
+  Class "Currency"
+  BaseType == "Orb of Binding" "Abrasive Catalyst" "Ancient Shard" "Annulment Shard" "Bestiary Orb" "Blessed Orb" "Facetor's Lens" "Gemcutter's Prism" "Harbinger's Shard" "Intrinsic Catalyst" "Orb of Alchemy" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Regal Orb" "Simple Sextant" "Tainted Armourer's Scrap" "Tainted Jeweller's Orb" "Turbulent Catalyst" "Vaal Orb"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 213 159 0 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 2 White Circle
+  PlayEffect White
+  PlayAlertSound 2 300
+
+Show  # %H4 $type->currency $tier->t6chrom
+  Class "Currency"
+  BaseType == "Enkindling Orb" "Glassblower's Bauble" "Imbued Catalyst" "Instilling Orb" "Noxious Catalyst" "Orb of Alteration" "Orb of Fusing"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 210 178 135 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 2 Grey Circle
+  PlayEffect Grey
+  PlayAlertSound 2 300
+
+Show  # %H4 $type->currency $tier->t6chrom
+  Class "Currency"
+  BaseType == "Chromatic Orb"
+  StackSize >= 3
+  SetFontSize 35
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 210 178 135 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 2 Grey Circle
+  PlayEffect Grey
+  PlayAlertSound 2 300
+
+Show  # %H5 $type->currency->splinter->simulacrum $tier->t5
+  Class "Currency"
+  BaseType "Simulacrum Splinter"
+  SetFontSize 45
+  SetTextColor 255 255 255 255
+  SetBackgroundColor 65 20 80
+  SetBorderColor 130 15 255 255
+  MinimapIcon 2 Grey Circle
+
+Show  # %H5 $type->currency->splinter $tier->t2
+  Class "Currency"
+  BaseType == "Timeless Eternal Empire Splinter" "Timeless Karui Splinter"
+  SetFontSize 45
+  SetTextColor 255 255 255 255
+  SetBackgroundColor 65 20 80
+  SetBorderColor 130 15 255 255
+  MinimapIcon 2 Grey Circle
+
+Show  # %H4 $type->currency->splinter $tier->t3
+  Class "Currency"
+  BaseType == "Splinter of Esh" "Splinter of Tul" "Splinter of Uul-Netol" "Splinter of Xoph"
+  SetFontSize 40
+  SetTextColor 255 255 255 255
+  SetBackgroundColor 65 20 80
+  SetBorderColor 115 115 115 255
+  MinimapIcon 2 Grey Circle
+
+`;
+
 export const lowCurrencyHider = `
 Hide
   Class "Currency"

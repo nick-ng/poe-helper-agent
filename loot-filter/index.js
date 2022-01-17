@@ -1,8 +1,14 @@
-import { topUniquesFilter, lowCurrencyHider, otherHider } from "./filters.js";
+import {
+  topUniquesFilter,
+  lowCurrencyHider,
+  nemThree,
+  otherHider,
+} from "./filters.js";
 import getShieldLevelingFilter from "./filters/shield-leveling.js";
 import getTRLevelingFilter from "./filters/tr-leveling.js";
 import getPCLevelingFilter from "./filters/pc-leveling.js";
 // import getEHeistFilter from "./filters/endless-heist.js";
+import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import { getCustomItemsFilter, getUniquesFilter } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
@@ -59,6 +65,17 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     [0, 10]
   );
 
+  writeFilters(
+    [getCustomItemsFilter(), getPSlingerLevelingFilter()]
+      .join("\n\n")
+      .replaceAll(/\n{2,}/g, "\n\n")
+      .replaceAll(/\t/g, "  "),
+    outputDir,
+    { prefix: "00pslinger_", suffix: "" },
+    isDebug,
+    [0, 10]
+  );
+
   // writeFilters(
   //   [getCustomItemsFilter(), getEHeistFilter()]
   //     .join("\n\n")
@@ -71,9 +88,18 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   // );
 
   writeFilters(
-    `${getCustomItemsFilter()}${topUniquesFilter}${lowCurrencyHider}${otherHider}`,
+    [
+      getCustomItemsFilter(),
+      nemThree,
+      topUniquesFilter,
+      lowCurrencyHider,
+      otherHider,
+    ]
+      .join("\n\n")
+      .replaceAll(/\n{2,}/g, "\n\n")
+      .replaceAll(/\t/g, "  "),
     outputDir,
-    { prefix: "trade_", suffix: "_general" },
+    { prefix: "n3_", suffix: "_general" },
     isDebug,
     [20, 9999]
   );
