@@ -22,9 +22,15 @@ const weapons = [
   [18, "Bastard Sword", true],
   [23, "Poleaxe", true],
   [33, "Double Axe", true],
-  [37, "Gilded Axe", false],
-  [41, "Shadow Axe", false],
+  [37, "Gilded Axe", true],
+  [41, "Shadow Axe", true],
   [45, "Jasper Chopper", true],
+  [45, "Dagger Axe", true],
+  [45, "Timber Axe", false],
+  // [49, "Headsman Axe", true],
+  // [52, "Labrys", true],
+  // [55, "Noble Axe", true],
+  // [59, "Abyssal Axe", false],
 ];
 
 function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
@@ -50,10 +56,10 @@ export default function getFilter() {
     }),
 
     // 4-Links
-    make4LinkFilter("GGGR", "3g1r", 1, 45),
-    make4LinkFilter("RRGG", "2r2g", 1, 45),
-    make4LinkFilter("RRBB", "2b2r", 35, 62),
-    make4LinkFilter("RRBG", "2rgb", 35, 62),
+    make4LinkFilter("GGGR", "3g1r", 1, 40),
+    make4LinkFilter("RRGG", "2r2g", 1, 40),
+    make4LinkFilter("RRBB", "2b2r", 1, 62),
+    make4LinkFilter("RRBG", "2rgb", 1, 62),
 
     // 3-Links
     make3LinkFilter("GGR", "Boots", "2g1r boots"),
