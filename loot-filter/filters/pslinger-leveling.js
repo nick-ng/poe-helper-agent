@@ -11,10 +11,20 @@ const custom = `Show
   SetFontSize 45
   ItemLevel >= 1
   BaseType "Rustic Sash"
-  ItemLevel <= 39
+  ItemLevel <= 50
   CustomAlertSound "sounds/rustic sash.mp3"
 
-  `;
+Show # Fast attack speed, low int req wands
+  ItemLevel >= 35
+  AreaLevel <= 70
+  Rarity = Rare
+  BaseType == "Carved Wand" "Engraved Wand" "Pagan Wand" "Crystal Wand"
+  SetFontSize 45
+  SetBackgroundColor 255 255 0 255
+  SetBorderColor 255 0 0 255
+  SetTextColor 0 0 0 255
+  MinimapIcon 1 Yellow Star
+`;
 
 const weapons = [
   [12, "Longsword", true],
@@ -27,7 +37,7 @@ const weapons = [
   [45, "Jasper Chopper", true],
   [45, "Dagger Axe", true],
   [45, "Timber Axe", false],
-  // [49, "Headsman Axe", true],
+  [50, "Headsman Axe", false],
   // [52, "Labrys", true],
   // [55, "Noble Axe", true],
   // [59, "Abyssal Axe", false],
@@ -60,6 +70,7 @@ export default function getFilter() {
     make4LinkFilter("RRGG", "2r2g", 1, 40),
     make4LinkFilter("RRBB", "2b2r", 1, 62),
     make4LinkFilter("RRBG", "2rgb", 1, 62),
+    make4LinkFilter("RBBG", "2rgb", 1, 62),
 
     // 3-Links
     make3LinkFilter("GGR", "Boots", "2g1r boots"),

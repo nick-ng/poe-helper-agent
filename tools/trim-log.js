@@ -8,7 +8,7 @@ import {
 import { join } from "path";
 
 const LOG_FILENAME = "Client.txt";
-const MAX_LOG_LENGTH = 10000;
+const MAX_LOG_LENGTH = 5000;
 const IGNORE_REGEX = [
   /\] \[vulkan\]/i,
   /\] \[job\]/i,
