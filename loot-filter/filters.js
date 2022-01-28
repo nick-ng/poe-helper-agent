@@ -56,7 +56,7 @@ Show
 
 Show
   Class "Currency"
-  BaseType "Simple Sextant" "Cartographer's Chisel"
+  BaseType "Cartographer's Chisel"
   SetFontSize 45
   SetTextColor 0 0 0 255
   SetBackgroundColor 249 150 25 255
@@ -86,7 +86,7 @@ Show  # %H5 $type->maps $tier->maps_b_t13
 
 Show
   Class "Currency"
-  BaseType "Simple Sextant" "Cartographer's Chisel"
+  BaseType "Cartographer's Chisel"
   SetFontSize 45
   SetTextColor 0 0 0 255
   SetBackgroundColor 249 150 25 255
@@ -107,7 +107,7 @@ Show  # %H4 $type->currency $tier->t6chrom
 
 Show  # %H5 $type->currency $tier->t5alchemy
   Class "Currency"
-  BaseType == "Orb of Binding" "Abrasive Catalyst" "Ancient Shard" "Annulment Shard" "Bestiary Orb" "Blessed Orb" "Facetor's Lens" "Gemcutter's Prism" "Harbinger's Shard" "Intrinsic Catalyst" "Orb of Alchemy" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Regal Orb" "Simple Sextant" "Tainted Armourer's Scrap" "Tainted Jeweller's Orb" "Turbulent Catalyst" "Vaal Orb"
+  BaseType == "Orb of Binding" "Abrasive Catalyst" "Ancient Shard" "Annulment Shard" "Bestiary Orb" "Blessed Orb" "Facetor's Lens" "Gemcutter's Prism" "Harbinger's Shard" "Intrinsic Catalyst" "Orb of Alchemy" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Regal Orb" "Turbulent Catalyst" "Vaal Orb"
   SetFontSize 45
   SetTextColor 0 0 0 255
   SetBackgroundColor 213 159 0 255

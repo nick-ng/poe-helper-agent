@@ -9,6 +9,7 @@ import getTRLevelingFilter from "./filters/tr-leveling.js";
 import getPCLevelingFilter from "./filters/pc-leveling.js";
 // import getEHeistFilter from "./filters/endless-heist.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
+import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
 import { getCustomItemsFilter, getUniquesFilter } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
@@ -72,6 +73,17 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
       .replaceAll(/\t/g, "  "),
     outputDir,
     { prefix: "00pslinger_", suffix: "" },
+    isDebug,
+    [0, 10]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), getAurabotLevelingFilter()]
+      .join("\n\n")
+      .replaceAll(/\n{2,}/g, "\n\n")
+      .replaceAll(/\t/g, "  "),
+    outputDir,
+    { prefix: "00aurabot_", suffix: "" },
     isDebug,
     [0, 10]
   );
