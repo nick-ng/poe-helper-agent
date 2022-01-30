@@ -121,6 +121,9 @@ export default function getFilter() {
     // make4LinkFilter("RRBG", "2rgb", 1, 62),
     // make4LinkFilter("RBBG", "2rgb", 1, 62),
     make4LinkFilter("GGGB", "3g1b", 1, 62),
+    make4LinkFilter("BBBG", "3b1g", 1, 62),
+    make4LinkFilter("BBBB", "4b", 1, 62),
+    make4LinkFilter("BBGG", "2b2g", 1, 62),
 
     // 3-Links
     make3LinkFilter("GGR", "Boots", "2g1r boots"),
@@ -137,6 +140,15 @@ export default function getFilter() {
     // make3LinkFilter("BRR", "Gloves", "2r1b", 35, 62),
     // make3LinkFilter("BRR", "Helmets", "2r1b", 35, 62),
     // make3LinkFilter("BRR", "Body Armours", "2r1b", 35, 62),
+    make3LinkFilter("BBG", "Wand", "2b1g wand", 8, 62),
+    make3LinkFilter("BBG", "Boots", "2b1g boots", 8, 62),
+    make3LinkFilter("BBG", "Gloves", "2b1g gloves", 8, 62),
+    make3LinkFilter("BBG", "Helmets", "2b1g helm", 8, 62),
+    make3LinkFilter("BBG", "Body Armours", "2b1g body", 8, 62),
+    make3LinkFilter("BGG", "Boots", "2g1b boots", 8, 62),
+    make3LinkFilter("BGG", "Gloves", "2g1b gloves", 8, 62),
+    make3LinkFilter("BGG", "Helmets", "2g1b helm", 8, 62),
+    make3LinkFilter("BGG", "Body Armours", "2g1b body", 8, 62),
 
     // Other People
     // make3LinkFilter("BBB", "Wand", "ding"),
