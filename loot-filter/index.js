@@ -99,19 +99,30 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   //   [0, 10]
   // );
 
+  // writeFilters(
+  //   [
+  //     getCustomItemsFilter(),
+  //     nemThree,
+  //     // topUniquesFilter,
+  //     lowCurrencyHider,
+  //     otherHider,
+  //   ]
+  //     .join("\n\n")
+  //     .replaceAll(/\n{2,}/g, "\n\n")
+  //     .replaceAll(/\t/g, "  "),
+  //   outputDir,
+  //   { prefix: "nem3_", suffix: "_general" },
+  //   isDebug,
+  //   [20, 9999]
+  // );
+
   writeFilters(
-    [
-      getCustomItemsFilter(),
-      nemThree,
-      topUniquesFilter,
-      lowCurrencyHider,
-      otherHider,
-    ]
+    [getCustomItemsFilter(), lowCurrencyHider, otherHider]
       .join("\n\n")
       .replaceAll(/\n{2,}/g, "\n\n")
       .replaceAll(/\t/g, "  "),
     outputDir,
-    { prefix: "n3_", suffix: "_general" },
+    { prefix: "group_", suffix: "_general" },
     isDebug,
     [20, 9999]
   );

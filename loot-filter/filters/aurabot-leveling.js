@@ -58,25 +58,25 @@ Show  # %HS3 $type->divination $tier->t4
 	PlayAlertSound 16 200
   MinimapIcon 1 Pink Star
 
-Show
-  BaseType "Long Bow" "Royal Bow" "Crude Bow" "Short Bow" "Imperial Bow"
-  Rarity Unique
-  SetFontSize 45
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 255 255 255 255
-  PlayAlertSound 16 200
-  MinimapIcon 1 Pink Star
-
-Show
-  AreaLevel <= 75
-  BaseType == "${bows.join('" "')}"
-  ItemLevel >= 25
-  SetFontSize 45
-  Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  PlayAlertSound 16 200
+#Show
+#  BaseType "Long Bow" "Royal Bow" "Crude Bow" "Short Bow" "Imperial Bow"
+#  Rarity Unique
+#  SetFontSize 45
+#  SetBackgroundColor 255 0 255 255
+#  SetBorderColor 255 255 255 255
+#  PlayAlertSound 16 200
+#  MinimapIcon 1 Pink Star
+#
+#Show
+#  AreaLevel <= 75
+#  BaseType == "${bows.join('" "')}"
+#  ItemLevel >= 25
+#  SetFontSize 45
+#  Rarity <= Rare
+#  SetBackgroundColor 255 0 255 255
+#  SetBorderColor 0 0 0 255
+#  MinimapIcon 1 Pink Cross
+#  PlayAlertSound 16 200
 `;
 
 const weapons = [
@@ -149,6 +149,7 @@ export default function getFilter() {
     make3LinkFilter("BBG", "Gloves", "2b1g gloves", 1, 62),
     make3LinkFilter("BBG", "Helmets", "2b1g helm", 1, 62),
     make3LinkFilter("BBG", "Body Armours", "2b1g body", 1, 62),
+    make3LinkFilter("BGG", "Wand", "2g1b wand", 1, 62),
     make3LinkFilter("BGG", "Boots", "2g1b boots", 1, 62),
     make3LinkFilter("BGG", "Gloves", "2g1b gloves", 1, 62),
     make3LinkFilter("BGG", "Helmets", "2g1b helm", 1, 62),
