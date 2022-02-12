@@ -155,10 +155,9 @@ const updateFilters = async () => {
   makeGeneralFilter(process.env.POE_SETTINGS_PATH, true);
 };
 
-trimLogs();
-
 switch (mode) {
   case "--trim-logs":
+    trimLogs();
     break;
   case "--update-filters":
     updateFilters();
@@ -182,6 +181,7 @@ switch (mode) {
     );
     break;
   default:
+    trimLogs();
     server.listen(PORT, () => {
       console.log(`${new Date()} Website server listening on ${PORT}.`);
       updateFilters();

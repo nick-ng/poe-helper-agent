@@ -58,7 +58,7 @@ export const fetchAndSaveFilters = async () => {
   }
 
   if (process.env.POESESSID) {
-    const res = await fetch("https://www.pathofexile.com/item-filter/AQmW9TM", {
+    const res = await fetch("https://www.pathofexile.com/item-filter/wvPeTJ", {
       credentials: "include",
       headers: {
         Accept:
