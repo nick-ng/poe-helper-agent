@@ -35,20 +35,6 @@ Hide
 `;
 
 export const nemThree = `
-Show  # Good Large Cluster Jewels
-  EnchantmentPassiveNum = 8
-  ItemLevel >= 50
-  Rarity <= Rare
-  BaseType "Large Cluster Jewel"
-  EnchantmentPassiveNode "Physical Damage" "Chaos Damage" "Minion Damage" "Cold Damage" "Lightning Damage"
-  SetFontSize 45
-  SetTextColor 0 200 0 255
-  SetBackgroundColor 255 255 255 255
-  SetBorderColor 0 200 0 255
-  MinimapIcon 1 Green Pentagon
-  PlayEffect Green
-  PlayAlertSound 2 300
-
 Show
   MapTier <= 5
   AreaLevel >= 77

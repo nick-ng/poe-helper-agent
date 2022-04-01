@@ -7,9 +7,11 @@ import {
 import getShieldLevelingFilter from "./filters/shield-leveling.js";
 import getTRLevelingFilter from "./filters/tr-leveling.js";
 import getPCLevelingFilter from "./filters/pc-leveling.js";
+import get2HAxeLevelingFilter from "./filters/2h-axe-leveling.js";
 // import getEHeistFilter from "./filters/endless-heist.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
+import getSpellLevelingFilter from "./filters/spell-leveling.js";
 import { getCustomItemsFilter, getUniquesFilter } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
@@ -84,6 +86,28 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
       .replaceAll(/\t/g, "  "),
     outputDir,
     { prefix: "00aurabot_", suffix: "" },
+    isDebug,
+    [0, 10]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), get2HAxeLevelingFilter()]
+      .join("\n\n")
+      .replaceAll(/\n{2,}/g, "\n\n")
+      .replaceAll(/\t/g, "  "),
+    outputDir,
+    { prefix: "002h-axe_", suffix: "" },
+    isDebug,
+    [0, 10]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), getSpellLevelingFilter()]
+      .join("\n\n")
+      .replaceAll(/\n{2,}/g, "\n\n")
+      .replaceAll(/\t/g, "  "),
+    outputDir,
+    { prefix: "00spell_", suffix: "" },
     isDebug,
     [0, 10]
   );
