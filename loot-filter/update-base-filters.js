@@ -52,40 +52,55 @@ export const fetchAndSaveFilters = async () => {
   console.log("Fetching filters");
   for (const filter of FILTERS) {
     for (const preset of filter.presets) {
+      console.log(`Fetching ${filter.group} ${preset.preset}`);
       const fullUrl = `${filter.url}&preset=${preset.preset}`;
       await fetchAndSaveFilter(fullUrl, `${preset.level}${preset.filename}`);
     }
   }
 
   if (process.env.POESESSID) {
-    const res = await fetch("https://www.pathofexile.com/item-filter/wvPeTJ", {
-      credentials: "include",
-      headers: {
-        Accept:
-          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-GB,en;q=0.5",
-        Cookie: `POESESSID=${process.env.POESESSID}`,
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "same-origin",
-        "Sec-Fetch-User": "?1",
-        Pragma: "no-cache",
-        "Cache-Control": "no-cache",
-      },
-      method: "GET",
-      mode: "cors",
-    });
+    try {
+      console.log("Fetching NeverSink-5uberstr-softcore");
+      const res = await fetch(
+        "https://www.pathofexile.com/item-filter/wvPeTJ",
+        {
+          credentials: "include",
+          headers: {
+            Accept:
+              "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-GB,en;q=0.5",
+            Cookie: `POESESSID=${process.env.POESESSID}`,
+            "Upgrade-Insecure-Requests": "1",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-User": "?1",
+            Pragma: "no-cache",
+            "Cache-Control": "no-cache",
+          },
+          method: "GET",
+          mode: "cors",
+        }
+      );
 
-    const resText = (await res.text())
-      .replace(/^.*<pre.*class="item-filter-view-filter">/s, "")
-      .replace(/<\/pre>.*$/s, "")
-      .replaceAll("&lt;", "<")
-      .replaceAll("&quot;", '"')
-      .replaceAll("&gt;", ">")
-      .replaceAll("&#039;", "'");
+      const resText = (await res.text())
+        .replace(/^.*<pre.*class="item-filter-view-filter">/s, "")
+        .replace(/<\/pre>.*$/s, "")
+        .replaceAll("&lt;", "<")
+        .replaceAll("&quot;", '"')
+        .replaceAll("&gt;", ">")
+        .replaceAll("&#039;", "'");
 
-    writeFileSync(resolve(".", "base-filters", "46custom.filter"), resText);
+      if (resText.includes("!DOCTYPE")) {
+        throw new Error("It looks like your POESESSID has expired");
+      }
+      writeFileSync(resolve(".", "base-filters", "46custom.filter"), resText);
+      console.log("NeverSink-5uberstr-softcore snippet", resText.slice(0, 100));
+    } catch (e) {
+      console.log("Error when fetching NeverSink-5uberstr-softcore");
+      console.log("Your POESESSID may have expired.");
+      console.log(e);
+    }
   }
 
   console.log("Finished fetching filters");

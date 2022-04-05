@@ -39,8 +39,37 @@ Show
 Show
   Rarity < Unique
   Class "Maps"
-  SetBorderColor 255 255 255
+  SetBorderColor 255 255 255 255
   SetTextColor 255 255 255 255
+  Continue
+
+# Influenced and other special maps have different text and borders
+Show
+  Rarity < Unique
+  Class "Maps"
+  HasInfluence Crusader Hunter Redeemer Warlord Shaper Elder
+  SetTextColor 100 255 133 255
+  Continue
+
+Show
+  Rarity < Unique
+  Class "Maps"
+  UberBlightedMap True
+  SetTextColor 255 100 253 255
+  Continue
+
+Show
+  Rarity < Unique
+  Class "Maps"
+  BlightedMap True
+  SetTextColor 255 100 253 255
+  Continue
+
+Show
+  Rarity < Unique
+  Class "Maps"
+  AnyEnchantment True
+  SetBorderColor 138 137 255 255
   Continue
 
 # Map size and sound
