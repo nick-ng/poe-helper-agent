@@ -1,0 +1,104 @@
+# White Maps: 68 - 72
+# Yellow Maps: 73 - 77
+# Red Maps: 78 - 80
+# High Red Maps: 81 - 83
+
+# Map appearance
+Show
+  Rarity < Unique
+  MapTier >= 14
+  Class "Maps"
+  SetBackgroundColor 77 0 117 255
+  Continue
+
+Show
+  Rarity < Unique
+  MapTier >= 11
+  MapTier <= 13
+  Class "Maps"
+  SetBackgroundColor 104 0 0 255
+  Continue
+
+Show
+  Rarity < Unique
+  MapTier >= 6
+  MapTier <= 10
+  Class "Maps"
+  SetBackgroundColor 91 96 0 255
+  Continue
+
+Show
+  Rarity < Unique
+  MapTier >= 1
+  MapTier <= 5
+  Class "Maps"
+  SetBackgroundColor 72 72 72 255
+  SetBorderColor 200 200 200 255
+  Continue
+
+Show
+  Rarity < Unique
+  Class "Maps"
+  SetBorderColor 255 255 255
+  SetTextColor 255 255 255 255
+  Continue
+
+# Map size and sound
+# sound 5 if it's in the same map tier range or higher, otherwise 4
+Show # High Reds
+  Rarity < Unique
+  MapTier >= 14
+  Class "Maps"
+  SetFontSize 45
+  PlayAlertSoundPositional 5 300
+
+Show # Low Reds - high area
+  AreaLevel > 80
+  Rarity < Unique
+  MapTier >= 11
+  MapTier <= 13
+  Class "Maps"
+  SetFontSize 40
+  PlayAlertSoundPositional 4 300
+
+Show # Low Reds - low area
+  Rarity < Unique
+  MapTier >= 11
+  MapTier <= 13
+  Class "Maps"
+  SetFontSize 45
+  PlayAlertSoundPositional 5 300
+
+Show # yellow - high area
+  AreaLevel > 77
+  Rarity < Unique
+  MapTier >= 6
+  MapTier <= 10
+  Class "Maps"
+  SetFontSize 40
+  PlayAlertSoundPositional 4 300
+
+Show # yellow - low area
+  Rarity < Unique
+  MapTier >= 6
+  MapTier <= 10
+  Class "Maps"
+  SetFontSize 45
+  PlayAlertSoundPositional 5 300
+
+Show # white - high area
+  AreaLevel > 72
+  Rarity < Unique
+  MapTier >= 1
+  MapTier <= 5
+  Class "Maps"
+  SetFontSize 40
+  PlayAlertSoundPositional 4 300
+
+Show # white - high area
+  Rarity < Unique
+  MapTier >= 1
+  MapTier <= 5
+  Class "Maps"
+  SetFontSize 45
+  PlayAlertSoundPositional 5 300

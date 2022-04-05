@@ -12,7 +12,7 @@ import get2HAxeLevelingFilter from "./filters/2h-axe-leveling.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
 import getSpellLevelingFilter from "./filters/spell-leveling.js";
-import { getCustomItemsFilter, getUniquesFilter } from "./filter-loader.js";
+import { getCustomItemsFilter } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
 
@@ -33,8 +33,6 @@ export const makeChaosFilter = (
 };
 
 export const makeGeneralFilter = (outputDir, isDebug = false) => {
-  const a = getUniquesFilter();
-
   writeFilters(
     [getCustomItemsFilter(), getShieldLevelingFilter()]
       .join("\n\n")

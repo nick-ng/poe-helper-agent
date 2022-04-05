@@ -28,6 +28,12 @@ export const getCustomItemsFilter = () => {
   return fixComments(readFileSync(customFilterPath));
 };
 
+export const getMapsFilter = () => {
+  const mapsFilterPath = resolve(".", "filter-fragments", "maps.filter");
+
+  return fixComments(readFileSync(mapsFilterPath));
+};
+
 export const getUniquesFilter = () => {
   getUniquesValue();
 };

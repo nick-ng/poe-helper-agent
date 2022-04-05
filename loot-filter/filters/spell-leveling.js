@@ -7,7 +7,8 @@ import {
 
 const custom = `
 Show
-  BaseType "Pagan Wand" "Heathen Wand" "Profane Wand"
+  # BaseType "Pagan Wand" "Heathen Wand" "Profane Wand"
+  BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 45
   SetBackgroundColor 255 0 255 255
   SetBorderColor 255 255 255 255
@@ -21,6 +22,7 @@ export default function getFilter() {
     make4LinkFilter("BBBB", "4b"),
     make4LinkFilter("BBBG", "3b1g"),
     make4LinkFilter("BBBR", "3b1r"),
+    make4LinkFilter("BBGG", "2b2g"),
     // 3-Links
     make3LinkFilter("BBB", "Boots", "3b boots", 1, 50),
     make3LinkFilter("BBB", "Gloves", "3b gloves", 1, 50),

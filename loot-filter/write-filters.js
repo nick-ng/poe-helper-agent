@@ -7,6 +7,7 @@ import {
 import { resolve, dirname, basename } from "path";
 
 import { presets } from "./update-base-filters.js";
+import { getMapsFilter } from "./filter-loader.js";
 
 export const writeFileSync = (filePath, fileContents) => {
   const dirName = dirname(filePath);
@@ -68,14 +69,17 @@ export const writeFilters = (
           outputPath,
           `${prefix}${filterName}${suffix}.filter`.toLowerCase()
         ),
-        `${filter}${baseFilter}`
+        `${getMapsFilter()}${filter}${baseFilter}`
       );
       writeFileSync(
         resolve(
           outputPath,
           `zno_effect_${prefix}${filterName}${suffix}.filter`.toLowerCase()
         ),
-        `${filter}${baseFilter}`.replaceAll("PlayEffect", "#bb# PlayEffect")
+        `${getMapsFilter()}${filter}${baseFilter}`.replaceAll(
+          "PlayEffect",
+          "#bb# PlayEffect"
+        )
       );
     }
     if (!outputPath || isDebug) {
@@ -85,7 +89,7 @@ export const writeFilters = (
           "output-filters",
           `${prefix}${filterName}${suffix}.filter`.toLowerCase()
         ),
-        `${filter}${baseFilter}`
+        `${getMapsFilter()}${filter}${baseFilter}`
       );
     }
   });
