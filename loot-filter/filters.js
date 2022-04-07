@@ -354,8 +354,8 @@ export const make3LinkFilter = (
   socketGroup,
   itemClass,
   sound,
-  minLevel,
-  maxLevel = 45
+  minLevel = 1,
+  maxLevel = 44
 ) => {
   // Level 45: < Act 6
   let shape = "Pentagon";
@@ -415,8 +415,8 @@ Show
 export const make4LinkFilter = (
   socketGroup,
   sound,
-  minLevel,
-  maxLevel = 62
+  minLevel = 1,
+  maxLevel = 44
 ) => {
   // Blood Aqueduct: 61
 

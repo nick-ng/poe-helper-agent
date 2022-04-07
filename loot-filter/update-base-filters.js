@@ -40,8 +40,6 @@ export const presets = _.flatMap(
   (filterGroup) => filterGroup.presets
 );
 
-console.log("presets", presets);
-
 const fetchAndSaveFilter = async (fullUrl, filename) => {
   const res = await fetch(fullUrl);
   const filterText = await res.text();
@@ -49,10 +47,10 @@ const fetchAndSaveFilter = async (fullUrl, filename) => {
 };
 
 export const fetchAndSaveFilters = async () => {
-  console.log("Fetching filters");
+  console.info("Fetching filters");
   for (const filter of FILTERS) {
     for (const preset of filter.presets) {
-      console.log(`Fetching ${filter.group} ${preset.preset}`);
+      console.info(`Fetching ${filter.group} ${preset.preset}`);
       const fullUrl = `${filter.url}&preset=${preset.preset}`;
       await fetchAndSaveFilter(fullUrl, `${preset.level}${preset.filename}`);
     }
@@ -60,7 +58,7 @@ export const fetchAndSaveFilters = async () => {
 
   if (process.env.POESESSID) {
     try {
-      console.log("Fetching NeverSink-5uberstr-softcore");
+      console.info("Fetching NeverSink-5uberstr-softcore");
       const res = await fetch(
         "https://www.pathofexile.com/item-filter/wvPeTJ",
         {
@@ -95,13 +93,13 @@ export const fetchAndSaveFilters = async () => {
         throw new Error("It looks like your POESESSID has expired");
       }
       writeFileSync(resolve(".", "base-filters", "46custom.filter"), resText);
-      console.log("NeverSink-5uberstr-softcore snippet", resText.slice(0, 100));
+      console.info("NeverSink-5uberstr-softcore snippet", resText.slice(0, 32));
     } catch (e) {
-      console.log("Error when fetching NeverSink-5uberstr-softcore");
-      console.log("Your POESESSID may have expired.");
-      console.log(e);
+      console.error("Error when fetching NeverSink-5uberstr-softcore");
+      console.error("Your POESESSID may have expired.");
+      console.error(e);
     }
   }
 
-  console.log("Finished fetching filters");
+  console.info("Finished fetching filters");
 };

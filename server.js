@@ -48,7 +48,7 @@ const rateLimited = () => {
     return false;
   }
 
-  console.log(new Date().toLocaleTimeString(), "limit hit", MS_PER - elapsed);
+  console.info(new Date().toLocaleTimeString(), "limit hit", MS_PER - elapsed);
   return true;
 };
 
@@ -135,7 +135,7 @@ app.post("/", async (req, res, _next) => {
 });
 
 const updateFilters = async () => {
-  console.log("Updating base filters and making chaos filters");
+  console.info("Updating base filters and making chaos filters");
   await fetchAndSaveFilters();
   makeChaosFilter(
     {
@@ -163,7 +163,7 @@ switch (mode) {
     updateFilters();
     break;
   case "--chaos-only":
-    console.log("Making chaos filters");
+    console.info("Making chaos filters");
     makeChaosFilter(
       {
         body: 35,
@@ -183,7 +183,13 @@ switch (mode) {
   default:
     trimLogs();
     server.listen(PORT, () => {
-      console.log(`${new Date()} Website server listening on ${PORT}.`);
+      console.info(`${new Date()} Website server listening on ${PORT}.`);
       updateFilters();
+      setInterval(
+        () => {
+          updateFilters();
+        },
+        7200000 // 2 hours in milliseconds
+      );
     });
 }

@@ -79,7 +79,8 @@ Show # High Reds
   MapTier >= 14
   Class "Maps"
   SetFontSize 45
-  PlayAlertSoundPositional 5 300
+  MinimapIcon 0 Purple Square
+  PlayAlertSound 5 100 # map drop sound
 
 Show # Low Reds - high area
   AreaLevel > 80
@@ -88,7 +89,7 @@ Show # Low Reds - high area
   MapTier <= 13
   Class "Maps"
   SetFontSize 40
-  PlayAlertSoundPositional 4 300
+  PlayAlertSound 4 100 # map drop sound
 
 Show # Low Reds - low area
   Rarity < Unique
@@ -96,7 +97,8 @@ Show # Low Reds - low area
   MapTier <= 13
   Class "Maps"
   SetFontSize 45
-  PlayAlertSoundPositional 5 300
+  MinimapIcon 0 Red Square
+  PlayAlertSound 5 100 # map drop sound
 
 Show # yellow - high area
   AreaLevel > 77
@@ -105,7 +107,7 @@ Show # yellow - high area
   MapTier <= 10
   Class "Maps"
   SetFontSize 40
-  PlayAlertSoundPositional 4 300
+  PlayAlertSound 4 100 # map drop sound
 
 Show # yellow - low area
   Rarity < Unique
@@ -113,7 +115,8 @@ Show # yellow - low area
   MapTier <= 10
   Class "Maps"
   SetFontSize 45
-  PlayAlertSoundPositional 5 300
+  MinimapIcon 0 Yellow Square
+  PlayAlertSound 5 100 # map drop sound
 
 Show # white - high area
   AreaLevel > 72
@@ -122,12 +125,13 @@ Show # white - high area
   MapTier <= 5
   Class "Maps"
   SetFontSize 40
-  PlayAlertSoundPositional 4 300
+  PlayAlertSound 4 100 # map drop sound
 
-Show # white - high area
+Show # white - low area
   Rarity < Unique
   MapTier >= 1
   MapTier <= 5
   Class "Maps"
   SetFontSize 45
-  PlayAlertSoundPositional 5 300
+  MinimapIcon 0 White Square
+  PlayAlertSound 5 100 # map drop sound
