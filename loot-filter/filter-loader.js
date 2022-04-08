@@ -7,12 +7,18 @@ const fixComments = (filterFragment) => {
   return filterFragment.toString().replaceAll("//", "#");
 };
 
+export const getFilterFragment = (fragmentName) => {
+  const actualFragmentName = fragmentName.replace(/\.filter$/, "");
+
+  return `
+${fixComments(
+  readFileSync(resolve(".", "filter-fragments", `${actualFragmentName}.filter`))
+)}
+`;
+};
+
 export const getShieldLevelingFilter = () => {
-  return (
-    fixComments(
-      readFileSync(resolve(".", "filter-fragments", "shield-leveling.filter"))
-    ) + "\n"
-  );
+  return getFilterFragment("shield-leveling");
 };
 
 export const getCustomItemsFilter = () => {
@@ -29,9 +35,7 @@ export const getCustomItemsFilter = () => {
 };
 
 export const getMapsFilter = () => {
-  const mapsFilterPath = resolve(".", "filter-fragments", "maps.filter");
-
-  return fixComments(readFileSync(mapsFilterPath));
+  return getFilterFragment("maps");
 };
 
 export const getUniquesFilter = () => {

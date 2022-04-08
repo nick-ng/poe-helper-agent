@@ -34,17 +34,21 @@ const isWithinLevelRange = (filterPath, levelRange) => {
 };
 
 /**
- * @param {string} filter
+ * @param {string[]} filterFragments
  * @param {string} outputPath
  * @param {boolean} [isDebug=false]
  */
 export const writeFilters = (
-  filter,
+  filterFragments,
   outputPath,
   filenameInfo,
   isDebug = false,
   levelRange = [-9999, 9999]
 ) => {
+  const filter = filterFragments
+    .join("\n\n")
+    .replaceAll(/\n{2,}/g, "\n\n")
+    .replaceAll(/\t/g, "  ");
   const baseFiltersPath = resolve(".", "base-filters");
   const baseFilters = readdirSync(baseFiltersPath);
 

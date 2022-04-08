@@ -12,7 +12,7 @@ import get2HAxeLevelingFilter from "./filters/2h-axe-leveling.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
 import getSpellLevelingFilter from "./filters/spell-leveling.js";
-import { getCustomItemsFilter } from "./filter-loader.js";
+import { getCustomItemsFilter, getFilterFragment } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
 
@@ -24,7 +24,7 @@ export const makeChaosFilter = (
 ) => {
   const chaosFilter = getChaosFilter(itemCounts, chaosOnly);
   writeFilters(
-    chaosFilter,
+    [chaosFilter],
     outputDir,
     { prefix: "05chaos", suffix: "" },
     isDebug,
@@ -34,10 +34,11 @@ export const makeChaosFilter = (
 
 export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
-    [getCustomItemsFilter(), getShieldLevelingFilter()]
-      .join("\n\n")
-      .replaceAll(/\n{2,}/g, "\n\n")
-      .replaceAll(/\t/g, "  "),
+    [
+      getCustomItemsFilter(),
+      getShieldLevelingFilter(),
+      getFilterFragment("ssf-bases"),
+    ],
     outputDir,
     { prefix: "00shield_", suffix: "" },
     isDebug,
@@ -45,10 +46,11 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getTRLevelingFilter()]
-      .join("\n\n")
-      .replaceAll(/\n{2,}/g, "\n\n")
-      .replaceAll(/\t/g, "  "),
+    [
+      getCustomItemsFilter(),
+      getTRLevelingFilter(),
+      getFilterFragment("ssf-bases"),
+    ],
     outputDir,
     { prefix: "00toxic_", suffix: "" },
     isDebug,
@@ -56,10 +58,11 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getPCLevelingFilter()]
-      .join("\n\n")
-      .replaceAll(/\n{2,}/g, "\n\n")
-      .replaceAll(/\t/g, "  "),
+    [
+      getCustomItemsFilter(),
+      getPCLevelingFilter(),
+      getFilterFragment("ssf-bases"),
+    ],
     outputDir,
     { prefix: "00pconc_", suffix: "" },
     isDebug,
@@ -67,10 +70,11 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getPSlingerLevelingFilter()]
-      .join("\n\n")
-      .replaceAll(/\n{2,}/g, "\n\n")
-      .replaceAll(/\t/g, "  "),
+    [
+      getCustomItemsFilter(),
+      getPSlingerLevelingFilter(),
+      getFilterFragment("ssf-bases"),
+    ],
     outputDir,
     { prefix: "00pslinger_", suffix: "" },
     isDebug,
@@ -78,10 +82,11 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getAurabotLevelingFilter()]
-      .join("\n\n")
-      .replaceAll(/\n{2,}/g, "\n\n")
-      .replaceAll(/\t/g, "  "),
+    [
+      getCustomItemsFilter(),
+      getAurabotLevelingFilter(),
+      getFilterFragment("ssf-bases"),
+    ],
     outputDir,
     { prefix: "00aurabot_", suffix: "" },
     isDebug,
@@ -89,10 +94,11 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), get2HAxeLevelingFilter()]
-      .join("\n\n")
-      .replaceAll(/\n{2,}/g, "\n\n")
-      .replaceAll(/\t/g, "  "),
+    [
+      getCustomItemsFilter(),
+      get2HAxeLevelingFilter(),
+      getFilterFragment("ssf-bases"),
+    ],
     outputDir,
     { prefix: "002h-axe_", suffix: "" },
     isDebug,
@@ -100,10 +106,11 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getSpellLevelingFilter()]
-      .join("\n\n")
-      .replaceAll(/\n{2,}/g, "\n\n")
-      .replaceAll(/\t/g, "  "),
+    [
+      getCustomItemsFilter(),
+      getSpellLevelingFilter(),
+      getFilterFragment("ssf-bases"),
+    ],
     outputDir,
     { prefix: "00spell_", suffix: "" },
     isDebug,
@@ -121,28 +128,8 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   //   [0, 10]
   // );
 
-  // writeFilters(
-  //   [
-  //     getCustomItemsFilter(),
-  //     nemThree,
-  //     // topUniquesFilter,
-  //     lowCurrencyHider,
-  //     otherHider,
-  //   ]
-  //     .join("\n\n")
-  //     .replaceAll(/\n{2,}/g, "\n\n")
-  //     .replaceAll(/\t/g, "  "),
-  //   outputDir,
-  //   { prefix: "nem3_", suffix: "_general" },
-  //   isDebug,
-  //   [20, 9999]
-  // );
-
   writeFilters(
-    [getCustomItemsFilter(), lowCurrencyHider, otherHider]
-      .join("\n\n")
-      .replaceAll(/\n{2,}/g, "\n\n")
-      .replaceAll(/\t/g, "  "),
+    [getCustomItemsFilter(), lowCurrencyHider, otherHider],
     outputDir,
     { prefix: "group_", suffix: "_general" },
     isDebug,
@@ -150,7 +137,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    `${getCustomItemsFilter()}${otherHider}`,
+    [getCustomItemsFilter(), getFilterFragment("ssf-bases"), otherHider],
     outputDir,
     { prefix: "ssf_", suffix: "_general" },
     isDebug,
