@@ -1,12 +1,23 @@
+Show
+  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" "Jade Amulet" "Citrine Amulet"
+  Rarity = Normal
+  SetTextColor 0 0 0 255
+  Continue
+
+Show
+  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" "Jade Amulet" "Citrine Amulet"
+  Rarity = Magic
+  SetTextColor 0 0 255 255
+  Continue
+
 Show  # T1 Body armour-evasion hybrid, equal or more armour
   ItemLevel >= 84
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Full Dragonscale"
   SetFontSize 35
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 255 0 0 255
-  SetTextColor 255 0 0 255
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
   MinimapIcon 1 Yellow Star
 
 Show  # T2 Body armour-evasion hybrid, equal or more armour
@@ -14,20 +25,19 @@ Show  # T2 Body armour-evasion hybrid, equal or more armour
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Full Dragonscale" # "General's Brigandine"
-  SetFontSize 25
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetFontSize 30
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
   MinimapIcon 1 Yellow Cross
 
 Show  # T2 Body armour-evasion hybrid, equal or more armour
-  BaseDefencePercentile >= 90
+  ItemLevel <= 81
+  BaseDefencePercentile <= 50
   Rarity <= Rare
   BaseType "Full Dragonscale" # "General's Brigandine"
-  SetFontSize 20
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetFontSize 25
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
 
 Show  # T1 Boots, Gloves, Helmet Armour-evasion hybrid, equal or more armour
   ItemLevel >= 85
@@ -36,7 +46,7 @@ Show  # T1 Boots, Gloves, Helmet Armour-evasion hybrid, equal or more armour
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   BaseEvasion > 10
   SetFontSize 35
-  SetBackgroundColor 255 255 0 255
+  SetBackgroundColor 180 130 0 255
   SetBorderColor 255 0 0 255
   SetTextColor 255 0 0 255
   MinimapIcon 1 Yellow Star
@@ -47,21 +57,20 @@ Show  # T2 Helmet, Gloves, Boot armour-evasion hybrid, equal or more armour
   Rarity <= Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   BaseEvasion > 10
-  SetFontSize 25
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetFontSize 30
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
   MinimapIcon 1 Yellow Cross
 
-Show  # T2 Helmet, Gloves, Boot armour-evasion hybrid, equal or more armour
-  BaseDefencePercentile >= 90
+Show  # T3 Helmet, Gloves, Boot armour-evasion hybrid, equal or more armour
+ItemLevel <= 76
+  BaseDefencePercentile >= 50
   Rarity <= Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   BaseEvasion > 10
-  SetFontSize 20
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetFontSize 25
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
 
 Show # T1 Shield
   ItemLevel >= 86
@@ -69,39 +78,37 @@ Show # T1 Shield
   Rarity <= Rare
   BaseType "Cardinal Round Shield"
   SetFontSize 35
-  SetBackgroundColor 255 255 0 255
+  SetBackgroundColor 180 130 0 255
   SetBorderColor 255 0 0 255
   SetTextColor 255 0 0 255
   MinimapIcon 1 Yellow Star
 
-Show  # T2 Shield
+Show # T2 Shield
   ItemLevel >= 77
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Cardinal Round Shield"
-  SetFontSize 25
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetFontSize 30
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
   MinimapIcon 1 Yellow Cross
 
-Show
-  BaseDefencePercentile >= 90
+Show # T3 Shield
+  ItemLevel <= 77
+  BaseDefencePercentile >= 50
   Rarity <= Rare
   BaseType "Cardinal Round Shield"
-  SetFontSize 20
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetFontSize 25
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
 
 Show
   ItemLevel >= 44
   Rarity <= Rare
-  BaseType "Amethyst Ring"
+  BaseType "Amethyst Ring" "Two-Stone Ring"
   SetFontSize 45
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
   MinimapIcon 1 Yellow Cross
 
 Show
@@ -109,9 +116,8 @@ Show
   Rarity <= Rare
   BaseType "Jade Amulet" "Citrine Amulet"
   SetFontSize 45
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
   MinimapIcon 1 Yellow Cross
 
 Show
@@ -119,7 +125,6 @@ Show
   Rarity <= Rare
   BaseType "Leather Belt"
   SetFontSize 45
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 0 0 0 255
-  SetTextColor 0 0 0 255
+  SetBackgroundColor 180 130 0 255
+  SetBorderColor 255 255 255 255
   MinimapIcon 1 Yellow Cross
