@@ -7,11 +7,12 @@ import {
 
 const custom = `
 Show
-  # BaseType "Pagan Wand" "Heathen Wand" "Profane Wand"
+  ItemLevel >= 64
+  Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
-  SetFontSize 45
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 255 255 255 255
+  SetFontSize 35
+  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 `;
 

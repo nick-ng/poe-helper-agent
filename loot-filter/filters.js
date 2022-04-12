@@ -386,7 +386,8 @@ export const make3LinkFilter = (
     `    SocketGroup = ${socketGroup}`,
     `    Class "${itemClass}"`,
     "    SetFontSize 45",
-    "    SetBorderColor 200 0 0",
+    "    SetBorderColor 200 0 0 255",
+    "    SetBackgroundColor 88 0 87 255",
     `    MinimapIcon 0 Cyan ${shape}`,
     `    CustomAlertSound "sounds/${sound}.mp3"`,
   ].filter((a) => a);
@@ -406,7 +407,8 @@ Show
     SocketGroup = ${socketGroup}
     Class "Body Armours" "Boots" "Gloves" "Helmets"
     SetFontSize 45
-    SetBorderColor 200 0 0
+    SetBorderColor 200 0 0 255
+    SetBackgroundColor 88 0 87 255
     MinimapIcon 0 Cyan ${shape}
     CustomAlertSound "sounds/${sound}.mp3"
 `;
@@ -429,7 +431,8 @@ export const make4LinkFilter = (
     `    SocketGroup = ${socketGroup}`,
     '    Class "Body Armours" "Boots" "Gloves" "Helmets"',
     "    SetFontSize 45",
-    "    SetBorderColor 200 0 0",
+    "    SetBorderColor 200 0 0 255",
+    "    SetBackgroundColor 88 0 87 255",
     "    MinimapIcon 0 Orange Pentagon",
     `    CustomAlertSound "sounds/${sound}.mp3"`,
   ].filter((a) => a);
@@ -438,15 +441,7 @@ export const make4LinkFilter = (
 };
 
 export const makeColourFilter = (sockets) => {
-  return `
-Show
-  AreaLevel < 30
-  Sockets < 6${sockets}
-  Rarity <= Rare
-  LinkedSockets < 3
-  Class "Body Armours" "Boots" "Gloves" "Helmets"
-  SetFontSize 35
-`;
+  return "";
 };
 
 export const makeAllLinkFilters = () => {
