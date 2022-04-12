@@ -101,16 +101,25 @@ Show
   SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross
 
-###########
-## Rings ##
-###########
+###########################
+## Rings, Amulets, Belts ##
+###########################
+Show
+  ItemLevel >= 84
+  Rarity <= Rare
+  BaseType "Amethyst Ring" "Two-Stone Ring" "Jade Amulet" "Citrine Amulet" "Leather Belt"
+  SetFontSize 40
+  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Yellow Cross
+
 Show
   ItemLevel >= 72
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Two-Stone Ring"
+  BaseType "Amethyst Ring" "Two-Stone Ring" "Jade Amulet" "Citrine Amulet" "Leather Belt"
   SetFontSize 35
   SetBackgroundColor 0 75 23 255 # Bases BG Colour
-  SetBorderColor 255 0 0 255
+  SetBorderColor 255 255 0 255
   MinimapIcon 1 Yellow Cross
 
 Show
@@ -119,19 +128,7 @@ Show
   BaseType "Amethyst Ring" "Two-Stone Ring"
   SetFontSize 30
   SetBackgroundColor 0 75 23 255 # Bases BG Colour
-  SetBorderColor 255 255 0 255
-  MinimapIcon 1 Yellow Cross
-
-#############
-## Amulets ##
-#############
-Show
-  ItemLevel >= 72
-  Rarity <= Rare
-  BaseType "Jade Amulet" "Citrine Amulet"
-  SetFontSize 30
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
-  SetBorderColor 255 0 0 255
+  SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross
 
 Show
@@ -140,26 +137,14 @@ Show
   BaseType "Jade Amulet" "Citrine Amulet"
   SetFontSize 30
   SetBackgroundColor 0 75 23 255 # Bases BG Colour
-  SetBorderColor 255 255 0 255
-  MinimapIcon 1 Yellow Cross
-
-###########
-## Belts ##
-###########
-Show
-  ItemLevel >= 72
-  Rarity <= Rare
-  BaseType "Leather Belt"
-  SetFontSize 45
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
-  SetBorderColor 255 0 0 255
+  SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross
 
 Show
   ItemLevel >= 64
   Rarity <= Rare
   BaseType "Leather Belt"
-  SetFontSize 45
+  SetFontSize 30
   SetBackgroundColor 0 75 23 255 # Bases BG Colour
-  SetBorderColor 255 255 0 255
+  SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross
