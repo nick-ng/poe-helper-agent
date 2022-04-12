@@ -1,7 +1,6 @@
 import {
   make3LinkFilter,
   make4LinkFilter,
-  makeColourFilter,
   levelingCurrencyFilter,
 } from "../filters.js";
 

@@ -9,6 +9,7 @@ import fetch from "node-fetch";
 import { makeChaosFilter, makeGeneralFilter } from "./loot-filter/index.js";
 import { fetchAndSaveFilters } from "./loot-filter/update-base-filters.js";
 import trimLogs from "./tools/trim-log.js";
+import getTracker, { getTrackerUrl } from "./poe-racing/get-tracker.js";
 
 const sleep = (ms) =>
   new Promise((resolve, reject) => {
@@ -62,6 +63,14 @@ app.use(cors());
 app.get("/", async (_req, res, _next) => {
   autoClose = false;
   res.sendStatus(200);
+});
+
+app.get("/poe-racing", (_req, res, _next) => {
+  res.send(getTracker());
+});
+
+app.get("/poe-racing-1", (_req, res, _next) => {
+  res.redirect(getTrackerUrl(1));
 });
 
 app.post("/chaos-filter", async (req, res, _next) => {

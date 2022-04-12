@@ -41,7 +41,7 @@ Show
   Rarity <= Rare
   BaseType "Full Dragonscale" "Cardinal Round Shield"
   SetFontSize 40
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Yellow Star
 
@@ -51,7 +51,7 @@ Show
   Rarity <= Rare
   BaseType "Full Dragonscale" "Cardinal Round Shield"
   SetFontSize 35
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Yellow Cross
 
@@ -61,7 +61,7 @@ Show
   Rarity = Rare
   BaseType "Full Dragonscale" "General's Brigandine" "Cardinal Round Shield" "Supreme Spiked Shield"
   SetFontSize 30
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross
 
@@ -75,7 +75,7 @@ Show
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   BaseEvasion > 10
   SetFontSize 40
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Yellow Star
 
@@ -86,7 +86,7 @@ Show
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   BaseEvasion > 10
   SetFontSize 35
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Yellow Cross
 
@@ -97,7 +97,7 @@ Show
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet"
   BaseEvasion > 10
   SetFontSize 30
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross
 
@@ -109,7 +109,7 @@ Show
   Rarity <= Rare
   BaseType "Amethyst Ring" "Two-Stone Ring" "Jade Amulet" "Citrine Amulet" "Leather Belt"
   SetFontSize 40
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Yellow Cross
 
@@ -118,7 +118,7 @@ Show
   Rarity <= Rare
   BaseType "Amethyst Ring" "Two-Stone Ring" "Jade Amulet" "Citrine Amulet" "Leather Belt"
   SetFontSize 35
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Yellow Cross
 
@@ -127,7 +127,7 @@ Show
   Rarity <= Rare
   BaseType "Amethyst Ring" "Two-Stone Ring"
   SetFontSize 30
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross
 
@@ -136,7 +136,7 @@ Show
   Rarity <= Rare
   BaseType "Jade Amulet" "Citrine Amulet"
   SetFontSize 30
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross
 
@@ -145,6 +145,6 @@ Show
   Rarity <= Rare
   BaseType "Leather Belt"
   SetFontSize 30
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255
   MinimapIcon 1 Yellow Cross

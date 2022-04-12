@@ -1,8 +1,6 @@
 import {
   make3LinkFilter,
-  make3LinkFilterB,
   make4LinkFilter,
-  makeColourFilter,
   levelingCurrencyFilter,
 } from "../filters.js";
 
@@ -96,8 +94,6 @@ export default function getFilter() {
     make3LinkFilter("RRG", "Body Armours", "2r1g body"),
 
     // other stuff
-    makeColourFilter("RR"),
-    makeColourFilter("RG"),
     levelingCurrencyFilter,
   ].join("\n\n");
 }
