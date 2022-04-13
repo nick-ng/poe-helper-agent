@@ -10,7 +10,7 @@ Show
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 35
-  SetBackgroundColor 0 75 23 255 # Bases BG Colour
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 `;

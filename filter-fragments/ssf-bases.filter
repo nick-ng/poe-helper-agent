@@ -23,7 +23,7 @@ Show
 Show
   BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" "Jade Amulet" "Citrine Amulet"
   Rarity = Rare
-  SetTextColor 255 255 119 255
+  SetTextColor 255 255 0 255
   Continue
 
 # SetBackgroundColor 84 237 44 255
