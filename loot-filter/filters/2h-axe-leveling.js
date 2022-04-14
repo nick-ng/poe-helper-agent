@@ -3,28 +3,32 @@ import {
   make4LinkFilter,
   levelingCurrencyFilter,
 } from "../filters.js";
+import { getFilterFragment } from "../filter-loader.js";
+
+const amulets = '"Lapis Amulet" "Turquoise Amulet"';
 
 const custom = `Show
   SetBorderColor 200 0 0
   SetFontSize 45
   ItemLevel >= 1
   BaseType "Rustic Sash"
-  ItemLevel <= 67
+  ItemLevel <= 44
   CustomAlertSound "sounds/rustic sash.mp3"
 
 Show
-  BaseType "Vaal Axe" "Despot Axe"
+  BaseType "Despot Axe"
   Rarity <= Rare
-  ItemLevel <= 83
+  ItemLevel >= 83 # T1 Phys %
   PlayAlertSound 16 200
   Continue
 
 Show
   BaseType "Vaal Axe" "Despot Axe"
+  ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
-  SetFontSize 45
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 0 0 0 255
+  SetFontSize 35
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
+  SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 `;
 
@@ -37,7 +41,6 @@ const weapons = [
   [37, "Gilded Axe", true],
   [41, "Shadow Axe", true],
   [45, "Jasper Chopper", true],
-  [45, "Dagger Axe", true],
   [49, "Timber Axe", false],
   [52, "Headsman Axe", false],
   [55, "Labrys", true],
@@ -55,9 +58,9 @@ function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
   return `Show
   AreaLevel <= ${maxAreaLevel}
   BaseType == "${baseType}"
-  SetFontSize ${sound ? 45 : 35}
+  SetFontSize ${sound ? 35 : 30}
   Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
   ${sound ? "PlayAlertSound 16 200" : ""}
@@ -74,20 +77,20 @@ export default function getFilter() {
     }),
 
     // 4-Links
-    make4LinkFilter("GGGR", "3g1r", 1, 55),
-    make4LinkFilter("RRGG", "2r2g", 1, 55),
-    make4LinkFilter("RRRG", "3r1g", 1, 62),
-    make4LinkFilter("RRRR", "4r", 55, 62),
+    // make4LinkFilter("GGGR", "3g1r"),
+    // make4LinkFilter("RRGG", "2r2g"),
+    make4LinkFilter("RRRG", "3r1g"),
+    // make4LinkFilter("RRRR", "4r"),
 
     // 3-Links
-    make3LinkFilter("GGR", "Boots", "2g1r boots"),
-    make3LinkFilter("GGR", "Gloves", "2g1r gloves"),
-    make3LinkFilter("GGR", "Helmets", "2g1r helm"),
-    make3LinkFilter("GGR", "Body Armours", "2g1r body"),
-    make3LinkFilter("RRR", "Boots", "3r boots", 55, 62),
-    make3LinkFilter("RRR", "Gloves", "3r gloves", 55, 62),
-    make3LinkFilter("RRR", "Helmets", "3r helm", 55, 62),
-    make3LinkFilter("RRR", "Body Armours", "3r body", 55, 62),
+    make3LinkFilter("GGR", "Boots", "2g1r boots", 1, 28),
+    make3LinkFilter("GGR", "Gloves", "2g1r gloves", 1, 28),
+    make3LinkFilter("GGR", "Helmets", "2g1r helm", 1, 28),
+    make3LinkFilter("GGR", "Body Armours", "2g1r body", 1, 28),
+    // make3LinkFilter("RRR", "Boots", "3r boots", 55, 44),
+    // make3LinkFilter("RRR", "Gloves", "3r gloves", 55, 44),
+    // make3LinkFilter("RRR", "Helmets", "3r helm", 55, 44),
+    // make3LinkFilter("RRR", "Body Armours", "3r body", 55, 44),
     make3LinkFilter("RRG", "Boots", "2r1g boots"),
     make3LinkFilter("RRG", "Gloves", "2r1g gloves"),
     make3LinkFilter("RRG", "Helmets", "2r1g helm"),
@@ -95,5 +98,6 @@ export default function getFilter() {
 
     // other stuff
     levelingCurrencyFilter,
+    getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
 }

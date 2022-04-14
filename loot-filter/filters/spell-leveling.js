@@ -3,8 +3,20 @@ import {
   make4LinkFilter,
   levelingCurrencyFilter,
 } from "../filters.js";
+import { getFilterFragment } from "../filter-loader.js";
+
+const amulets = '"Jade Amulet" "Citrine Amulet"';
 
 const custom = `
+Show
+  ItemLevel >= 78
+  Rarity <= Rare
+  BaseType "Void Sceptre" "Opal Sceptre"
+  SetFontSize 40
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
+
 Show
   ItemLevel >= 64
   Rarity <= Rare
@@ -24,25 +36,26 @@ export default function getFilter() {
     // make4LinkFilter("BBBR", "3b1r"),
     make4LinkFilter("BBGG", "2b2g"),
     // 3-Links
-    make3LinkFilter("BBB", "Boots", "3b boots", 1, 44),
-    make3LinkFilter("BBB", "Gloves", "3b gloves", 1, 44),
-    make3LinkFilter("BBB", "Helmets", "3b helm", 1, 44),
-    make3LinkFilter("BBB", "Body Armours", "3b body", 1, 44),
-    make3LinkFilter("BBB", "Wand", "3b wand", 1, 44),
-    make3LinkFilter("BBG", "Boots", "2b1g boots", 1, 44),
-    make3LinkFilter("BBG", "Gloves", "2b1g gloves", 1, 44),
-    make3LinkFilter("BBG", "Helmets", "2b1g helm", 1, 44),
-    make3LinkFilter("BBG", "Body Armours", "2b1g body", 1, 44),
-    make3LinkFilter("BBG", "Wand", "2b1g wand", 1, 44),
-    // make3LinkFilter("BBR", "Wand", "2b1r", 1, 44),
-    // make3LinkFilter("BBR", "Boots", "2b1r", 1, 44),
-    // make3LinkFilter("BBR", "Gloves", "2b1r", 1, 44),
-    // make3LinkFilter("BBR", "Helmets", "2b1r", 1, 44),
-    // make3LinkFilter("BBR", "Body Armours", "2b1r", 1, 44),
+    make3LinkFilter("BBB", "Boots", "3b boots"),
+    make3LinkFilter("BBB", "Gloves", "3b gloves"),
+    make3LinkFilter("BBB", "Helmets", "3b helm"),
+    make3LinkFilter("BBB", "Body Armours", "3b body"),
+    make3LinkFilter("BBB", "Wand", "3b wand"),
+    make3LinkFilter("BBG", "Boots", "2b1g boots"),
+    make3LinkFilter("BBG", "Gloves", "2b1g gloves"),
+    make3LinkFilter("BBG", "Helmets", "2b1g helm"),
+    make3LinkFilter("BBG", "Body Armours", "2b1g body"),
+    make3LinkFilter("BBG", "Wand", "2b1g wand"),
+    // make3LinkFilter("BBR", "Wand", "2b1r"),
+    // make3LinkFilter("BBR", "Boots", "2b1r"),
+    // make3LinkFilter("BBR", "Gloves", "2b1r"),
+    // make3LinkFilter("BBR", "Helmets", "2b1r"),
+    // make3LinkFilter("BBR", "Body Armours", "2b1r"),
     // other stuff
     // makeColourFilter("BB"),
     // makeColourFilter("BR"),
     // makeColourFilter("BG"),
     levelingCurrencyFilter,
+    getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
 }

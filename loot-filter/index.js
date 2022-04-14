@@ -34,75 +34,11 @@ export const makeChaosFilter = (
 
 export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
-    [
-      getCustomItemsFilter(),
-      getShieldLevelingFilter(),
-      getFilterFragment("ssf-bases"),
-    ],
-    outputDir,
-    { prefix: "00shield_", suffix: "" },
-    isDebug,
-    [0, 10]
-  );
-
-  writeFilters(
-    [
-      getCustomItemsFilter(),
-      getTRLevelingFilter(),
-      getFilterFragment("ssf-bases"),
-    ],
-    outputDir,
-    { prefix: "00toxic_", suffix: "" },
-    isDebug,
-    [0, 10]
-  );
-
-  writeFilters(
-    [
-      getCustomItemsFilter(),
-      getPCLevelingFilter(),
-      getFilterFragment("ssf-bases"),
-    ],
-    outputDir,
-    { prefix: "00pconc_", suffix: "" },
-    isDebug,
-    [0, 10]
-  );
-
-  writeFilters(
-    [
-      getCustomItemsFilter(),
-      getPSlingerLevelingFilter(),
-      getFilterFragment("ssf-bases"),
-    ],
-    outputDir,
-    { prefix: "00pslinger_", suffix: "" },
-    isDebug,
-    [0, 10]
-  );
-
-  writeFilters(
-    [
-      getCustomItemsFilter(),
-      getAurabotLevelingFilter(),
-      getFilterFragment("ssf-bases"),
-    ],
-    outputDir,
-    { prefix: "00aurabot_", suffix: "" },
-    isDebug,
-    [0, 10]
-  );
-
-  writeFilters(
-    [
-      getCustomItemsFilter(),
-      get2HAxeLevelingFilter(),
-      getFilterFragment("ssf-bases"),
-    ],
+    [getCustomItemsFilter(), get2HAxeLevelingFilter()],
     outputDir,
     { prefix: "002h-axe_", suffix: "" },
     isDebug,
-    [0, 10]
+    [0, 20]
   );
 
   writeFilters(
@@ -114,8 +50,68 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     outputDir,
     { prefix: "00spell_", suffix: "" },
     isDebug,
-    [0, 10]
+    [0, 20]
   );
+
+  // writeFilters(
+  //   [
+  //     getCustomItemsFilter(),
+  //     getShieldLevelingFilter(),
+  //     getFilterFragment("ssf-bases"),
+  //   ],
+  //   outputDir,
+  //   { prefix: "00shield_", suffix: "" },
+  //   isDebug,
+  //   [0, 10]
+  // );
+
+  // writeFilters(
+  //   [
+  //     getCustomItemsFilter(),
+  //     getTRLevelingFilter(),
+  //     getFilterFragment("ssf-bases"),
+  //   ],
+  //   outputDir,
+  //   { prefix: "00toxic_", suffix: "" },
+  //   isDebug,
+  //   [0, 10]
+  // );
+
+  // writeFilters(
+  //   [
+  //     getCustomItemsFilter(),
+  //     getPCLevelingFilter(),
+  //     getFilterFragment("ssf-bases"),
+  //   ],
+  //   outputDir,
+  //   { prefix: "00pconc_", suffix: "" },
+  //   isDebug,
+  //   [0, 10]
+  // );
+
+  // writeFilters(
+  //   [
+  //     getCustomItemsFilter(),
+  //     getPSlingerLevelingFilter(),
+  //     getFilterFragment("ssf-bases"),
+  //   ],
+  //   outputDir,
+  //   { prefix: "00pslinger_", suffix: "" },
+  //   isDebug,
+  //   [0, 10]
+  // );
+
+  // writeFilters(
+  //   [
+  //     getCustomItemsFilter(),
+  //     getAurabotLevelingFilter(),
+  //     getFilterFragment("ssf-bases"),
+  //   ],
+  //   outputDir,
+  //   { prefix: "00aurabot_", suffix: "" },
+  //   isDebug,
+  //   [0, 10]
+  // );
 
   // writeFilters(
   //   [getCustomItemsFilter(), getEHeistFilter()]
@@ -128,19 +124,19 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   //   [0, 10]
   // );
 
-  writeFilters(
-    [getCustomItemsFilter(), lowCurrencyHider, otherHider],
-    outputDir,
-    { prefix: "group_", suffix: "_general" },
-    isDebug,
-    [20, 9999]
-  );
+  // writeFilters(
+  //   [getCustomItemsFilter(), lowCurrencyHider, otherHider],
+  //   outputDir,
+  //   { prefix: "group_", suffix: "_general" },
+  //   isDebug,
+  //   [20, 9999]
+  // );
 
-  writeFilters(
-    [getCustomItemsFilter(), getFilterFragment("ssf-bases"), otherHider],
-    outputDir,
-    { prefix: "ssf_", suffix: "_general" },
-    isDebug,
-    [0, 9999]
-  );
+  // writeFilters(
+  //   [getCustomItemsFilter(), getFilterFragment("ssf-bases"), otherHider],
+  //   outputDir,
+  //   { prefix: "ssf_", suffix: "_general" },
+  //   isDebug,
+  //   [0, 9999]
+  // );
 };

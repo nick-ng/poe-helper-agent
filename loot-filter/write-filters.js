@@ -75,16 +75,16 @@ export const writeFilters = (
         ),
         `${getMapsFilter()}${filter}${baseFilter}`
       );
-      writeFileSync(
-        resolve(
-          outputPath,
-          `zno_effect_${prefix}${filterName}${suffix}.filter`.toLowerCase()
-        ),
-        `${getMapsFilter()}${filter}${baseFilter}`.replaceAll(
-          "PlayEffect",
-          "#bb# PlayEffect"
-        )
-      );
+      // writeFileSync(
+      //   resolve(
+      //     outputPath,
+      //     `zno_effect_${prefix}${filterName}${suffix}.filter`.toLowerCase()
+      //   ),
+      //   `${getMapsFilter()}${filter}${baseFilter}`.replaceAll(
+      //     "PlayEffect",
+      //     "#bb# PlayEffect"
+      //   )
+      // );
     }
     if (!outputPath || isDebug) {
       writeFileSync(

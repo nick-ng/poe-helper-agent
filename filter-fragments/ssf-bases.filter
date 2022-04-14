@@ -9,19 +9,19 @@
 #defaultfontsize: 32 (18-45)
 
 Show
-  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" "Jade Amulet" "Citrine Amulet"
+  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Normal
   SetTextColor 200 200 200 255
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" "Jade Amulet" "Citrine Amulet"
+  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Magic
   SetTextColor 136 136 255 255
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" "Jade Amulet" "Citrine Amulet"
+  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Rare
   SetTextColor 255 255 0 255
   Continue
@@ -53,7 +53,7 @@ Show
   SetFontSize 35
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
-  MinimapIcon 1 Yellow Cross
+  MinimapIcon 1 Yellow Star
 
 Show
   ItemLevel >= 77
@@ -63,7 +63,7 @@ Show
   SetFontSize 30
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255
-  MinimapIcon 1 Yellow Cross
+  MinimapIcon 1 Yellow Star
 
 ###########################
 ## Helmet, Gloves, Boots ##
@@ -88,7 +88,7 @@ Show
   SetFontSize 35
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
-  MinimapIcon 1 Yellow Cross
+  MinimapIcon 1 Yellow Star
 
 Show
   ItemLevel >= 76
@@ -99,7 +99,7 @@ Show
   SetFontSize 30
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255
-  MinimapIcon 1 Yellow Cross
+  MinimapIcon 1 Yellow Star
 
 ###########################
 ## Rings, Amulets, Belts ##
@@ -107,7 +107,7 @@ Show
 Show
   ItemLevel >= 84
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Two-Stone Ring" "Jade Amulet" "Citrine Amulet" "Leather Belt"
+  BaseType "Amethyst Ring" "Two-Stone Ring" ##amulets## "Leather Belt"
   SetFontSize 40
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 0 0 255
@@ -116,7 +116,7 @@ Show
 Show
   ItemLevel >= 72
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Two-Stone Ring" "Jade Amulet" "Citrine Amulet" "Leather Belt"
+  BaseType "Amethyst Ring" "Two-Stone Ring" ##amulets## "Leather Belt"
   SetFontSize 35
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
@@ -134,7 +134,7 @@ Show
 Show
   ItemLevel >= 54
   Rarity <= Rare
-  BaseType "Jade Amulet" "Citrine Amulet"
+  BaseType ##amulets##
   SetFontSize 30
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255

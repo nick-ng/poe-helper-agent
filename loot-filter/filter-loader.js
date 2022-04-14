@@ -7,14 +7,21 @@ const fixComments = (filterFragment) => {
   return filterFragment.toString().replaceAll("//", "#");
 };
 
-export const getFilterFragment = (fragmentName) => {
+export const getFilterFragment = (fragmentName, replacements = {}) => {
   const actualFragmentName = fragmentName.replace(/\.filter$/, "");
+  const rawFilter = fixComments(
+    readFileSync(
+      resolve(".", "filter-fragments", `${actualFragmentName}.filter`)
+    )
+  );
 
-  return `
-${fixComments(
-  readFileSync(resolve(".", "filter-fragments", `${actualFragmentName}.filter`))
-)}
-`;
+  const replacedFilter = Object.entries(replacements).reduce((prev, curr) => {
+    const [original, replacement] = curr;
+
+    return prev.replaceAll(`##${original}##`, replacement);
+  }, rawFilter);
+
+  return ["\n\n", replacedFilter, "\n\n"].join();
 };
 
 export const getShieldLevelingFilter = () => {
