@@ -21,7 +21,7 @@ export const getFilterFragment = (fragmentName, replacements = {}) => {
     return prev.replaceAll(`##${original}##`, replacement);
   }, rawFilter);
 
-  return ["\n\n", replacedFilter, "\n\n"].join();
+  return ["\n\n", replacedFilter, "\n\n"].join("");
 };
 
 export const getShieldLevelingFilter = () => {

@@ -42,11 +42,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [
-      getCustomItemsFilter(),
-      getSpellLevelingFilter(),
-      getFilterFragment("ssf-bases"),
-    ],
+    [getCustomItemsFilter(), getSpellLevelingFilter()],
     outputDir,
     { prefix: "00spell_", suffix: "" },
     isDebug,
