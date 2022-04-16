@@ -194,13 +194,13 @@ switch (mode) {
     server.listen(PORT, () => {
       console.info(`${new Date()} Website server listening on ${PORT}.`);
       updateFilters();
-      let counter = 0;
-      setInterval(
-        () => {
-          updateFilters();
-          console.info(counter++);
-        },
-        7200000 // 2 hours in milliseconds
-      );
+      // let counter = 0;
+      // setInterval(
+      //   () => {
+      //     updateFilters();
+      //     console.info(counter++);
+      //   },
+      //   7200000 // 2 hours in milliseconds
+      // );
     });
 }

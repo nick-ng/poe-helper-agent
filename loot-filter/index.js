@@ -12,6 +12,7 @@ import get2HAxeLevelingFilter from "./filters/2h-axe-leveling.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
 import getSpellLevelingFilter from "./filters/spell-leveling.js";
+import getTrapFilter from "./filters/traps.js";
 import { getCustomItemsFilter, getFilterFragment } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
@@ -45,6 +46,14 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     [getCustomItemsFilter(), getSpellLevelingFilter()],
     outputDir,
     { prefix: "00spell_", suffix: "" },
+    isDebug,
+    [0, 20]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), getTrapFilter()],
+    outputDir,
+    { prefix: "00traps_", suffix: "" },
     isDebug,
     [0, 20]
   );
