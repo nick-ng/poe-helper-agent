@@ -8,6 +8,14 @@ import { getFilterFragment } from "../filter-loader.js";
 const amulets = '"Amber Amulet" "Citrine Amulet"';
 
 const custom = `
+Show
+  Rarity Unique
+  BaseType == "Deerskin Boots"
+  SetFontSize 45
+  PlayAlertSound 3 300
+  PlayEffect Brown
+  MinimapIcon 2 Brown Star
+
 Show  # +1 all Fire Gems recipe
   Quality >= 1
   Class "Gems"
