@@ -98,7 +98,7 @@ const fetchGggFilter = async (
         resolve(".", "base-filters", `${level}${filename}`),
         resText
       );
-      console.info("NeverSink-5uberstr-softcore snippet", resText.slice(0, 32));
+      console.info(`${preset} snippet`, resText.slice(0, 32));
     } catch (e) {
       console.error(`Error when fetching ${preset}`);
       console.error("Your POESESSID may have expired.");
