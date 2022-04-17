@@ -106,7 +106,6 @@ dist
 # Loot filter files
 output-filters/*
 base-filters/*
-!base-filters/default.filter
 filter-fragments/!custom.filter
 filter-fragments/!custom*.filter
 

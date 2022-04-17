@@ -154,6 +154,54 @@ Show  # %H4 $type->currency->splinter $tier->t3
 
 `;
 
+export const oniGoroshiFarm = `
+Show
+  Class "Sword"
+  LinkedSockets = 6
+  SetFontSize 45
+  SetTextColor 0 0 255 255
+  SetBackgroundColor 255 255 255 255
+  SetBorderColor 0 0 255 255
+  MinimapIcon 0 Blue Star
+  PlayEffect Blue
+  PlayAlertSound 6 300
+
+Show
+  Class "Boots"
+  Rarity >= Magic
+  SetFontSize 45
+  SetBorderColor 200 0 200
+  MinimapIcon 0 Purple Pentagon
+
+Show
+  SocketGroup = GG
+  Rarity < Magic
+  Class "Boots" "Gloves" "Helmets"
+  SetFontSize 45
+  SetBorderColor 200 0 0
+  MinimapIcon 0 Orange Pentagon
+
+Show
+  SocketGroup = GG
+  Rarity < Magic
+  Class "Body Armours"
+  SetFontSize 25
+  SetBorderColor 200 0 0
+
+Show  # %D2 $type->rr->amuring $tier->t3
+  Rarity < Magic
+  BaseType "Iron Ring"
+  SetFontSize 45
+  SetBackgroundColor 0 0 0 255
+  SetBorderColor 200 0 0
+
+Show
+  Class "Two Hand"
+  SetFontSize 45
+  SetBorderColor 200 200 0
+  MinimapIcon 0 Yellow Pentagon
+`;
+
 export const lowCurrencyHider = `
 Hide
   Class "Currency"

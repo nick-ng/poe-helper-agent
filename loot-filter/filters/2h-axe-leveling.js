@@ -23,7 +23,7 @@ Show
   Continue
 
 Show
-  BaseType "Vaal Axe" "Despot Axe"
+  BaseType "Ezomyte Axe" "Despot Axe"
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
@@ -34,23 +34,23 @@ Show
 
 const weapons = [
   [12, "Longsword", true],
-  [18, "Woodsplitter", true],
-  [18, "Bastard Sword", true],
+  [18, "Woodsplitter", false],
+  [18, "Bastard Sword", false],
   [23, "Poleaxe", true],
-  [33, "Double Axe", true],
+  [33, "Double Axe", false],
   [37, "Gilded Axe", true],
-  [41, "Shadow Axe", true],
-  [45, "Jasper Chopper", true],
-  [49, "Timber Axe", false],
+  [41, "Shadow Axe", false],
+  [45, "Jasper Chopper", false],
+  [49, "Timber Axe", true],
   [52, "Headsman Axe", false],
-  [55, "Labrys", true],
+  [55, "Labrys", false],
   [58, "Noble Axe", true],
   [60, "Abyssal Axe", false],
   [67, "Karui Chopper", false],
   [67, "Sundering Axe", false],
-  [67, "Ezomyte Axe", false],
+  [67, "Ezomyte Axe", true],
   [67, "Vaal Axe", false],
-  [67, "Despot Axe", false],
+  [67, "Despot Axe", true],
   [67, "Void Axe", false],
 ];
 
@@ -58,7 +58,7 @@ function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
   return `Show
   AreaLevel <= ${maxAreaLevel}
   BaseType == "${baseType}"
-  SetFontSize ${sound ? 35 : 30}
+  SetFontSize ${sound ? 45 : 30}
   Rarity <= Rare
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 0 0 0 255

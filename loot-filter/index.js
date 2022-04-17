@@ -1,9 +1,4 @@
-import {
-  topUniquesFilter,
-  lowCurrencyHider,
-  nemThree,
-  otherHider,
-} from "./filters.js";
+import { oniGoroshiFarm } from "./filters.js";
 import getShieldLevelingFilter from "./filters/shield-leveling.js";
 import getTRLevelingFilter from "./filters/tr-leveling.js";
 import getPCLevelingFilter from "./filters/pc-leveling.js";
@@ -29,7 +24,7 @@ export const makeChaosFilter = (
     outputDir,
     { prefix: "05chaos", suffix: "" },
     isDebug,
-    [0, 10]
+    [5, 10]
   );
 };
 
@@ -39,7 +34,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     outputDir,
     { prefix: "002h-axe_", suffix: "" },
     isDebug,
-    [0, 20]
+    [5, 20]
   );
 
   writeFilters(
@@ -47,7 +42,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     outputDir,
     { prefix: "00spell_", suffix: "" },
     isDebug,
-    [0, 20]
+    [5, 20]
   );
 
   writeFilters(
@@ -55,7 +50,15 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     outputDir,
     { prefix: "00traps_", suffix: "" },
     isDebug,
-    [0, 20]
+    [5, 20]
+  );
+
+  writeFilters(
+    [oniGoroshiFarm],
+    outputDir,
+    { prefix: "zzz_oni_farm_", suffix: "" },
+    isDebug,
+    [0, 2]
   );
 
   // writeFilters(

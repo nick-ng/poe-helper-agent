@@ -3,6 +3,8 @@ dotenv.config();
 import fetch from "node-fetch";
 import _ from "lodash";
 import { resolve } from "path";
+import { rmdirSync } from "fs";
+
 import { writeFileSync } from "./write-filters.js";
 
 /**
@@ -21,6 +23,11 @@ const FILTER_BLAST = [
       // { filename: "nsub.filter", preset: "UBER-STRICT", level: 45 },
       // { filename: "nsup.filter", preset: "UBER-PLUS-STRICT", level: 50 },
     ],
+  },
+  {
+    group: "default",
+    url: "https://filterblast.xyz/api/FilterFile/?filter=Default",
+    presets: [{ filename: "default.filter", preset: "", level: 1 }],
   },
 ];
 
@@ -104,11 +111,14 @@ const fetchGggFilter = async (
 };
 
 export const fetchAndSaveFilters = async () => {
+  console.info("Removing old filters");
+  rmdirSync(resolve(".", "base-filters"), { recursive: true });
   console.info("Fetching filters");
   for (const filter of FILTER_BLAST) {
     for (const preset of filter.presets) {
       console.info(`Fetching ${filter.group} ${preset.preset}`);
-      const fullUrl = `${filter.url}&preset=${preset.preset}`;
+      const presetQuery = preset.preset ? `&preset=${preset.preset}` : "";
+      const fullUrl = `${filter.url}${presetQuery}`;
       await fetchAndSaveFilter(fullUrl, `${preset.level}${preset.filename}`);
     }
   }
