@@ -16,14 +16,14 @@ const custom = `Show
   CustomAlertSound "sounds/rustic sash.mp3"
 
 Show
-  BaseType "Despot Axe"
+  BaseType "Vaal Axe" "Despot Axe"
   Rarity <= Rare
   ItemLevel >= 83 # T1 Phys %
   PlayAlertSound 16 200
   Continue
 
 Show
-  BaseType "Ezomyte Axe" "Despot Axe"
+  BaseType "Vaal Axe" "Despot Axe"
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
