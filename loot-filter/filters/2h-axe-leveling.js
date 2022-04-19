@@ -30,6 +30,15 @@ Show
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
+
+Show
+  BaseType "Ezomyte Axe" "Sundering Axe" "Void Axe"
+  ItemLevel >= 73 # T2 Phys %
+  Rarity = Rare
+  SetFontSize 35
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
+  SetBorderColor 255 255 0 255
+  MinimapIcon 1 Pink Star
 `;
 
 const weapons = [

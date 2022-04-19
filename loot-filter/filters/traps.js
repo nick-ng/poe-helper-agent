@@ -10,7 +10,7 @@ const amulets = '"Amber Amulet" "Citrine Amulet"';
 const custom = `
 Show
   Rarity Unique
-  BaseType == "Deerskin Boots"
+  BaseType == "Deerskin Boots" "Crimson Jewel"
   SetFontSize 45
   PlayAlertSound 3 300
   PlayEffect Brown
