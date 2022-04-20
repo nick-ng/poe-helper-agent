@@ -32,7 +32,7 @@ Show
   MinimapIcon 1 Pink Star
 
 Show
-  BaseType "Ezomyte Axe" "Sundering Axe" "Void Axe"
+  BaseType "Ezomyte Axe" "Sundering Axe"
   ItemLevel >= 73 # T2 Phys %
   Rarity = Rare
   SetFontSize 35

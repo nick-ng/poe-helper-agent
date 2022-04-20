@@ -2,7 +2,8 @@ import { oniGoroshiFarm } from "./filters.js";
 import getShieldLevelingFilter from "./filters/shield-leveling.js";
 import getTRLevelingFilter from "./filters/tr-leveling.js";
 import getPCLevelingFilter from "./filters/pc-leveling.js";
-import get2HAxeLevelingFilter from "./filters/2h-axe-leveling.js";
+import get2HAxeFilter from "./filters/2h-axe.js";
+import get2HMaceFilter from "./filters/2h-mace.js";
 // import getEHeistFilter from "./filters/endless-heist.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
@@ -30,9 +31,17 @@ export const makeChaosFilter = (
 
 export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
-    [getCustomItemsFilter(), get2HAxeLevelingFilter()],
+    [getCustomItemsFilter(), get2HAxeFilter()],
     outputDir,
     { prefix: "002h-axe_", suffix: "" },
+    isDebug,
+    [5, 20]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), get2HMaceFilter()],
+    outputDir,
+    { prefix: "002h-mace_", suffix: "" },
     isDebug,
     [5, 20]
   );

@@ -74,22 +74,24 @@ Show
 
 # Map size and sound
 # sound 5 if it's in the same map tier range or higher, otherwise 4
+# High area = same tier of maps (except high reds)
 Show # High Reds
   Rarity < Unique
   MapTier >= 14
   Class "Maps"
   SetFontSize 45
-  MinimapIcon 0 Purple Square
+  MinimapIcon 2 Purple Square
   PlayAlertSound 5 100 # map drop sound
 
 Show # Low Reds - high area
-  AreaLevel > 80
+  AreaLevel >= 78
   Rarity < Unique
   MapTier >= 11
   MapTier <= 13
   Class "Maps"
   SetFontSize 40
-  PlayAlertSound 4 100 # map drop sound
+  MinimapIcon 0 Red Square
+  PlayAlertSound 16 100 # map drop sound
 
 Show # Low Reds - low area
   Rarity < Unique
@@ -97,17 +99,18 @@ Show # Low Reds - low area
   MapTier <= 13
   Class "Maps"
   SetFontSize 45
-  MinimapIcon 0 Red Square
+  MinimapIcon 2 Red Square
   PlayAlertSound 5 100 # map drop sound
 
 Show # yellow - high area
-  AreaLevel > 77
+  AreaLevel >= 73
   Rarity < Unique
   MapTier >= 6
   MapTier <= 10
   Class "Maps"
   SetFontSize 40
-  PlayAlertSound 4 100 # map drop sound
+  MinimapIcon 0 Yellow Square
+  PlayAlertSound 16 100 # map drop sound
 
 Show # yellow - low area
   Rarity < Unique
@@ -115,17 +118,18 @@ Show # yellow - low area
   MapTier <= 10
   Class "Maps"
   SetFontSize 45
-  MinimapIcon 0 Yellow Square
+  MinimapIcon 2 Yellow Square
   PlayAlertSound 5 100 # map drop sound
 
 Show # white - high area
-  AreaLevel > 72
+  AreaLevel >= 68
   Rarity < Unique
   MapTier >= 1
   MapTier <= 5
   Class "Maps"
   SetFontSize 40
-  PlayAlertSound 4 100 # map drop sound
+  MinimapIcon 0 White Square
+  PlayAlertSound 16 100 # map drop sound
 
 Show # white - low area
   Rarity < Unique
@@ -133,5 +137,5 @@ Show # white - low area
   MapTier <= 5
   Class "Maps"
   SetFontSize 45
-  MinimapIcon 0 White Square
+  MinimapIcon 2 White Square
   PlayAlertSound 5 100 # map drop sound
