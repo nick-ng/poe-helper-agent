@@ -65,7 +65,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
     [oniGoroshiFarm],
     outputDir,
-    { prefix: "zzz_oni_farm_", suffix: "" },
+    { prefix: "yy_oni_farm_", suffix: "" },
     isDebug,
     [0, 2]
   );
