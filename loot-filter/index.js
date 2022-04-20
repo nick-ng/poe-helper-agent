@@ -7,7 +7,7 @@ import get2HMaceFilter from "./filters/2h-mace.js";
 // import getEHeistFilter from "./filters/endless-heist.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
-import getSpellLevelingFilter from "./filters/spell-leveling.js";
+import getSpellFilter from "./filters/spell.js";
 import getTrapFilter from "./filters/traps.js";
 import { getCustomItemsFilter, getFilterFragment } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
@@ -47,7 +47,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getSpellLevelingFilter()],
+    [getCustomItemsFilter(), getSpellFilter()],
     outputDir,
     { prefix: "00spell_", suffix: "" },
     isDebug,
