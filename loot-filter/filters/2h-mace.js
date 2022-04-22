@@ -16,6 +16,12 @@ const custom = `Show
   CustomAlertSound "sounds/rustic sash.mp3"
 
 Show
+  AreaLevel < 20
+  BaseType "Lapis Amulet" "Turquoise Amulet"
+  SetFontSize 45
+  PlayAlertSound 16 200
+
+Show
   BaseType "Piledriver"
   Rarity <= Rare
   ItemLevel >= 83 # T1 Phys %
