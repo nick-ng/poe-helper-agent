@@ -34,126 +34,6 @@ Hide
   LinkedSockets < 5
 `;
 
-export const nemThree = `
-Show
-  MapTier <= 5
-  AreaLevel >= 77
-  Class "Maps"
-
-Show
-  Class "Currency"
-  BaseType "Cartographer's Chisel"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 249 150 25 255
-  SetBorderColor 255 0 0 255
-  MinimapIcon 2 Pink Circle
-  PlayEffect Pink
-  PlayAlertSound 2 300
-
-Show  # %H5 $type->maps $tier->maps_b_t13
-  MapTier >= 14
-  Rarity <= Rare
-  Class "Maps"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 255 255 255 255
-  MinimapIcon 2 Grey Square
-  PlayAlertSound 5 300
-
-Show  # %H5 $type->maps $tier->maps_b_t13
-  MapTier >= 11
-  Rarity <= Rare
-  Class "Maps"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 200 200 200 255
-  MinimapIcon 2 Grey Square
-
-Show
-  Class "Currency"
-  BaseType "Cartographer's Chisel"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 249 150 25 255
-  SetBorderColor 255 0 0 255
-  MinimapIcon 2 Pink Circle
-  PlayEffect Pink
-  PlayAlertSound 2 300
-
-Show  # %H4 $type->currency $tier->t6chrom
-  Class "Currency"
-  BaseType "Noxious Catalyst" "Orb of Alteration" "Orb of Fusing"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 210 178 135 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 2 Grey Circle
-  PlayEffect Grey
-
-Show  # %H5 $type->currency $tier->t5alchemy
-  Class "Currency"
-  BaseType == "Orb of Binding" "Abrasive Catalyst" "Ancient Shard" "Annulment Shard" "Bestiary Orb" "Blessed Orb" "Facetor's Lens" "Gemcutter's Prism" "Harbinger's Shard" "Intrinsic Catalyst" "Orb of Alchemy" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Regal Orb" "Turbulent Catalyst" "Vaal Orb"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 213 159 0 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 2 White Circle
-  PlayEffect White
-  PlayAlertSound 2 300
-
-Show  # %H4 $type->currency $tier->t6chrom
-  Class "Currency"
-  BaseType == "Enkindling Orb" "Glassblower's Bauble" "Imbued Catalyst" "Instilling Orb" "Noxious Catalyst" "Orb of Alteration" "Orb of Fusing"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 210 178 135 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 2 Grey Circle
-  PlayEffect Grey
-  PlayAlertSound 2 300
-
-Show  # %H4 $type->currency $tier->t6chrom
-  Class "Currency"
-  BaseType == "Chromatic Orb"
-  StackSize >= 3
-  SetFontSize 35
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 210 178 135 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 2 Grey Circle
-  PlayEffect Grey
-  PlayAlertSound 2 300
-
-Show  # %H5 $type->currency->splinter->simulacrum $tier->t5
-  Class "Currency"
-  BaseType "Simulacrum Splinter"
-  SetFontSize 45
-  SetTextColor 255 255 255 255
-  SetBackgroundColor 65 20 80
-  SetBorderColor 130 15 255 255
-  MinimapIcon 2 Grey Circle
-
-Show  # %H5 $type->currency->splinter $tier->t2
-  Class "Currency"
-  BaseType == "Timeless Eternal Empire Splinter" "Timeless Karui Splinter"
-  SetFontSize 45
-  SetTextColor 255 255 255 255
-  SetBackgroundColor 65 20 80
-  SetBorderColor 130 15 255 255
-  MinimapIcon 2 Grey Circle
-
-Show  # %H4 $type->currency->splinter $tier->t3
-  Class "Currency"
-  BaseType == "Splinter of Esh" "Splinter of Tul" "Splinter of Uul-Netol" "Splinter of Xoph"
-  SetFontSize 40
-  SetTextColor 255 255 255 255
-  SetBackgroundColor 65 20 80
-  SetBorderColor 115 115 115 255
-  MinimapIcon 2 Grey Circle
-
-`;
-
 export const oniGoroshiFarm = `
 Show
   Class "Sword"
@@ -569,6 +449,10 @@ Show
   Continue
 
 Show
+  AreaLevel = 1
+  SetFontSize 45
+
+Show
   AreaLevel < 65
   Class Currency
   BaseType "Muttering Essence of" "Wailing Essence of" "Weeping Essence of" "Whispering Essence of"
@@ -581,14 +465,23 @@ Show
   MinimapIcon 2 White Circle
 
 Show
+  BaseType "Scroll of Wisdom"
   Class Currency
   SetTextColor 210 178 135
   SetBackgroundColor 0 0 0 255
   SetBorderColor 213 159 100 200
   SetFontSize 42
-  BaseType "Scroll of Wisdom"
   AreaLevel <= 11
   CustomAlertSound "sounds/wisdom.mp3"
+
+Show
+  BaseType "Scroll of Wisdom"
+  Class Currency
+  StackSize >= 6
+  SetTextColor 210 178 135
+  SetBackgroundColor 0 0 0 255
+  SetBorderColor 213 159 100 200
+  SetFontSize 35
 
 Show
   Class Currency
@@ -605,7 +498,7 @@ Show
 Show
   Class Currency
   StackSize >= 4
-  AreaLevel <= 67
+  AreaLevel < 44
   SetTextColor 0 0 0
   SetBackgroundColor 100 200 200
   SetBorderColor 0 0 0
@@ -624,7 +517,7 @@ Show
   PlayEffect Grey
 
 Show
-  AreaLevel <= 61
+  AreaLevel < 44
   Class Currency
   BaseType "Blacksmith's Whetstone"
   SetFontSize 45
@@ -636,7 +529,7 @@ Show
   CustomAlertSound "sounds/whetstone.mp3"
 
 Show
-  AreaLevel <= 61
+  AreaLevel < 44
   Class Currency
   BaseType "Orb of Transmutation"
   SetFontSize 45
@@ -648,7 +541,7 @@ Show
   CustomAlertSound "sounds/transmute.mp3"
 
 Show
-  AreaLevel <= 61
+  AreaLevel < 44
   Class Currency
   BaseType "Orb of Alteration"
   SetFontSize 45
@@ -674,7 +567,6 @@ Show
 Show
   SetBorderColor 200 0 0
   SetFontSize 45
-  ItemLevel >= 1
   BaseType "Iron Ring"
   ItemLevel <= 20
   CustomAlertSound "sounds/iron.mp3"
@@ -682,7 +574,6 @@ Show
 Show
   SetBorderColor 200 0 0
   SetFontSize 45
-  ItemLevel >= 1
   BaseType "Ruby Ring"
   ItemLevel <= 20
   CustomAlertSound "sounds/ruby ring.mp3"
@@ -690,7 +581,6 @@ Show
 Show
   SetBorderColor 200 0 0
   SetFontSize 45
-  ItemLevel >= 1
   BaseType "Sapphire Ring"
   ItemLevel <= 20
   CustomAlertSound "sounds/sapphire ring.mp3"
@@ -698,7 +588,6 @@ Show
 Show
   SetBorderColor 200 0 0
   SetFontSize 45
-  ItemLevel >= 1
   BaseType "Topaz Ring"
   ItemLevel <= 20
   CustomAlertSound "sounds/topaz ring.mp3"

@@ -104,7 +104,7 @@ Show
 Show
   ItemLevel >= 84
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Two-Stone Ring" ##amulets## "Leather Belt"
+  BaseType "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 40
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 0 0 255
@@ -113,7 +113,7 @@ Show
 Show
   ItemLevel >= 72
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Two-Stone Ring" ##amulets## "Leather Belt"
+  BaseType "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 35
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255

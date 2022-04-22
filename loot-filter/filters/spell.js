@@ -9,6 +9,23 @@ const amulets = '"Jade Amulet" "Citrine Amulet"';
 
 const custom = `
 Show
+  AreaLevel < 20
+  BaseType "Jade Amulet" "Citrine Amulet"
+  SetFontSize 45
+  PlayAlertSound 16 200
+
+Show
+  Class Currency
+  BaseType "of Fear"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBorderColor 0 0 0
+  SetBackgroundColor 213 159 0 255
+  PlayAlertSound 2 50
+  PlayEffect White
+  MinimapIcon 2 White Circle
+
+Show
   ItemLevel >= 78
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
