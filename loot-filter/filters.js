@@ -435,7 +435,64 @@ Show
   ].join("\n");
 };
 
+export const currencyFilter = `
+Show
+	Class "Currency"
+	BaseType == "Annulment Shard" "Orb of Binding"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 210 178 135 255
+	SetBorderColor 0 0 0 255
+
+Show
+	Class "Currency"
+	BaseType == "Orb of Alteration"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 210 178 135 255
+	SetBorderColor 0 0 0 255
+
+Show
+	Class "Currency"
+	BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
+  StackSize >= 4
+	SetFontSize 45
+	SetTextColor 190 178 135 255
+	SetBackgroundColor 0 0 0 255
+	SetBorderColor 190 178 135 255
+
+Show
+	Class "Currency"
+	BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
+	SetFontSize 35
+	SetTextColor 190 178 135 255
+	SetBackgroundColor 0 0 0 255
+	SetBorderColor 190 178 135 255
+
+Show
+	Class "Divination"
+	BaseType == "Loyalty" "Rain of Chaos"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 39 141 192 255
+	SetBorderColor 0 0 0 255
+	MinimapIcon 2 White Triangle
+	PlayEffect White
+	PlayAlertSound 2 300
+`;
+
 export const levelingCurrencyFilter = `
+Show
+  BaseType == "Quicksilver Flask"
+  AreaLevel <= 15
+  SetFontSize 45
+  SetTextColor 255 255 255 255
+  SetBorderColor 255 255 255 255
+  SetBackgroundColor 0 203 221 255
+  PlayEffect Green
+  MinimapIcon 2 Green Circle
+  PlayAlertSound 5 200
+
 Show
   Class "Life Flask"
   Rarity <= Rare
@@ -600,6 +657,8 @@ Show
   SetBackgroundColor 255 0 0 255
   SetBorderColor 100 100 100 255
   PlayEffect Red
+
+${currencyFilter}
 `;
 
 export const rusticSash = `Show

@@ -159,3 +159,42 @@ Show
   MinimapIcon 0 Blue Star
   PlayEffect Blue
   PlayAlertSound 6 200
+
+####################
+## Utility Flasks ##
+####################
+Show
+  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
+  ItemLevel >= 85
+  SetFontSize 45
+  Rarity <= Magic
+  SetTextColor 255 255 255 255
+  SetBorderColor 255 0 0 255
+  SetBackgroundColor 0 203 221 255
+
+Show
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" # "Diamond Flask"
+  ItemLevel >= 84
+  SetFontSize 45
+  Rarity <= Magic
+  SetTextColor 255 255 255 255
+  SetBorderColor 255 255 0 255
+  SetBackgroundColor 0 203 221 255
+
+Show
+  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" # "Diamond Flask"
+  ItemLevel >= 65
+  SetFontSize 35
+  Rarity <= Magic
+  SetTextColor 255 255 255 255
+  SetBorderColor 255 255 255 255
+  SetBackgroundColor 0 203 221 255
+
+Show
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" # "Diamond Flask"
+  ItemLevel >= 63
+  SetFontSize 30
+  Rarity <= Magic
+  SetTextColor 255 255 255 255
+  SetBorderColor 0 0 0 255
+  SetBackgroundColor 0 203 221 255
