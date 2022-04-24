@@ -171,7 +171,7 @@ Show
   SetBackgroundColor 0 203 221 255
 
 Show
-  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" # "Diamond Flask"
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
   ItemLevel >= 84
   SetFontSize 45
   Rarity <= Magic
@@ -180,7 +180,7 @@ Show
   SetBackgroundColor 0 203 221 255
 
 Show
-  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" # "Diamond Flask"
+  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
   ItemLevel >= 65
   SetFontSize 35
   Rarity <= Magic
@@ -189,7 +189,7 @@ Show
   SetBackgroundColor 0 203 221 255
 
 Show
-  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" # "Diamond Flask"
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
   ItemLevel >= 63
   SetFontSize 30
   Rarity <= Magic

@@ -1,3 +1,241 @@
+export const currencyFilter = `
+Show
+	Class "Currency"
+	BaseType == "Annulment Shard" "Orb of Binding"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 210 178 135 255
+	SetBorderColor 0 0 0 255
+
+Show
+	Class "Currency"
+	BaseType == "Orb of Alteration"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 210 178 135 255
+	SetBorderColor 0 0 0 255
+
+Show
+	Class "Currency"
+	BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
+  StackSize >= 4
+	SetFontSize 45
+	SetTextColor 190 178 135 255
+	SetBackgroundColor 0 0 0 255
+	SetBorderColor 190 178 135 255
+
+Show
+	Class "Currency"
+	BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
+	SetFontSize 35
+	SetTextColor 190 178 135 255
+	SetBackgroundColor 0 0 0 255
+	SetBorderColor 190 178 135 255
+
+Show
+	StackSize >= 5
+	Class "Currency"
+	BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 213 159 0 255
+	SetBorderColor 0 0 0 255
+	MinimapIcon 2 White Circle
+	PlayEffect White
+	PlayAlertSound 2 300
+
+Show
+	Class "Divination"
+	BaseType == "Loyalty" "Rain of Chaos"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 39 141 192 255
+	SetBorderColor 0 0 0 255
+	MinimapIcon 2 White Triangle
+	PlayEffect White
+	PlayAlertSound 2 300
+`;
+
+export const levelingCurrencyFilter = `
+Show
+  BaseType == "Quicksilver Flask"
+  AreaLevel <= 15
+  SetFontSize 45
+  SetTextColor 255 255 255 255
+  SetBorderColor 255 255 255 255
+  SetBackgroundColor 0 203 221 255
+  PlayEffect Green
+  MinimapIcon 2 Green Circle
+  PlayAlertSound 5 200
+
+Show
+  Class "Life Flask"
+  Rarity <= Rare
+  SetBackgroundColor 200 0 0 255
+  Continue
+
+Show
+  Class "Mana Flask"
+  Rarity <= Rare
+  SetBackgroundColor 0 0 200 255
+  Continue
+
+Show
+  AreaLevel = 1
+  SetFontSize 45
+
+Show
+  AreaLevel < 65
+  Class Currency
+  BaseType "Muttering Essence of" "Wailing Essence of" "Weeping Essence of" "Whispering Essence of"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBorderColor 0 0 0
+  SetBackgroundColor 213 159 0 255
+  PlayAlertSound 2 50
+  PlayEffect White
+  MinimapIcon 2 White Circle
+
+Show
+  BaseType "Scroll of Wisdom"
+  Class Currency
+  SetTextColor 210 178 135
+  SetBackgroundColor 0 0 0 255
+  SetBorderColor 213 159 100 200
+  SetFontSize 42
+  AreaLevel <= 11
+  CustomAlertSound "sounds/wisdom.mp3"
+
+Show
+  BaseType "Scroll of Wisdom"
+  Class Currency
+  StackSize >= 6
+  SetTextColor 210 178 135
+  SetBackgroundColor 0 0 0 255
+  SetBorderColor 213 159 100 200
+  SetFontSize 35
+
+Show
+  Class Currency
+  SetTextColor 0 0 0
+  SetBackgroundColor 100 200 200
+  SetBorderColor 0 0 0
+  SetFontSize 42
+  BaseType "Portal Scroll"
+  MinimapIcon 2 Grey Star
+  PlayEffect Grey
+  AreaLevel <= 31
+  CustomAlertSound "sounds/portal.mp3"
+
+Show
+  Class Currency
+  StackSize >= 4
+  AreaLevel < 44
+  SetTextColor 0 0 0
+  SetBackgroundColor 100 200 200
+  SetBorderColor 0 0 0
+  SetFontSize 35
+  BaseType "Portal Scroll"
+  PlayEffect Grey
+
+Show
+  Class Currency
+  StackSize >= 6
+  SetTextColor 0 0 0
+  SetBackgroundColor 100 200 200
+  SetBorderColor 0 0 0
+  SetFontSize 35
+  BaseType "Portal Scroll"
+  PlayEffect Grey
+
+Show
+  AreaLevel < 44
+  Class Currency
+  BaseType "Blacksmith's Whetstone"
+  SetFontSize 45
+  SetTextColor 190 178 135 255
+  SetBackgroundColor 0 0 0 255
+  SetBorderColor 190 178 135 255
+  MinimapIcon 2 Grey Cross
+  PlayEffect Grey
+  CustomAlertSound "sounds/whetstone.mp3"
+
+Show
+  AreaLevel < 44
+  Class Currency
+  BaseType "Orb of Transmutation"
+  SetFontSize 45
+  SetTextColor 190 178 135 255
+  SetBackgroundColor 0 0 0 255
+  SetBorderColor 190 178 135 255
+  MinimapIcon 2 Grey Cross
+  PlayEffect Grey
+  CustomAlertSound "sounds/transmute.mp3"
+
+Show
+  AreaLevel < 44
+  Class Currency
+  BaseType "Orb of Alteration"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 210 178 135 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 2 Grey Circle
+  PlayEffect Grey
+  CustomAlertSound "sounds/alteration.mp3"
+
+Show
+  AreaLevel <= 72
+  Class "Currency"
+  BaseType "Orb of Chance"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 210 178 135 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 2 Grey Circle
+  PlayEffect Grey
+  CustomAlertSound "sounds/chance.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  BaseType "Iron Ring"
+  AreaLevel <= 30
+  CustomAlertSound "sounds/iron.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  BaseType "Ruby Ring"
+  AreaLevel <= 30
+  CustomAlertSound "sounds/ruby ring.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  BaseType "Sapphire Ring"
+  AreaLevel <= 30
+  CustomAlertSound "sounds/sapphire ring.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  BaseType "Topaz Ring"
+  AreaLevel <= 30
+  CustomAlertSound "sounds/topaz ring.mp3"
+
+Show
+  Rarity = Unique
+  Class "Rings"
+  SetFontSize 45
+  SetTextColor 255 255 255 255
+  SetBackgroundColor 255 0 0 255
+  SetBorderColor 100 100 100 255
+  PlayEffect Red
+
+${currencyFilter}
+`;
+
 export const topUniquesFilter = `
 # Top Uniques
 Show
@@ -434,232 +672,6 @@ Show
     make3LinkFilter("RRG", "Body Armours", "ding"),
   ].join("\n");
 };
-
-export const currencyFilter = `
-Show
-	Class "Currency"
-	BaseType == "Annulment Shard" "Orb of Binding"
-	SetFontSize 45
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 210 178 135 255
-	SetBorderColor 0 0 0 255
-
-Show
-	Class "Currency"
-	BaseType == "Orb of Alteration"
-	SetFontSize 45
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 210 178 135 255
-	SetBorderColor 0 0 0 255
-
-Show
-	Class "Currency"
-	BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
-  StackSize >= 4
-	SetFontSize 45
-	SetTextColor 190 178 135 255
-	SetBackgroundColor 0 0 0 255
-	SetBorderColor 190 178 135 255
-
-Show
-	Class "Currency"
-	BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
-	SetFontSize 35
-	SetTextColor 190 178 135 255
-	SetBackgroundColor 0 0 0 255
-	SetBorderColor 190 178 135 255
-
-Show
-	Class "Divination"
-	BaseType == "Loyalty" "Rain of Chaos"
-	SetFontSize 45
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 39 141 192 255
-	SetBorderColor 0 0 0 255
-	MinimapIcon 2 White Triangle
-	PlayEffect White
-	PlayAlertSound 2 300
-`;
-
-export const levelingCurrencyFilter = `
-Show
-  BaseType == "Quicksilver Flask"
-  AreaLevel <= 15
-  SetFontSize 45
-  SetTextColor 255 255 255 255
-  SetBorderColor 255 255 255 255
-  SetBackgroundColor 0 203 221 255
-  PlayEffect Green
-  MinimapIcon 2 Green Circle
-  PlayAlertSound 5 200
-
-Show
-  Class "Life Flask"
-  Rarity <= Rare
-  SetBackgroundColor 200 0 0 255
-  Continue
-
-Show
-  Class "Mana Flask"
-  Rarity <= Rare
-  SetBackgroundColor 0 0 200 255
-  Continue
-
-Show
-  AreaLevel = 1
-  SetFontSize 45
-
-Show
-  AreaLevel < 65
-  Class Currency
-  BaseType "Muttering Essence of" "Wailing Essence of" "Weeping Essence of" "Whispering Essence of"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBorderColor 0 0 0
-  SetBackgroundColor 213 159 0 255
-  PlayAlertSound 2 50
-  PlayEffect White
-  MinimapIcon 2 White Circle
-
-Show
-  BaseType "Scroll of Wisdom"
-  Class Currency
-  SetTextColor 210 178 135
-  SetBackgroundColor 0 0 0 255
-  SetBorderColor 213 159 100 200
-  SetFontSize 42
-  AreaLevel <= 11
-  CustomAlertSound "sounds/wisdom.mp3"
-
-Show
-  BaseType "Scroll of Wisdom"
-  Class Currency
-  StackSize >= 6
-  SetTextColor 210 178 135
-  SetBackgroundColor 0 0 0 255
-  SetBorderColor 213 159 100 200
-  SetFontSize 35
-
-Show
-  Class Currency
-  SetTextColor 0 0 0
-  SetBackgroundColor 100 200 200
-  SetBorderColor 0 0 0
-  SetFontSize 42
-  BaseType "Portal Scroll"
-  MinimapIcon 2 Grey Star
-  PlayEffect Grey
-  AreaLevel <= 31
-  CustomAlertSound "sounds/portal.mp3"
-
-Show
-  Class Currency
-  StackSize >= 4
-  AreaLevel < 44
-  SetTextColor 0 0 0
-  SetBackgroundColor 100 200 200
-  SetBorderColor 0 0 0
-  SetFontSize 35
-  BaseType "Portal Scroll"
-  PlayEffect Grey
-
-Show
-  Class Currency
-  StackSize >= 6
-  SetTextColor 0 0 0
-  SetBackgroundColor 100 200 200
-  SetBorderColor 0 0 0
-  SetFontSize 35
-  BaseType "Portal Scroll"
-  PlayEffect Grey
-
-Show
-  AreaLevel < 44
-  Class Currency
-  BaseType "Blacksmith's Whetstone"
-  SetFontSize 45
-  SetTextColor 190 178 135 255
-  SetBackgroundColor 0 0 0 255
-  SetBorderColor 190 178 135 255
-  MinimapIcon 2 Grey Cross
-  PlayEffect Grey
-  CustomAlertSound "sounds/whetstone.mp3"
-
-Show
-  AreaLevel < 44
-  Class Currency
-  BaseType "Orb of Transmutation"
-  SetFontSize 45
-  SetTextColor 190 178 135 255
-  SetBackgroundColor 0 0 0 255
-  SetBorderColor 190 178 135 255
-  MinimapIcon 2 Grey Cross
-  PlayEffect Grey
-  CustomAlertSound "sounds/transmute.mp3"
-
-Show
-  AreaLevel < 44
-  Class Currency
-  BaseType "Orb of Alteration"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 210 178 135 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 2 Grey Circle
-  PlayEffect Grey
-  CustomAlertSound "sounds/alteration.mp3"
-
-Show
-  AreaLevel <= 72
-  Class "Currency"
-  BaseType "Orb of Chance"
-  SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 210 178 135 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 2 Grey Circle
-  PlayEffect Grey
-  CustomAlertSound "sounds/chance.mp3"
-
-Show
-  SetBorderColor 200 0 0
-  SetFontSize 45
-  BaseType "Iron Ring"
-  AreaLevel <= 30
-  CustomAlertSound "sounds/iron.mp3"
-
-Show
-  SetBorderColor 200 0 0
-  SetFontSize 45
-  BaseType "Ruby Ring"
-  AreaLevel <= 30
-  CustomAlertSound "sounds/ruby ring.mp3"
-
-Show
-  SetBorderColor 200 0 0
-  SetFontSize 45
-  BaseType "Sapphire Ring"
-  AreaLevel <= 30
-  CustomAlertSound "sounds/sapphire ring.mp3"
-
-Show
-  SetBorderColor 200 0 0
-  SetFontSize 45
-  BaseType "Topaz Ring"
-  AreaLevel <= 30
-  CustomAlertSound "sounds/topaz ring.mp3"
-
-Show
-  Rarity = Unique
-  Class "Rings"
-  SetFontSize 45
-  SetTextColor 255 255 255 255
-  SetBackgroundColor 255 0 0 255
-  SetBorderColor 100 100 100 255
-  PlayEffect Red
-
-${currencyFilter}
-`;
 
 export const rusticSash = `Show
   SetBorderColor 200 0 0
