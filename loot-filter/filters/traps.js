@@ -66,16 +66,19 @@ export default function getFilter() {
     make4LinkFilter("BBBG", "3b1g"),
     make4LinkFilter("BBGG", "2b2g"),
     make4LinkFilter("GGGB", "3g1b"),
+
     // 3-Links
     make3LinkFilter("BBG", "Boots", "2b1g boots"),
     make3LinkFilter("BBG", "Gloves", "2b1g gloves"),
     make3LinkFilter("BBG", "Helmets", "2b1g helm"),
     make3LinkFilter("BBG", "Body Armours", "2b1g body"),
     make3LinkFilter("BBG", "Wand", "2b1g wand"),
+
     make3LinkFilter("BGG", "Boots", "2g1b boots"),
     make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
     make3LinkFilter("BGG", "Helmets", "2g1b helm"),
     make3LinkFilter("BGG", "Body Armours", "2g1b body"),
+    make3LinkFilter("BGG", "Wand", "2g1b wand"),
     levelingCurrencyFilter,
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
