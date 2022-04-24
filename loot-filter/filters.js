@@ -625,28 +625,28 @@ Show
   SetBorderColor 200 0 0
   SetFontSize 45
   BaseType "Iron Ring"
-  ItemLevel <= 20
+  AreaLevel <= 30
   CustomAlertSound "sounds/iron.mp3"
 
 Show
   SetBorderColor 200 0 0
   SetFontSize 45
   BaseType "Ruby Ring"
-  ItemLevel <= 20
+  AreaLevel <= 30
   CustomAlertSound "sounds/ruby ring.mp3"
 
 Show
   SetBorderColor 200 0 0
   SetFontSize 45
   BaseType "Sapphire Ring"
-  ItemLevel <= 20
+  AreaLevel <= 30
   CustomAlertSound "sounds/sapphire ring.mp3"
 
 Show
   SetBorderColor 200 0 0
   SetFontSize 45
   BaseType "Topaz Ring"
-  ItemLevel <= 20
+  AreaLevel <= 30
   CustomAlertSound "sounds/topaz ring.mp3"
 
 Show

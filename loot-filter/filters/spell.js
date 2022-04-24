@@ -13,6 +13,8 @@ Show
   BaseType "Jade Amulet" "Citrine Amulet"
   SetFontSize 45
   PlayAlertSound 16 200
+  MinimapIcon 1 Green Moon
+  SetBorderColor 0 255 0 255
 
 Show
   Class Currency

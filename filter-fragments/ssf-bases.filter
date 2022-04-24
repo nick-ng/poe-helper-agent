@@ -29,15 +29,14 @@ Show
 # SetBackgroundColor 84 237 44 255
 
 # Showing:
-# 1. T2 Life, T2 Spell Supp., T1 Res
+# 1. T1 Spell Supp.
 # 2. T2 Spell Supp.
 
 ##########################
 ## Body Armour, Shields ##
 ##########################
 Show
-  ItemLevel >= 84
-  BaseDefencePercentile >= 90
+  ItemLevel >= 86
   Rarity <= Rare
   BaseType "Full Dragonscale" "Cardinal Round Shield"
   SetFontSize 40
@@ -70,7 +69,6 @@ Show
 ###########################
 Show
   ItemLevel >= 85
-  BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   SetFontSize 40

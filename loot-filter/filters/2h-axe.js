@@ -20,6 +20,8 @@ Show
   BaseType "Lapis Amulet" "Turquoise Amulet"
   SetFontSize 45
   PlayAlertSound 16 200
+  MinimapIcon 1 Blue Moon
+  SetBorderColor 0 0 255 255
 
 Show
   BaseType "Vaal Axe" "Despot Axe"
