@@ -1,5 +1,5 @@
 import { oniGoroshiFarm } from "./filters.js";
-import getShieldLevelingFilter from "./filters/shield-leveling.js";
+import getShieldFilter from "./filters/shield.js";
 import getTRLevelingFilter from "./filters/tr-leveling.js";
 import getPCLevelingFilter from "./filters/pc-leveling.js";
 import get2HAxeFilter from "./filters/2h-axe.js";
@@ -47,6 +47,14 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
+    [getCustomItemsFilter(), getShieldFilter()],
+    outputDir,
+    { prefix: "00shield_", suffix: "" },
+    isDebug,
+    [5, 20]
+  );
+
+  writeFilters(
     [getCustomItemsFilter(), getSpellFilter()],
     outputDir,
     { prefix: "00spell_", suffix: "" },
@@ -69,18 +77,6 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     isDebug,
     [0, 2]
   );
-
-  // writeFilters(
-  //   [
-  //     getCustomItemsFilter(),
-  //     getShieldLevelingFilter(),
-  //     getFilterFragment("ssf-bases"),
-  //   ],
-  //   outputDir,
-  //   { prefix: "00shield_", suffix: "" },
-  //   isDebug,
-  //   [0, 10]
-  // );
 
   // writeFilters(
   //   [

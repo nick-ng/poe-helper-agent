@@ -1,12 +1,22 @@
 import {
   make3LinkFilter,
-  make3LinkFilterB,
   make4LinkFilter,
-  makeColourFilter,
   levelingCurrencyFilter,
 } from "../filters.js";
+import { getFilterFragment } from "../filter-loader.js";
 
-const custom = `Show
+const amulets = '"Lapis Amulet" "Turquoise Amulet"';
+
+const custom = `
+Show
+  Rarity Unique
+  BaseType == "Twilight Blade" "Viridian Jewel"
+  SetFontSize 45
+  PlayAlertSound 3 300
+  PlayEffect Brown
+  MinimapIcon 2 Brown Star
+
+Show
   SetBorderColor 200 0 0
   SetFontSize 45
   ItemLevel >= 1
@@ -30,45 +40,18 @@ Show
   SetBackgroundColor 255 0 255 255
   SetBorderColor 214 126 0 255
   MinimapIcon 1 Pink Cross
-
-Show # Bleed chance fast 1h weapons
-  ItemLevel >= 40
-  BaseType == "Driftwood Club" "Spiked Club" "War Hammer" "Tenderizer" "Phantom Mace" "Battle Hammer" "Barbed Club" "Dream Mace" "Bladed Mace" "Siege Axe" "Tomahawk" "Boarding Axe"
-  Rarity = Rare
-  SetFontSize 45
-  SetBackgroundColor 255 255 0 255
-  SetBorderColor 255 0 0 255
-  SetTextColor 0 0 0 255
-  MinimapIcon 1 Yellow Star
-
-Show # Bleed chance 1h weapons
-  ItemLevel >= 40
-  AreaLevel <= 55
-  Rarity = Rare
-  Class == "One Hand Axes" "One Hand Maces" "One Hand Swords"
-  SetFontSize 45
-  SetBackgroundColor 255 255 0 255
-  SetTextColor 0 0 0 255
-  MinimapIcon 1 Yellow Star
-
-Show # Bleed chance 1h weapons
-  ItemLevel >= 20
-  AreaLevel < 40
-  Rarity = Rare
-  Class == "One Hand Axes" "One Hand Maces" "One Hand Swords"
-  SetFontSize 35
-  SetBackgroundColor 255 255 0 255
-  SetTextColor 0 0 0 255
-  MinimapIcon 1 Yellow Cross
-  `;
+`;
 
 const weapons = [
   [12, "Longsword", true],
-  [18, "Woodsplitter", true],
-  [18, "Bastard Sword", true],
+  [18, "Woodsplitter", false],
+  [18, "Bastard Sword", false],
   [23, "Poleaxe", true],
-  [33, "Double Axe", true],
-  [33, "Gilded Axe", false],
+  [33, "Double Axe", false],
+  [37, "Gilded Axe", true],
+  [41, "Shadow Axe", false],
+  [45, "Jasper Chopper", false],
+  [49, "Timber Axe", true],
   // [33, "Shadow Axe", false],
   // [41, "Jasper Chopper", true],
   // [41, "Dagger Axe", true],
@@ -86,9 +69,9 @@ function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
   return `Show
   AreaLevel <= ${maxAreaLevel}
   BaseType == "${baseType}"
-  SetFontSize ${sound ? 45 : 35}
+  SetFontSize ${sound ? 45 : 30}
   Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
   ${sound ? "PlayAlertSound 16 200" : ""}
@@ -124,17 +107,7 @@ export default function getFilter() {
     make3LinkFilter("RRG", "Helmets", "2r1g helm"),
     make3LinkFilter("RRG", "Body Armours", "2r1g body"),
 
-    // Other People
-    make3LinkFilter("BBB", "Wand", "ding"),
-    make3LinkFilterB("BBB", "ding"),
-    make3LinkFilter("BBG", "Wand", "ding"),
-    make3LinkFilterB("BBG", "ding"),
-    make3LinkFilter("BGG", "Wand", "ding"),
-    make3LinkFilterB("BGG", "ding"),
-
-    // other stuff
-    makeColourFilter("RR"),
-    makeColourFilter("RG"),
     levelingCurrencyFilter,
+    getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
 }
