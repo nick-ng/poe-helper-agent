@@ -10,7 +10,7 @@ const amulets = '"Lapis Amulet" "Turquoise Amulet"';
 const custom = `
 Show
   Rarity Unique
-  BaseType == "Twilight Blade" "Viridian Jewel"
+  BaseType == "Timeworn Claw" "Twilight Blade" "Viridian Jewel"
   SetFontSize 45
   PlayAlertSound 3 300
   PlayEffect Brown
@@ -25,20 +25,41 @@ Show
   CustomAlertSound "sounds/rustic sash.mp3"
 
 Show
-  BaseType "Colossal Tower Shield"
-  BaseDefencePercentile >= 85
+  ItemLevel >= 86
   Rarity <= Rare
-  SetFontSize 45
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 255 255 255 255
-  MinimapIcon 1 Pink Star
+  BaseType "Colossal Tower Shield"
+  SetFontSize 40
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+
+Show
+  ItemLevel >= 77
+  BaseDefencePercentile >= 90
+  Rarity <= Rare
+  BaseType "Colossal Tower Shield"
+  SetFontSize 35
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+
+Show
+  ItemLevel >= 77
+  BaseDefencePercentile >= 33
+  Rarity = Rare
+  BaseType "Colossal Tower Shield"
+  SetFontSize 30
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
 
 Show
   BaseType "Colossal Tower Shield"
+  AreaLevel <= 72
   Rarity <= Rare
-  SetFontSize 35
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 214 126 0 255
+  SetFontSize 30
+  SetBackgroundColor 101 8 214 255 # Bases BG Colour
+  SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 `;
 
@@ -52,17 +73,16 @@ const weapons = [
   [41, "Shadow Axe", false],
   [45, "Jasper Chopper", false],
   [49, "Timber Axe", true],
-  // [33, "Shadow Axe", false],
-  // [41, "Jasper Chopper", true],
-  // [41, "Dagger Axe", true],
-  // [45, "Timber Axe", true],
-  // [49, "Headsman Axe", true],
-  // [52, "Labrys", true],
-  // [55, "Noble Axe", true],
-  // [59, "Abyssal Axe", false],
-  [51, "Reinforced Tower Shield", true],
-  [67, "Girded Tower Shield", true],
-  [70, "Colossal Tower Shield", true],
+  [52, "Headsman Axe", false],
+  [55, "Labrys", false],
+  [58, "Noble Axe", true],
+  [60, "Abyssal Axe", false],
+  [67, "Karui Chopper", false],
+  [67, "Sundering Axe", false],
+  [67, "Ezomyte Axe", true],
+  [67, "Vaal Axe", false],
+  [67, "Despot Axe", true],
+  [67, "Void Axe", false],
 ];
 
 function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
