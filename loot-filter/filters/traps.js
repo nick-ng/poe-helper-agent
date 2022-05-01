@@ -4,6 +4,7 @@ import {
   levelingCurrencyFilter,
 } from "../filters.js";
 import { getFilterFragment } from "../filter-loader.js";
+import getFlaskFilter from "../../filter-generators/flasks.js";
 
 const amulets = '"Amber Amulet" "Citrine Amulet"';
 
@@ -82,6 +83,7 @@ export default function getFilter() {
     make3LinkFilter("BGG", "Wand", "2g1b wand"),
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
+    getFlaskFilter(),
     levelingCurrencyFilter,
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");

@@ -4,6 +4,7 @@ import {
   levelingCurrencyFilter,
 } from "../filters.js";
 import { getFilterFragment } from "../filter-loader.js";
+import getFlaskFilter from "../../filter-generators/flasks.js";
 
 const amulets = '"Lapis Amulet" "Turquoise Amulet"';
 
@@ -101,6 +102,7 @@ export default function getFilter() {
     make3LinkFilter("RRG", "Body Armours", "2r1g body"),
 
     // other stuff
+    getFlaskFilter(),
     levelingCurrencyFilter,
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");

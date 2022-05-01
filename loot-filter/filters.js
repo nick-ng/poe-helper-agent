@@ -80,12 +80,6 @@ Show
   PlayAlertSound 5 200
 
 Show
-  Class "Life Flask"
-  Rarity <= Rare
-  SetBackgroundColor 200 0 0 255
-  Continue
-
-Show
   Class "Mana Flask"
   Rarity <= Rare
   SetBackgroundColor 0 0 200 255
