@@ -90,9 +90,9 @@ Show
   SetFontSize 45
 
 Show
-  AreaLevel < 65
+  AreaLevel <= 23
   Class Currency
-  BaseType "Muttering Essence of" "Wailing Essence of" "Weeping Essence of" "Whispering Essence of"
+  BaseType "Essence of"
   SetFontSize 45
   SetTextColor 0 0 0 255
   SetBorderColor 0 0 0
