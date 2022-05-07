@@ -71,11 +71,11 @@ export default function getFilter() {
     make3LinkFilter("BBG", "Wand", "2b1g wand"),
     // make3LinkFilter("BBG", "Sceptre", "2b1g sceptre"),
 
-    make3LinkFilter("BGG", "Boots", "2g1b boots"),
-    make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
-    make3LinkFilter("BGG", "Helmets", "2g1b helm"),
-    make3LinkFilter("BGG", "Body Armours", "2g1b body"),
-    make3LinkFilter("BGG", "Wand", "2g1b wand"),
+    // make3LinkFilter("BGG", "Boots", "2g1b boots"),
+    // make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
+    // make3LinkFilter("BGG", "Helmets", "2g1b helm"),
+    // make3LinkFilter("BGG", "Body Armours", "2g1b body"),
+    // make3LinkFilter("BGG", "Wand", "2g1b wand"),
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
     getFlaskFilter(),

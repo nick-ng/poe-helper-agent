@@ -8,7 +8,7 @@ Show
   Rarity < Unique
   MapTier >= 14
   Class "Maps"
-  SetBackgroundColor 77 0 117 255
+  SetBackgroundColor 0 0 130 255
   Continue
 
 Show
@@ -80,7 +80,8 @@ Show # High Reds
   MapTier >= 14
   Class "Maps"
   SetFontSize 45
-  MinimapIcon 2 Purple Square
+  MinimapIcon 0 Blue Square
+  PlayEffect Blue
   PlayAlertSound 5 100 # map drop sound
 
 Show # Low Reds - high area
@@ -90,7 +91,7 @@ Show # Low Reds - high area
   MapTier <= 13
   Class "Maps"
   SetFontSize 40
-  MinimapIcon 0 Red Square
+  MinimapIcon 2 Red Square
   PlayAlertSound 16 100 # map drop sound
 
 Show # Low Reds - low area
@@ -99,7 +100,8 @@ Show # Low Reds - low area
   MapTier <= 13
   Class "Maps"
   SetFontSize 45
-  MinimapIcon 2 Red Square
+  MinimapIcon 0 Red Square
+  PlayEffect Red
   PlayAlertSound 5 100 # map drop sound
 
 Show # yellow - high area
@@ -109,7 +111,7 @@ Show # yellow - high area
   MapTier <= 10
   Class "Maps"
   SetFontSize 40
-  MinimapIcon 0 Yellow Square
+  MinimapIcon 2 Yellow Square
   PlayAlertSound 16 100 # map drop sound
 
 Show # yellow - low area
@@ -118,7 +120,8 @@ Show # yellow - low area
   MapTier <= 10
   Class "Maps"
   SetFontSize 45
-  MinimapIcon 2 Yellow Square
+  MinimapIcon 0 Yellow Square
+  PlayEffect Yellow
   PlayAlertSound 5 100 # map drop sound
 
 Show # white - high area
@@ -128,7 +131,7 @@ Show # white - high area
   MapTier <= 5
   Class "Maps"
   SetFontSize 40
-  MinimapIcon 0 White Square
+  MinimapIcon 2 White Square
   PlayAlertSound 16 100 # map drop sound
 
 Show # white - low area
@@ -137,5 +140,6 @@ Show # white - low area
   MapTier <= 5
   Class "Maps"
   SetFontSize 45
-  MinimapIcon 2 White Square
+  MinimapIcon 0 White Square
+  PlayEffect White
   PlayAlertSound 5 100 # map drop sound
