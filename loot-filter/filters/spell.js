@@ -45,6 +45,16 @@ Show
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
+
+Hide
+  ItemLevel < 43
+  Rarity = Normal
+  BaseType == "Rustic Sash" "Cloth Belt" "Studded Belt"
+
+Hide
+  ItemLevel < 43
+  Rarity = Normal
+  Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Claws" "Warstaves"
 `;
 
 // https://textreader.pro/
