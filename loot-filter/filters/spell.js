@@ -47,11 +47,13 @@ Show
   MinimapIcon 1 Pink Star
 
 Hide
+  AreaLevel > 3
   ItemLevel < 43
   Rarity = Normal
   BaseType == "Rustic Sash" "Cloth Belt" "Studded Belt"
 
 Hide
+  AreaLevel > 3
   ItemLevel < 43
   Rarity = Normal
   Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Claws" "Warstaves"
