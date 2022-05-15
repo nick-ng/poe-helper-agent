@@ -116,7 +116,7 @@ export default function getFilter() {
 
     // other stuff
     getFlaskFilter(),
-    levelingCurrencyFilter,
+    levelingCurrencyFilter(),
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
 }

@@ -9,19 +9,19 @@
 #defaultfontsize: 32 (18-45)
 
 Show
-  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Normal
   SetTextColor 200 200 200 255
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Magic
   SetTextColor 136 136 255 255
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Rare
   SetTextColor 255 255 0 255
   Continue
@@ -38,17 +38,18 @@ Show
 Show
   ItemLevel >= 86
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Cardinal Round Shield"
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   SetFontSize 40
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 0 0 255
+  PlayAlertSound 5 100 # map drop sound
   MinimapIcon 1 Yellow Star
 
 Show
   ItemLevel >= 77
   BaseDefencePercentile >= 90
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Cardinal Round Shield"
+  BaseType "Full Dragonscale" "Cardinal Round Shield" "Ezomyte Tower Shield"
   SetFontSize 35
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
@@ -58,7 +59,7 @@ Show
   ItemLevel >= 77
   BaseDefencePercentile >= 33
   Rarity = Rare
-  BaseType "Full Dragonscale" "General's Brigandine" "Cardinal Round Shield" "Supreme Spiked Shield"
+  BaseType "Full Dragonscale" "General's Brigandine" "Cardinal Round Shield" "Supreme Spiked Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Triumphant Lamellar" "General's Brigandine"
   SetFontSize 30
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255
@@ -70,10 +71,11 @@ Show
 Show
   ItemLevel >= 85
   Rarity <= Rare
-  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
+  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet" "Nightmare Bascinet"
   SetFontSize 40
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 0 0 255
+  PlayAlertSound 5 100 # map drop sound
   MinimapIcon 1 Yellow Star
 
 Show
@@ -90,7 +92,7 @@ Show
   ItemLevel >= 76
   BaseDefencePercentile >= 33
   Rarity = Rare
-  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet"
+  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet" "Nightmare Bascinet"
   SetFontSize 30
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 100 100 100 255

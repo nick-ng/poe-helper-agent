@@ -6,12 +6,12 @@ import {
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
-const amulets = '"Jade Amulet" "Citrine Amulet"';
+const amulets = '"Jade Amulet" "Amber Amulet" "Citrine Amulet"';
 
 const custom = `
 Show
   AreaLevel < 20
-  BaseType "Jade Amulet" "Citrine Amulet"
+  BaseType ${amulets}
   SetFontSize 45
   PlayAlertSound 16 200
   MinimapIcon 1 Green Moon
@@ -91,7 +91,7 @@ export default function getFilter() {
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
     getFlaskFilter(),
-    levelingCurrencyFilter,
+    levelingCurrencyFilter(),
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
 }

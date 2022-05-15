@@ -1,4 +1,9 @@
-export const currencyFilter = `
+export const currencyFilter = () => {
+  const showNew = Date.now() > 1652443200000;
+  const newDivCards1 = showNew
+    ? '"Darker Half" "Altered Perception" "Rebirth and Renewal"'
+    : "";
+  return `
 Show
   Class "Currency"
   BaseType == "Annulment Shard" "Orb of Binding"
@@ -46,7 +51,7 @@ Show
 
 Show
   Class "Divination"
-  BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love"
+  BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" ${newDivCards1}
   SetFontSize 45
 	SetTextColor 255 0 0 255
 	SetBackgroundColor 255 255 255 255
@@ -66,8 +71,9 @@ Show
   PlayEffect White
   PlayAlertSound 2 300
 `;
+};
 
-export const levelingCurrencyFilter = `
+export const levelingCurrencyFilter = () => `
 Show
   BaseType == "Quicksilver Flask"
   AreaLevel <= 15
@@ -238,7 +244,7 @@ Show
   SetBorderColor 100 100 100 255
   PlayEffect Red
 
-${currencyFilter}
+${currencyFilter()}
 `;
 
 export const topUniquesFilter = `
@@ -683,6 +689,6 @@ export const makeLevelingFilter = () => {
   return `
 ${topUniquesFilter}
 
-${levelingCurrencyFilter}
+${levelingCurrencyFilter()}
 `;
 };

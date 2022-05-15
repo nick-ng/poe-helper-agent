@@ -13,7 +13,8 @@ const lifeFlasks = [
   [42, "Colossal Life Flask", false],
   [42, "Sacred Life Flask", "life-flask-sacred"],
   [60, "Sacred Life Flask", false],
-  [60, "Hallowed Life Flask", "life-flask-hallowed"],
+  [44, "Hallowed Life Flask", "life-flask-hallowed"],
+  [60, "Hallowed Life Flask", false],
   [65, "Divine Life Flask", "life-flask-divine"],
   [77, "Divine Life Flask", false],
 ];

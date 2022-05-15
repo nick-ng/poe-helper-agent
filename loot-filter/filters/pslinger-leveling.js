@@ -99,6 +99,6 @@ export default function getFilter() {
     // other stuff
     makeColourFilter("RR"),
     makeColourFilter("RG"),
-    levelingCurrencyFilter,
+    levelingCurrencyFilter(),
   ].join("\n\n");
 }

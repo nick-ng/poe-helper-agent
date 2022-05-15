@@ -120,6 +120,6 @@ export default function getFilter() {
     makeColourFilter("B"),
     makeColourFilter("GG"),
     makeColourFilter("RG"),
-    levelingCurrencyFilter,
+    levelingCurrencyFilter(),
   ].join("\n\n");
 }

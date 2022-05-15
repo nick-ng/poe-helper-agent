@@ -73,6 +73,10 @@ app.get("/poe-racing-1", (_req, res, _next) => {
   res.redirect(getTrackerUrl(1));
 });
 
+app.get("/poe-racing-2", (_req, res, _next) => {
+  res.redirect(getTrackerUrl(2));
+});
+
 app.post("/chaos-filter", async (req, res, _next) => {
   autoClose = false;
   makeChaosFilter(

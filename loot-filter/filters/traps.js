@@ -84,7 +84,7 @@ export default function getFilter() {
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
     getFlaskFilter(),
-    levelingCurrencyFilter,
+    levelingCurrencyFilter(),
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
 }
