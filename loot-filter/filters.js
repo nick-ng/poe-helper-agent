@@ -111,7 +111,7 @@ Show
   BaseType "Scroll of Wisdom"
   Class Currency
   SetTextColor 210 178 135
-  SetBackgroundColor 0 0 0 255
+  SetBackgroundColor 0 0 0 50
   SetBorderColor 213 159 100 200
   SetFontSize 42
   AreaLevel <= 11
@@ -121,9 +121,9 @@ Show
   BaseType "Scroll of Wisdom"
   Class Currency
   StackSize >= 6
-  SetTextColor 210 178 135
-  SetBackgroundColor 0 0 0 255
-  SetBorderColor 213 159 100 200
+  SetTextColor 210 178 135 150
+  SetBackgroundColor 0 0 0 50
+  SetBorderColor 213 159 100 150
   SetFontSize 45
 
 Show
@@ -142,9 +142,9 @@ Show
   Class Currency
   StackSize >= 4
   AreaLevel < 44
-  SetTextColor 0 0 0
-  SetBackgroundColor 100 200 200
-  SetBorderColor 0 0 0
+  SetTextColor 100 200 200 150
+  SetBackgroundColor 0 0 0 50
+  SetBorderColor 100 200 200 150
   SetFontSize 35
   BaseType "Portal Scroll"
   PlayEffect Grey
@@ -152,9 +152,9 @@ Show
 Show
   Class Currency
   StackSize >= 6
-  SetTextColor 0 0 0
-  SetBackgroundColor 100 200 200
-  SetBorderColor 0 0 0
+  SetTextColor 100 200 200 150
+  SetBackgroundColor 0 0 0 50
+  SetBorderColor 100 200 200 150
   SetFontSize 45
   BaseType "Portal Scroll"
   PlayEffect Grey

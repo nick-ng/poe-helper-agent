@@ -10,20 +10,26 @@
 
 Show
   BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  SetTextColor 101 8 214 150
+  SetBackgroundColor 0 0 0 50
+  Continue
+
+Show
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Normal
-  SetTextColor 200 200 200 255
+  SetBorderColor 200 200 200 150
   Continue
 
 Show
   BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Magic
-  SetTextColor 136 136 255 255
+  SetBorderColor 136 136 255 150
   Continue
 
 Show
   BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Rare
-  SetTextColor 255 255 0 255
+  SetBorderColor 255 255 0 150
   Continue
 
 # SetBackgroundColor 84 237 44 255
@@ -39,9 +45,8 @@ Show
   ItemLevel >= 86
   Rarity <= Rare
   BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
-  SetFontSize 40
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 255 0 0 255
+  SetFontSize 45
+  PlayEffect Red
   PlayAlertSound 5 100 # map drop sound
   MinimapIcon 1 Yellow Star
 
@@ -51,8 +56,7 @@ Show
   Rarity <= Rare
   BaseType "Full Dragonscale" "Cardinal Round Shield" "Ezomyte Tower Shield"
   SetFontSize 35
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 255 255 0 255
+  PlayEffect Yellow
   MinimapIcon 1 Yellow Star
 
 Show
@@ -61,8 +65,7 @@ Show
   Rarity = Rare
   BaseType "Full Dragonscale" "General's Brigandine" "Cardinal Round Shield" "Supreme Spiked Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Triumphant Lamellar" "General's Brigandine"
   SetFontSize 30
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 100 100 100 255
+  PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star
 
 ###########################
@@ -73,8 +76,7 @@ Show
   Rarity <= Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet" "Nightmare Bascinet"
   SetFontSize 40
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 255 0 0 255
+  PlayEffect Red
   PlayAlertSound 5 100 # map drop sound
   MinimapIcon 1 Yellow Star
 
@@ -84,8 +86,7 @@ Show
   Rarity <= Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   SetFontSize 35
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 255 255 0 255
+  PlayEffect Yellow
   MinimapIcon 1 Yellow Star
 
 Show
@@ -94,8 +95,7 @@ Show
   Rarity = Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet" "Nightmare Bascinet"
   SetFontSize 30
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 100 100 100 255
+  PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star
 
 ###########################
@@ -106,8 +106,7 @@ Show
   Rarity <= Rare
   BaseType "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 40
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 255 0 0 255
+  PlayEffect Red
   MinimapIcon 1 Yellow Cross
 
 Show
@@ -115,8 +114,7 @@ Show
   Rarity <= Rare
   BaseType "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 35
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 255 255 0 255
+  PlayEffect Yellow
   MinimapIcon 1 Yellow Cross
 
 Show
@@ -124,8 +122,7 @@ Show
   Rarity <= Rare
   BaseType "Amethyst Ring" "Two-Stone Ring"
   SetFontSize 30
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 100 100 100 255
+  PlayEffect Grey Temp
   MinimapIcon 1 Yellow Cross
 
 Show
@@ -133,8 +130,7 @@ Show
   Rarity <= Rare
   BaseType ##amulets##
   SetFontSize 30
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 100 100 100 255
+  PlayEffect Grey Temp
   MinimapIcon 1 Yellow Cross
 
 Show
@@ -142,8 +138,7 @@ Show
   Rarity <= Rare
   BaseType "Leather Belt"
   SetFontSize 30
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 100 100 100 255
+  PlayEffect Grey Temp
   MinimapIcon 1 Yellow Cross
 
 #####################
@@ -168,33 +163,35 @@ Show
   ItemLevel >= 85
   SetFontSize 45
   Rarity <= Magic
-  SetTextColor 255 255 255 255
-  SetBorderColor 255 0 0 255
-  SetBackgroundColor 0 203 221 255
+  SetTextColor 0 203 221 255
+  SetBorderColor 0 203 221 255
+  PlayEffect Red
+  SetBackgroundColor 0 0 0 50
 
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
   ItemLevel >= 84
   SetFontSize 45
   Rarity <= Magic
-  SetTextColor 255 255 255 255
-  SetBorderColor 255 255 0 255
-  SetBackgroundColor 0 203 221 255
+  SetTextColor 0 203 221 255
+  SetBorderColor 0 203 221 255
+  PlayEffect Yellow
+  SetBackgroundColor 0 0 0 50
 
 Show
   BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
   ItemLevel >= 65
   SetFontSize 35
   Rarity <= Magic
-  SetTextColor 255 255 255 255
-  SetBorderColor 255 255 255 255
-  SetBackgroundColor 0 203 221 255
+  SetTextColor 0 203 221 255
+  SetBorderColor 0 203 221 255
+  SetBackgroundColor 0 0 0 50
 
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
   ItemLevel >= 63
   SetFontSize 30
   Rarity <= Magic
-  SetTextColor 255 255 255 255
-  SetBorderColor 0 0 0 255
-  SetBackgroundColor 0 203 221 255
+  SetTextColor 0 203 221 255
+  SetBorderColor 0 203 221 255
+  SetBackgroundColor 0 0 0 50
