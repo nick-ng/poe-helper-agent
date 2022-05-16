@@ -124,7 +124,7 @@ Show
   SetTextColor 210 178 135
   SetBackgroundColor 0 0 0 255
   SetBorderColor 213 159 100 200
-  SetFontSize 35
+  SetFontSize 45
 
 Show
   Class Currency
@@ -155,7 +155,7 @@ Show
   SetTextColor 0 0 0
   SetBackgroundColor 100 200 200
   SetBorderColor 0 0 0
-  SetFontSize 35
+  SetFontSize 45
   BaseType "Portal Scroll"
   PlayEffect Grey
 
