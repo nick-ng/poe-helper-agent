@@ -10,7 +10,7 @@
 
 Show
   BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
-  SetTextColor 101 8 214 150
+  SetTextColor 150 150 255 150
   SetBackgroundColor 0 0 0 50
   Continue
 
