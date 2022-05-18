@@ -33,7 +33,7 @@ Show
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
-  SetTextColor 101 8 214 150
+  SetTextColor 150 150 255 200
   SetBackgroundColor 0 0 0 50
   PlayEffect Red
   MinimapIcon 1 Pink Star
@@ -43,7 +43,7 @@ Show
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 35
-  SetTextColor 101 8 214 150
+  SetTextColor 150 150 255 200
   SetBackgroundColor 0 0 0 50
   MinimapIcon 1 Pink Star
 

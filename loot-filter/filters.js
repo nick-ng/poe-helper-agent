@@ -13,12 +13,31 @@ Show
   SetBorderColor 0 0 0 255
 
 Show
+  BaseType "Scroll of Wisdom"
+  Class Currency
+  StackSize >= 6
+  SetTextColor 210 178 135 200
+  SetBackgroundColor 0 0 0 50
+  SetBorderColor 213 159 100 200
+  SetFontSize 45
+
+Show
+  BaseType "Portal Scroll"
+  Class Currency
+  StackSize >= 6
+  SetTextColor 100 200 200 200
+  SetBackgroundColor 0 0 0 50
+  SetBorderColor 100 200 200 200
+  SetFontSize 45
+
+Show
   Class "Currency"
   BaseType == "Orb of Alteration"
   SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 210 178 135 255
-  SetBorderColor 0 0 0 255
+  SetTextColor 0 255 255 200
+  SetBackgroundColor 0 0 0 50
+  SetBorderColor 0 255 255 200
+  PlayEffect Cyan
 
 Show
   Class "Currency"
@@ -118,15 +137,6 @@ Show
   CustomAlertSound "sounds/wisdom.mp3"
 
 Show
-  BaseType "Scroll of Wisdom"
-  Class Currency
-  StackSize >= 6
-  SetTextColor 210 178 135 150
-  SetBackgroundColor 0 0 0 50
-  SetBorderColor 213 159 100 150
-  SetFontSize 45
-
-Show
   Class Currency
   SetTextColor 0 0 0
   SetBackgroundColor 100 200 200
@@ -142,20 +152,10 @@ Show
   Class Currency
   StackSize >= 4
   AreaLevel < 44
-  SetTextColor 100 200 200 150
+  SetTextColor 100 200 200 200
   SetBackgroundColor 0 0 0 50
   SetBorderColor 100 200 200 150
   SetFontSize 35
-  BaseType "Portal Scroll"
-  PlayEffect Grey
-
-Show
-  Class Currency
-  StackSize >= 6
-  SetTextColor 100 200 200 150
-  SetBackgroundColor 0 0 0 50
-  SetBorderColor 100 200 200 150
-  SetFontSize 45
   BaseType "Portal Scroll"
   PlayEffect Grey
 

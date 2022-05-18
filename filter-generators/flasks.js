@@ -25,7 +25,9 @@ function makeLifeFlaskBlock(maxAreaLevel, baseType, sound = false) {
   BaseType == "${baseType}"
   SetFontSize ${sound ? 45 : 30}
   Rarity <= Rare
-  SetBackgroundColor 200 0 0 255
+  SetTextColor 255 0 0 200
+  SetBorderColor 255 0 0 200
+  SetBackgroundColor 0 0 0 50
   ${sound ? "MinimapIcon 2 Red Raindrop" : ""}
   ${sound ? `CustomAlertSound "sounds/${sound}.mp3"` : ""}
 `;

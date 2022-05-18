@@ -9,25 +9,25 @@
 #defaultfontsize: 32 (18-45)
 
 Show
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
-  SetTextColor 150 150 255 150
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  SetTextColor 255 0 255 200
   SetBackgroundColor 0 0 0 50
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Normal
   SetBorderColor 200 200 200 150
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Magic
   SetBorderColor 136 136 255 150
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   Rarity = Rare
   SetBorderColor 255 255 0 150
   Continue
@@ -104,7 +104,7 @@ Show
 Show
   ItemLevel >= 84
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 40
   PlayEffect Red
   MinimapIcon 1 Yellow Cross
@@ -112,7 +112,7 @@ Show
 Show
   ItemLevel >= 72
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 35
   PlayEffect Yellow
   MinimapIcon 1 Yellow Cross
@@ -120,7 +120,7 @@ Show
 Show
   ItemLevel >= 44
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Two-Stone Ring"
+  BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring"
   SetFontSize 30
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Cross
@@ -163,8 +163,8 @@ Show
   ItemLevel >= 85
   SetFontSize 45
   Rarity <= Magic
-  SetTextColor 0 203 221 255
-  SetBorderColor 0 203 221 255
+  SetTextColor 0 203 221 200
+  SetBorderColor 0 203 221 200
   PlayEffect Red
   SetBackgroundColor 0 0 0 50
 
@@ -173,18 +173,18 @@ Show
   ItemLevel >= 84
   SetFontSize 45
   Rarity <= Magic
-  SetTextColor 0 203 221 255
-  SetBorderColor 0 203 221 255
+  SetTextColor 0 203 221 200
+  SetBorderColor 0 203 221 200
   PlayEffect Yellow
   SetBackgroundColor 0 0 0 50
 
 Show
-  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
+  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Basalt Flask"
   ItemLevel >= 65
   SetFontSize 35
   Rarity <= Magic
-  SetTextColor 0 203 221 255
-  SetBorderColor 0 203 221 255
+  SetTextColor 0 203 221 200
+  SetBorderColor 0 203 221 200
   SetBackgroundColor 0 0 0 50
 
 Show
@@ -192,6 +192,6 @@ Show
   ItemLevel >= 63
   SetFontSize 30
   Rarity <= Magic
-  SetTextColor 0 203 221 255
-  SetBorderColor 0 203 221 255
+  SetTextColor 0 203 221 200
+  SetBorderColor 0 203 221 200
   SetBackgroundColor 0 0 0 50

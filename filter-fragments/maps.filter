@@ -3,12 +3,19 @@
 # Red Maps: 78 - 80
 # High Red Maps: 81 - 83
 
+Show
+  Rarity < Unique
+  Class "Maps"
+  SetBackgroundColor 0 0 0 50
+  Continue
+
 # Map appearance
 Show
   Rarity < Unique
   MapTier >= 14
   Class "Maps"
-  SetBackgroundColor 0 0 130 255
+  SetTextColor 200 0 230 200
+  SetBorderColor 200 0 230 200
   Continue
 
 Show
@@ -16,7 +23,8 @@ Show
   MapTier >= 11
   MapTier <= 13
   Class "Maps"
-  SetBackgroundColor 104 0 0 255
+  SetTextColor 255 0 0 200
+  SetBorderColor 255 0 0 200
   Continue
 
 Show
@@ -24,7 +32,8 @@ Show
   MapTier >= 6
   MapTier <= 10
   Class "Maps"
-  SetBackgroundColor 91 96 0 255
+  SetTextColor 200 200 0 200
+  SetBorderColor 200 200 0 200
   Continue
 
 Show
@@ -32,15 +41,8 @@ Show
   MapTier >= 1
   MapTier <= 5
   Class "Maps"
-  SetBackgroundColor 72 72 72 255
-  SetBorderColor 200 200 200 255
-  Continue
-
-Show
-  Rarity < Unique
-  Class "Maps"
-  SetBorderColor 255 255 255 255
-  SetTextColor 255 255 255 255
+  SetTextColor 200 200 200 200
+  SetBorderColor 200 200 200 200
   Continue
 
 # Influenced and other special maps have different text and borders
@@ -48,28 +50,28 @@ Show
   Rarity < Unique
   Class "Maps"
   HasInfluence Crusader Hunter Redeemer Warlord Shaper Elder
-  SetTextColor 100 255 133 255
+  SetTextColor 100 255 133 200
   Continue
 
 Show
   Rarity < Unique
   Class "Maps"
   UberBlightedMap True
-  SetTextColor 255 100 253 255
+  SetTextColor 255 100 253 200
   Continue
 
 Show
   Rarity < Unique
   Class "Maps"
   BlightedMap True
-  SetTextColor 255 100 253 255
+  SetTextColor 255 100 253 200
   Continue
 
 Show
   Rarity < Unique
   Class "Maps"
   AnyEnchantment True
-  SetBorderColor 138 137 255 255
+  SetBorderColor 138 137 255 200
   Continue
 
 # Map size and sound
