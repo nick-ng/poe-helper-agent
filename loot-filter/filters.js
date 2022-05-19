@@ -17,7 +17,7 @@ Show
   Class Currency
   StackSize >= 6
   SetTextColor 210 178 135 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   SetBorderColor 213 159 100 200
   SetFontSize 45
 
@@ -26,7 +26,7 @@ Show
   Class Currency
   StackSize >= 6
   SetTextColor 100 200 200 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   SetBorderColor 100 200 200 200
   SetFontSize 45
 
@@ -35,7 +35,7 @@ Show
   BaseType == "Orb of Alteration"
   SetFontSize 45
   SetTextColor 0 255 255 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   SetBorderColor 0 255 255 200
   PlayEffect Cyan
 
@@ -130,7 +130,7 @@ Show
   BaseType "Scroll of Wisdom"
   Class Currency
   SetTextColor 210 178 135
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   SetBorderColor 213 159 100 200
   SetFontSize 42
   AreaLevel <= 11
@@ -153,7 +153,7 @@ Show
   StackSize >= 4
   AreaLevel < 44
   SetTextColor 100 200 200 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   SetBorderColor 100 200 200 150
   SetFontSize 35
   BaseType "Portal Scroll"

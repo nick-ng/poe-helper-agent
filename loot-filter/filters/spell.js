@@ -34,7 +34,7 @@ Show
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
   SetTextColor 150 150 255 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star
 
@@ -44,7 +44,7 @@ Show
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 35
   SetTextColor 150 150 255 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   MinimapIcon 1 Pink Star
 
 Hide

@@ -11,7 +11,7 @@
 Show
   BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetTextColor 255 0 255 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   Continue
 
 Show
@@ -166,7 +166,7 @@ Show
   SetTextColor 0 203 221 200
   SetBorderColor 0 203 221 200
   PlayEffect Red
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
 
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
@@ -176,7 +176,7 @@ Show
   SetTextColor 0 203 221 200
   SetBorderColor 0 203 221 200
   PlayEffect Yellow
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
 
 Show
   BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Basalt Flask"
@@ -185,7 +185,7 @@ Show
   Rarity <= Magic
   SetTextColor 0 203 221 200
   SetBorderColor 0 203 221 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
 
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
@@ -194,4 +194,4 @@ Show
   Rarity <= Magic
   SetTextColor 0 203 221 200
   SetBorderColor 0 203 221 200
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground

@@ -6,7 +6,7 @@
 Show
   Rarity < Unique
   Class "Maps"
-  SetBackgroundColor 0 0 0 50
+  ##DefaultBackground
   Continue
 
 # Map appearance

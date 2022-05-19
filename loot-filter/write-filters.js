@@ -6,6 +6,7 @@ import {
 } from "fs";
 import { resolve, dirname, basename } from "path";
 
+import { applyColours } from "./colours.js";
 import { presets } from "./update-base-filters.js";
 import { getMapsFilter } from "./filter-loader.js";
 
@@ -15,7 +16,7 @@ export const writeFileSync = (filePath, fileContents) => {
     recursive: true,
   });
 
-  return _writeFileSync(filePath, fileContents);
+  return _writeFileSync(filePath, applyColours(fileContents));
 };
 
 const isWithinLevelRange = (filterPath, levelRange) => {
