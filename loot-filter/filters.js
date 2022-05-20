@@ -1,16 +1,11 @@
 export const currencyFilter = () => {
-  const showNew = Date.now() > 1652443200000;
-  const newDivCards1 = showNew
-    ? '"Darker Half" "Altered Perception" "Rebirth and Renewal"'
-    : "";
   return `
 Show
   Class "Currency"
   BaseType == "Annulment Shard" "Orb of Binding"
   SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 210 178 135 255
-  SetBorderColor 0 0 0 255
+  SetTextColor 210 178 135 255
+  SetBorderColor 210 178 135 255
 
 Show
   BaseType "Scroll of Wisdom"
@@ -34,18 +29,16 @@ Show
   Class "Currency"
   BaseType == "Orb of Alteration"
   SetFontSize 45
-  SetTextColor 0 255 255 200
-  ##DefaultBackground
-  SetBorderColor 0 255 255 200
+  SetTextColor 47 252 47 255
+  SetBorderColor 47 252 47 255
   PlayEffect Cyan
 
 Show
   Class "Currency"
   BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
-  StackSize >= 4
+  StackSize >= 3
   SetFontSize 45
   SetTextColor 190 178 135 255
-  SetBackgroundColor 0 0 0 255
   SetBorderColor 190 178 135 255
 
 Show
@@ -53,7 +46,6 @@ Show
   BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
   SetFontSize 35
   SetTextColor 190 178 135 255
-  SetBackgroundColor 0 0 0 255
   SetBorderColor 190 178 135 255
 
 Show
@@ -61,19 +53,18 @@ Show
   Class "Currency"
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble"
   SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 213 159 0 255
-  SetBorderColor 0 0 0 255
+  SetTextColor 213 159 0 255
+  SetBorderColor 213 159 0 255
   MinimapIcon 2 White Circle
   PlayEffect White
   PlayAlertSound 2 300
 
 Show
   Class "Divination"
-  BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" ${newDivCards1}
+  BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" "Darker Half" "Altered Perception" "Rebirth and Renewal"
   SetFontSize 45
 	SetTextColor 255 0 0 255
-	SetBackgroundColor 255 255 255 255
+	SetBackgroundColor 255 255 255 200
 	SetBorderColor 255 0 0 255
 	MinimapIcon 0 Red Star
 	PlayEffect Red
@@ -83,9 +74,8 @@ Show
   Class "Divination"
   BaseType == "A Sea of Blue" "Acclimatisation" "Chaotic Disposition" "Coveted Possession" "Demigod's Wager" "Emperor's Luck" "Harmony of Souls" "Loyalty" "Lucky Connections" "Lucky Deck" "No Traces" "Parasitic Passengers" "Rain of Chaos" "Society's Remorse" "The Cacophony" "The Cartographer" "The Catalyst" "The Fool" "The Gemcutter" "The Heroic Shot" "The Innocent" "The Inventor" "The Journey" "The Master Artisan" "The Puzzle" "The Rabbit's Foot" "The Scholar" "The Seeker" "The Sephirot" "The Survivalist" "The Tinkerer's Table" "The Tireless Extractor" "The Union" "The Wrath" "Three Faces in the Dark" "Three Voices" "Underground Forest" "Vinia's Token" "Bowyer's Dream" "Draped in Dreams" "Emperor of Purity" "Humility" "Immortal Resolve" "Imperial Legacy" "Rebirth" "The Celestial Justicar" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Ethereal" "The Porcupine" "The Sacrifice" "The Warlord" "The White Knight" "Vanity"
   SetFontSize 45
-  SetTextColor 0 0 0 255
-  SetBackgroundColor 47 252 47 255
-  SetBorderColor 0 0 0 255
+  SetTextColor 47 252 47 255
+  SetBorderColor 47 252 47 255
   MinimapIcon 2 Green Triangle
   PlayEffect White
   PlayAlertSound 2 300
