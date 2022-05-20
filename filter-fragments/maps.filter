@@ -77,6 +77,15 @@ Show
 # Map size and sound
 # sound 5 if it's in the same map tier range or higher, otherwise 4
 # High area = same tier of maps (except high reds)
+Show # T16
+  Rarity < Unique
+  MapTier >= 16
+  Class "Maps"
+  SetFontSize 45
+  MinimapIcon 0 Blue Square
+  PlayEffect Blue
+  CustomAlertSound "sounds/top-map.mp3"
+
 Show # High Reds
   Rarity < Unique
   MapTier >= 14

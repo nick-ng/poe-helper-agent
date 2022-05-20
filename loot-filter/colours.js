@@ -5,6 +5,7 @@ const allColours = {
 export const applyColours = (filter) => {
   let newFilter = `
 Show
+  AreaLevel >= 43
   ${allColours.DefaultBackground}
   Continue
 
