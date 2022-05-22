@@ -105,6 +105,13 @@ Show # High Reds
   PlayEffect Blue
   PlayAlertSound 5 100 # map drop sound
 
+Hide
+  AreaLevel >= 83
+  Rarity < Unique
+  MapTier < 14
+  Class "Maps"
+  SetFontSize 45
+
 Show # Low Reds - high area
   AreaLevel >= 78
   Rarity < Unique
