@@ -10,6 +10,16 @@ Show
 Show
   BaseType "Scroll of Wisdom"
   Class Currency
+  StackSize >= 10
+  SetTextColor 210 178 135 200
+  ##DefaultBackground
+  SetBorderColor 213 159 100 200
+  SetFontSize 45
+
+Show
+  BaseType "Scroll of Wisdom"
+  Class Currency
+  AreaLevel <= 77
   StackSize >= 6
   SetTextColor 210 178 135 200
   ##DefaultBackground
@@ -19,6 +29,16 @@ Show
 Show
   BaseType "Portal Scroll"
   Class Currency
+  StackSize >= 10
+  SetTextColor 100 200 200 200
+  ##DefaultBackground
+  SetBorderColor 100 200 200 200
+  SetFontSize 45
+
+Show
+  BaseType "Portal Scroll"
+  Class Currency
+  AreaLevel <= 77
   StackSize >= 6
   SetTextColor 100 200 200 200
   ##DefaultBackground
@@ -36,20 +56,24 @@ Show
 Show
   Class "Currency"
   BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
-  StackSize >= 3
   SetFontSize 45
   SetTextColor 190 178 135 255
   SetBorderColor 190 178 135 255
 
 Show
+  StackSize >= 8
   Class "Currency"
-  BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
-  SetFontSize 35
-  SetTextColor 190 178 135 255
-  SetBorderColor 190 178 135 255
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble"
+  SetFontSize 45
+  SetTextColor 213 159 0 255
+  SetBorderColor 213 159 0 255
+  MinimapIcon 2 White Circle
+  PlayEffect White
+  PlayAlertSound 2 300
 
 Show
   StackSize >= 5
+  AreaLevel <= 77
   Class "Currency"
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble"
   SetFontSize 45

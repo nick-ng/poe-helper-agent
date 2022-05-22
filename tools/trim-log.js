@@ -8,7 +8,7 @@ import {
 import { join } from "path";
 
 const LOG_FILENAME = "Client.txt";
-const MAX_LOG_LENGTH = 5000;
+const MAX_LOG_LENGTH = 100000;
 const IGNORE_REGEX = [
   /\] \[vulkan\]/i,
   /\] \[job\]/i,
@@ -67,7 +67,7 @@ function trimLog(logDir) {
     console.info(
       `Trimmed ${
         logContents.length - logContents2.length
-      } lines from ${logFilePath}.`
+      } lines from ${logFilePath}. New length: ${logContents2.length} lines.`
     );
     const newLogContents = `${logContents2.join("\r\n")}`;
     writeFileSync(logFilePath, newLogContents);

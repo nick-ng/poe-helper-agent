@@ -29,7 +29,19 @@ Show
   MinimapIcon 2 White Circle
 
 Show
+  ItemLevel >= 84
+  AreaLevel <= 80
+  Rarity = Rare
+  BaseType "Void Sceptre" "Opal Sceptre"
+  SetFontSize 40
+  SetTextColor 150 150 255 200
+  ##DefaultBackground
+  PlayEffect Red
+  MinimapIcon 1 Pink Star
+
+Show
   ItemLevel >= 78
+  AreaLevel <= 80
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
@@ -40,6 +52,7 @@ Show
 
 Show
   ItemLevel >= 64
+  AreaLevel <= 80
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 35

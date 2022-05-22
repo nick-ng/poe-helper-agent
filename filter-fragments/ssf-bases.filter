@@ -42,7 +42,16 @@ Show
 ## Body Armour, Shields ##
 ##########################
 Show
-  ItemLevel >= 86
+  ItemLevel > 86
+  Rarity <= Rare
+  BaseType "Full Dragonscale" "Ezomyte Tower Shield"
+  SetFontSize 45
+  PlayEffect Red
+  PlayAlertSound 5 100 # map drop sound
+  MinimapIcon 1 Yellow Star
+
+Show
+  ItemLevel == 86
   Rarity <= Rare
   BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   SetFontSize 45
@@ -52,6 +61,7 @@ Show
 
 Show
   ItemLevel >= 77
+  AreaLevel <= 80
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Full Dragonscale" "Cardinal Round Shield" "Ezomyte Tower Shield"
@@ -61,6 +71,7 @@ Show
 
 Show
   ItemLevel >= 77
+  AreaLevel <= 80
   BaseDefencePercentile >= 33
   Rarity = Rare
   BaseType "Full Dragonscale" "General's Brigandine" "Cardinal Round Shield" "Supreme Spiked Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Triumphant Lamellar" "General's Brigandine"
@@ -74,7 +85,7 @@ Show
 Show
   ItemLevel >= 85
   Rarity <= Rare
-  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet" "Nightmare Bascinet"
+  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   SetFontSize 40
   PlayEffect Red
   PlayAlertSound 5 100 # map drop sound
@@ -82,6 +93,7 @@ Show
 
 Show
   ItemLevel >= 76
+  AreaLevel <= 80
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
@@ -91,6 +103,7 @@ Show
 
 Show
   ItemLevel >= 76
+  AreaLevel <= 80
   BaseDefencePercentile >= 33
   Rarity = Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet" "Nightmare Bascinet"
@@ -103,14 +116,24 @@ Show
 ###########################
 Show
   ItemLevel >= 84
+  Rarity = Rare
+  BaseType "Amethyst Ring" "Unset Ring" "Leather Belt" ##amulets##
+  SetFontSize 40
+  PlayEffect Red
+  MinimapIcon 1 Yellow Cross
+
+Show
+  ItemLevel >= 84
+  AreaLevel < 83
   Rarity <= Rare
-  BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Amethyst Ring" "Unset Ring" "Leather Belt" ##amulets##
   SetFontSize 40
   PlayEffect Red
   MinimapIcon 1 Yellow Cross
 
 Show
   ItemLevel >= 72
+  AreaLevel <= 80
   Rarity <= Rare
   BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 35
@@ -119,6 +142,7 @@ Show
 
 Show
   ItemLevel >= 44
+  AreaLevel <= 80
   Rarity <= Rare
   BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring"
   SetFontSize 30
@@ -127,6 +151,7 @@ Show
 
 Show
   ItemLevel >= 54
+  AreaLevel <= 80
   Rarity <= Rare
   BaseType ##amulets##
   SetFontSize 30
@@ -135,6 +160,7 @@ Show
 
 Show
   ItemLevel >= 64
+  AreaLevel <= 80
   Rarity <= Rare
   BaseType "Leather Belt"
   SetFontSize 30
@@ -145,7 +171,6 @@ Show
 ## Vermillion Ring ##
 #####################
 Show
-  Rarity <= Rare
   BaseType "Vermillion Ring"
   SetFontSize 45
   SetTextColor 0 0 255 255
@@ -169,7 +194,7 @@ Show
   ##DefaultBackground
 
 Show
-  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
+  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
   ItemLevel >= 84
   SetFontSize 45
   Rarity <= Magic
@@ -181,6 +206,7 @@ Show
 Show
   BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Basalt Flask"
   ItemLevel >= 65
+  AreaLevel <= 80
   SetFontSize 35
   Rarity <= Magic
   SetTextColor 0 203 221 200
@@ -190,6 +216,7 @@ Show
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
   ItemLevel >= 63
+  AreaLevel <= 80
   SetFontSize 30
   Rarity <= Magic
   SetTextColor 0 203 221 200
