@@ -47,11 +47,23 @@ Show
 
 Show
   Class "Currency"
-  BaseType == "Orb of Alteration"
+  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Binding" "Orb of Fusing" "Orb of Horizons" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Enkindling Orb" "Instilling Orb"
   SetFontSize 45
   SetTextColor 47 252 47 255
   SetBorderColor 47 252 47 255
-  PlayEffect Cyan
+  MinimapIcon 0 Green Circle
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Show
+  Class "Currency"
+  BaseType "Catalyst" "Eldritch"
+  SetFontSize 45
+  SetTextColor 47 252 47 255
+  SetBorderColor 47 252 47 255
+  MinimapIcon 0 Green Circle
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
 
 Show
   Class "Currency"
@@ -102,7 +114,7 @@ Show
   SetBorderColor 47 252 47 255
   MinimapIcon 2 Green Triangle
   PlayEffect White
-  PlayAlertSound 2 300
+  CustomAlertSound "sounds/brian-02-doof.mp3"
 `;
 };
 

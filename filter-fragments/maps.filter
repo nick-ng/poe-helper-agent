@@ -111,6 +111,7 @@ Hide
   MapTier < 14
   Class "Maps"
   SetFontSize 45
+  DisableDropSound True
 
 Show # Low Reds - high area
   AreaLevel >= 78

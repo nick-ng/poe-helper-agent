@@ -21,7 +21,7 @@ const IGNORE_REGEX = [
   /\] \[eos sdk\]/i,
   /\[debug client /i,
   /\*{5} log file opening \*{5}/i,
-  /\.pathofexile\.com/i,
+  // /\.pathofexile\.com/i, // can't filter this because it indicates if you went to the character select screen
   /\] connecting to instance server at (\d{1,3}\.){3}\d{1,3}:\d+$/i,
   /\] tile hash: \d+$/i,
   /\] doodad hash: \d+$/i,

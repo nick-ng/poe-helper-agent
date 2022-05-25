@@ -47,7 +47,7 @@ Show
   BaseType "Full Dragonscale" "Ezomyte Tower Shield"
   SetFontSize 45
   PlayEffect Red
-  PlayAlertSound 5 100 # map drop sound
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
   MinimapIcon 1 Yellow Star
 
 Show
@@ -56,7 +56,7 @@ Show
   BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   SetFontSize 45
   PlayEffect Red
-  PlayAlertSound 5 100 # map drop sound
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
   MinimapIcon 1 Yellow Star
 
 Show
@@ -88,7 +88,7 @@ Show
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
   SetFontSize 40
   PlayEffect Red
-  PlayAlertSound 5 100 # map drop sound
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
   MinimapIcon 1 Yellow Star
 
 Show
