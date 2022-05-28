@@ -25,14 +25,14 @@ Show
   SetBorderColor 0 0 255 255
 
 Show
-  BaseType "Vaal Axe" "Despot Axe"
+  BaseType "Vaal Axe" "Despot Axe" "Piledriver"
   Rarity <= Rare
   ItemLevel >= 83 # T1 Phys %
   PlayAlertSound 16 200
   Continue
 
 Show
-  BaseType "Vaal Axe" "Despot Axe"
+  BaseType "Vaal Axe" "Despot Axe" "Piledriver"
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
@@ -41,7 +41,8 @@ Show
   MinimapIcon 1 Pink Star
 
 Show
-  BaseType "Ezomyte Axe" "Sundering Axe"
+  BaseType "Ezomyte Axe" "Sundering Axe" "Piledriver"
+  AreaLevel <= 80
   ItemLevel >= 73 # T2 Phys %
   Rarity = Rare
   SetFontSize 35

@@ -65,10 +65,10 @@ export const writeFilters = (
     }
 
     if (outputPath) {
-      writeFileSync(
-        resolve(outputPath, `zzz_${filterName}.filter`.toLowerCase()),
-        baseFilter
-      );
+      // writeFileSync(
+      //   resolve(outputPath, `zzz_${filterName}.filter`.toLowerCase()),
+      //   baseFilter
+      // );
       writeFileSync(
         resolve(
           outputPath,

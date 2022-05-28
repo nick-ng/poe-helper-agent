@@ -1,9 +1,8 @@
 import { oniGoroshiFarm } from "./filters.js";
 import getShieldFilter from "./filters/shield.js";
 import getTRLevelingFilter from "./filters/tr-leveling.js";
-import getPCLevelingFilter from "./filters/pc-leveling.js";
-import get2HAxeFilter from "./filters/2h-axe.js";
-import get2HMaceFilter from "./filters/2h-mace.js";
+import getPoisonFilter from "./filters/poison-leveling.js";
+import get2HAxeFilter from "./filters/2h-melee.js";
 // import getEHeistFilter from "./filters/endless-heist.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
@@ -23,7 +22,7 @@ export const makeChaosFilter = (
   writeFilters(
     [chaosFilter],
     outputDir,
-    { prefix: "05chaos", suffix: "" },
+    { prefix: "99_chaos", suffix: "" },
     isDebug,
     [5, 10]
   );
@@ -33,15 +32,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
     [getCustomItemsFilter(), get2HAxeFilter()],
     outputDir,
-    { prefix: "002h-axe_", suffix: "" },
-    isDebug,
-    [5, 20]
-  );
-
-  writeFilters(
-    [getCustomItemsFilter(), get2HMaceFilter()],
-    outputDir,
-    { prefix: "002h-mace_", suffix: "" },
+    { prefix: "02_2h-axe_", suffix: "" },
     isDebug,
     [5, 20]
   );
@@ -49,7 +40,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
     [getCustomItemsFilter(), getShieldFilter()],
     outputDir,
-    { prefix: "00shield_", suffix: "" },
+    { prefix: "04_shield_", suffix: "" },
     isDebug,
     [5, 20]
   );
@@ -57,7 +48,15 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
     [getCustomItemsFilter(), getSpellFilter()],
     outputDir,
-    { prefix: "00spell_", suffix: "" },
+    { prefix: "01_spell_", suffix: "" },
+    isDebug,
+    [5, 20]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), getPoisonFilter()],
+    outputDir,
+    { prefix: "00_poison_", suffix: "" },
     isDebug,
     [5, 20]
   );
@@ -65,7 +64,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
     [getCustomItemsFilter(), getTrapFilter()],
     outputDir,
-    { prefix: "00traps_", suffix: "" },
+    { prefix: "03_traps_", suffix: "" },
     isDebug,
     [5, 20]
   );

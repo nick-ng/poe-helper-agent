@@ -636,6 +636,37 @@ export const make4LinkFilter = (
   return ["", "", "Show", ...filterLines, "", ""].join("\n");
 };
 
+export const make4LinkFilter2 = (
+  { armour, evasion, es },
+  maxAreaLevel = 62, // Foothills
+  increment = 5
+) => {
+  const allFilterLines = [];
+
+  for (let n = maxAreaLevel; n >= 25; n -= increment) {
+    const filterLines = [
+      `    AreaLevel <= ${n}`,
+      `    DropLevel >= ${n - 5}`,
+      "    Sockets < 6",
+      "    Rarity <= Rare",
+      "    LinkedSockets >= 4",
+      '    Class "Body Armours" "Boots" "Gloves" "Helmets"',
+      "    SetFontSize 45",
+      armour ? `    BaseArmour >= ${armour}` : null,
+      evasion ? `    BaseEvasion >= ${evasion}` : null,
+      es ? `    BaseEnergyShield >= ${es}` : null,
+      "    SetBorderColor 200 0 0 255",
+      "    SetBackgroundColor 88 0 87 255",
+      "    MinimapIcon 0 Yellow Pentagon",
+      '    CustomAlertSound "sounds/brian-03-bong.mp3"',
+    ].filter((a) => a);
+
+    allFilterLines.push(...["", "", "Show", ...filterLines, "", ""]);
+  }
+
+  return allFilterLines.join("\n");
+};
+
 export const makeColourFilter = (sockets) => {
   return "";
 };
