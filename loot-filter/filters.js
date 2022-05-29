@@ -117,7 +117,7 @@ Show
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
 Show
-  GemLevel > 3
+  GemLevel > 10
   Class "Gems"
   SetFontSize 45
   SetTextColor 20 240 240 255
