@@ -3,7 +3,7 @@ import {
   make3LinkFilterB,
   make4LinkFilter,
   makeColourFilter,
-  levelingCurrencyFilter,
+  levelingBaseFilter,
 } from "../filters.js";
 
 const bows = [
@@ -120,6 +120,6 @@ export default function getFilter() {
     makeColourFilter("B"),
     makeColourFilter("GG"),
     makeColourFilter("RG"),
-    levelingCurrencyFilter(),
+    levelingBaseFilter(),
   ].join("\n\n");
 }

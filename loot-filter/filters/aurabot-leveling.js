@@ -3,7 +3,7 @@ import {
   make3LinkFilterB,
   make4LinkFilter,
   makeColourFilter,
-  levelingCurrencyFilter,
+  levelingBaseFilter,
 } from "../filters.js";
 
 // const custom = `Show
@@ -166,6 +166,6 @@ export default function getFilter() {
     // other stuff
     // makeColourFilter("RR"),
     // makeColourFilter("RG"),
-    levelingCurrencyFilter(),
+    levelingBaseFilter(),
   ].join("\n\n");
 }

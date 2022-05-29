@@ -2,7 +2,7 @@ import {
   make3LinkFilter,
   make4LinkFilter,
   make4LinkFilter2,
-  levelingCurrencyFilter,
+  levelingBaseFilter,
 } from "../filters.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
@@ -107,7 +107,7 @@ export default function getFilter() {
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
     getFlaskFilter(),
-    levelingCurrencyFilter(),
+    levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
 }

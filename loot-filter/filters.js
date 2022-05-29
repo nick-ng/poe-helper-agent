@@ -1,4 +1,4 @@
-export const currencyFilter = () => {
+export const baseFilter = () => {
   return `
 Show
   Class "Currency"
@@ -115,10 +115,18 @@ Show
   MinimapIcon 2 Green Triangle
   PlayEffect White
   CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Show
+  GemLevel > 3
+  Class "Gems"
+  SetFontSize 45
+  SetTextColor 20 240 240 255
+  SetBorderColor 0 0 240 255
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
 `;
 };
 
-export const levelingCurrencyFilter = () => `
+export const levelingBaseFilter = () => `
 Show
   BaseType == "Quicksilver Flask"
   AreaLevel <= 15
@@ -270,7 +278,7 @@ Show
   SetBorderColor 100 100 100 255
   PlayEffect Red
 
-${currencyFilter()}
+${baseFilter()}
 `;
 
 export const topUniquesFilter = `
@@ -746,6 +754,6 @@ export const makeLevelingFilter = () => {
   return `
 ${topUniquesFilter}
 
-${levelingCurrencyFilter()}
+${levelingBaseFilter()}
 `;
 };

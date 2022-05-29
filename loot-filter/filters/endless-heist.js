@@ -2,7 +2,7 @@ import {
   make3LinkFilter,
   make4LinkFilter,
   makeColourFilter,
-  levelingCurrencyFilter,
+  levelingBaseFilter,
 } from "../filters.js";
 
 // https://textreader.pro/
@@ -37,6 +37,6 @@ export default function getFilter() {
     // other stuff
     makeColourFilter("BB"),
     makeColourFilter("BG"),
-    levelingCurrencyFilter(),
+    levelingBaseFilter(),
   ].join("\n\n");
 }

@@ -1,7 +1,7 @@
 import {
   make3LinkFilter,
   make4LinkFilter,
-  levelingCurrencyFilter,
+  levelingBaseFilter,
 } from "../filters.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
@@ -117,7 +117,7 @@ export default function getFilter() {
 
     // other stuff
     getFlaskFilter(),
-    levelingCurrencyFilter(),
+    levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
 }
