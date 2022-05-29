@@ -137,15 +137,6 @@ Show
   SetTextColor 20 240 240 255
   SetBorderColor 0 0 240 255
   CustomAlertSound "sounds/brian-01-clang.mp3"
-
-Show
-  Rarity Unique
-  SetFontSize 40
-	SetTextColor 175 96 37 255
-	SetBorderColor 175 96 37 255
-  CustomAlertSound "sounds/brian-03-bong.mp3"
-  PlayEffect Brown
-  MinimapIcon 2 Brown Star
 `;
 };
 

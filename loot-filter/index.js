@@ -1,7 +1,7 @@
 import { oniGoroshiFarm } from "./filters.js";
 import getShieldFilter from "./filters/shield.js";
 import getTRLevelingFilter from "./filters/tr-leveling.js";
-import getPoisonFilter from "./filters/poison-leveling.js";
+import getPoisonFilter from "./filters/poison.js";
 import get2HAxeFilter from "./filters/2h-melee.js";
 // import getEHeistFilter from "./filters/endless-heist.js";
 import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";

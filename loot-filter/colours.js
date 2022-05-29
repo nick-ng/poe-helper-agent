@@ -1,5 +1,5 @@
 const allColours = {
-  DefaultBackground: "SetBackgroundColor 0 0 0 88",
+  DefaultBackground: "SetBackgroundColor 0 0 0 120",
 };
 
 export const applyColours = (filter) => {

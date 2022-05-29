@@ -58,6 +58,18 @@ Show
   ##DefaultBackground
   MinimapIcon 1 Pink Star
 
+Show
+	ItemLevel >= 50
+	Rarity <= Rare
+	BaseType "Large Cluster Jewel"
+	EnchantmentPassiveNode "Physical Damage"
+	SetFontSize 45
+	SetTextColor 150 150 255 200
+	SetBorderColor 150 150 255 200
+	PlayEffect Red
+  MinimapIcon 1 Pink Star
+  CustomAlertSound "sounds/brian-06-shing.mp3"
+
 Hide
   AreaLevel > 3
   ItemLevel < 43
