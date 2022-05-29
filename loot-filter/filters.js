@@ -1,13 +1,6 @@
 export const baseFilter = () => {
   return `
 Show
-  Class "Currency"
-  BaseType == "Annulment Shard" "Orb of Binding"
-  SetFontSize 45
-  SetTextColor 210 178 135 255
-  SetBorderColor 210 178 135 255
-
-Show
   BaseType "Scroll of Wisdom"
   Class Currency
   StackSize >= 10
@@ -47,10 +40,10 @@ Show
 
 Show
   Class "Currency"
-  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Binding" "Orb of Fusing" "Orb of Horizons" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Enkindling Orb" "Instilling Orb"
+  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Enkindling Orb" "Instilling Orb"
   SetFontSize 45
-  SetTextColor 47 252 47 255
-  SetBorderColor 47 252 47 255
+  SetTextColor 255 255 0 255
+  SetBorderColor 0 255 0 255
   MinimapIcon 0 Green Circle
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
@@ -59,9 +52,30 @@ Show
   Class "Currency"
   BaseType "Catalyst" "Eldritch"
   SetFontSize 45
-  SetTextColor 47 252 47 255
-  SetBorderColor 47 252 47 255
+  SetTextColor 255 255 0 255
+  SetBorderColor 0 255 0 255
   MinimapIcon 0 Green Circle
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Show
+  Class "Currency"
+  BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard"
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Show
+  Class "Currency"
+  BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb"
+  SetFontSize 45
+  StackSize >= 3
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
