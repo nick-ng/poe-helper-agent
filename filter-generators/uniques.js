@@ -46,7 +46,6 @@ const goodUniqueBaseTypes = [
   "Sacrificial Garb", // Shadowstitch
   // Boots
   "Deerskin Boots", // Deerstalker
-  "Amethyst Ring", // Death's Rush
   "Rawhide Boots", // Seven-League Step
   "Nubuck Boots", // Goldwyrm
   "Slink Boots", // Atziri's Step, others
@@ -87,7 +86,6 @@ const goodUniqueBaseTypes = [
   "Elegant Round Shield",
   "Cardinal Round Shield",
   "Branded Kite Shield",
-  "Champion Kite Shield",
   "Mosaic Kite Shield",
   "Archon Kite Shield",
   "Golden Buckler",
@@ -104,7 +102,6 @@ const goodUniqueBaseTypes = [
   "Throat Stabber",
   "Terror Claw",
   // Daggers & Rune Daggers
-  "Fiend Dagger",
   "Ezomyte Dagger",
   "Slaughter Knife",
   "Imperial Skean",
@@ -125,7 +122,6 @@ const goodUniqueBaseTypes = [
   "Serpentine Staff",
   "Judgement Staff",
   // Swords
-  "Charan's Sword",
   "Cutlass",
   "Twilight Blade",
   "Gladius",
@@ -138,7 +134,6 @@ const goodUniqueBaseTypes = [
   // Wands
   "Carved Wand",
   "Demon's Horn",
-  "Prophecy Wand",
   // Flasks
   "Sanctified Life Flask",
   "Hallowed Hybrid Flask",
@@ -169,6 +164,17 @@ const goodUniqueBaseTypes = [
 
 export const getSsfUniquesFilter = () => {
   return `
+Show
+  Rarity Unique
+  BaseType == "Champion Kite Shield" "Fiend Dagger" "Charan's Sword" "Prophecy Wand"
+  SetFontSize 45
+  SetTextColor 175 96 37 255
+  ##BrightBackground
+  SetBorderColor 255 0 0 255
+  CustomAlertSound "sounds/brian-06-shing.mp3"
+  PlayEffect Brown
+  MinimapIcon 0 Brown Star
+
 Show
   Rarity Unique
   SynthesisedItem True
