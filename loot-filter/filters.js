@@ -38,9 +38,9 @@ Show
   SetBorderColor 100 200 200 200
   SetFontSize 45
 
-Show
+Show # T1 Currency
   Class "Currency"
-  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Enkindling Orb" "Instilling Orb"
+  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
   SetFontSize 45
   SetTextColor 255 255 0 255
   SetBorderColor 0 255 0 255
@@ -58,9 +58,9 @@ Show
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
-Show
+Show # T2 Currency
   Class "Currency"
-  BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard"
+  BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb"
   SetFontSize 45
   SetTextColor 0 255 0 255
   SetBorderColor 0 255 0 255
@@ -68,9 +68,9 @@ Show
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
-Show
+Show # T3 Currency (3+ to show)
   Class "Currency"
-  BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb"
+  BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation"
   SetFontSize 45
   StackSize >= 3
   SetTextColor 0 255 0 255
@@ -79,35 +79,31 @@ Show
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
+Show # T4 Currency (6+ to show)
+  Class "Currency"
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Orb of Transmutation" "Armourer's Scrap"
+  SetFontSize 45
+  StackSize >= 6
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Hide # T3 & T4 Currency (don't show if not above thresholds)
+  Class "Currency"
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Orb of Transmutation" "Jeweller's Orb" "Orb of Chance" "Chromatic Orb"
+  AreaLevel >= 77
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+
 Show
   Class "Currency"
   BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
   SetFontSize 45
   SetTextColor 190 178 135 255
   SetBorderColor 190 178 135 255
-
-Show
-  StackSize >= 8
-  Class "Currency"
-  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble"
-  SetFontSize 45
-  SetTextColor 213 159 0 255
-  SetBorderColor 213 159 0 255
-  MinimapIcon 2 White Circle
-  PlayEffect White
-  PlayAlertSound 2 300
-
-Show
-  StackSize >= 5
-  AreaLevel <= 77
-  Class "Currency"
-  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble"
-  SetFontSize 45
-  SetTextColor 213 159 0 255
-  SetBorderColor 213 159 0 255
-  MinimapIcon 2 White Circle
-  PlayEffect White
-  PlayAlertSound 2 300
 
 Show
   Class "Divination"
@@ -370,20 +366,6 @@ Show
   SetFontSize 45
   SetBorderColor 200 200 0
   MinimapIcon 0 Yellow Pentagon
-`;
-
-export const lowCurrencyHider = `
-Hide
-  Class "Currency"
-  BaseType ==  "Orb of Chance" "Alteration Shard" "Armourer's Scrap" "Orb of Augmentation" "Portal Scroll" "Scroll of Wisdom"
-  AreaLevel > 69
-  StackSize < 6
-
-Hide
-  Class "Currency"
-  BaseType == "Orb of Transmutation" "Blacksmith's Whetstone" "Alchemy Shard"
-  AreaLevel > 69
-  StackSize < 3
 `;
 
 export const otherHider = `

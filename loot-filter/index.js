@@ -11,6 +11,7 @@ import getTrapFilter from "./filters/traps.js";
 import { getCustomItemsFilter, getFilterFragment } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
+import { getSsfUniquesFilter } from "../filter-generators/uniques.js";
 
 export const makeChaosFilter = (
   itemCounts,
@@ -30,7 +31,7 @@ export const makeChaosFilter = (
 
 export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
-    [getCustomItemsFilter(), get2HAxeFilter()],
+    [getCustomItemsFilter(), getSsfUniquesFilter(), get2HAxeFilter()],
     outputDir,
     { prefix: "02_2h-axe_", suffix: "" },
     isDebug,
@@ -38,7 +39,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getShieldFilter()],
+    [getCustomItemsFilter(), getSsfUniquesFilter(), getShieldFilter()],
     outputDir,
     { prefix: "04_shield_", suffix: "" },
     isDebug,
@@ -46,7 +47,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getSpellFilter()],
+    [getCustomItemsFilter(), getSsfUniquesFilter(), getSpellFilter()],
     outputDir,
     { prefix: "01_spell_", suffix: "" },
     isDebug,
@@ -54,7 +55,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getPoisonFilter()],
+    [getCustomItemsFilter(), getSsfUniquesFilter(), getPoisonFilter()],
     outputDir,
     { prefix: "00_poison_", suffix: "" },
     isDebug,
@@ -62,7 +63,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   );
 
   writeFilters(
-    [getCustomItemsFilter(), getTrapFilter()],
+    [getCustomItemsFilter(), getSsfUniquesFilter(), getTrapFilter()],
     outputDir,
     { prefix: "03_traps_", suffix: "" },
     isDebug,
@@ -79,7 +80,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
 
   // writeFilters(
   //   [
-  //     getCustomItemsFilter(),
+  //     getCustomItemsFilter(), getSsfUniquesFilter(),
   //     getTRLevelingFilter(),
   //     getFilterFragment("ssf-bases"),
   //   ],
@@ -91,7 +92,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
 
   // writeFilters(
   //   [
-  //     getCustomItemsFilter(),
+  //     getCustomItemsFilter(), getSsfUniquesFilter(),
   //     getPCLevelingFilter(),
   //     getFilterFragment("ssf-bases"),
   //   ],
@@ -103,7 +104,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
 
   // writeFilters(
   //   [
-  //     getCustomItemsFilter(),
+  //     getCustomItemsFilter(), getSsfUniquesFilter(),
   //     getPSlingerLevelingFilter(),
   //     getFilterFragment("ssf-bases"),
   //   ],
@@ -115,7 +116,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
 
   // writeFilters(
   //   [
-  //     getCustomItemsFilter(),
+  //     getCustomItemsFilter(), getSsfUniquesFilter(),
   //     getAurabotLevelingFilter(),
   //     getFilterFragment("ssf-bases"),
   //   ],
@@ -126,7 +127,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   // );
 
   // writeFilters(
-  //   [getCustomItemsFilter(), getEHeistFilter()]
+  //   [getCustomItemsFilter(), getSsfUniquesFilter(), getEHeistFilter()]
   //     .join("\n\n")
   //     .replaceAll(/\n{2,}/g, "\n\n")
   //     .replaceAll(/\t/g, "  "),
@@ -137,7 +138,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   // );
 
   // writeFilters(
-  //   [getCustomItemsFilter(), lowCurrencyHider, otherHider],
+  //   [getCustomItemsFilter(), getSsfUniquesFilter(), otherHider],
   //   outputDir,
   //   { prefix: "group_", suffix: "_general" },
   //   isDebug,
@@ -145,7 +146,7 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   // );
 
   // writeFilters(
-  //   [getCustomItemsFilter(), getFilterFragment("ssf-bases"), otherHider],
+  //   [getCustomItemsFilter(), getSsfUniquesFilter(), getFilterFragment("ssf-bases"), otherHider],
   //   outputDir,
   //   { prefix: "ssf_", suffix: "_general" },
   //   isDebug,
