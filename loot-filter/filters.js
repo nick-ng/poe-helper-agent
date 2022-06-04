@@ -40,7 +40,7 @@ Show
 
 Show # T1 Currency
   Class "Currency"
-  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
+  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
   SetFontSize 45
   SetTextColor 255 255 0 255
   SetBorderColor 0 255 0 255
@@ -60,7 +60,7 @@ Show
 
 Show # T2 Currency
   Class "Currency"
-  BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb"
+  BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb"
   SetFontSize 45
   SetTextColor 0 255 0 255
   SetBorderColor 0 255 0 255
