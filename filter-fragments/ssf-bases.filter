@@ -9,25 +9,25 @@
 #defaultfontsize: 32 (18-45)
 
 Show
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   SetTextColor 255 0 255 200
   ##DefaultBackground
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   Rarity = Normal
   SetBorderColor 200 200 200 150
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   Rarity = Magic
   SetBorderColor 136 136 255 150
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   Rarity = Rare
   SetBorderColor 255 255 0 150
   Continue
@@ -53,7 +53,7 @@ Show
 Show
   ItemLevel == 86
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  BaseType "Full Dragonscale" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   SetFontSize 45
   PlayEffect Red
   CustomAlertSound "sounds/brian-05-woosh.mp3"
@@ -64,7 +64,7 @@ Show
   AreaLevel <= 80
   BaseDefencePercentile >= 90
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Cardinal Round Shield" "Ezomyte Tower Shield"
+  BaseType "Full Dragonscale" "Cardinal Round Shield" # "Ezomyte Tower Shield"
   SetFontSize 35
   PlayEffect Yellow
   MinimapIcon 1 Yellow Star
@@ -74,7 +74,7 @@ Show
   AreaLevel <= 80
   BaseDefencePercentile >= 33
   Rarity = Rare
-  BaseType "Full Dragonscale" "General's Brigandine" "Cardinal Round Shield" "Supreme Spiked Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Triumphant Lamellar" "General's Brigandine"
+  BaseType "Full Dragonscale" "General's Brigandine" "Cardinal Round Shield" # "Supreme Spiked Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Triumphant Lamellar" "General's Brigandine"
   SetFontSize 30
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star

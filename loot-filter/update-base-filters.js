@@ -3,7 +3,7 @@ dotenv.config();
 import fetch from "node-fetch";
 import _ from "lodash";
 import { resolve } from "path";
-import { rmdirSync } from "fs";
+import { rmSync } from "fs";
 
 import { writeFileSync } from "./write-filters.js";
 
@@ -112,7 +112,7 @@ const fetchGggFilter = async (
 
 export const fetchAndSaveFilters = async () => {
   console.info("Removing old filters");
-  rmdirSync(resolve(".", "base-filters"), { recursive: true });
+  rmSync(resolve(".", "base-filters"), { recursive: true });
   console.info("Fetching filters");
   for (const filter of FILTER_BLAST) {
     for (const preset of filter.presets) {

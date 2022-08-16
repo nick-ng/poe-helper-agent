@@ -25,14 +25,14 @@ Show
   SetBorderColor 0 0 255 255
 
 Show
-  BaseType "Vaal Axe" "Despot Axe" "Piledriver"
+  BaseType "Vaal Axe" "Despot Axe" #"Piledriver"
   Rarity <= Rare
   ItemLevel >= 83 # T1 Phys %
   PlayAlertSound 16 200
   Continue
 
 Show
-  BaseType "Vaal Axe" "Despot Axe" "Piledriver"
+  BaseType "Vaal Axe" "Despot Axe" #"Piledriver"
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
@@ -41,7 +41,7 @@ Show
   MinimapIcon 1 Pink Star
 
 Show
-  BaseType "Ezomyte Axe" "Sundering Axe" "Piledriver"
+  BaseType "Ezomyte Axe" "Sundering Axe" #"Piledriver"
   AreaLevel <= 80
   ItemLevel >= 73 # T2 Phys %
   Rarity = Rare
@@ -49,6 +49,24 @@ Show
   SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
+
+Show
+  AreaLevel < 33
+  SetFontSize 35
+  Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
+  Sockets GRR
+
+Show
+  AreaLevel < 33
+  SetFontSize 35
+  Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
+  Sockets RRR
+
+Hide
+  AreaLevel > 3
+  ItemLevel < 43
+  Rarity = Normal
+  Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Bows" "Claws" "Warstaves" "Wand" "Sceptre"
 `;
 
 const weapons = [
@@ -96,9 +114,9 @@ export default function getFilter() {
     }),
 
     // 4-Links
-    // make4LinkFilter("GGGR", "3g1r"),
-    // make4LinkFilter("RRGG", "2r2g"),
-    make4LinkFilter("RRRG", "3r1g"),
+    make4LinkFilter("GGGR", "3g1r"),
+    make4LinkFilter("RRGG", "2r2g"),
+    // make4LinkFilter("RRRG", "3r1g"),
     // make4LinkFilter("RRRR", "4r"),
 
     // 3-Links
