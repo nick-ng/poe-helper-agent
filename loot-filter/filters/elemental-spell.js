@@ -18,18 +18,21 @@ Show
   SetBorderColor 0 255 0 255
 
 Show
-  Rarity Unique
-  BaseType == "Platinum Sceptre"
+  Class Currency
+  BaseType "of Fear"
   SetFontSize 45
-  PlayAlertSound 3 300
-  PlayEffect Brown
-  MinimapIcon 2 Brown Star
+  SetTextColor 0 0 0 255
+  SetBorderColor 0 0 0
+  SetBackgroundColor 213 159 0 255
+  PlayAlertSound 2 50
+  PlayEffect White
+  MinimapIcon 2 White Circle
 
 Show
   ItemLevel >= 84
   AreaLevel <= 80
   Rarity = Rare
-  BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
+  BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
   SetTextColor 150 150 255 200
   ##DefaultBackground
@@ -40,7 +43,7 @@ Show
   ItemLevel >= 78
   AreaLevel <= 80
   Rarity <= Rare
-  BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
+  BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
   SetTextColor 150 150 255 200
   ##DefaultBackground
@@ -51,7 +54,7 @@ Show
   ItemLevel >= 64
   AreaLevel <= 80
   Rarity <= Rare
-  BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
+  BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 35
   SetTextColor 150 150 255 200
   ##DefaultBackground
@@ -77,7 +80,7 @@ export default function getFilter() {
     make4LinkFilter("BBBB", "4b"),
     make4LinkFilter("BBBG", "3b1g"),
     // make4LinkFilter("BBBR", "3b1r"),
-    // make4LinkFilter("BBGG", "2b2g"),
+    make4LinkFilter("BBGG", "2b2g"),
 
     // 3-Links
     make3LinkFilter("BBB", "Boots", "3b boots"),
