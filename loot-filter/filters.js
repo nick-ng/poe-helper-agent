@@ -107,7 +107,7 @@ Show
 
 Show
   Class "Divination"
-  BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" "Darker Half" "Altered Perception" "Rebirth and Renewal"
+  BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" "Darker Half" "Altered Perception" "Rebirth and Renewal" "The Sephirot"
   SetFontSize 45
 	SetTextColor 255 0 0 255
 	SetBackgroundColor 255 255 255 200
@@ -118,7 +118,7 @@ Show
 
 Show
   Class "Divination"
-  BaseType == "A Sea of Blue" "Acclimatisation" "Chaotic Disposition" "Coveted Possession" "Demigod's Wager" "Emperor's Luck" "Harmony of Souls" "Loyalty" "Lucky Connections" "Lucky Deck" "No Traces" "Parasitic Passengers" "Rain of Chaos" "Society's Remorse" "The Cacophony" "The Cartographer" "The Catalyst" "The Fool" "The Gemcutter" "The Heroic Shot" "The Innocent" "The Inventor" "The Journey" "The Master Artisan" "The Puzzle" "The Rabbit's Foot" "The Scholar" "The Seeker" "The Sephirot" "The Survivalist" "The Tinkerer's Table" "The Tireless Extractor" "The Union" "The Wrath" "Three Faces in the Dark" "Three Voices" "Underground Forest" "Vinia's Token" "Bowyer's Dream" "Draped in Dreams" "Emperor of Purity" "Humility" "Immortal Resolve" "Imperial Legacy" "Rebirth" "The Celestial Justicar" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Ethereal" "The Porcupine" "The Sacrifice" "The Warlord" "The White Knight" "Vanity"
+  BaseType == "A Sea of Blue" "Acclimatisation" "Chaotic Disposition" "Coveted Possession" "Demigod's Wager" "Emperor's Luck" "Harmony of Souls" "Loyalty" "Lucky Connections" "Lucky Deck" "No Traces" "Parasitic Passengers" "Rain of Chaos" "Society's Remorse" "The Cacophony" "The Cartographer" "The Catalyst" "The Fool" "The Gemcutter" "The Heroic Shot" "The Innocent" "The Inventor" "The Journey" "The Master Artisan" "The Puzzle" "The Rabbit's Foot" "The Scholar" "The Seeker" "The Survivalist" "The Tinkerer's Table" "The Tireless Extractor" "The Union" "The Wrath" "Three Faces in the Dark" "Three Voices" "Underground Forest" "Vinia's Token" "Bowyer's Dream" "Draped in Dreams" "Emperor of Purity" "Humility" "Immortal Resolve" "Imperial Legacy" "Rebirth" "The Celestial Justicar" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Ethereal" "The Porcupine" "The Sacrifice" "The Warlord" "The White Knight" "Vanity"
   SetFontSize 45
   SetTextColor 47 252 47 255
   SetBorderColor 47 252 47 255

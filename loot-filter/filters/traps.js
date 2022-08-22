@@ -27,7 +27,7 @@ Show  # +1 all Fire Gems recipe
   SetBorderColor 0 0 0 255
   MinimapIcon 1 White Triangle
   PlayEffect Grey
-  PlayAlertSound 2 300
+  CustomAlertSound "sounds/brian-01-clang.mp3"
 
 Show  # +1 all Physical Gems recipe
   Quality >= 1
@@ -39,7 +39,7 @@ Show  # +1 all Physical Gems recipe
   SetBorderColor 0 0 0 255
   MinimapIcon 1 White Triangle
   PlayEffect Grey
-  PlayAlertSound 2 300
+  CustomAlertSound "sounds/brian-01-clang.mp3"
 
 Show
   ItemLevel >= 78

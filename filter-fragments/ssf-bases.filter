@@ -9,25 +9,25 @@
 #defaultfontsize: 32 (18-45)
 
 Show
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   SetTextColor 255 0 255 200
   ##DefaultBackground
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   Rarity = Normal
   SetBorderColor 200 200 200 150
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   Rarity = Magic
   SetBorderColor 136 136 255 150
   Continue
 
 Show
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   Rarity = Rare
   SetBorderColor 255 255 0 150
   Continue
@@ -44,7 +44,7 @@ Show
 Show
   ItemLevel > 86
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Blood Raiment" "Cardinal Round Shield"
+  BaseType "Full Dragonscale" "Blood Raiment" "Saint's Hauberk" "Cardinal Round Shield"
   SetFontSize 45
   PlayEffect Red
   CustomAlertSound "sounds/brian-05-woosh.mp3"
@@ -53,7 +53,7 @@ Show
 Show
   ItemLevel == 86
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
   SetFontSize 45
   PlayEffect Red
   CustomAlertSound "sounds/brian-05-woosh.mp3"
@@ -61,20 +61,17 @@ Show
 
 Show
   ItemLevel >= 77
-  AreaLevel <= 80
   BaseDefencePercentile >= 90
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Blood Raiment" "Cardinal Round Shield" # "Ezomyte Tower Shield"
+  BaseType "Full Dragonscale" "Blood Raiment" "Saint's Hauberk" "Cardinal Round Shield" # "Ezomyte Tower Shield"
   SetFontSize 35
   PlayEffect Yellow
   MinimapIcon 1 Yellow Star
 
 Show
-  ItemLevel >= 77
-  AreaLevel <= 80
   BaseDefencePercentile >= 33
   Rarity = Rare
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "General's Brigandine" "Cardinal Round Shield" # "Supreme Spiked Shield" "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Triumphant Lamellar" "General's Brigandine"
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "General's Brigandine" "Cardinal Round Shield" "Supreme Spiked Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Triumphant Lamellar" "General's Brigandine"
   SetFontSize 30
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star
@@ -93,7 +90,6 @@ Show
 
 Show
   ItemLevel >= 76
-  AreaLevel <= 80
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
@@ -102,8 +98,6 @@ Show
   MinimapIcon 1 Yellow Star
 
 Show
-  ItemLevel >= 76
-  AreaLevel <= 80
   BaseDefencePercentile >= 33
   Rarity = Rare
   BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet" "Nightmare Bascinet"
@@ -133,7 +127,6 @@ Show
 
 Show
   ItemLevel >= 72
-  AreaLevel <= 80
   Rarity <= Rare
   BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 35
@@ -142,7 +135,6 @@ Show
 
 Show
   ItemLevel >= 44
-  AreaLevel <= 80
   Rarity <= Rare
   BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring"
   SetFontSize 30
@@ -151,7 +143,6 @@ Show
 
 Show
   ItemLevel >= 54
-  AreaLevel <= 80
   Rarity <= Rare
   BaseType ##amulets##
   SetFontSize 30
@@ -160,7 +151,6 @@ Show
 
 Show
   ItemLevel >= 64
-  AreaLevel <= 80
   Rarity <= Rare
   BaseType "Leather Belt"
   SetFontSize 30
@@ -206,7 +196,6 @@ Show
 Show
   BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Basalt Flask"
   ItemLevel >= 65
-  AreaLevel <= 80
   SetFontSize 35
   Rarity <= Magic
   SetTextColor 0 203 221 200
@@ -216,7 +205,6 @@ Show
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
   ItemLevel >= 63
-  AreaLevel <= 80
   SetFontSize 30
   Rarity <= Magic
   SetTextColor 0 203 221 200
