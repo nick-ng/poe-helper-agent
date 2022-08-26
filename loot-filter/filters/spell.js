@@ -57,6 +57,16 @@ Show
   ##DefaultBackground
   MinimapIcon 1 Pink Star
 
+Show
+  Rarity >= Rare
+  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
+  SetFontSize 30
+  ##DefaultBackground
+
+Hide
+  AreaLevel >= 70
+  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
+
 Hide
   AreaLevel > 3
   ItemLevel < 43

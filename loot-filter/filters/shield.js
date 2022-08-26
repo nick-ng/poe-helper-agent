@@ -6,9 +6,9 @@ import {
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
-const amulets = '"Lapis Amulet" "Turquoise Amulet"';
+const amulets = '"Lapis Amulet" "Jade Amulet" "Turquoise Amulet"';
 
-const custom = `
+export const shieldT16 = `
 Show
   Rarity Unique
   BaseType == "Timeworn Claw" "Twilight Blade" "Viridian Jewel"
@@ -17,6 +17,26 @@ Show
   PlayEffect Brown
   MinimapIcon 2 Brown Star
 
+  Show
+  ItemLevel >= 86
+  BaseDefencePercentile >= 50
+  Rarity <= Rare
+  BaseType "Colossal Tower Shield"
+  SetFontSize 40
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
+
+Show
+  ItemLevel >= 84
+  BaseDefencePercentile >= 80
+  Rarity <= Rare
+  BaseType "Colossal Tower Shield"
+  SetFontSize 40
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
+`;
+
+const specific = `
 Show
   SetBorderColor 200 0 0
   SetFontSize 45
@@ -26,31 +46,20 @@ Show
   CustomAlertSound "sounds/rustic sash.mp3"
 
 Show
-  ItemLevel >= 86
-  Rarity <= Rare
-  BaseType "Colossal Tower Shield"
-  SetFontSize 40
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-
-Show
-  ItemLevel >= 77
+  ItemLevel >= 78
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Colossal Tower Shield"
   SetFontSize 35
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
 Show
-  ItemLevel >= 77
+  ItemLevel >= 78
   BaseDefencePercentile >= 33
   Rarity = Rare
   BaseType "Colossal Tower Shield"
   SetFontSize 30
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
@@ -59,9 +68,44 @@ Show
   AreaLevel <= 72
   Rarity <= Rare
   SetFontSize 30
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
+
+Show
+ItemLevel >= 40
+  Rarity = Rare
+  SetFontSize 30
+  SetBorderColor 0 100 255 255
+  MinimapIcon 1 Pink Cross
+  Class "One Hand"
+
+Show
+  AreaLevel < 33
+  SetFontSize 35
+  Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
+  Sockets GRR
+
+Show
+  AreaLevel < 33
+  SetFontSize 35
+  Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
+  Sockets RRR
+
+Show
+  Rarity >= Rare
+  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
+  SetFontSize 30
+  ##DefaultBackground
+
+Hide
+  AreaLevel >= 70
+  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
+
+Hide
+  AreaLevel > 3
+  ItemLevel < 43
+  Rarity = Normal
+  Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Bows" "Claws" "Warstaves" "Wand" "Sceptre"
 `;
 
 const weapons = [
@@ -92,7 +136,6 @@ function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
   BaseType == "${baseType}"
   SetFontSize ${sound ? 45 : 30}
   Rarity <= Rare
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
   ${sound ? "PlayAlertSound 16 200" : ""}
@@ -102,7 +145,8 @@ function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
 // https://textreader.pro/
 export default function getFilter() {
   return [
-    custom,
+    shieldT16,
+    specific,
     ...weapons.map((weapon) => {
       const [maxAreaLevel, baseType, sound] = weapon;
       return makeWeaponBlock(maxAreaLevel, baseType, sound);

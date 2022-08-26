@@ -6,7 +6,7 @@ import {
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
-const amulets = '"Lapis Amulet" "Turquoise Amulet"';
+const amulets = '"Jade Amulet" "Turquoise Amulet"';
 
 const custom = `Show
   SetBorderColor 200 0 0
@@ -25,28 +25,26 @@ Show
   SetBorderColor 0 0 255 255
 
 Show
-  BaseType "Vaal Axe" "Despot Axe" #"Piledriver"
+  BaseType "Despot Axe" "Ezomyte Axe" #"Piledriver"
   Rarity <= Rare
-  ItemLevel >= 83 # T1 Phys %
+  ItemLevel = 83 # T1 Phys %
   PlayAlertSound 16 200
-  Continue
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
 
 Show
-  BaseType "Vaal Axe" "Despot Axe" #"Piledriver"
+  BaseType "Ezomyte Axe" "Despot Axe" #"Piledriver"
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 
 Show
   BaseType "Ezomyte Axe" "Sundering Axe" #"Piledriver"
-  AreaLevel <= 80
   ItemLevel >= 73 # T2 Phys %
   Rarity = Rare
   SetFontSize 35
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 
@@ -61,6 +59,16 @@ Show
   SetFontSize 35
   Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
   Sockets RRR
+
+Show
+  Rarity >= Rare
+  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
+  SetFontSize 30
+  ##DefaultBackground
+
+Hide
+  AreaLevel >= 70
+  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
 
 Hide
   AreaLevel > 3
@@ -97,7 +105,6 @@ function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
   BaseType == "${baseType}"
   SetFontSize ${sound ? 45 : 30}
   Rarity <= Rare
-  SetBackgroundColor 101 8 214 255 # Bases BG Colour
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
   ${sound ? "PlayAlertSound 16 200" : ""}
