@@ -753,3 +753,16 @@ ${topUniquesFilter}
 ${levelingBaseFilter()}
 `;
 };
+
+export const makeWeaponBlock = (maxAreaLevel, baseType, sound = true) => {
+  return `Show
+  AreaLevel <= ${maxAreaLevel}
+  BaseType == "${baseType}"
+  Corrupted False
+  SetFontSize ${sound ? 45 : 30}
+  Rarity <= Rare
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+  ${sound ? "PlayAlertSound 16 200" : ""}
+`;
+};

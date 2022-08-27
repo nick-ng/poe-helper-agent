@@ -2,6 +2,7 @@ import {
   make3LinkFilter,
   make4LinkFilter,
   levelingBaseFilter,
+  makeWeaponBlock,
 } from "../filters.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
@@ -22,6 +23,7 @@ Show
   BaseDefencePercentile >= 50
   Rarity <= Rare
   BaseType "Colossal Tower Shield"
+  Corrupted False
   SetFontSize 40
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
@@ -31,6 +33,7 @@ Show
   BaseDefencePercentile >= 80
   Rarity <= Rare
   BaseType "Colossal Tower Shield"
+  Corrupted False
   SetFontSize 40
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
@@ -50,6 +53,7 @@ Show
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType "Colossal Tower Shield"
+  Corrupted False
   SetFontSize 35
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
@@ -59,12 +63,14 @@ Show
   BaseDefencePercentile >= 33
   Rarity = Rare
   BaseType "Colossal Tower Shield"
+  Corrupted False
   SetFontSize 30
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
 Show
   BaseType "Colossal Tower Shield"
+  Corrupted False
   AreaLevel <= 72
   Rarity <= Rare
   SetFontSize 30
@@ -129,18 +135,6 @@ const weapons = [
   [67, "Despot Axe", true],
   [67, "Void Axe", false],
 ];
-
-function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
-  return `Show
-  AreaLevel <= ${maxAreaLevel}
-  BaseType == "${baseType}"
-  SetFontSize ${sound ? 45 : 30}
-  Rarity <= Rare
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  ${sound ? "PlayAlertSound 16 200" : ""}
-`;
-}
 
 // https://textreader.pro/
 export default function getFilter() {

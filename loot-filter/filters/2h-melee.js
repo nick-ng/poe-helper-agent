@@ -2,6 +2,7 @@ import {
   make3LinkFilter,
   make4LinkFilter,
   levelingBaseFilter,
+  makeWeaponBlock,
 } from "../filters.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
@@ -19,6 +20,7 @@ const custom = `Show
 Show
   AreaLevel < 20
   BaseType "Lapis Amulet" "Turquoise Amulet"
+  Corrupted False
   SetFontSize 45
   PlayAlertSound 16 200
   MinimapIcon 1 Blue Moon
@@ -26,6 +28,7 @@ Show
 
 Show
   BaseType "Despot Axe" "Ezomyte Axe" #"Piledriver"
+  Corrupted False
   Rarity <= Rare
   ItemLevel = 83 # T1 Phys %
   PlayAlertSound 16 200
@@ -34,6 +37,7 @@ Show
 
 Show
   BaseType "Ezomyte Axe" "Despot Axe" #"Piledriver"
+  Corrupted False
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
@@ -42,6 +46,7 @@ Show
 
 Show
   BaseType "Ezomyte Axe" "Sundering Axe" #"Piledriver"
+  Corrupted False
   ItemLevel >= 73 # T2 Phys %
   Rarity = Rare
   SetFontSize 35
@@ -98,18 +103,6 @@ const weapons = [
   [67, "Despot Axe", true],
   [67, "Void Axe", false],
 ];
-
-function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
-  return `Show
-  AreaLevel <= ${maxAreaLevel}
-  BaseType == "${baseType}"
-  SetFontSize ${sound ? 45 : 30}
-  Rarity <= Rare
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  ${sound ? "PlayAlertSound 16 200" : ""}
-`;
-}
 
 // https://textreader.pro/
 export default function getFilter() {
