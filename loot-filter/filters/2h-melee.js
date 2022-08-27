@@ -1,9 +1,9 @@
+import { levelingBaseFilter } from "../filters.js";
 import {
+  makeWeaponBlock,
   make3LinkFilter,
   make4LinkFilter,
-  levelingBaseFilter,
-  makeWeaponBlock,
-} from "../filters.js";
+} from "../generators.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
@@ -24,16 +24,8 @@ Show
   SetFontSize 45
   PlayAlertSound 16 200
   MinimapIcon 1 Blue Moon
+  SetTextColor 255 0 255 200
   SetBorderColor 0 0 255 255
-
-Show
-  BaseType "Despot Axe" "Ezomyte Axe" #"Piledriver"
-  Corrupted False
-  Rarity <= Rare
-  ItemLevel = 83 # T1 Phys %
-  PlayAlertSound 16 200
-  SetBorderColor 255 0 0 255
-  MinimapIcon 1 Pink Star
 
 Show
   BaseType "Ezomyte Axe" "Despot Axe" #"Piledriver"
@@ -41,6 +33,7 @@ Show
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
+  SetTextColor 255 0 255 200
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 
@@ -50,6 +43,7 @@ Show
   ItemLevel >= 73 # T2 Phys %
   Rarity = Rare
   SetFontSize 35
+  SetTextColor 255 0 255 200
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 

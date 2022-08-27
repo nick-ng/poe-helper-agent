@@ -1,7 +1,6 @@
 import {
   make3LinkFilter,
   make4LinkFilter,
-  makeColourFilter,
   levelingBaseFilter,
 } from "../filters.js";
 
@@ -34,9 +33,8 @@ export default function getFilter() {
     make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
     make3LinkFilter("BGG", "Helmets", "2g1b helm"),
     make3LinkFilter("BGG", "Body Armours", "2g1b body"),
+
     // other stuff
-    makeColourFilter("BB"),
-    makeColourFilter("BG"),
     levelingBaseFilter(),
   ].join("\n\n");
 }

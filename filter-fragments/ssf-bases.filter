@@ -53,7 +53,7 @@ Show
 Show
   ItemLevel == 86
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" "Colossal Tower Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Bronze Tower Shield"
   SetFontSize 45
   PlayEffect Red
   CustomAlertSound "sounds/brian-05-woosh.mp3"
@@ -210,3 +210,31 @@ Show
   SetTextColor 0 203 221 200
   SetBorderColor 0 203 221 200
   ##DefaultBackground
+
+######################
+## Physical Weapons ##
+######################
+
+Show
+  BaseType "Despot Axe" "Ezomyte Axe" "Piledriver"
+  Corrupted False
+  Rarity <= Rare
+  ItemLevel = 83 # T1 Phys only
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  SetTextColor 255 0 255 200
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
+
+#######################
+## Elemental Weapons ##
+#######################
+
+Show
+  BaseType "Imperial Claw" "Gemini Claw"
+  Corrupted False
+  Rarity <= Rare
+  ItemLevel = 82 # T1 Flat Ele
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  SetTextColor 255 0 255 200
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star

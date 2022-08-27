@@ -1,8 +1,5 @@
-import {
-  make3LinkFilter,
-  make4LinkFilter,
-  levelingBaseFilter,
-} from "../filters.js";
+import { levelingBaseFilter } from "../filters.js";
+import { make3LinkFilter, make4LinkFilter } from "../generators.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 

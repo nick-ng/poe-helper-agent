@@ -1,10 +1,9 @@
+import { levelingBaseFilter } from "../filters.js";
 import {
   make3LinkFilter,
   make3LinkFilterB,
   make4LinkFilter,
-  makeColourFilter,
-  levelingBaseFilter,
-} from "../filters.js";
+} from "../generators.js";
 
 const bows = [
   "Short Bow",
@@ -72,19 +71,6 @@ const weapons = [
   // [59, "Abyssal Axe", false],
 ];
 
-function makeWeaponBlock(maxAreaLevel, baseType, sound = true) {
-  return `Show
-  AreaLevel <= ${maxAreaLevel}
-  BaseType == "${baseType}"
-  SetFontSize ${sound ? 45 : 35}
-  Rarity <= Rare
-  SetBackgroundColor 255 0 255 255
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-  ${sound ? "PlayAlertSound 16 200" : ""}
-`;
-}
-
 // https://textreader.pro/
 export default function getFilter() {
   return [
@@ -117,9 +103,6 @@ export default function getFilter() {
     make3LinkFilterB("BGG", "ding"),
 
     // other stuff
-    makeColourFilter("B"),
-    makeColourFilter("GG"),
-    makeColourFilter("RG"),
     levelingBaseFilter(),
   ].join("\n\n");
 }
