@@ -1,3 +1,4 @@
+import { getFilterFragment } from "./filter-loader.js";
 import {
   make3LinkFilter,
   make4LinkFilter,
@@ -25,6 +26,8 @@ export const divinationCards = makeBaseTypeFilter(
 
 export const baseFilter = () => {
   return `
+${getFilterFragment("ssf-bases-top", {})}
+
 Show
   BaseType "Scroll of Wisdom"
   Class Currency

@@ -1,0 +1,158 @@
+
+# "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Marble Amulet"
+
+Show
+  Corrupted False
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  SetTextColor 255 0 255 200
+  ##DefaultBackground
+  Continue
+
+Show
+  Corrupted False
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  Rarity = Normal
+  SetBorderColor 200 200 200 150
+  Continue
+
+Show
+  Corrupted False
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  Rarity = Magic
+  SetBorderColor 136 136 255 150
+  Continue
+
+Show
+  Corrupted False
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
+  Rarity = Rare
+  SetBorderColor 255 255 0 150
+  Continue
+
+
+#####################
+## Vermillion Ring ##
+#####################
+Show
+  BaseType "Vermillion Ring"
+  Corrupted False
+  SetFontSize 45
+  SetTextColor 0 0 255 255
+  SetBackgroundColor 255 255 255 255
+  SetBorderColor 0 0 255 255
+  MinimapIcon 0 Blue Star
+  PlayEffect Blue
+  PlayAlertSound 6 200
+
+###########################
+## Rings, Amulets, Belts ##
+###########################
+Show
+  BaseType = "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Marble Amulet" "Amethyst Ring" "Unset Ring" "Leather Belt"
+  ItemLevel >= 85
+  Rarity <= Rare
+  Corrupted False
+  SetFontSize 40
+  SetTextColor 255 0 255 200
+  SetBorderColor 255 255 0 150
+  PlayEffect Red
+  MinimapIcon 1 Yellow Cross
+  ##DefaultBackground
+
+########################
+## Top Utility Flasks ##
+########################
+Show
+  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
+  ItemLevel >= 85
+  SetFontSize 45
+  Rarity <= Magic
+  SetTextColor 0 203 221 200
+  SetBorderColor 0 203 221 200
+  PlayEffect Red
+  ##DefaultBackground
+
+############################
+## Bossing Utility Flasks ##
+############################
+Show
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
+  ItemLevel = 80
+  SetFontSize 45
+  Rarity <= Magic
+  SetTextColor 0 203 221 200
+  SetBorderColor 0 203 221 200
+  PlayEffect Red
+  ##DefaultBackground
+
+######################
+## Physical Weapons ##
+######################
+
+Show
+  BaseType "Despot Axe" "Ezomyte Axe" "Piledriver"
+  Corrupted False
+  Rarity <= Rare
+  ItemLevel = 83 # T1 Phys only
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  SetTextColor 255 0 255 200
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
+  ##DefaultBackground
+
+#######################
+## Elemental Weapons ##
+#######################
+
+Show
+  BaseType "Imperial Claw" "Gemini Claw"
+  Corrupted False
+  Rarity <= Rare
+  ItemLevel = 82 # T1 Flat Ele
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  SetTextColor 255 0 255 200
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
+  ##DefaultBackground
+
+###########################
+## Helmet, Gloves, Boots ##
+###########################
+Show
+  ItemLevel >= 85
+  Rarity <= Rare
+  Corrupted False
+  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
+  SetFontSize 40
+  PlayEffect Red
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  MinimapIcon 1 Yellow Star
+  ##DefaultBackground
+
+##########################
+## Body Armour, Shields ##
+##########################
+Show
+  ItemLevel >= 86
+  Rarity <= Rare
+  Corrupted False
+  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" "Spiny Round Shield" "Colossal Tower Shield" "Supreme Spiked Shield" "Mirrored Spiked Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Bronze Tower Shield"
+  SetFontSize 45
+  PlayEffect Red
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  MinimapIcon 1 Yellow Star
+  ##DefaultBackground
+
+###############################################
+## Body Armour, Shields T2 Spell Suppression ##
+###############################################
+Show
+  ItemLevel == 77
+  Rarity <= Rare
+  Corrupted False
+  BaseType "Full Dragonscale" "General's Brigandine" "Sadist Garb" "Blood Raiment" "Triumphant Lamellar" "Sharkskin Tunic" "Destiny Leather" "Exquisite Leather" "Cardinal Round Shield" "Spiny Round Shield" "Supreme Spiked Shield" "Mirrored Spiked Shield"
+  SetFontSize 45
+  PlayEffect Red
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  MinimapIcon 1 Yellow Star
+  ##DefaultBackground

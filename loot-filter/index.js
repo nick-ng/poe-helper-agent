@@ -1,4 +1,4 @@
-import { oniGoroshiFarm } from "./filters.js";
+import { oniGoroshiFarm, baseFilter } from "./filters.js";
 import getShieldFilter from "./filters/shield.js";
 import getTRLevelingFilter from "./filters/tr-leveling.js";
 import getPoisonFilter from "./filters/poison.js";
@@ -8,6 +8,7 @@ import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
 import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
 import getSpellFilter from "./filters/spell.js";
 import getTrapFilter from "./filters/traps.js";
+import getClawFilter from "./filters/claw.js";
 import { getCustomItemsFilter, getFilterFragment } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
@@ -33,41 +34,57 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
   writeFilters(
     [getCustomItemsFilter(), getSsfUniquesFilter(), get2HAxeFilter()],
     outputDir,
-    { prefix: "02_2h-axe_", suffix: "" },
+    { prefix: "0_2h-axe_", suffix: "" },
     isDebug,
-    [5, 20]
+    [5, 11]
   );
 
   writeFilters(
     [getCustomItemsFilter(), getSsfUniquesFilter(), getShieldFilter()],
     outputDir,
-    { prefix: "04_shield_", suffix: "" },
+    { prefix: "0_shield_", suffix: "" },
     isDebug,
-    [5, 20]
+    [5, 11]
   );
 
   writeFilters(
     [getCustomItemsFilter(), getSsfUniquesFilter(), getSpellFilter()],
     outputDir,
-    { prefix: "01_spell_", suffix: "" },
+    { prefix: "0_spell_", suffix: "" },
     isDebug,
-    [5, 20]
+    [5, 11]
   );
 
   writeFilters(
     [getCustomItemsFilter(), getSsfUniquesFilter(), getPoisonFilter()],
     outputDir,
-    { prefix: "00_poison_", suffix: "" },
+    { prefix: "0_poison_", suffix: "" },
     isDebug,
-    [5, 20]
+    [5, 11]
   );
 
   writeFilters(
     [getCustomItemsFilter(), getSsfUniquesFilter(), getTrapFilter()],
     outputDir,
-    { prefix: "03_traps_", suffix: "" },
+    { prefix: "0_traps_", suffix: "" },
     isDebug,
-    [5, 20]
+    [5, 11]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), getSsfUniquesFilter(), getClawFilter()],
+    outputDir,
+    { prefix: "0_claw_", suffix: "" },
+    isDebug,
+    [5, 11]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), getSsfUniquesFilter(), baseFilter()],
+    outputDir,
+    { prefix: "1_t16-maps_", suffix: "" },
+    isDebug,
+    [19, 25]
   );
 
   writeFilters(

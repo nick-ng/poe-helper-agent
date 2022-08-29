@@ -8,29 +8,6 @@
 #questitem rgb(74,230,58)
 #defaultfontsize: 32 (18-45)
 
-Show
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
-  SetTextColor 255 0 255 200
-  ##DefaultBackground
-  Continue
-
-Show
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
-  Rarity = Normal
-  SetBorderColor 200 200 200 150
-  Continue
-
-Show
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
-  Rarity = Magic
-  SetBorderColor 136 136 255 150
-  Continue
-
-Show
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Triumphant Lamellar" "General's Brigandine" "Pig-Faced Bascinet" "Fluted Bascinet" "Nightmare Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets## "Cardinal Round Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Colossal Tower Shield" "Bronze Tower Shield"
-  Rarity = Rare
-  SetBorderColor 255 255 0 150
-  Continue
 
 # SetBackgroundColor 84 237 44 255
 
@@ -41,24 +18,6 @@ Show
 ##########################
 ## Body Armour, Shields ##
 ##########################
-Show
-  ItemLevel > 86
-  Rarity <= Rare
-  BaseType "Full Dragonscale" "Blood Raiment" "Saint's Hauberk" "Cardinal Round Shield"
-  SetFontSize 45
-  PlayEffect Red
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
-  MinimapIcon 1 Yellow Star
-
-Show
-  ItemLevel == 86
-  Rarity <= Rare
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "Triumphant Lamellar" "General's Brigandine" "Cardinal Round Shield" "Colossal Tower Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Bronze Tower Shield"
-  SetFontSize 45
-  PlayEffect Red
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
-  MinimapIcon 1 Yellow Star
-
 Show
   ItemLevel >= 77
   BaseDefencePercentile >= 90
@@ -80,15 +39,6 @@ Show
 ## Helmet, Gloves, Boots ##
 ###########################
 Show
-  ItemLevel >= 85
-  Rarity <= Rare
-  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
-  SetFontSize 40
-  PlayEffect Red
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
-  MinimapIcon 1 Yellow Star
-
-Show
   ItemLevel >= 76
   BaseDefencePercentile >= 90
   Rarity <= Rare
@@ -108,14 +58,6 @@ Show
 ###########################
 ## Rings, Amulets, Belts ##
 ###########################
-Show
-  ItemLevel >= 84
-  Rarity = Rare
-  BaseType "Amethyst Ring" "Unset Ring" "Leather Belt" ##amulets##
-  SetFontSize 40
-  PlayEffect Red
-  MinimapIcon 1 Yellow Cross
-
 Show
   ItemLevel >= 84
   AreaLevel < 83
@@ -157,32 +99,10 @@ Show
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Cross
 
-#####################
-## Vermillion Ring ##
-#####################
-Show
-  BaseType "Vermillion Ring"
-  SetFontSize 45
-  SetTextColor 0 0 255 255
-  SetBackgroundColor 255 255 255 255
-  SetBorderColor 0 0 255 255
-  MinimapIcon 0 Blue Star
-  PlayEffect Blue
-  PlayAlertSound 6 200
 
 ####################
 ## Utility Flasks ##
 ####################
-Show
-  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
-  ItemLevel >= 85
-  SetFontSize 45
-  Rarity <= Magic
-  SetTextColor 0 203 221 200
-  SetBorderColor 0 203 221 200
-  PlayEffect Red
-  ##DefaultBackground
-
 Show
   BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
   ItemLevel >= 84
@@ -210,31 +130,3 @@ Show
   SetTextColor 0 203 221 200
   SetBorderColor 0 203 221 200
   ##DefaultBackground
-
-######################
-## Physical Weapons ##
-######################
-
-Show
-  BaseType "Despot Axe" "Ezomyte Axe" "Piledriver"
-  Corrupted False
-  Rarity <= Rare
-  ItemLevel = 83 # T1 Phys only
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
-  SetTextColor 255 0 255 200
-  SetBorderColor 255 0 0 255
-  MinimapIcon 1 Pink Star
-
-#######################
-## Elemental Weapons ##
-#######################
-
-Show
-  BaseType "Imperial Claw" "Gemini Claw"
-  Corrupted False
-  Rarity <= Rare
-  ItemLevel = 82 # T1 Flat Ele
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
-  SetTextColor 255 0 255 200
-  SetBorderColor 255 0 0 255
-  MinimapIcon 1 Pink Star
