@@ -7,7 +7,7 @@ import {
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
-const amulets = '"Lapis Amulet" "Jade Amulet" "Turquoise Amulet"';
+const amulets = '"Lapis Amulet" "Amber Amulet" "Agate Amulet"';
 
 export const shieldT16 = `
 Show
