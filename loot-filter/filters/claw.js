@@ -89,13 +89,13 @@ Show
   AreaLevel < 33
   SetFontSize 35
   Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
-  Sockets GRR
+  Sockets GGB
 
 Show
   AreaLevel < 33
   SetFontSize 35
   Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
-  Sockets RRR
+  Sockets GGR
 
 Show
   Rarity >= Rare
