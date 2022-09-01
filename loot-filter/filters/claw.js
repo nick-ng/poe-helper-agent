@@ -9,7 +9,7 @@ import getFlaskFilter from "../../filter-generators/flasks.js";
 
 const amulets = '"Lapis Amulet" "Amber Amulet" "Agate Amulet"';
 
-export const shieldT16 = `
+export const clawT16 = `
 Show
   Rarity Unique
   BaseType == "Timeworn Claw" "Twilight Blade" "Viridian Jewel"
@@ -40,51 +40,6 @@ Show
 `;
 
 const specific = `
-Show
-  SetBorderColor 200 0 0
-  SetFontSize 45
-  ItemLevel >= 1
-  BaseType "Rustic Sash"
-  ItemLevel <= 30
-  CustomAlertSound "sounds/rustic sash.mp3"
-
-Show
-  ItemLevel >= 78
-  BaseDefencePercentile >= 90
-  Rarity <= Rare
-  BaseType "Colossal Tower Shield"
-  Corrupted False
-  SetFontSize 35
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-
-Show
-  ItemLevel >= 78
-  BaseDefencePercentile >= 33
-  Rarity = Rare
-  BaseType "Colossal Tower Shield"
-  Corrupted False
-  SetFontSize 30
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-
-Show
-  BaseType "Colossal Tower Shield"
-  Corrupted False
-  AreaLevel <= 72
-  Rarity <= Rare
-  SetFontSize 30
-  SetBorderColor 0 0 0 255
-  MinimapIcon 1 Pink Cross
-
-Show
-ItemLevel >= 40
-  Rarity = Rare
-  SetFontSize 30
-  SetBorderColor 0 100 255 255
-  MinimapIcon 1 Pink Cross
-  Class "One Hand"
-
 Show
   AreaLevel < 33
   SetFontSize 35
@@ -134,7 +89,7 @@ const weapons = [
 // https://textreader.pro/
 export default function getFilter() {
   return [
-    shieldT16,
+    clawT16,
     specific,
     ...weapons.map((weapon) => {
       const [maxAreaLevel, baseType, sound] = weapon;
