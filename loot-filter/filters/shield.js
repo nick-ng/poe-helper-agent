@@ -82,7 +82,6 @@ Show
   MinimapIcon 1 Pink Cross
 
 Show
-  Area
   AreaLevel < 67
   Rarity <= Rare
   BaseType "Girded Tower Shield"
