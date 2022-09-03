@@ -85,9 +85,9 @@ Show
   PlayEffect Red
   ##DefaultBackground
 
-######################
-## Physical Weapons ##
-######################
+###########################
+## 83 Weapons - Physical ##
+###########################
 
 Show
   BaseType "Despot Axe" "Ezomyte Axe" "Piledriver"
@@ -100,12 +100,12 @@ Show
   MinimapIcon 1 Pink Star
   ##DefaultBackground
 
-#######################
-## Elemental Weapons ##
-#######################
+##########################################
+## 82 Weapons - Elemental, Bleed Chance ##
+##########################################
 
 Show
-  BaseType "Imperial Claw" "Gemini Claw"
+  BaseType "Imperial Claw" "Gemini Claw" "Runic Hatchet"
   Corrupted False
   Rarity <= Rare
   ItemLevel = 82 # T1 Flat Ele

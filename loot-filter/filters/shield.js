@@ -35,6 +35,7 @@ Show
   BaseType "Colossal Tower Shield"
   Corrupted False
   SetFontSize 40
+  SetTextColor 255 0 255 200
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
 `;
@@ -55,6 +56,7 @@ Show
   BaseType "Colossal Tower Shield"
   Corrupted False
   SetFontSize 35
+  SetTextColor 255 0 255 200
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
@@ -65,6 +67,7 @@ Show
   BaseType "Colossal Tower Shield"
   Corrupted False
   SetFontSize 30
+  SetTextColor 255 0 255 200
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
@@ -74,13 +77,35 @@ Show
   AreaLevel <= 72
   Rarity <= Rare
   SetFontSize 30
+  SetTextColor 255 0 255 200
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
 Show
-ItemLevel >= 40
+  Area
+  AreaLevel < 67
+  Rarity <= Rare
+  BaseType "Girded Tower Shield"
+  Corrupted False
+  SetFontSize 40
+  SetTextColor 255 0 255 200
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
+
+Show
+  ItemLevel >= 40
   Rarity = Rare
+  Identified False
   SetFontSize 30
+  SetBorderColor 0 100 255 255
+  MinimapIcon 1 Pink Cross
+  Class "One Hand"
+
+Show
+  Rarity = Rare
+  Identified True
+  HasExplicitMod = "of Haemophilia" "of Exsanguination"
+  SetFontSize 45
   SetBorderColor 0 100 255 255
   MinimapIcon 1 Pink Cross
   Class "One Hand"
@@ -130,9 +155,9 @@ const weapons = [
   [60, "Abyssal Axe", false],
   [67, "Karui Chopper", false],
   [67, "Sundering Axe", false],
-  [67, "Ezomyte Axe", true],
+  [67, "Ezomyte Axe", false],
   [67, "Vaal Axe", false],
-  [67, "Despot Axe", true],
+  [67, "Despot Axe", false],
   [67, "Void Axe", false],
 ];
 
@@ -147,10 +172,9 @@ export default function getFilter() {
     }),
 
     // 4-Links
-    make4LinkFilter("GGGR", "3g1r", 1, 55),
     make4LinkFilter("RRGG", "2r2g", 1, 55),
     make4LinkFilter("RRRG", "3r1g", 1, 62),
-    make4LinkFilter("RRRR", "4r", 55, 62),
+    make4LinkFilter("RRRR", "4r", 45, 62),
 
     // 3-Links
     make3LinkFilter("GGR", "Boots", "2g1r boots"),
