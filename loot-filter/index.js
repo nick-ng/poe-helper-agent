@@ -1,14 +1,11 @@
 import { oniGoroshiFarm, baseFilter } from "./filters.js";
 import getShieldFilter from "./filters/shield.js";
-import getTRLevelingFilter from "./filters/tr-leveling.js";
 import getPoisonFilter from "./filters/poison.js";
 import get2HAxeFilter from "./filters/2h-melee.js";
-// import getEHeistFilter from "./filters/endless-heist.js";
-import getPSlingerLevelingFilter from "./filters/pslinger-leveling.js";
-import getAurabotLevelingFilter from "./filters/aurabot-leveling.js";
 import getSpellFilter from "./filters/spell.js";
 import getTrapFilter from "./filters/traps.js";
 import getClawFilter from "./filters/claw.js";
+import getPhysDotFilter from "./filters/phys-dot.js";
 import { getCustomItemsFilter, getFilterFragment } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
@@ -35,6 +32,14 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     [getCustomItemsFilter(), getSsfUniquesFilter(), get2HAxeFilter()],
     outputDir,
     { prefix: "0_2h-axe_", suffix: "" },
+    isDebug,
+    [5, 11]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), getSsfUniquesFilter(), getPhysDotFilter()],
+    outputDir,
+    { prefix: "0_phys-dot_", suffix: "" },
     isDebug,
     [5, 11]
   );
