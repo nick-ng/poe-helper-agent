@@ -15,12 +15,12 @@ export const divinationCards = makeBaseTypeFilter(
     "Lethean Temptation", // Nebulis
   ],
   [
-    "SetFontSize 40",
-    "SetTextColor 47 252 47 255",
+    "SetFontSize 45",
+    "SetTextColor 175 96 37 255",
     "SetBorderColor 47 252 47 255",
     "MinimapIcon 2 Green Triangle",
     "PlayEffect Brown",
-    '  CustomAlertSound "sounds/brian-03-bong.mp3"',
+    'CustomAlertSound "sounds/brian-03-bong.mp3"',
   ]
 );
 
