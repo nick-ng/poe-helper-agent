@@ -1,9 +1,5 @@
 import { levelingBaseFilter } from "../filters.js";
-import {
-  make3LinkFilter,
-  make4LinkFilter,
-  makeWeaponBlock,
-} from "../generators.js";
+import { make3LinkFilter, make4LinkFilter } from "../generators.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
@@ -71,19 +67,9 @@ Hide
   Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Claws" "Warstaves"
 `;
 
-const weapons = [
-  [52, "Woodful Staff", true],
-  [58, "Highborn Staff", true],
-  [61, "Primordial Staff", true],
-];
-
 // https://textreader.pro/
 export default function getFilter() {
   return [
-    ...weapons.map((weapon) => {
-      const [maxAreaLevel, baseType, sound] = weapon;
-      return makeWeaponBlock(maxAreaLevel, baseType, sound);
-    }),
     custom,
     make4LinkFilter("BBBB", "4b"),
     make4LinkFilter("BBBG", "3b1g"),
