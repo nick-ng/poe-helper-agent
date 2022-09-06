@@ -6,6 +6,7 @@ import getSpellFilter from "./filters/spell.js";
 import getTrapFilter from "./filters/traps.js";
 import getClawFilter from "./filters/claw.js";
 import getPhysDotFilter from "./filters/phys-dot.js";
+import getInquisitorFilter from "./filters/inquisitor.js";
 import { getCustomItemsFilter, getFilterFragment } from "./filter-loader.js";
 import { getChaosFilter } from "./chaos-filter.js";
 import { writeFilters } from "./write-filters.js";
@@ -32,6 +33,14 @@ export const makeGeneralFilter = (outputDir, isDebug = false) => {
     [getCustomItemsFilter(), getSsfUniquesFilter(), get2HAxeFilter()],
     outputDir,
     { prefix: "0_2h-axe_", suffix: "" },
+    isDebug,
+    [5, 11]
+  );
+
+  writeFilters(
+    [getCustomItemsFilter(), getSsfUniquesFilter(), getInquisitorFilter()],
+    outputDir,
+    { prefix: "0_inquisitor_", suffix: "" },
     isDebug,
     [5, 11]
   );

@@ -7,7 +7,7 @@ import {
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
-const amulets = '"Jade Amulet" "Turquoise Amulet"';
+const amulets = '"Lapis Amulet" "Turquoise Amulet"';
 
 const custom = `Show
   SetBorderColor 200 0 0
@@ -38,13 +38,12 @@ Show  # +1 all Physical Gems recipe
 
 Show
   AreaLevel < 20
-  BaseType "Lapis Amulet" "Turquoise Amulet"
+  BaseType ${amulets}
   Corrupted False
   SetFontSize 45
   PlayAlertSound 16 200
-  MinimapIcon 1 Blue Moon
-  SetTextColor 255 0 255 200
-  SetBorderColor 0 0 255 255
+  MinimapIcon 1 Green Moon
+  SetBorderColor 0 255 0 255
 
 Show
   BaseType "Carved Wand"
