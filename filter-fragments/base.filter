@@ -13,6 +13,7 @@ Show # Red Maps
   Class Currency
   StackSize >= 10
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   SetFontSize 40
 
 Show # Yellow Maps
@@ -21,6 +22,7 @@ Show # Yellow Maps
   AreaLevel <= 77
   StackSize >= 6
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   SetFontSize 45
 
 Show # Campaign
@@ -29,6 +31,7 @@ Show # Campaign
   AreaLevel < 68
   StackSize >= 3
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   SetFontSize 45
 
 Show # Pre-Chamber of Innocence
@@ -36,6 +39,7 @@ Show # Pre-Chamber of Innocence
   Class Currency
   AreaLevel < 43
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   SetFontSize 45
   PlayEffect Grey
 
@@ -45,6 +49,7 @@ Hide
   AreaLevel >= 68
   StackSize < 3
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   SetFontSize 45
 
 Show # T1 Currency
@@ -53,6 +58,7 @@ Show # T1 Currency
   SetFontSize 45
   SetTextColor 255 255 0 255
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Circle
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
@@ -63,6 +69,7 @@ Show
   SetFontSize 45
   SetTextColor 255 255 0 255
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Circle
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
@@ -73,6 +80,7 @@ Show # T2 Currency
   SetFontSize 45
   SetTextColor 0 255 0 255
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
@@ -84,6 +92,7 @@ Show # T3 Currency (3+ to show)
   StackSize >= 3
   SetTextColor 0 255 0 255
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
@@ -95,6 +104,7 @@ Show # T4 Currency (6+ to show)
   StackSize >= 6
   SetTextColor 0 255 0 255
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
@@ -106,6 +116,7 @@ Hide # T3 & T4 Currency (don't show if not above thresholds)
   SetFontSize 45
   SetTextColor 0 255 0 255
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
 
 Show
   Class "Currency"
@@ -113,6 +124,7 @@ Show
   SetFontSize 45
   SetTextColor 190 178 135 255
   SetBorderColor 190 178 135 255
+  ##DefaultBackground
 
 Show # T1 Currency Divination Cards
   Class "Divination"
@@ -121,6 +133,7 @@ Show # T1 Currency Divination Cards
 	SetTextColor 255 0 0 255
 	SetBackgroundColor 255 255 255 200
 	SetBorderColor 255 0 0 255
+  ##DefaultBackground
 	MinimapIcon 0 Red Star
 	PlayEffect Red
 	PlayAlertSound 6 300
@@ -131,6 +144,7 @@ Show # T2 Currency Divination Cards
   SetFontSize 45
   SetTextColor 47 252 47 255
   SetBorderColor 47 252 47 255
+  ##DefaultBackground
   MinimapIcon 2 Green Triangle
   PlayEffect White
   CustomAlertSound "sounds/brian-02-doof.mp3"
