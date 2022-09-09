@@ -15,11 +15,13 @@ const defaultReplacements = {
     "Carnal Armour",
     "Full Dragonscale",
     "Cardinal Round Shield",
+    "Saint's Hauberk",
     "Supreme Spiked Shield",
   ]),
   ilvl86b: basesToFilter([
     "Sadist Garb",
     "General's Brigandine",
+    "Saintly Chainmail",
     "Mirrored Spiked Shield",
   ]),
   ilvl85a: basesToFilter([
