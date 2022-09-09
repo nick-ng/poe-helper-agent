@@ -1,7 +1,9 @@
 import { levelingBaseFilter } from "../filters.js";
 import { make3LinkFilter, make4LinkFilter } from "../generators.js";
 import { getFilterFragment } from "../filter-loader.js";
-import getFlaskFilter from "../../filter-generators/flasks.js";
+import getFlaskFilter, {
+  getManaFlaskFilter,
+} from "../../filter-generators/flasks.js";
 
 const amulets = '"Jade Amulet" "Amber Amulet" "Citrine Amulet"';
 
@@ -104,6 +106,7 @@ export default function getFilter() {
     make3LinkFilter("BB", "Sceptre", "brian-2-link"),
 
     getFlaskFilter(),
+    getManaFlaskFilter(),
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
   ].join("\n\n");
