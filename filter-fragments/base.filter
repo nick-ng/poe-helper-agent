@@ -1,0 +1,136 @@
+Show
+  BaseType "Scroll of Wisdom"
+  SetTextColor 210 178 135 220
+  Continue
+
+Show
+  BaseType "Portal Scroll"
+  SetTextColor 100 200 200 220
+  Continue
+
+Show # Red Maps
+  BaseType "Scroll of Wisdom" "Portal Scroll"
+  Class Currency
+  StackSize >= 10
+  SetBorderColor 0 255 0 255
+  SetFontSize 40
+
+Show # Yellow Maps
+  BaseType "Scroll of Wisdom" "Portal Scroll"
+  Class Currency
+  AreaLevel <= 77
+  StackSize >= 6
+  SetBorderColor 0 255 0 255
+  SetFontSize 45
+
+Show # Campaign
+  BaseType "Scroll of Wisdom" "Portal Scroll"
+  Class Currency
+  AreaLevel < 68
+  StackSize >= 3
+  SetBorderColor 0 255 0 255
+  SetFontSize 45
+
+Show # Pre-Chamber of Innocence
+  BaseType "Scroll of Wisdom" "Portal Scroll"
+  Class Currency
+  AreaLevel < 43
+  SetBorderColor 0 255 0 255
+  SetFontSize 45
+  PlayEffect Grey
+
+Hide
+  BaseType "Scroll of Wisdom" "Portal Scroll"
+  Class Currency
+  AreaLevel >= 68
+  StackSize < 3
+  SetBorderColor 0 255 0 255
+  SetFontSize 45
+
+Show # T1 Currency
+  Class "Currency"
+  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
+  SetFontSize 45
+  SetTextColor 255 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Circle
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Show
+  Class "Currency"
+  BaseType "Catalyst" "Eldritch"
+  SetFontSize 45
+  SetTextColor 255 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Circle
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Show # T2 Currency
+  Class "Currency"
+  BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb"
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Show # T3 Currency (3+ to show)
+  Class "Currency"
+  BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation"
+  SetFontSize 45
+  StackSize >= 3
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Show # T4 Currency (6+ to show)
+  Class "Currency"
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Orb of Transmutation" "Armourer's Scrap"
+  SetFontSize 45
+  StackSize >= 6
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/brian-02-doof.mp3"
+
+Hide # T3 & T4 Currency (don't show if not above thresholds)
+  Class "Currency"
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Orb of Transmutation" "Jeweller's Orb" "Orb of Chance" "Chromatic Orb"
+  AreaLevel >= 77
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+
+Show
+  Class "Currency"
+  BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
+  SetFontSize 45
+  SetTextColor 190 178 135 255
+  SetBorderColor 190 178 135 255
+
+Show # T1 Currency Divination Cards
+  Class "Divination"
+  BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" "Darker Half" "Altered Perception" "Rebirth and Renewal" "The Sephirot"
+  SetFontSize 45
+	SetTextColor 255 0 0 255
+	SetBackgroundColor 255 255 255 200
+	SetBorderColor 255 0 0 255
+	MinimapIcon 0 Red Star
+	PlayEffect Red
+	PlayAlertSound 6 300
+
+Show # T2 Currency Divination Cards
+  Class "Divination"
+  BaseType == "A Sea of Blue" "Acclimatisation" "Chaotic Disposition" "Coveted Possession" "Demigod's Wager" "Emperor's Luck" "Harmony of Souls" "Loyalty" "Lucky Connections" "Lucky Deck" "No Traces" "Parasitic Passengers" "Rain of Chaos" "Society's Remorse" "The Cacophony" "The Cartographer" "The Catalyst" "The Fool" "The Gemcutter" "The Heroic Shot" "The Innocent" "The Inventor" "The Journey" "The Master Artisan" "The Puzzle" "The Rabbit's Foot" "The Scholar" "The Seeker" "The Survivalist" "The Tinkerer's Table" "The Tireless Extractor" "The Union" "The Wrath" "Three Faces in the Dark" "Three Voices" "Underground Forest" "Vinia's Token" "Bowyer's Dream" "Draped in Dreams" "Emperor of Purity" "Humility" "Immortal Resolve" "Imperial Legacy" "Rebirth" "The Celestial Justicar" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Ethereal" "The Porcupine" "The Sacrifice" "The Warlord" "The White Knight" "Vanity"
+  SetFontSize 45
+  SetTextColor 47 252 47 255
+  SetBorderColor 47 252 47 255
+  MinimapIcon 2 Green Triangle
+  PlayEffect White
+  CustomAlertSound "sounds/brian-02-doof.mp3"

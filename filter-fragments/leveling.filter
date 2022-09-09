@@ -1,0 +1,162 @@
+Show
+  BaseType == "Quicksilver Flask"
+  AreaLevel <= 15
+  SetFontSize 45
+  SetTextColor 255 255 255 255
+  SetBorderColor 255 255 255 255
+  SetBackgroundColor 0 203 221 255
+  PlayEffect Green
+  MinimapIcon 2 Green Circle
+  PlayAlertSound 5 200
+
+Show
+  AreaLevel = 1
+  SetFontSize 45
+
+Show
+  AreaLevel <= 23
+  Class Currency
+  BaseType "Essence of"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBorderColor 0 0 0
+  SetBackgroundColor 213 159 0 255
+  PlayAlertSound 2 50
+  PlayEffect White
+  MinimapIcon 2 White Circle
+
+Show
+  BaseType "Scroll of Wisdom"
+  Class Currency
+  AreaLevel <= 28
+  SetTextColor 210 178 135 220
+  SetBorderColor 0 255 0 255
+  SetFontSize 45
+  MinimapIcon 0 Grey Raindrop
+  PlayEffect Grey
+  CustomAlertSound "sounds/amy-wisdom.mp3"
+
+Show
+  BaseType "Portal Scroll"
+  Class Currency
+  AreaLevel <= 28
+  SetTextColor 100 200 200 220
+  SetBorderColor 0 255 0 255
+  SetFontSize 45
+  MinimapIcon 2 Grey Star
+  PlayEffect Grey
+  CustomAlertSound "sounds/amy-portal.mp3"
+
+Show
+  BaseType "Armourer's Scrap"
+  Class Currency
+  AreaLevel <= 28
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Grey Raindrop
+  PlayEffect Grey
+  CustomAlertSound "sounds/amy-armourer.mp3"
+
+Show
+  AreaLevel < 44
+  Class Currency
+  BaseType "Blacksmith's Whetstone"
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/amy-blacksmith.mp3"
+
+Show
+  AreaLevel < 33
+  Class Currency
+  BaseType "Orb of Transmutation"
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/amy-transmute.mp3"
+
+Show
+  AreaLevel < 33
+  Class Currency
+  BaseType "Orb of Alteration"
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/amy-alteration.mp3"
+
+Show
+  AreaLevel < 33
+  Class Currency
+  BaseType "Orb of Fusing"
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/amy-fusing.mp3"
+
+Show
+  AreaLevel < 48
+  Class Currency
+  BaseType "Orb of Alchemy"
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/amy-alchemy.mp3"
+
+Show
+  AreaLevel <= 72
+  Class "Currency"
+  BaseType "Orb of Chance"
+  SetFontSize 45
+  SetTextColor 0 255 0 255
+  SetBorderColor 0 255 0 255
+  MinimapIcon 0 Green Raindrop
+  PlayEffect Green
+  CustomAlertSound "sounds/amy-chance.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  BaseType "Iron Ring"
+  AreaLevel <= 30
+  CustomAlertSound "sounds/iron.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  BaseType "Ruby Ring"
+  AreaLevel <= 30
+  CustomAlertSound "sounds/ruby ring.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  BaseType "Sapphire Ring"
+  AreaLevel <= 30
+  CustomAlertSound "sounds/sapphire ring.mp3"
+
+Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  BaseType "Topaz Ring"
+  AreaLevel <= 30
+  CustomAlertSound "sounds/topaz ring.mp3"
+
+Show
+  Rarity = Unique
+  Class "Rings"
+  SetFontSize 45
+  SetTextColor 255 255 255 255
+  SetBackgroundColor 255 0 0 255
+  SetBorderColor 100 100 100 255
+  PlayEffect Red

@@ -64,8 +64,8 @@ function makeManaFlaskBlock(maxAreaLevel, baseType, big) {
   BaseType == "${baseType}"
   SetFontSize ${big ? 45 : 30}
   Rarity <= Rare
-  SetTextColor 0 0 255 200
-  SetBorderColor 0 0 255 200
+  SetTextColor 80 80 255 200
+  SetBorderColor 80 80 255 200
   ##DefaultBackground
   ${big ? "MinimapIcon 2 Blue Raindrop" : ""}
 `;
