@@ -7,6 +7,29 @@ const fixComments = (filterFragment) => {
   return filterFragment.toString().replaceAll("//", "#");
 };
 
+const basesToFilter = (baseTypes) =>
+  baseTypes.map((a) => `"${a.trim()}" `).join("");
+
+const defaultReplacements = {
+  ilvl86a: basesToFilter([
+    "Carnal Armour",
+    "Full Dragonscale",
+    "Cardinal Round Shield",
+    "Supreme Spiked Shield",
+  ]),
+  ilvl86b: basesToFilter([
+    "Sadist Garb",
+    "General's Brigandine",
+    "Mirrored Spiked Shield",
+  ]),
+  ilvl85a: basesToFilter([
+    "Pig-Faced Bascinet",
+    "Dragonscale Gauntlets",
+    "Dragonscale Boots",
+    "Two-Toned Boots",
+  ]),
+};
+
 export const getFilterFragment = (fragmentName, replacements = {}) => {
   const actualFragmentName = fragmentName.replace(/\.filter$/, "");
   const rawFilter = fixComments(
@@ -15,7 +38,10 @@ export const getFilterFragment = (fragmentName, replacements = {}) => {
     )
   );
 
-  const replacedFilter = Object.entries(replacements).reduce((prev, curr) => {
+  const replacedFilter = Object.entries({
+    ...defaultReplacements,
+    ...replacements,
+  }).reduce((prev, curr) => {
     const [original, replacement] = curr;
 
     return prev.replaceAll(`##${original}##`, replacement);

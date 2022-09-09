@@ -20,17 +20,19 @@
 ##########################
 Show
   ItemLevel >= 77
+  AreaLevel < 83
   BaseDefencePercentile >= 90
   Rarity <= Rare
-  BaseType "Full Dragonscale" "Blood Raiment" "Saint's Hauberk" "Cardinal Round Shield" # "Ezomyte Tower Shield"
+  BaseType ##ilvl86a##
   SetFontSize 35
   PlayEffect Yellow
   MinimapIcon 1 Yellow Star
 
 Show
   BaseDefencePercentile >= 33
+  AreaLevel < 83
   Rarity = Rare
-  BaseType "Full Dragonscale" "Sadist Garb" "Blood Raiment" "Saint's Hauberk" "Saintly Chainmail" "General's Brigandine" "Cardinal Round Shield" "Supreme Spiked Shield" # "Ezomyte Tower Shield" "Pinnacle Tower Shield" "Ebony Tower Shield" "Triumphant Lamellar" "General's Brigandine"
+  BaseType ##ilvl86a####ilvl86b##
   SetFontSize 30
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star
@@ -40,17 +42,19 @@ Show
 ###########################
 Show
   ItemLevel >= 76
+  AreaLevel < 83
   BaseDefencePercentile >= 90
   Rarity <= Rare
-  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots"
+  BaseType ##ilvl85a##
   SetFontSize 35
   PlayEffect Yellow
   MinimapIcon 1 Yellow Star
 
 Show
   BaseDefencePercentile >= 33
+  AreaLevel < 83
   Rarity = Rare
-  BaseType "Pig-Faced Bascinet" "Dragonscale Gauntlets" "Dragonscale Boots" "Two-Toned Boots" "Fluted Bascinet" "Nightmare Bascinet"
+  BaseType ##ilvl85a##
   SetFontSize 30
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star
@@ -69,6 +73,7 @@ Show
 
 Show
   ItemLevel >= 72
+  AreaLevel < 83
   Rarity <= Rare
   BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" ##amulets##
   SetFontSize 35
@@ -77,6 +82,7 @@ Show
 
 Show
   ItemLevel >= 44
+  AreaLevel < 83
   Rarity <= Rare
   BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring"
   SetFontSize 30
@@ -85,6 +91,7 @@ Show
 
 Show
   ItemLevel >= 54
+  AreaLevel < 83
   Rarity <= Rare
   BaseType ##amulets##
   SetFontSize 30
@@ -93,6 +100,7 @@ Show
 
 Show
   ItemLevel >= 64
+  AreaLevel < 83
   Rarity <= Rare
   BaseType "Leather Belt"
   SetFontSize 30
@@ -116,6 +124,7 @@ Show
 Show
   BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Basalt Flask"
   ItemLevel >= 65
+  AreaLevel < 83
   SetFontSize 35
   Rarity <= Magic
   SetTextColor 0 203 221 200
@@ -125,6 +134,7 @@ Show
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
   ItemLevel >= 63
+  AreaLevel < 83
   SetFontSize 30
   Rarity <= Magic
   SetTextColor 0 203 221 200
