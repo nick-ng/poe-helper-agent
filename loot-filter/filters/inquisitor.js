@@ -98,6 +98,11 @@ export default function getFilter() {
     // make3LinkFilter("BGG", "Wand", "2g1b wand"),
     make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
+    make3LinkFilter("3BG", "Sceptre", "brian-3-link"),
+    make3LinkFilter("3BB", "Sceptre", "brian-3-link"),
+    make3LinkFilter("BG", "Sceptre", "brian-2-link"),
+    make3LinkFilter("BB", "Sceptre", "brian-2-link"),
+
     getFlaskFilter(),
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
