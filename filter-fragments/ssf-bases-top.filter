@@ -82,9 +82,10 @@ Show
   SetFontSize 45
   Rarity <= Magic
   SetTextColor 0 203 221 200
-  SetBorderColor 0 203 221 200
+  SetBorderColor 255 255 0 200
   PlayEffect Red
   ##DefaultBackground
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
 
 ##########################
 ## Seething Life Flasks ##
@@ -95,7 +96,7 @@ Show
   SetFontSize 45
   Rarity <= Magic
   SetTextColor 255 0 0 200
-  SetBorderColor 255 0 0 200
+  SetBorderColor 255 255 0 200
   PlayEffect Red
   ##DefaultBackground
   MinimapIcon 2 Red Raindrop
