@@ -6,7 +6,8 @@ import {
 } from "fs";
 import { resolve, dirname, basename } from "path";
 
-import { applyColours } from "./colours.js";
+import { applyColours } from "./mutators/colours.js";
+import { cleanComments } from "./mutators/comments.js";
 import { presets } from "./update-base-filters.js";
 import { getMapsFilter } from "./filter-loader.js";
 
@@ -16,7 +17,13 @@ export const writeFileSync = (filePath, fileContents) => {
     recursive: true,
   });
 
-  return _writeFileSync(filePath, applyColours(fileContents));
+  return _writeFileSync(
+    filePath,
+    [applyColours, cleanComments].reduce(
+      (prev, mutator) => mutator(prev),
+      fileContents
+    )
+  );
 };
 
 const isWithinLevelRange = (filterPath, levelRange) => {
@@ -46,10 +53,7 @@ export const writeFilters = (
   isDebug = false,
   levelRange = [-9999, 9999]
 ) => {
-  const filter = filterFragments
-    .join("\n\n")
-    .replaceAll(/\n{2,}/g, "\n\n")
-    .replaceAll(/\t/g, "  ");
+  const filter = filterFragments.join("\n\n").replaceAll(/\t/g, "  ");
   const baseFiltersPath = resolve(".", "base-filters");
   const baseFilters = readdirSync(baseFiltersPath);
 

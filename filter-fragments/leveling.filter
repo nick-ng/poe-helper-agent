@@ -29,8 +29,9 @@ Show
   BaseType "Scroll of Wisdom"
   Class Currency
   AreaLevel <= 28
-  SetTextColor 210 178 135 220
+  ##ScrollOfWisdomText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   SetFontSize 45
   MinimapIcon 0 Grey Raindrop
   PlayEffect Grey
@@ -40,8 +41,9 @@ Show
   BaseType "Portal Scroll"
   Class Currency
   AreaLevel <= 28
-  SetTextColor 100 200 200 220
+  ##PortalScrollText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   SetFontSize 45
   MinimapIcon 2 Grey Star
   PlayEffect Grey
@@ -52,8 +54,9 @@ Show
   Class Currency
   AreaLevel <= 28
   SetFontSize 45
-  SetTextColor 0 255 0 255
+  ##T3CurrencyText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Grey Raindrop
   PlayEffect Grey
   CustomAlertSound "sounds/amy-armourer.mp3"
@@ -63,8 +66,9 @@ Show
   Class Currency
   BaseType "Blacksmith's Whetstone"
   SetFontSize 45
-  SetTextColor 0 255 0 255
+  ##T3CurrencyText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/amy-blacksmith.mp3"
@@ -74,8 +78,9 @@ Show
   Class Currency
   BaseType "Orb of Transmutation"
   SetFontSize 45
-  SetTextColor 0 255 0 255
+  ##T3CurrencyText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/amy-transmute.mp3"
@@ -85,8 +90,9 @@ Show
   Class Currency
   BaseType "Orb of Alteration"
   SetFontSize 45
-  SetTextColor 0 255 0 255
+  ##T2CurrencyText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/amy-alteration.mp3"
@@ -96,8 +102,9 @@ Show
   Class Currency
   BaseType "Orb of Fusing"
   SetFontSize 45
-  SetTextColor 0 255 0 255
+  ##T2CurrencyText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/amy-fusing.mp3"
@@ -107,8 +114,9 @@ Show
   Class Currency
   BaseType "Orb of Alchemy"
   SetFontSize 45
-  SetTextColor 0 255 0 255
+  ##T2CurrencyText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/amy-alchemy.mp3"
@@ -118,8 +126,9 @@ Show
   Class "Currency"
   BaseType "Orb of Chance"
   SetFontSize 45
-  SetTextColor 0 255 0 255
+  ##T2CurrencyText
   SetBorderColor 0 255 0 255
+  ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
   CustomAlertSound "sounds/amy-chance.mp3"
@@ -151,12 +160,3 @@ Show
   BaseType "Topaz Ring"
   AreaLevel <= 30
   CustomAlertSound "sounds/topaz ring.mp3"
-
-Show
-  Rarity = Unique
-  Class "Rings"
-  SetFontSize 45
-  SetTextColor 255 255 255 255
-  SetBackgroundColor 255 0 0 255
-  SetBorderColor 100 100 100 255
-  PlayEffect Red
