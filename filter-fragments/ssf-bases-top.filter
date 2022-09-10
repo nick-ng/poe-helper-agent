@@ -102,15 +102,15 @@ Show
   MinimapIcon 2 Red Raindrop
   CustomAlertSound "sounds/life-flask-divine.mp3"
 
-############################
-## 84 Weapons - Elemental ##
-############################
+################################
+## 82 Weapons - Elemental DoT ##
+################################
 
 Show
   BaseType "Void Sceptre" "Opal Sceptre"
   Corrupted False
   Rarity <= Rare
-  ItemLevel = 84 # T1 Phys only
+  ItemLevel = 82 # T1 Generic DoT multi
   CustomAlertSound "sounds/brian-05-woosh.mp3"
   SetTextColor 255 0 255 200
   SetBorderColor 255 0 0 255
