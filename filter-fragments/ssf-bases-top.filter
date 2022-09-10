@@ -72,18 +72,34 @@ Show
   PlayEffect Red
   ##DefaultBackground
 
-############################
-## Bossing Utility Flasks ##
-############################
+###############################
+## Flagellant Utility Flasks ##
+###############################
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
-  ItemLevel = 80
+  ItemLevel >= 80
+  ItemLevel <= 81 # includes a tier of resists during flask effect
   SetFontSize 45
   Rarity <= Magic
   SetTextColor 0 203 221 200
   SetBorderColor 0 203 221 200
   PlayEffect Red
   ##DefaultBackground
+
+##########################
+## Seething Life Flasks ##
+########### ##############
+Show
+  BaseType == "Divine Life Flask"
+  ItemLevel < 61
+  SetFontSize 45
+  Rarity <= Magic
+  SetTextColor 255 0 0 200
+  SetBorderColor 255 0 0 200
+  PlayEffect Red
+  ##DefaultBackground
+  MinimapIcon 2 Red Raindrop
+  CustomAlertSound "sounds/life-flask-divine.mp3"
 
 ############################
 ## 84 Weapons - Elemental ##
