@@ -108,9 +108,9 @@ export default function getFilter() {
     make3LinkFilter("BG", "Sceptre", "brian-2-link"),
     make3LinkFilter("BB", "Sceptre", "brian-2-link"),
 
-    getFlaskFilter(),
-    getManaFlaskFilter(),
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
+    getFlaskFilter(),
+    getManaFlaskFilter(),
   ].join("\n\n");
 }

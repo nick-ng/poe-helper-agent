@@ -80,8 +80,8 @@ export default function getFilter() {
     make3LinkFilter("BGG", "Wand", "2g1b wand"),
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
-    getFlaskFilter(),
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
+    getFlaskFilter(),
   ].join("\n\n");
 }

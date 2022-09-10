@@ -143,8 +143,8 @@ export default function getFilter() {
     make3LinkFilter("RRG", "Body Armours", "2r1g body"),
 
     // other stuff
-    getFlaskFilter(),
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
+    getFlaskFilter(),
   ].join("\n\n");
 }
