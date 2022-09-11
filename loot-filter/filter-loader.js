@@ -17,12 +17,12 @@ const defaultReplacements = {
     "Cardinal Round Shield",
     "Saint's Hauberk",
     "Supreme Spiked Shield",
+    "Mirrored Spiked Shield",
   ]),
   ilvl86b: basesToFilter([
     "Sadist Garb",
     "General's Brigandine",
     "Saintly Chainmail",
-    "Mirrored Spiked Shield",
   ]),
   ilvl85a: basesToFilter([
     "Pig-Faced Bascinet",
