@@ -110,7 +110,7 @@ Show
   Rarity < Unique
   MapTier < 14
   Class "Maps"
-  SetFontSize 15
+  SetFontSize 25
   DisableDropSound True
 
 Show # Low Reds - high area
