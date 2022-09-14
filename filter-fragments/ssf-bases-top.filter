@@ -85,7 +85,6 @@ Show
   SetBorderColor 255 255 0 200
   PlayEffect Red
   ##DefaultBackground
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
 
 ##########################
 ## Seething Life Flasks ##
@@ -111,7 +110,6 @@ Show
   Corrupted False
   Rarity <= Rare
   ItemLevel = 82 # T1 Generic DoT multi
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
   SetTextColor 255 0 255 200
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
@@ -126,7 +124,6 @@ Show
   Corrupted False
   Rarity <= Rare
   ItemLevel = 83 # T1 Phys only
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
   SetTextColor 255 0 255 200
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
@@ -141,7 +138,6 @@ Show
   Corrupted False
   Rarity <= Rare
   ItemLevel = 82 # T1 Flat Ele
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
   SetTextColor 255 0 255 200
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
@@ -185,6 +181,5 @@ Show
   BaseType ##ilvl86a####ilvl86b##
   SetFontSize 45
   PlayEffect Red
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
   MinimapIcon 1 Yellow Star
   ##DefaultBackground
