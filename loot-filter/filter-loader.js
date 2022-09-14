@@ -29,6 +29,9 @@ const defaultReplacements = {
     "Dragonscale Gauntlets",
     "Dragonscale Boots",
     "Two-Toned Boots",
+    "Crusader Gloves",
+    "Crusader Boots",
+    "Prophet Crown",
   ]),
 };
 
