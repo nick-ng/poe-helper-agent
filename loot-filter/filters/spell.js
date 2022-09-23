@@ -92,14 +92,14 @@ export default function getFilter() {
     make3LinkFilter("BBB", "Helmets", "3b helm"),
     make3LinkFilter("BBB", "Body Armours", "3b body"),
     make3LinkFilter("BBB", "Wand", "3b wand"),
-    // make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
+    make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
 
     make3LinkFilter("BBG", "Boots", "2b1g boots"),
     make3LinkFilter("BBG", "Gloves", "2b1g gloves"),
     make3LinkFilter("BBG", "Helmets", "2b1g helm"),
     make3LinkFilter("BBG", "Body Armours", "2b1g body"),
     make3LinkFilter("BBG", "Wand", "2b1g wand"),
-    // make3LinkFilter("BBG", "Sceptre", "2b1g sceptre"),
+    make3LinkFilter("BBG", "Sceptre", "2b1g sceptre"),
 
     // make3LinkFilter("BGG", "Boots", "2g1b boots"),
     // make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
@@ -107,6 +107,11 @@ export default function getFilter() {
     // make3LinkFilter("BGG", "Body Armours", "2g1b body"),
     // make3LinkFilter("BGG", "Wand", "2g1b wand"),
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
+
+    make3LinkFilter("3BG", "Sceptre", "brian-3-link"),
+    make3LinkFilter("3BB", "Sceptre", "brian-3-link"),
+    make3LinkFilter("BG", "Sceptre", "brian-2-link"),
+    make3LinkFilter("BB", "Sceptre", "brian-2-link"),
 
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
