@@ -107,9 +107,18 @@ Show # T4 Currency (6+ to show)
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
-Hide # T3 & T4 Currency (don't show if not above thresholds)
+Hide # T3  Currency (don't show if not above thresholds)
   Class "Currency"
-  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Orb of Transmutation" "Jeweller's Orb" "Orb of Chance" "Chromatic Orb"
+  BaseType == "Orb of Transmutation" "Jeweller's Orb" "Orb of Chance" "Chromatic Orb"
+  AreaLevel > 77
+  SetFontSize 45
+  ##T3CurrencyText
+  SetBorderColor 0 255 0 255
+  ##DefaultBackground
+
+Hide # T4 Currency (don't show if not above thresholds)
+  Class "Currency"
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble"
   AreaLevel >= 68
   SetFontSize 45
   ##T3CurrencyText
