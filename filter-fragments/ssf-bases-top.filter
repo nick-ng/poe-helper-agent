@@ -33,6 +33,7 @@ Show
 #####################
 ## Vermillion Ring ##
 #####################
+
 Show
   BaseType "Vermillion Ring"
   Corrupted False
@@ -47,6 +48,7 @@ Show
 ###########################
 ## Rings, Amulets, Belts ##
 ###########################
+
 Show
   BaseType = "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Marble Amulet" "Amethyst Ring" "Unset Ring" "Leather Belt"
   ItemLevel >= 85
@@ -62,6 +64,7 @@ Show
 ########################
 ## Top Utility Flasks ##
 ########################
+
 Show
   BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
   ItemLevel >= 85
@@ -75,6 +78,7 @@ Show
 ###############################
 ## Flagellant Utility Flasks ##
 ###############################
+
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
   ItemLevel >= 80
@@ -88,7 +92,8 @@ Show
 
 ##########################
 ## Seething Life Flasks ##
-########### ##############
+##########################
+
 Show
   BaseType == "Divine Life Flask"
   ItemLevel < 61
@@ -160,6 +165,7 @@ Show
 ###########################
 ## Helmet, Gloves, Boots ##
 ###########################
+
 Show
   ItemLevel >= 85
   Rarity <= Rare
@@ -174,6 +180,7 @@ Show
 ##########################
 ## Body Armour, Shields ##
 ##########################
+
 Show
   ItemLevel >= 86
   Rarity <= Rare
@@ -188,6 +195,7 @@ Show
 ###############################################
 ## Body Armour, Shields T2 Spell Suppression ##
 ###############################################
+
 Show
   ItemLevel == 77
   Rarity <= Rare
