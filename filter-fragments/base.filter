@@ -12,47 +12,31 @@ Show
   ##PortalScrollText
   Continue
 
+Hide # Red Maps
+  BaseType "Scroll of Wisdom" "Portal Scroll"
+  Class Currency
+  AreaLevel > 77
+  StackSize < 6
+  SetBorderColor 0 255 0 255
+  ##DefaultBackground
+  SetFontSize 45
+
+Hide # White-Yellow Maps
+  BaseType "Scroll of Wisdom" "Portal Scroll"
+  Class Currency
+  AreaLevel > 68
+  StackSize < 3
+  SetBorderColor 0 255 0 255
+  ##DefaultBackground
+  SetFontSize 45
+
 Show # Red Maps
   BaseType "Scroll of Wisdom" "Portal Scroll"
   Class Currency
-  StackSize >= 10
   SetBorderColor 0 255 0 255
   ##DefaultBackground
   SetFontSize 40
-
-Show # Yellow Maps
-  BaseType "Scroll of Wisdom" "Portal Scroll"
-  Class Currency
-  AreaLevel <= 77
-  StackSize >= 6
-  SetBorderColor 0 255 0 255
-  ##DefaultBackground
-  SetFontSize 45
-
-Show # Campaign
-  BaseType "Scroll of Wisdom" "Portal Scroll"
-  Class Currency
-  AreaLevel < 68
-  StackSize >= 3
-  SetBorderColor 0 255 0 255
-  ##DefaultBackground
-  SetFontSize 45
-
-Show # Pre-Chamber of Innocence
-  BaseType "Scroll of Wisdom" "Portal Scroll"
-  Class Currency
-  AreaLevel < 43
-  SetBorderColor 0 255 0 255
-  ##DefaultBackground
-  SetFontSize 45
-  PlayEffect Grey
-
-Hide
-  BaseType "Scroll of Wisdom" "Portal Scroll"
-  Class Currency
-  SetBorderColor 0 255 0 255
-  ##DefaultBackground
-  SetFontSize 45
+  MinimapIcon 0 Grey Raindrop
 
 #################
 ## T1 Currency ##
