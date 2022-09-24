@@ -1,3 +1,7 @@
+#######################
+## Wisdom and Portal ##
+#######################
+
 Show
   BaseType "Scroll of Wisdom"
   ##ScrollOfWisdomText
@@ -50,6 +54,10 @@ Hide
   ##DefaultBackground
   SetFontSize 45
 
+#################
+## T1 Currency ##
+#################
+
 Show # T1 Currency
   Class "Currency"
   BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
@@ -72,6 +80,10 @@ Show
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
+#################
+## T2 Currency ##
+#################
+
 Show # T2 Currency
   Class "Currency"
   BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb"
@@ -83,55 +95,69 @@ Show # T2 Currency
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
-Show # T3 Currency (3+ to show)
+#################
+## T3 Currency ##
+#################
+
+Hide # Red Maps
   Class "Currency"
-  BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation"
+  BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation"
   SetFontSize 45
-  StackSize >= 3
+  AreaLevel > 77
+  StackSize < 3
   ##T3CurrencyText
   SetBorderColor 0 255 0 255
   ##DefaultBackground
-  MinimapIcon 0 Green Raindrop
+
+Show # T3 Currency (3+ to show)
+  Class "Currency"
+  BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation"
+  SetFontSize 45
+  ##T3CurrencyText
+  SetBorderColor 0 255 0 255
+  ##DefaultBackground
+  MinimapIcon 0 Green Cross
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
+
+#################
+## T4 Currency ##
+#################
+
+Hide # Yellow Maps
+  Class "Currency"
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
+  SetFontSize 45
+  AreaLevel > 72
+  StackSize < 6
+  ##T3CurrencyText
+  SetBorderColor 0 255 0 255
+  ##DefaultBackground
+
+Hide # White Maps
+  Class "Currency"
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
+  SetFontSize 45
+  AreaLevel > 67
+  StackSize < 3
+  ##T3CurrencyText
+  SetBorderColor 0 255 0 255
+  ##DefaultBackground
 
 Show # T4 Currency (6+ to show)
   Class "Currency"
-  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Orb of Transmutation" "Armourer's Scrap"
+  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
   SetFontSize 45
-  StackSize >= 6
   ##T3CurrencyText
   SetBorderColor 0 255 0 255
   ##DefaultBackground
-  MinimapIcon 0 Green Raindrop
+  MinimapIcon 0 Green Star
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
-Hide # T3  Currency (don't show if not above thresholds)
-  Class "Currency"
-  BaseType == "Orb of Transmutation" "Jeweller's Orb" "Orb of Chance" "Chromatic Orb"
-  AreaLevel > 77
-  SetFontSize 45
-  ##T3CurrencyText
-  SetBorderColor 0 255 0 255
-  ##DefaultBackground
-
-Hide # T4 Currency (don't show if not above thresholds)
-  Class "Currency"
-  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble"
-  AreaLevel >= 68
-  SetFontSize 45
-  ##T3CurrencyText
-  SetBorderColor 0 255 0 255
-  ##DefaultBackground
-
-Show # T3 & T4 Currency (show below threshold)
-  Class "Currency"
-  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Orb of Transmutation" "Jeweller's Orb" "Orb of Chance" "Chromatic Orb"
-  SetFontSize 45
-  ##T3CurrencyText
-  SetBorderColor 0 255 0 255
-  ##DefaultBackground
+####################
+## Other Currency ##
+####################
 
 Show
   Class "Currency"
@@ -140,6 +166,10 @@ Show
   ##T9CurrencyText
   SetBorderColor 190 178 135 255
   ##DefaultBackground
+
+######################
+## Divination Cards ##
+######################
 
 Show # T1 Currency Divination Cards
   Class "Divination"

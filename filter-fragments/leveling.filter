@@ -57,7 +57,7 @@ Show
   ##T3CurrencyText
   SetBorderColor 0 255 0 255
   ##DefaultBackground
-  MinimapIcon 0 Grey Raindrop
+  MinimapIcon 0 Grey Star
   PlayEffect Grey
   CustomAlertSound "sounds/amy-armourer.mp3"
 
@@ -69,7 +69,7 @@ Show
   ##T3CurrencyText
   SetBorderColor 0 255 0 255
   ##DefaultBackground
-  MinimapIcon 0 Green Raindrop
+  MinimapIcon 0 Green Star
   PlayEffect Green
   CustomAlertSound "sounds/amy-blacksmith.mp3"
 
@@ -81,7 +81,7 @@ Show
   ##T3CurrencyText
   SetBorderColor 0 255 0 255
   ##DefaultBackground
-  MinimapIcon 0 Green Raindrop
+  MinimapIcon 0 Green Cross
   PlayEffect Green
   CustomAlertSound "sounds/amy-transmute.mp3"
 
@@ -129,7 +129,7 @@ Show
   ##T2CurrencyText
   SetBorderColor 0 255 0 255
   ##DefaultBackground
-  MinimapIcon 0 Green Raindrop
+  MinimapIcon 0 Green Cross
   PlayEffect Green
   CustomAlertSound "sounds/amy-chance.mp3"
 
