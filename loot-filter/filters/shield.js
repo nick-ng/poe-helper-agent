@@ -18,7 +18,7 @@ Show
   PlayEffect Brown
   MinimapIcon 2 Brown Star
 
-  Show
+Show
   ItemLevel >= 86
   BaseDefencePercentile >= 50
   Rarity <= Rare

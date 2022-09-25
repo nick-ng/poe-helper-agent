@@ -28,6 +28,14 @@ Show
   MinimapIcon 1 Green Moon
   SetBorderColor 0 255 0 255
 
+Show
+  Rarity Unique
+  BaseType == "Demon's Horn" "Slaughter Knife"
+  SetFontSize 45
+  PlayAlertSound 3 300
+  PlayEffect Brown
+  MinimapIcon 2 Brown Star
+
 Show # Expensive Gems
   Class "Gems"
   AreaLevel < 73
@@ -38,6 +46,49 @@ Show # Expensive Gems
   MinimapIcon 2 White Circle
   PlayEffect White
   PlayAlertSound 2 300
+
+Show
+  ItemLevel >= 84
+  BaseDefencePercentile >= 80
+  Rarity <= Rare
+  BaseType "Colossal Tower Shield"
+  Corrupted False
+  SetFontSize 40
+  SetTextColor 255 0 255 200
+  SetBorderColor 255 0 0 255
+  MinimapIcon 1 Pink Star
+
+Show
+  ItemLevel >= 78
+  BaseDefencePercentile >= 90
+  Rarity <= Rare
+  BaseType "Colossal Tower Shield"
+  Corrupted False
+  SetFontSize 35
+  SetTextColor 255 0 255 200
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+
+Show
+  ItemLevel >= 78
+  BaseDefencePercentile >= 33
+  Rarity = Rare
+  BaseType "Colossal Tower Shield"
+  Corrupted False
+  SetFontSize 30
+  SetTextColor 255 0 255 200
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
+
+Show
+  BaseType "Colossal Tower Shield"
+  Corrupted False
+  AreaLevel <= 72
+  Rarity <= Rare
+  SetFontSize 30
+  SetTextColor 255 0 255 200
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Pink Cross
 
 Show
   Rarity >= Rare

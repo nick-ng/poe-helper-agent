@@ -18,6 +18,7 @@ const defaultReplacements = {
     "Saint's Hauberk",
     "Supreme Spiked Shield",
     "Mirrored Spiked Shield",
+    "Colossal Tower Shield",
   ]),
   ilvl86b: basesToFilter([
     "Sadist Garb",
