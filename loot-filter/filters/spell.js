@@ -14,7 +14,7 @@ Show
   SetFontSize 45
   PlayAlertSound 16 200
   MinimapIcon 1 Green Moon
-  SetBorderColor 0 255 0 255
+  SetBorderColor 255 55 255 255
 
 Show
   Rarity Unique

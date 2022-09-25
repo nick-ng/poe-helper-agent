@@ -30,7 +30,7 @@ Show
   Class Currency
   AreaLevel <= 28
   ##ScrollOfWisdomText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 45
   MinimapIcon 0 Grey Raindrop
@@ -42,7 +42,7 @@ Show
   Class Currency
   AreaLevel <= 28
   ##PortalScrollText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 45
   MinimapIcon 2 Grey Star
@@ -55,7 +55,7 @@ Show
   AreaLevel <= 28
   SetFontSize 45
   ##T3CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Grey Star
   PlayEffect Grey
@@ -67,7 +67,7 @@ Show
   BaseType "Blacksmith's Whetstone"
   SetFontSize 45
   ##T3CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Star
   PlayEffect Green
@@ -79,7 +79,7 @@ Show
   BaseType "Orb of Transmutation"
   SetFontSize 45
   ##T3CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Cross
   PlayEffect Green
@@ -90,8 +90,8 @@ Show
   Class Currency
   BaseType "Orb of Alteration"
   SetFontSize 45
-  ##T2CurrencyText
-  SetBorderColor 0 255 0 255
+  ##T1CurrencyText
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
@@ -103,7 +103,7 @@ Show
   BaseType "Orb of Fusing"
   SetFontSize 45
   ##T2CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
@@ -115,7 +115,7 @@ Show
   BaseType "Orb of Alchemy"
   SetFontSize 45
   ##T2CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
@@ -127,7 +127,7 @@ Show
   BaseType "Orb of Chance"
   SetFontSize 45
   ##T2CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Cross
   PlayEffect Green

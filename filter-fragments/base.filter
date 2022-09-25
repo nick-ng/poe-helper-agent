@@ -17,7 +17,7 @@ Hide # Red Maps
   Class Currency
   AreaLevel > 77
   StackSize < 6
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 45
 
@@ -26,14 +26,14 @@ Hide # White-Yellow Maps
   Class Currency
   AreaLevel > 68
   StackSize < 3
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 45
 
 Show # Red Maps
   BaseType "Scroll of Wisdom" "Portal Scroll"
   Class Currency
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 40
   MinimapIcon 0 Grey Raindrop
@@ -43,22 +43,22 @@ Show # Red Maps
 #################
 
 Show # T1 Currency
-  Class "Currency"
+  Class Currency
   BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
   SetFontSize 45
   ##T1CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Circle
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
 Show
-  Class "Currency"
+  Class Currency
   BaseType "Catalyst" "Eldritch"
   SetFontSize 45
   ##T1CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Circle
   PlayEffect Green
@@ -69,11 +69,11 @@ Show
 #################
 
 Show # T2 Currency
-  Class "Currency"
+  Class Currency
   BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb"
   SetFontSize 45
   ##T2CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
@@ -84,21 +84,21 @@ Show # T2 Currency
 #################
 
 Hide # Red Maps
-  Class "Currency"
+  Class Currency
   BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation"
   SetFontSize 45
   AreaLevel > 77
   StackSize < 3
   ##T3CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
 
 Show # T3 Currency (3+ to show)
-  Class "Currency"
+  Class Currency
   BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation"
   SetFontSize 45
   ##T3CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Cross
   PlayEffect Green
@@ -109,31 +109,31 @@ Show # T3 Currency (3+ to show)
 #################
 
 Hide # Yellow Maps
-  Class "Currency"
+  Class Currency
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
   SetFontSize 45
   AreaLevel > 72
   StackSize < 6
   ##T3CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
 
 Hide # White Maps
-  Class "Currency"
+  Class Currency
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
   SetFontSize 45
   AreaLevel > 67
   StackSize < 3
   ##T3CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
 
 Show # T4 Currency (6+ to show)
-  Class "Currency"
+  Class Currency
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
   SetFontSize 45
   ##T3CurrencyText
-  SetBorderColor 0 255 0 255
+  ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Star
   PlayEffect Green
@@ -144,7 +144,7 @@ Show # T4 Currency (6+ to show)
 ####################
 
 Show
-  Class "Currency"
+  Class Currency
   BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
   SetFontSize 45
   ##T9CurrencyText
