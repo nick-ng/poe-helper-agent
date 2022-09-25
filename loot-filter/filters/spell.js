@@ -1,7 +1,9 @@
 import { levelingBaseFilter } from "../filters.js";
 import { make3LinkFilter, make4LinkFilter } from "../generators.js";
 import { getFilterFragment } from "../filter-loader.js";
-import getFlaskFilter from "../../filter-generators/flasks.js";
+import getFlaskFilter, {
+  getManaFlaskFilter,
+} from "../../filter-generators/flasks.js";
 
 const amulets = '"Jade Amulet" "Amber Amulet" "Citrine Amulet"';
 
@@ -42,16 +44,6 @@ Show
   SetTextColor 255 0 255 200
   ##DefaultBackground
   PlayEffect Red
-  MinimapIcon 1 Pink Star
-
-Show
-  ItemLevel >= 64
-  AreaLevel <= 80
-  Rarity <= Rare
-  BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
-  SetFontSize 35
-  SetTextColor 255 0 255 200
-  ##DefaultBackground
   MinimapIcon 1 Pink Star
 
 Show
@@ -116,5 +108,6 @@ export default function getFilter() {
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
     getFlaskFilter(),
+    getManaFlaskFilter(),
   ].join("\n\n");
 }

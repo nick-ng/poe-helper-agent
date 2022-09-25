@@ -5,14 +5,16 @@ import {
   make4LinkFilter2,
 } from "../generators.js";
 import { getFilterFragment } from "../filter-loader.js";
-import getFlaskFilter from "../../filter-generators/flasks.js";
+import getFlaskFilter, {
+  getManaFlaskFilter,
+} from "../../filter-generators/flasks.js";
 
 /**
  * Leveling as:
  * 1-27: Stormblast Mine + Orb of Storms
  * 28-59: Armageddon Brand + Cremation
  * 60-~80: Poisonous Concoction
- * 80+: Bladefall + Blade Blast
+ * 80+: Shield Crush
  */
 
 const amulets = '"Lapis Amulet" "Amber Amulet" "Agate Amulet" "Marble Amulet"';
@@ -26,60 +28,26 @@ Show
   MinimapIcon 1 Green Moon
   SetBorderColor 0 255 0 255
 
-Show
-  ItemLevel >= 84
-  AreaLevel <= 80
-  Rarity = Rare
-  BaseType "Pagan Wand" "Heathen Wand"
-  SetFontSize 40
-  SetTextColor 150 150 255 200
-  ##DefaultBackground
-  PlayEffect Red
-  MinimapIcon 1 Pink Star
-
-Show
-  ItemLevel >= 78
-  AreaLevel <= 80
-  Rarity <= Rare
-  BaseType "Pagan Wand" "Heathen Wand"
-  SetFontSize 40
-  SetTextColor 150 150 255 200
-  ##DefaultBackground
-  PlayEffect Red
-  MinimapIcon 1 Pink Star
-
-Show
-  ItemLevel >= 64
-  AreaLevel <= 80
-  Rarity <= Rare
-  BaseType "Pagan Wand" "Heathen Wand"
-  SetFontSize 35
-  SetTextColor 150 150 255 200
-  ##DefaultBackground
-  MinimapIcon 1 Pink Star
-
-Show
-	ItemLevel >= 50
-	Rarity <= Rare
-	BaseType "Large Cluster Jewel"
-	EnchantmentPassiveNode "Physical Damage"
-	SetFontSize 45
-	SetTextColor 150 150 255 200
-	SetBorderColor 150 150 255 200
-	PlayEffect Red
-  MinimapIcon 1 Pink Star
-  CustomAlertSound "sounds/brian-06-shing.mp3"
-
-Show  # +1 all Physical Gems recipe
-  Quality >= 1
+Show # Expensive Gems
   Class "Gems"
-  BaseType "Sweep" "Cleave" "Shield Charge" "Added Fire Damage Support" "Melee Physical Damage Support" "Punishment" "Bloodlust Support" "Molten Shell" "Vaal Molten Shell" "Determination" "Iron Grip Support" "Shockwave Totem" "Holy Flame Totem" "Animate Guardian" "Herald of Purity" "Reckoning" "Vengeance" "Summon Stone Golem" "Chance to Bleed Support" "Maim Support" "Brutality Support" "Vulnerability" "War Banner" "Dread Banner" "Perforate" "Pride" "Awakened Added Fire Damage Support" "Awakened Brutality Support" "Awakened Melee Physical Damage Support" "Intimidating Cry" "Exsanguinate" "Corrupting Fever" "Bloodthirst Support" "Reap" "Defiance Banner" "Absolution" "Shield Crush" "Boneshatter" "Blade Flurry" "Double Strike" "Vaal Double Strike" "Lacerate" "Unearth" "Split Arrow" "Blood Rage" "Phase Run" "Puncture" "Bear Trap" "Ethereal Knives" "Cyclone" "Vaal Cyclone" "Spectral Shield Throw" "Animate Weapon" "Vicious Projectiles Support" "Herald of Agony" "Riposte" "Bladefall" "Blade Vortex" "Vaal Blade Vortex" "Explosive Trap" "Seismic Trap" "Withering Touch Support" "Lancing Steel" "Shattering Steel" "Impale Support" "Shrapnel Ballista" "Awakened Vicious Projectiles Support" "Blade Blast" "Splitting Steel" "Tornado" "Storm Burst" "Glacial Cascade" "Physical to Lightning Support" "Purifying Flame" "Wave of Conviction" "Divine Ire" "Summon Carrion Golem" "Penance Brand" "Void Sphere" "Hydrosphere" "Summon Reaper"
+  AreaLevel < 73
+  BaseType == "Cast when Damage Taken Support" "Greater Volley Support" "Greater Multiple Projectiles Support" "Multistrike Support"
   SetFontSize 45
-  SetTextColor 30 190 190 255
-  SetBorderColor 255 255 0 255
-  MinimapIcon 1 Yellow Triangle
-  PlayEffect Grey
-  CustomAlertSound "sounds/brian-01-clang.mp3"
+  ##DefaultBackground
+  SetBorderColor 213 159 0 255
+  MinimapIcon 2 White Circle
+  PlayEffect White
+  PlayAlertSound 2 300
+
+Show
+  Rarity >= Rare
+  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
+  SetFontSize 30
+  ##DefaultBackground
+
+Hide
+  AreaLevel >= 70
+  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
 
 Hide
   AreaLevel > 3
@@ -102,7 +70,6 @@ export default function getFilter() {
     make4LinkFilter("BBBG", "3b1g"),
     // make4LinkFilter("BBBR", "3b1r"),
     make4LinkFilter("BBGG", "2b2g"),
-    make4LinkFilter("BBGG", "2b2g"),
     make4LinkFilter("GGGR", "3g1r", 55, 62),
     make4LinkFilter("GGGG", "4g", 55, 62),
     make4LinkFilter2({ evasion: 20 }),
@@ -113,14 +80,14 @@ export default function getFilter() {
     make3LinkFilter("BBB", "Helmets", "3b helm"),
     make3LinkFilter("BBB", "Body Armours", "3b body"),
     make3LinkFilter("BBB", "Wand", "3b wand"),
-    // make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
+    make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
 
     make3LinkFilter("BBG", "Boots", "2b1g boots"),
     make3LinkFilter("BBG", "Gloves", "2b1g gloves"),
     make3LinkFilter("BBG", "Helmets", "2b1g helm"),
     make3LinkFilter("BBG", "Body Armours", "2b1g body"),
     make3LinkFilter("BBG", "Wand", "2b1g wand"),
-    // make3LinkFilter("BBG", "Sceptre", "2b1g sceptre"),
+    make3LinkFilter("BBG", "Sceptre", "2b1g sceptre"),
 
     // make3LinkFilter("BGG", "Boots", "2g1b boots"),
     // make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
@@ -129,8 +96,14 @@ export default function getFilter() {
     // make3LinkFilter("BGG", "Wand", "2g1b wand"),
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
+    make3LinkFilter("3BG", "Sceptre", "brian-3-link"),
+    make3LinkFilter("3BB", "Sceptre", "brian-3-link"),
+    make3LinkFilter("BG", "Sceptre", "brian-2-link"),
+    make3LinkFilter("BB", "Sceptre", "brian-2-link"),
+
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
     getFlaskFilter(),
+    getManaFlaskFilter(),
   ].join("\n\n");
 }

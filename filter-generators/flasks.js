@@ -38,10 +38,10 @@ const manaFlasks = [
   [60, "Hallowed Mana Flask", false],
   [50, "Sanctified Mana Flask", true],
   [65, "Sanctified Mana Flask", false],
-  // [65, "Divine Mana Flask", true],
-  // [70, "Divine Mana Flask", false],
-  // [68, "Eternal Mana Flask", true],
-  // [70, "Eternal Mana Flask", false],
+  [65, "Divine Mana Flask", true],
+  [70, "Divine Mana Flask", false],
+  [68, "Eternal Mana Flask", true],
+  [70, "Eternal Mana Flask", false],
 ];
 
 function makeLifeFlaskBlock(maxAreaLevel, baseType, sound = false) {
