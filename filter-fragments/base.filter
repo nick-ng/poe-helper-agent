@@ -24,7 +24,7 @@ Hide # Red Maps
 Hide # White-Yellow Maps
   BaseType "Scroll of Wisdom" "Portal Scroll"
   Class Currency
-  AreaLevel > 68
+  AreaLevel > 67
   StackSize < 3
   ##CurrencyBorder
   ##DefaultBackground
