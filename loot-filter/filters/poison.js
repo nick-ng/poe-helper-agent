@@ -91,6 +91,17 @@ Show
   MinimapIcon 1 Pink Cross
 
 Show
+  AreaLevel <= 65
+  BaseType == "Divine Life Flask"
+  SetFontSize 45
+  Rarity <= Rare
+  SetTextColor 255 0 0 200
+  SetBorderColor 255 0 0 200
+  ##DefaultBackground
+  MinimapIcon 0 Red Raindrop
+  CustomAlertSound "sounds/life-flask-divine.mp3"
+
+Show
   Rarity >= Rare
   BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
   SetFontSize 30

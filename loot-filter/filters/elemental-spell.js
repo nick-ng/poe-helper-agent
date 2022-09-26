@@ -18,7 +18,7 @@ Show
   SetBorderColor 255 55 255 255
 
 Show
-  Class Currency
+  Class "Currency"
   BaseType "of Fear"
   SetFontSize 45
   SetTextColor 0 0 0 255

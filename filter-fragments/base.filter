@@ -14,7 +14,7 @@ Show
 
 Hide # Red Maps
   BaseType "Scroll of Wisdom" "Portal Scroll"
-  Class Currency
+  Class "Currency"
   AreaLevel > 77
   StackSize < 6
   ##CurrencyBorder
@@ -23,7 +23,7 @@ Hide # Red Maps
 
 Hide # White-Yellow Maps
   BaseType "Scroll of Wisdom" "Portal Scroll"
-  Class Currency
+  Class "Currency"
   AreaLevel > 67
   StackSize < 3
   ##CurrencyBorder
@@ -32,7 +32,7 @@ Hide # White-Yellow Maps
 
 Show # Red Maps
   BaseType "Scroll of Wisdom" "Portal Scroll"
-  Class Currency
+  Class "Currency"
   ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 40
@@ -43,7 +43,7 @@ Show # Red Maps
 #################
 
 Show # T1 Currency
-  Class Currency
+  Class "Currency"
   BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
   SetFontSize 45
   ##T1CurrencyText
@@ -54,7 +54,7 @@ Show # T1 Currency
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
 Show
-  Class Currency
+  Class "Currency"
   BaseType "Catalyst" "Eldritch"
   SetFontSize 45
   ##T1CurrencyText
@@ -69,7 +69,7 @@ Show
 #################
 
 Show # T2 Currency
-  Class Currency
+  Class "Currency"
   BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb"
   SetFontSize 45
   ##T2CurrencyText
@@ -84,7 +84,7 @@ Show # T2 Currency
 #################
 
 Hide # Red Maps
-  Class Currency
+  Class "Currency"
   BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation"
   SetFontSize 45
   AreaLevel > 77
@@ -94,7 +94,7 @@ Hide # Red Maps
   ##DefaultBackground
 
 Show # T3 Currency (3+ to show)
-  Class Currency
+  Class "Currency"
   BaseType == "Jeweller's Orb" "Orb of Chance" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation"
   SetFontSize 45
   ##T3CurrencyText
@@ -109,7 +109,7 @@ Show # T3 Currency (3+ to show)
 #################
 
 Hide # Yellow Maps
-  Class Currency
+  Class "Currency"
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
   SetFontSize 45
   AreaLevel > 72
@@ -119,7 +119,7 @@ Hide # Yellow Maps
   ##DefaultBackground
 
 Hide # White Maps
-  Class Currency
+  Class "Currency"
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
   SetFontSize 45
   AreaLevel > 67
@@ -129,7 +129,7 @@ Hide # White Maps
   ##DefaultBackground
 
 Show # T4 Currency (6+ to show)
-  Class Currency
+  Class "Currency"
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
   SetFontSize 45
   ##T3CurrencyText
@@ -144,7 +144,7 @@ Show # T4 Currency (6+ to show)
 ####################
 
 Show
-  Class Currency
+  Class "Currency"
   BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
   SetFontSize 45
   ##T9CurrencyText

@@ -15,7 +15,7 @@ Show
 
 Show
   AreaLevel <= 23
-  Class Currency
+  Class "Currency"
   BaseType "Essence of"
   SetFontSize 45
   SetTextColor 0 0 0 255
@@ -27,19 +27,19 @@ Show
 
 Show
   BaseType "Scroll of Wisdom"
-  Class Currency
+  Class "Currency"
   AreaLevel < 68
   ##ScrollOfWisdomText
   ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 45
-  MinimapIcon 0 Grey Raindrop
+  MinimapIcon 2 Grey Raindrop
   PlayEffect Grey
   CustomAlertSound "sounds/amy-wisdom.mp3"
 
 Show
   BaseType "Portal Scroll"
-  Class Currency
+  Class "Currency"
   AreaLevel < 68
   ##PortalScrollText
   ##CurrencyBorder
@@ -51,31 +51,31 @@ Show
 
 Show
   BaseType "Armourer's Scrap"
-  Class Currency
+  Class "Currency"
   AreaLevel < 68
   SetFontSize 45
   ##T3CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
-  MinimapIcon 0 Grey Star
+  MinimapIcon 2 Grey Star
   PlayEffect Grey
   CustomAlertSound "sounds/amy-armourer.mp3"
 
 Show
   AreaLevel < 68
-  Class Currency
+  Class "Currency"
   BaseType "Blacksmith's Whetstone"
   SetFontSize 45
   ##T3CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
-  MinimapIcon 0 Green Star
+  MinimapIcon 2 Green Star
   PlayEffect Green
   CustomAlertSound "sounds/amy-blacksmith.mp3"
 
 Show
   AreaLevel < 68
-  Class Currency
+  Class "Currency"
   BaseType "Orb of Transmutation"
   SetFontSize 45
   ##T3CurrencyText
@@ -87,7 +87,7 @@ Show
 
 Show
   AreaLevel < 68
-  Class Currency
+  Class "Currency"
   BaseType "Orb of Alteration"
   SetFontSize 45
   ##T1CurrencyText
@@ -99,7 +99,7 @@ Show
 
 Show
   AreaLevel < 68
-  Class Currency
+  Class "Currency"
   BaseType "Orb of Fusing"
   SetFontSize 45
   ##T2CurrencyText
@@ -111,7 +111,7 @@ Show
 
 Show
   AreaLevel < 68
-  Class Currency
+  Class "Currency"
   BaseType "Orb of Alchemy"
   SetFontSize 45
   ##T2CurrencyText
