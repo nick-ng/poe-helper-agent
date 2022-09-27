@@ -122,6 +122,15 @@ Hide
   ItemLevel < 43
   Rarity = Normal
   Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Claws" "Warstaves"
+
+Hide # Hide weapons you won't use starting in maps
+  AreaLevel >= 68
+  Rarity <= Rare
+  LinkedSockets < 5
+  Sockets < 5
+  FracturedItem False
+  Identified False
+  Class "Quivers" "Staves" "Two Hand" "Bows" "Warstaves"
 `;
 
 // https://textreader.pro/
