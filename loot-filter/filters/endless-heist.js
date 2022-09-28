@@ -1,11 +1,10 @@
-import {
-  make3LinkFilter,
-  make4LinkFilter,
-  levelingBaseFilter,
-} from "../filters.js";
+import { levelingBaseFilter } from "../filters.js";
+import { make3LinkFilter, make4LinkFilter } from "../generators.js";
 
 // https://textreader.pro/
 export default function getFilter() {
+  return "";
+
   return [
     // `Show  # %H5 $type->heist->contract $tier->any
     // Class "Contract"

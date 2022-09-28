@@ -6,7 +6,7 @@ import compression from "compression";
 import cors from "cors";
 import fetch from "node-fetch";
 
-import { makeChaosFilter, makeGeneralFilter } from "./loot-filter/index.js";
+import { makeChaosFilter, autoMakeFilters } from "./loot-filter/index.js";
 import { fetchAndSaveFilters } from "./loot-filter/update-base-filters.js";
 import trimLogs from "./tools/trim-log.js";
 import getTracker, { getTrackerUrl } from "./poe-racing/get-tracker.js";
@@ -150,22 +150,8 @@ app.post("/", async (req, res, _next) => {
 const updateFilters = async () => {
   console.info("Updating base filters and making chaos filters");
   await fetchAndSaveFilters();
-  makeChaosFilter(
-    {
-      body: 35,
-      glove: 35,
-      boot: 35,
-      helm: 35,
-      ring: 35,
-      amulet: 35,
-      belt: 35,
-      weapon: 35,
-    },
-    process.env.POE_SETTINGS_PATH,
-    true,
-    process.env.CHAOS_FILTER_ONLY?.toLowerCase() === "true"
-  );
-  makeGeneralFilter(process.env.POE_SETTINGS_PATH, true);
+
+  autoMakeFilters(process.env.POE_SETTINGS_PATH, true);
 };
 
 switch (mode) {

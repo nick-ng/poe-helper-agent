@@ -88,6 +88,8 @@ const weapons = [
 
 // https://textreader.pro/
 export default function getFilter() {
+  return "";
+
   return [
     clawT16,
     specific,

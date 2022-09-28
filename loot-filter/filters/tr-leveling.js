@@ -73,6 +73,8 @@ const weapons = [
 
 // https://textreader.pro/
 export default function getFilter() {
+  return "";
+
   return [
     custom,
     ...weapons.map((weapon) => {
