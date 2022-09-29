@@ -30,7 +30,7 @@ Show
   Rarity = Rare
   BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
   SetFontSize 40
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star
@@ -41,7 +41,7 @@ Show
   Rarity <= Rare
   BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
   SetFontSize 40
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star

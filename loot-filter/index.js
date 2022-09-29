@@ -1,5 +1,5 @@
 import { readdirSync } from "fs";
-import { resolve, dirname } from "path";
+import { resolve } from "path";
 
 import { oniGoroshiFarm, baseFilter } from "./filters.js";
 import { getCustomItemsFilter } from "./filter-loader.js";

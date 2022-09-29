@@ -4,7 +4,7 @@
 Show
   Corrupted False
   BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Marble Amulet" ##ilvl85a####ilvl86a####ilvl86b##
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   ##DefaultBackground
   Continue
 
@@ -55,7 +55,7 @@ Show
   Rarity <= Rare
   Corrupted False
   SetFontSize 40
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 255 0 150
   PlayEffect Red
   MinimapIcon 1 Yellow Cross
@@ -115,7 +115,7 @@ Show
   Corrupted False
   Rarity <= Rare
   ItemLevel = 2 # +1 <type> Spells
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
   ##DefaultBackground
@@ -129,7 +129,7 @@ Show
   Corrupted False
   Rarity <= Rare
   ItemLevel = 82 # T1 Generic DoT multi
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
   ##DefaultBackground
@@ -143,7 +143,7 @@ Show
   Corrupted False
   Rarity <= Rare
   ItemLevel = 83 # T1 Phys only
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
   ##DefaultBackground
@@ -157,7 +157,7 @@ Show
   Corrupted False
   Rarity <= Rare
   ItemLevel = 82 # T1 Flat Ele
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
   ##DefaultBackground

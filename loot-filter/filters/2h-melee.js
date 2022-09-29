@@ -24,7 +24,7 @@ Show
   SetFontSize 45
   PlayAlertSound 16 200
   MinimapIcon 1 Blue Moon
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 0 0 255 255
 
 Show
@@ -33,7 +33,7 @@ Show
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 
@@ -43,7 +43,7 @@ Show
   ItemLevel >= 73 # T2 Phys %
   Rarity = Rare
   SetFontSize 35
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 255 0 255
   MinimapIcon 1 Pink Star
 

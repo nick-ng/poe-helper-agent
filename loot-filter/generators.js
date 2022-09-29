@@ -7,7 +7,7 @@ export const makeWeaponBlock = (maxAreaLevel, baseType, sound = true) => {
   Rarity <= Rare
   SetBorderColor 0 0 0 255
   ##DefaultBackground
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   MinimapIcon 1 Pink Cross
   ${sound ? "PlayAlertSound 16 200" : ""}
 `;

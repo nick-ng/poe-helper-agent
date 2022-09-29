@@ -27,35 +27,36 @@ Show
   SetBorderColor 255 55 255 255
 
 Show
-  ItemLevel >= 84
+  ItemLevel = 83 # T1 Cast Speed
   AreaLevel <= 80
   Rarity = Rare
   BaseType "Pagan Wand" "Heathen Wand"
-  SetFontSize 40
-  SetTextColor 150 150 255 200
+  SetFontSize 45
+  ##GoodBaseText
   ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star
 
 Show
-  ItemLevel >= 78
+  ItemLevel >= 78 # T1 Chaos DoT Multi
   AreaLevel <= 80
   Rarity <= Rare
   BaseType "Pagan Wand" "Heathen Wand"
-  SetFontSize 40
-  SetTextColor 150 150 255 200
+  SetFontSize 45
+  ##GoodBaseText
   ##DefaultBackground
-  PlayEffect Red
+  PlayEffect Yellow
   MinimapIcon 1 Pink Star
 
 Show
-  ItemLevel >= 64
+  ItemLevel >= 64 # T2 Chaos DoT Multi
   AreaLevel <= 80
   Rarity <= Rare
   BaseType "Pagan Wand" "Heathen Wand"
   SetFontSize 35
-  SetTextColor 150 150 255 200
+  ##GoodBaseText
   ##DefaultBackground
+  PlayEffect White
   MinimapIcon 1 Pink Star
 
 Show
@@ -70,16 +71,16 @@ Show
   MinimapIcon 1 Pink Star
   CustomAlertSound "sounds/brian-06-shing.mp3"
 
-Show  # +1 all Physical Gems recipe
-  Quality >= 1
-  Class "Gems"
-  BaseType "Sweep" "Cleave" "Shield Charge" "Added Fire Damage Support" "Melee Physical Damage Support" "Punishment" "Bloodlust Support" "Molten Shell" "Vaal Molten Shell" "Determination" "Iron Grip Support" "Shockwave Totem" "Holy Flame Totem" "Animate Guardian" "Herald of Purity" "Reckoning" "Vengeance" "Summon Stone Golem" "Chance to Bleed Support" "Maim Support" "Brutality Support" "Vulnerability" "War Banner" "Dread Banner" "Perforate" "Pride" "Awakened Added Fire Damage Support" "Awakened Brutality Support" "Awakened Melee Physical Damage Support" "Intimidating Cry" "Exsanguinate" "Corrupting Fever" "Bloodthirst Support" "Reap" "Defiance Banner" "Absolution" "Shield Crush" "Boneshatter" "Blade Flurry" "Double Strike" "Vaal Double Strike" "Lacerate" "Unearth" "Split Arrow" "Blood Rage" "Phase Run" "Puncture" "Bear Trap" "Ethereal Knives" "Cyclone" "Vaal Cyclone" "Spectral Shield Throw" "Animate Weapon" "Vicious Projectiles Support" "Herald of Agony" "Riposte" "Bladefall" "Blade Vortex" "Vaal Blade Vortex" "Explosive Trap" "Seismic Trap" "Withering Touch Support" "Lancing Steel" "Shattering Steel" "Impale Support" "Shrapnel Ballista" "Awakened Vicious Projectiles Support" "Blade Blast" "Splitting Steel" "Tornado" "Storm Burst" "Glacial Cascade" "Physical to Lightning Support" "Purifying Flame" "Wave of Conviction" "Divine Ire" "Summon Carrion Golem" "Penance Brand" "Void Sphere" "Hydrosphere" "Summon Reaper"
-  SetFontSize 45
-  SetTextColor 30 190 190 255
-  SetBorderColor 255 255 0 255
-  MinimapIcon 1 Yellow Triangle
-  PlayEffect Grey
-  CustomAlertSound "sounds/brian-01-clang.mp3"
+#Show  # +1 all Physical Gems recipe
+#  Quality >= 1
+#  Class "Gems"
+#  BaseType "Sweep" "Cleave" "Shield Charge" "Added Fire Damage Support" "Melee Physical Damage Support" "Punishment" "Bloodlust Support" "Molten Shell" "Vaal Molten Shell" "Determination" "Iron Grip Support" "Shockwave Totem" "Holy Flame Totem" "Animate Guardian" "Herald of Purity" "Reckoning" "Vengeance" "Summon Stone Golem" "Chance to Bleed Support" "Maim Support" "Brutality Support" "Vulnerability" "War Banner" "Dread Banner" "Perforate" "Pride" "Awakened Added Fire Damage Support" "Awakened Brutality Support" "Awakened Melee Physical Damage Support" "Intimidating Cry" "Exsanguinate" "Corrupting Fever" "Bloodthirst Support" "Reap" "Defiance Banner" "Absolution" "Shield Crush" "Boneshatter" "Blade Flurry" "Double Strike" "Vaal Double Strike" "Lacerate" "Unearth" "Split Arrow" "Blood Rage" "Phase Run" "Puncture" "Bear Trap" "Ethereal Knives" "Cyclone" "Vaal Cyclone" "Spectral Shield Throw" "Animate Weapon" "Vicious Projectiles Support" "Herald of Agony" "Riposte" "Bladefall" "Blade Vortex" "Vaal Blade Vortex" "Explosive Trap" "Seismic Trap" "Withering Touch Support" "Lancing Steel" "Shattering Steel" "Impale Support" "Shrapnel Ballista" "Awakened Vicious Projectiles Support" "Blade Blast" "Splitting Steel" "Tornado" "Storm Burst" "Glacial Cascade" "Physical to Lightning Support" "Purifying Flame" "Wave of Conviction" "Divine Ire" "Summon Carrion Golem" "Penance Brand" "Void Sphere" "Hydrosphere" "Summon Reaper"
+#  SetFontSize 45
+#  SetTextColor 30 190 190 255
+#  SetBorderColor 255 255 0 255
+#  MinimapIcon 1 Yellow Triangle
+#  PlayEffect Grey
+#  CustomAlertSound "sounds/brian-01-clang.mp3"
 
 Hide
   AreaLevel > 3
@@ -98,21 +99,18 @@ Hide
 export default function getFilter() {
   return [
     custom,
-    make4LinkFilter("BBBB", "4b"),
     make4LinkFilter("BBBG", "3b1g"),
-    // make4LinkFilter("BBBR", "3b1r"),
-    make4LinkFilter("BBGG", "2b2g"),
     make4LinkFilter("BBGG", "2b2g"),
     make4LinkFilter("GGGR", "3g1r", 55, 62),
     make4LinkFilter("GGGG", "4g", 55, 62),
     make4LinkFilter2({ evasion: 20 }),
 
     // 3-Links
-    make3LinkFilter("BBB", "Boots", "3b boots"),
-    make3LinkFilter("BBB", "Gloves", "3b gloves"),
-    make3LinkFilter("BBB", "Helmets", "3b helm"),
-    make3LinkFilter("BBB", "Body Armours", "3b body"),
-    make3LinkFilter("BBB", "Wand", "3b wand"),
+    // make3LinkFilter("BBB", "Boots", "3b boots"),
+    // make3LinkFilter("BBB", "Gloves", "3b gloves"),
+    // make3LinkFilter("BBB", "Helmets", "3b helm"),
+    // make3LinkFilter("BBB", "Body Armours", "3b body"),
+    // make3LinkFilter("BBB", "Wand", "3b wand"),
     // make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
 
     make3LinkFilter("BBG", "Boots", "2b1g boots"),
@@ -122,11 +120,11 @@ export default function getFilter() {
     make3LinkFilter("BBG", "Wand", "2b1g wand"),
     // make3LinkFilter("BBG", "Sceptre", "2b1g sceptre"),
 
-    // make3LinkFilter("BGG", "Boots", "2g1b boots"),
-    // make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
-    // make3LinkFilter("BGG", "Helmets", "2g1b helm"),
-    // make3LinkFilter("BGG", "Body Armours", "2g1b body"),
-    // make3LinkFilter("BGG", "Wand", "2g1b wand"),
+    make3LinkFilter("BGG", "Boots", "2g1b boots"),
+    make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
+    make3LinkFilter("BGG", "Helmets", "2g1b helm"),
+    make3LinkFilter("BGG", "Body Armours", "2g1b body"),
+    make3LinkFilter("BGG", "Wand", "2g1b wand"),
     // make3LinkFilter("BGG", "Sceptre", "2g1b sceptre"),
 
     levelingBaseFilter(),

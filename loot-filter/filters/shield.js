@@ -35,7 +35,7 @@ Show
   BaseType "Colossal Tower Shield"
   Corrupted False
   SetFontSize 40
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
 `;
@@ -56,7 +56,7 @@ Show
   BaseType "Colossal Tower Shield"
   Corrupted False
   SetFontSize 35
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
@@ -67,7 +67,7 @@ Show
   BaseType "Colossal Tower Shield"
   Corrupted False
   SetFontSize 30
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
@@ -77,7 +77,7 @@ Show
   AreaLevel <= 72
   Rarity <= Rare
   SetFontSize 30
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 0 0 0 255
   MinimapIcon 1 Pink Cross
 
@@ -87,7 +87,7 @@ Show
   BaseType "Girded Tower Shield"
   Corrupted False
   SetFontSize 40
-  SetTextColor 255 0 255 200
+  ##GoodBaseText
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
 
