@@ -155,6 +155,17 @@ Show
 ## Divination Cards ##
 ######################
 
+Show # 6-link Body Armour Divination Cards and The Jeweller's Boon
+Class "Divination"
+  BaseType == "Draped in Dreams" "Emperor of Purity" "Immortal Resolve" "The Celestial Justicar" "The Chains that Bind" "The Dapper Prodigy" "The Ethereal" "The Jeweller's Boon" "The Sacrifice" "The White Knight"
+  SetFontSize 45
+  ##GoodBaseText
+  SetBorderColor 255 255 0 255
+  ##DefaultBackground
+  MinimapIcon 0 Yellow Triangle
+  PlayEffect Yellow
+  CustomAlertSound "sounds/brian-06-shing.mp3"
+
 Show # T1 Currency Divination Cards
   Class "Divination"
   BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" "Darker Half" "Altered Perception" "Rebirth and Renewal" "The Sephirot"
