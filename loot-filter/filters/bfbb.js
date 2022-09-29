@@ -28,7 +28,7 @@ Show
 
 Show
   ItemLevel = 83 # T1 Cast Speed
-  AreaLevel <= 80
+  AreaLevel < 83
   Rarity = Rare
   BaseType "Pagan Wand" "Heathen Wand"
   SetFontSize 45

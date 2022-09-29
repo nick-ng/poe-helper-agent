@@ -134,15 +134,15 @@ Show
   MinimapIcon 1 Pink Star
   ##DefaultBackground
 
-###########################
-## 83 Weapons - Physical ##
-###########################
+#######################################
+## 83 Weapons - Physical, Cast Speed ##
+#######################################
 
 Show
-  BaseType "Despot Axe" "Piledriver"
+  BaseType "Despot Axe" "Piledriver" "Pagan Wand" "Heathen Wand"
   Corrupted False
   Rarity <= Rare
-  ItemLevel = 83 # T1 Phys only
+  ItemLevel = 83 # T1 Phys, T1 Cast Speed
   ##GoodBaseText
   SetBorderColor 255 0 0 255
   MinimapIcon 1 Pink Star
