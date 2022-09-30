@@ -5,7 +5,9 @@ import {
   make4LinkFilter2,
 } from "../generators.js";
 import { getFilterFragment } from "../filter-loader.js";
-import getFlaskFilter from "../../filter-generators/flasks.js";
+import getFlaskFilter, {
+  getManaFlaskFilter,
+} from "../../filter-generators/flasks.js";
 
 /**
  * Leveling as:
@@ -130,5 +132,6 @@ export default function getFilter() {
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
     getFlaskFilter(),
+    getManaFlaskFilter(),
   ].join("\n\n");
 }
