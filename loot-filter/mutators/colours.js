@@ -3,6 +3,7 @@ const allColours = {
   BrightBackground: "SetBackgroundColor 255 255 255 200",
   ScrollOfWisdomText: "SetTextColor 210 178 135 220",
   PortalScrollText: "SetTextColor 50 240 240 220",
+  T0CurrencyText: "SetTextColor 255 0 0 255",
   T1CurrencyText: "SetTextColor 255 255 0 255",
   T2CurrencyText: "SetTextColor 0 255 0 255",
   T3CurrencyText: "SetTextColor 0 255 0 255",

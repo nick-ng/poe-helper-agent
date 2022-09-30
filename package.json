@@ -12,6 +12,7 @@
     "update-filters": "npm run uf && echo \"\nYou can run 'npm run uf' instead\" ",
     "uf": "node ./server.js --update-filters",
     "check-style": "pretty-quick --branch main",
+    "hideout": "node ./tools/translate-hideout.js",
     "pre-commit": "pretty-quick --staged"
   },
   "repository": {

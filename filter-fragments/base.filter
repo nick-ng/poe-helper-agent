@@ -170,7 +170,7 @@ Show # T1 Currency Divination Cards
   Class "Divination"
   BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" "Darker Half" "Altered Perception" "Rebirth and Renewal" "The Sephirot"
   SetFontSize 45
-  SetTextColor 255 0 0 255
+  ##T0CurrencyText
   SetBorderColor 255 0 0 255
   SetBackgroundColor 255 255 255 200
   MinimapIcon 0 Red Star

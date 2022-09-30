@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "fs";
 
-const main = ({ dx, dy }) => {
+const main = ({ targetX, targetY }) => {
   const hideoutJSON = readFileSync("./input.hideout", {
     encoding: "utf-8",
   });
@@ -9,13 +9,26 @@ const main = ({ dx, dy }) => {
 
   const { doodads: prevDoodads } = hideout;
 
+  let currX = 0;
+  let currY = 0;
+
+  Object.entries(prevDoodads).forEach(([key, value]) => {
+    if (key === "Waypoint") {
+      currX = value.x;
+      currY = value.y;
+    }
+  });
+
+  const dx = targetX - currX;
+  const dy = targetY - currY;
+
   const doodads = {};
 
   Object.entries(prevDoodads).map(([key, value]) => {
     doodads[key] = {
       ...value,
-      x: value.x - dx,
-      y: value.y - dy,
+      x: value.x + dx,
+      y: value.y + dy,
     };
   });
 
@@ -28,6 +41,6 @@ const main = ({ dx, dy }) => {
 };
 
 main({
-  dx: 149 - 242,
-  dy: 149 - 271,
+  targetX: 231,
+  targetY: 308,
 });
