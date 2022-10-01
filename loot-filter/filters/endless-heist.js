@@ -1,5 +1,5 @@
 import { levelingBaseFilter } from "../filters.js";
-import { make3LinkFilter, make4LinkFilter } from "../generators.js";
+import { make3LinkFilter, make4LinkFilter } from "../common/generators.js";
 
 // https://textreader.pro/
 export default function getFilter() {

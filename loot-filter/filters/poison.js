@@ -3,7 +3,7 @@ import {
   make3LinkFilter,
   make4LinkFilter,
   make4LinkFilter2,
-} from "../generators.js";
+} from "../common/generators.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter, {
   getManaFlaskFilter,

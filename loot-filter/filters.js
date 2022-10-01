@@ -3,7 +3,7 @@ import {
   make3LinkFilter,
   make4LinkFilter,
   makeBaseTypeFilter,
-} from "./generators.js";
+} from "./common/generators.js";
 
 export const uniqueDivinationCards = makeBaseTypeFilter(
   [

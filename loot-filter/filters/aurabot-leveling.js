@@ -4,7 +4,7 @@ import {
   make3LinkFilter,
   make3LinkFilterB,
   make4LinkFilter,
-} from "../generators.js";
+} from "../common/generators.js";
 
 // const custom = `Show
 //   SetBorderColor 200 0 0

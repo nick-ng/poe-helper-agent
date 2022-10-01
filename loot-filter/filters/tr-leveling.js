@@ -3,7 +3,7 @@ import {
   make3LinkFilter,
   make3LinkFilterB,
   make4LinkFilter,
-} from "../generators.js";
+} from "../common/generators.js";
 
 const bows = [
   "Short Bow",

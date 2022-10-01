@@ -12,6 +12,36 @@ export const makeWeaponBlock = (maxAreaLevel, baseType, sound = true) => {
 `;
 };
 
+export const makeFullWeaponBlock = (weapons) =>
+  weapons
+    .map(({ base, requiredLevel }) => {
+      const safeZone = 3 + Math.floor(requiredLevel / 16);
+      const highlight = requiredLevel + safeZone + 1;
+      const hide = highlight + safeZone;
+      return `Show
+  AreaLevel <= ${highlight}
+  BaseType == "${base}"
+  Corrupted False
+  SetFontSize 45
+  Rarity <= Rare
+  ##DefaultBackground
+  ##GoodBaseBorder
+  MinimapIcon 1 Pink Cross
+  CustomAlertSound "sounds/brian-weapon.mp3"
+
+Show
+  AreaLevel <= ${hide}
+  BaseType == "${base}"
+  Corrupted False
+  SetFontSize 25
+  Rarity <= Rare
+  ##DefaultBackground
+  ##GoodBaseBorder
+  MinimapIcon 1 Pink Cross
+`;
+    })
+    .join("/n/n/n");
+
 export const make3LinkFilter = (
   socketGroup,
   itemClass,

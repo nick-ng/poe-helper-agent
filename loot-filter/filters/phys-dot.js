@@ -3,7 +3,7 @@ import {
   makeWeaponBlock,
   make3LinkFilter,
   make4LinkFilter,
-} from "../generators.js";
+} from "../common/generators.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
