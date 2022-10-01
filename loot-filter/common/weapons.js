@@ -1,4 +1,4 @@
-import { makeFullWeaponBlock } from "./generators";
+import { makeFullWeaponBlock } from "./generators.js";
 
 export const claws = makeFullWeaponBlock([
   { base: "Longsword", requiredLevel: 8 },
