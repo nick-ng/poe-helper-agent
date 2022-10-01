@@ -40,7 +40,7 @@ Show
   MinimapIcon 1 Pink Cross
 `;
     })
-    .join("/n/n/n");
+    .join("\n\n\n");
 
 export const make3LinkFilter = (
   socketGroup,
