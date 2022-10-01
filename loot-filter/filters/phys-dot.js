@@ -51,8 +51,7 @@ Show
   ItemLevel = 12
   Rarity <= Rare
   SetFontSize 45
-  ##GoodBaseText
-  SetBorderColor 255 255 0 255
+  ##GoodBaseBorder
   MinimapIcon 1 Pink Star
 
 Show
@@ -61,8 +60,7 @@ Show
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
-  ##GoodBaseText
-  SetBorderColor 255 255 0 255
+  ##GoodBaseBorder
   MinimapIcon 1 Pink Star
 
 Show

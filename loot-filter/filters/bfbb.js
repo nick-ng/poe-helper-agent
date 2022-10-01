@@ -34,7 +34,7 @@ Show
   Rarity = Rare
   BaseType "Pagan Wand" "Heathen Wand"
   SetFontSize 45
-  ##GoodBaseText
+  ##GoodBaseBorder
   ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star
@@ -45,7 +45,7 @@ Show
   Rarity <= Rare
   BaseType "Pagan Wand" "Heathen Wand"
   SetFontSize 45
-  ##GoodBaseText
+  ##GoodBaseBorder
   ##DefaultBackground
   PlayEffect Yellow
   MinimapIcon 1 Pink Star
@@ -56,7 +56,7 @@ Show
   Rarity <= Rare
   BaseType "Pagan Wand" "Heathen Wand"
   SetFontSize 35
-  ##GoodBaseText
+  ##GoodBaseBorder
   ##DefaultBackground
   PlayEffect White
   MinimapIcon 1 Pink Star

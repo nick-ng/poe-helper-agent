@@ -5,9 +5,8 @@ export const makeWeaponBlock = (maxAreaLevel, baseType, sound = true) => {
   Corrupted False
   SetFontSize ${sound ? 45 : 30}
   Rarity <= Rare
-  SetBorderColor 0 0 0 255
   ##DefaultBackground
-  ##GoodBaseText
+  ##GoodBaseBorder
   MinimapIcon 1 Pink Cross
   ${sound ? "PlayAlertSound 16 200" : ""}
 `;

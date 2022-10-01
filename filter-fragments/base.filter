@@ -159,8 +159,7 @@ Show # 6-link Body Armour Divination Cards and The Jeweller's Boon
 Class "Divination"
   BaseType == "Draped in Dreams" "Emperor of Purity" "Immortal Resolve" "The Celestial Justicar" "The Chains that Bind" "The Dapper Prodigy" "The Ethereal" "The Jeweller's Boon" "The Sacrifice" "The White Knight"
   SetFontSize 45
-  ##GoodBaseText
-  SetBorderColor 255 255 0 255
+  ##GoodBaseBorder
   ##DefaultBackground
   MinimapIcon 0 Yellow Triangle
   PlayEffect Yellow

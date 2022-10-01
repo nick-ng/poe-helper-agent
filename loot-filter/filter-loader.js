@@ -12,27 +12,34 @@ const basesToFilter = (baseTypes) =>
 
 const defaultReplacements = {
   ilvl86a: basesToFilter([
-    "Carnal Armour",
-    "Full Dragonscale",
-    "Cardinal Round Shield",
-    "Saint's Hauberk",
-    "Supreme Spiked Shield",
-    "Mirrored Spiked Shield",
-    "Colossal Tower Shield",
+    "Carnal Armour", // Dex/Int
+    "Full Dragonscale", // Str/Dex
+    "Cardinal Round Shield", // Str/Dex
+    // "Saint's Hauberk", // Str/Int
+    "Supreme Spiked Shield", // Dex/Int
+    "Mirrored Spiked Shield", // Dex/Int
+    // "Colossal Tower Shield", // Str
   ]),
   ilvl86b: basesToFilter([
-    "Sadist Garb",
-    "General's Brigandine",
-    "Saintly Chainmail",
+    "Sadist Garb", // Dex/Int
+    "Blood Raiment", // Dex/Int
+    "General's Brigandine", // Str/Dex
+    "Triumphant Lamellar", // Str/Dex
+    // "Saintly Chainmail", // Str/Int
   ]),
   ilvl85a: basesToFilter([
-    "Pig-Faced Bascinet",
-    "Dragonscale Gauntlets",
-    "Dragonscale Boots",
+    "Pig-Faced Bascinet", // Str/Dex
+    "Dragonscale Gauntlets", // Str/Dex
+    "Dragonscale Boots", // Str/Dex
     "Two-Toned Boots",
-    "Crusader Gloves",
-    "Crusader Boots",
-    "Prophet Crown",
+    // "Crusader Gloves", // Str/Int
+    // "Crusader Boots", // Str/Int
+    // "Prophet Crown", // Str/Int
+  ]),
+  ilvl85b: basesToFilter([
+    "Nightmare Bascinet", // Str/Dex
+    "Fluted Bascinet", // Str/Dex
+    "Deicide Mask", // Dex/Int
   ]),
 };
 

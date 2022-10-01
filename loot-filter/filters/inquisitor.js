@@ -30,8 +30,7 @@ Show
   Rarity = Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
-  ##GoodBaseText
-  SetBorderColor 255 0 0 255
+  ##GoodBaseBorder
   ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star
@@ -42,8 +41,7 @@ Show
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
-  ##GoodBaseText
-  SetBorderColor 255 0 0 255
+  ##GoodBaseBorder
   ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star
@@ -54,8 +52,7 @@ Show
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 35
-  ##GoodBaseText
-  SetBorderColor 255 0 0 255
+  ##GoodBaseBorder
   ##DefaultBackground
   MinimapIcon 1 Pink Star
 

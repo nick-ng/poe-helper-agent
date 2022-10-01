@@ -9,7 +9,7 @@ const allColours = {
   T3CurrencyText: "SetTextColor 0 255 0 255",
   T9CurrencyText: "SetTextColor 190 178 135 255",
   CurrencyBorder: "SetBorderColor 0 255 0 255",
-  GoodBaseText: "SetTextColor 255 88 255 200",
+  GoodBaseBorder: "SetBorderColor 255 88 255 200",
 };
 
 export const applyColours = (filter) => {

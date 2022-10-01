@@ -24,8 +24,7 @@ Show
   SetFontSize 45
   PlayAlertSound 16 200
   MinimapIcon 1 Blue Moon
-  ##GoodBaseText
-  SetBorderColor 0 0 255 255
+  ##GoodBaseBorder
 
 Show
   BaseType "Ezomyte Axe" "Despot Axe" #"Piledriver"
@@ -33,8 +32,7 @@ Show
   ItemLevel >= 73 # T2 Phys %
   Rarity <= Rare
   SetFontSize 35
-  ##GoodBaseText
-  SetBorderColor 255 255 0 255
+  ##GoodBaseBorder
   MinimapIcon 1 Pink Star
 
 Show
@@ -43,8 +41,7 @@ Show
   ItemLevel >= 73 # T2 Phys %
   Rarity = Rare
   SetFontSize 35
-  ##GoodBaseText
-  SetBorderColor 255 255 0 255
+  ##GoodBaseBorder
   MinimapIcon 1 Pink Star
 
 Show
