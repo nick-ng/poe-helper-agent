@@ -13,8 +13,15 @@ export const makeWeaponBlock = (maxAreaLevel, baseType, sound = true) => {
 };
 
 export const makeFullWeaponBlock = (weapons) =>
-  weapons
-    .map(({ base, requiredLevel }) => {
+  [
+    `Show
+  SetBorderColor 200 0 0
+  SetFontSize 45
+  ItemLevel >= 1
+  BaseType "Rustic Sash"
+  ItemLevel <= 44
+  CustomAlertSound "sounds/rustic sash.mp3"`,
+    ...weapons.map(({ base, requiredLevel }) => {
       const safeZone = 3 + Math.floor(requiredLevel / 16);
       const highlight = requiredLevel + safeZone + 1;
       const hide = highlight + safeZone;
@@ -39,8 +46,8 @@ Show
   ##GoodBaseBorder
   MinimapIcon 1 Pink Cross
 `;
-    })
-    .join("\n\n\n");
+    }),
+  ].join("\n\n\n");
 
 export const make3LinkFilter = (
   socketGroup,

@@ -13,3 +13,13 @@ export const claws = makeFullWeaponBlock([
   { base: "Twin Claw", requiredLevel: 57 },
   { base: "Hellion's Paw", requiredLevel: 62 },
 ]);
+
+export const slowBows = makeFullWeaponBlock([
+  { base: "Long Bow", requiredLevel: 9 },
+  { base: "Recurve Bow", requiredLevel: 18 },
+  { base: "Death Bow", requiredLevel: 32 },
+  { base: "Decurve Bow", requiredLevel: 38 },
+  { base: "Snipe Bow", requiredLevel: 44 },
+  { base: "Decimation Bow", requiredLevel: 53 },
+  { base: "Citadel Bow", requiredLevel: 58 },
+]);
