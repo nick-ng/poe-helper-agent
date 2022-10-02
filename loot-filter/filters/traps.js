@@ -58,12 +58,21 @@ Show
   ##DefaultBackground
   ##GoodBaseBorder
   MinimapIcon 1 Pink Star
+
+Show
+  Class == "Rune Daggers"
+  Corrupted False
+  Rarity <= Rare
+  ItemLevel = 12 # T4 DoT Multi
+  ##GoodBaseBorder
+  MinimapIcon 1 Pink Star
+  ##DefaultBackground
+
 `;
 
 // https://textreader.pro/
 export default function getFilter() {
   return [
-    custom,
     claws,
     make4LinkFilter("BBBG", "3b1g", 55, 62),
     make4LinkFilter("BBGG", "2b2g", 55, 62),
@@ -91,5 +100,6 @@ export default function getFilter() {
     getFilterFragment("ssf-bases", { amulets }),
     getFlaskFilter(),
     getManaFlaskFilter(),
+    custom,
   ].join("\n\n");
 }

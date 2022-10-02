@@ -19,7 +19,7 @@ export const slowBows = makeFullWeaponBlock([
   { base: "Recurve Bow", requiredLevel: 18 },
   { base: "Death Bow", requiredLevel: 32 },
   { base: "Decurve Bow", requiredLevel: 38 },
-  { base: "Snipe Bow", requiredLevel: 44 },
+  { base: "Sniper Bow", requiredLevel: 44 },
   { base: "Decimation Bow", requiredLevel: 53 },
   { base: "Citadel Bow", requiredLevel: 58 },
 ]);
