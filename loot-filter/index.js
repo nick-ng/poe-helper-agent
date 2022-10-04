@@ -39,7 +39,7 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
 
     console.info(`Writing ${filterName}`);
     writeFilters(
-      [getCustomItemsFilter(), getSsfUniquesFilter(), getFilter()],
+      [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
       outputDir,
       { prefix: `0_${filterName}_`, suffix: "" },
       isDebug,
@@ -48,7 +48,7 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
   });
 
   writeFilters(
-    [getCustomItemsFilter(), getSsfUniquesFilter(), baseFilter()],
+    [getCustomItemsFilter(), baseFilter(), getSsfUniquesFilter()],
     outputDir,
     { prefix: "1_t16-maps_", suffix: "" },
     isDebug,

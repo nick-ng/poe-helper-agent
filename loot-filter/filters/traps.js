@@ -13,9 +13,22 @@ Show
   Rarity Unique
   BaseType == "Deerskin Boots" "Crimson Jewel" "Ezomyte Dagger"
   SetFontSize 45
-  CustomAlertSound "sounds/brian-06-shing.mp3"
+  ##BrightBackground
+  SetTextColor 175 96 37 255
+  SetBorderColor 175 96 37 255
   PlayEffect Brown
   MinimapIcon 2 Brown Star
+  CustomAlertSound "sounds/brian-06-shing.mp3"
+
+Show
+  BaseType == "Broken Truce"
+  SetFontSize 45
+  ##BrightBackground
+  SetTextColor 175 96 37 255
+  SetBorderColor 175 96 37 255
+  PlayEffect Brown
+  MinimapIcon 2 Brown Star
+  CustomAlertSound "sounds/brian-06-shing.mp3"
 
 #Show  # +1 all Fire Gems recipe
 #  Quality >= 1
@@ -44,7 +57,7 @@ Show  # +1 all Physical Gems recipe
 Show
   ItemLevel >= 78
   Rarity <= Rare
-  BaseType "Copper Kris" "Golden Kris" "Platinum Kris"
+  BaseType "Copper Kris" "Golden Kris"
   SetFontSize 40
   ##DefaultBackground
   ##GoodBaseBorder
@@ -81,13 +94,13 @@ Hide
   AreaLevel > 3
   ItemLevel < 43
   Rarity = Normal
-  Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Claws" "Warstaves"
+  Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Warstaves"
 `;
 
 // https://textreader.pro/
 export default function getFilter() {
   return [
-    claws,
+    claws(60),
     make4LinkFilter("BBBG", "3b1g", 55, 62),
     make4LinkFilter("BBGG", "2b2g", 55, 62),
     make4LinkFilter("GGGB", "3g1b"),
