@@ -91,6 +91,15 @@ Hide
   BaseType == "Rustic Sash" "Cloth Belt" "Studded Belt"
 
 Hide
+  AreaLevel > 68
+  Identified False
+  FracturedItem False
+  Class "Body Armours" "Boots" "Gloves" "Helmets"
+  BaseEvasion < 10
+  Sockets < 6
+  LinkedSockets < 5
+
+Hide
   AreaLevel > 3
   ItemLevel < 43
   Rarity = Normal

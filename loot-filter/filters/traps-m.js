@@ -71,6 +71,20 @@ Show
   MinimapIcon 1 Pink Star
   ##DefaultBackground
 
+Hide
+  AreaLevel > 68
+  Identified False
+	FracturedItem False
+  Class "Body Armours" "Boots" "Gloves" "Helmets"
+  BaseEvasion < 10
+  Sockets < 6
+  LinkedSockets < 5
+
+Hide
+  AreaLevel > 3
+  ItemLevel < 43
+  Rarity = Normal
+  Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Claws" "Warstaves"
 `;
 
 // https://textreader.pro/
