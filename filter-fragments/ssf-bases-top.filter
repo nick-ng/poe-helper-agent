@@ -175,6 +175,6 @@ Show
   Corrupted False
   BaseType ##ilvl86a####ilvl86b##
   SetFontSize 45
-  PlayEffect Red
+  PlayEffect Yellow
   MinimapIcon 1 Yellow Star
   ##DefaultBackground

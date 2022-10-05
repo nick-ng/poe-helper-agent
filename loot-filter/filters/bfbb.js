@@ -109,7 +109,6 @@ Hide
 // https://textreader.pro/
 export default function getFilter() {
   return [
-    custom,
     make4LinkFilter("BBBG", "3b1g"),
     make4LinkFilter("BBGG", "2b2g"),
     make4LinkFilter("GGGR", "3g1r", 55, 62),
@@ -142,5 +141,6 @@ export default function getFilter() {
     getFilterFragment("ssf-bases", { amulets }),
     getFlaskFilter(),
     getManaFlaskFilter(),
+    custom,
   ].join("\n\n");
 }
