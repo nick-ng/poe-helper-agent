@@ -8,28 +8,6 @@ Show
   ##DefaultBackground
   Continue
 
-Show
-  Corrupted False
-  BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Marble Amulet" ##ilvl85a####ilvl86a####ilvl86b##
-  Rarity = Normal
-  SetBorderColor 200 200 200 150
-  Continue
-
-Show
-  Corrupted False
-  BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Marble Amulet" ##ilvl85a####ilvl86a####ilvl86b##
-  Rarity = Magic
-  SetBorderColor 136 136 255 150
-  Continue
-
-Show
-  Corrupted False
-  BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Marble Amulet" ##ilvl85a####ilvl86a####ilvl86b##
-  Rarity = Rare
-  SetBorderColor 255 255 0 150
-  Continue
-
-
 #####################
 ## Vermillion Ring ##
 #####################
