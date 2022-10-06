@@ -26,7 +26,18 @@ Show
   SetFontSize 45
   PlayAlertSound 16 200
   MinimapIcon 1 Green Moon
-  SetBorderColor 255 55 255 255
+  ##GoodBaseBorder
+
+Show
+  Rarity Unique
+  BaseType == "Carnal Mitts"
+  SetFontSize 45
+  ##BrightBackground
+  SetTextColor 175 96 37 255
+  SetBorderColor 175 96 37 255
+  PlayEffect Brown
+  MinimapIcon 2 Brown Star
+  CustomAlertSound "sounds/brian-06-shing.mp3"
 
 Show
   ItemLevel = 83 # T1 Cast Speed
