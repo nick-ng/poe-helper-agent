@@ -150,6 +150,8 @@ Show
   MinimapIcon 1 Yellow Star
   ##DefaultBackground
 
+# ilvl 85 can drop in normal T16s so no need a lower tier
+
 ##########################
 ## Body Armour, Shields ##
 ##########################
@@ -165,10 +167,7 @@ Show
   MinimapIcon 1 Yellow Star
   ##DefaultBackground
 
-###############################################
-## Body Armour, Shields T2 Spell Suppression ##
-###############################################
-
+# T2 Spell Suppression ##
 Show
   ItemLevel == 77
   Rarity <= Rare

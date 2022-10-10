@@ -19,13 +19,13 @@
 ## Body Armour, Shields ##
 ##########################
 Show
-  ItemLevel >= 77
+  ItemLevel > 77
   AreaLevel < 83
   BaseDefencePercentile >= 90
   Rarity <= Rare
   BaseType ##ilvl86a##
   SetFontSize 35
-  PlayEffect Yellow
+  PlayEffect Grey
   MinimapIcon 1 Yellow Star
 
 Show
@@ -47,7 +47,7 @@ Show
   Rarity <= Rare
   BaseType ##ilvl85a##
   SetFontSize 35
-  PlayEffect Yellow
+  PlayEffect Grey
   MinimapIcon 1 Yellow Star
 
 Show

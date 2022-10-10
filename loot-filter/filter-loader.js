@@ -26,6 +26,8 @@ const defaultReplacements = {
     "General's Brigandine", // Str/Dex
     "Triumphant Lamellar", // Str/Dex
     // "Saintly Chainmail", // Str/Int
+    "Assassin's Garb", // Dex
+    "Crusader Buckler", // Dex
   ]),
   ilvl85a: basesToFilter([
     "Pig-Faced Bascinet", // Str/Dex
@@ -35,6 +37,10 @@ const defaultReplacements = {
     // "Crusader Gloves", // Str/Int
     // "Crusader Boots", // Str/Int
     // "Prophet Crown", // Str/Int
+    "Lion Pelt", // Dex
+    "Slink Boots", // Dex
+    "Slink Gloves", // Dex
+    "Gripped Gloves", // Dex
   ]),
   ilvl85b: basesToFilter([
     "Nightmare Bascinet", // Str/Dex
