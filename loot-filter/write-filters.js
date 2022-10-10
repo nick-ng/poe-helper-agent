@@ -8,6 +8,7 @@ import { resolve, dirname, basename } from "path";
 
 import { applyColours } from "./mutators/colours.js";
 import { cleanComments } from "./mutators/comments.js";
+import { fixIndents } from "./mutators/indents.js";
 import { presets } from "./update-base-filters.js";
 import { getMapsFilter } from "./filter-loader.js";
 
@@ -19,7 +20,7 @@ export const writeFileSync = (filePath, fileContents) => {
 
   return _writeFileSync(
     filePath,
-    [applyColours, cleanComments].reduce(
+    [applyColours, cleanComments, fixIndents].reduce(
       (prev, mutator) => mutator(prev),
       fileContents
     )

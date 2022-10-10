@@ -23,7 +23,7 @@ ${filter}`;
 
   Object.entries(allColours).forEach((entry) => {
     const [key, value] = entry;
-    newFilter = newFilter.replaceAll(`##${key}`, `${value} # colours.js`);
+    newFilter = newFilter.replaceAll(`##${key}`, `${value}`);
   });
 
   return newFilter;

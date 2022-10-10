@@ -79,7 +79,10 @@ export const getCustomItemsFilter = () => {
   const customFilterPath = resolve(".", "filter-fragments", "!custom.filter");
 
   if (!filters.includes("!custom.filter")) {
-    writeFileSync(customFilterPath, "## Put your custom filter stuff here");
+    writeFileSync(
+      customFilterPath,
+      "## filter-fragments/!custom.filter\n# Put your custom filter stuff here"
+    );
     return "";
   }
 

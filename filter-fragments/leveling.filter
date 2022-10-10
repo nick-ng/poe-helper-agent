@@ -1,3 +1,5 @@
+## filter-fragments/leveling.filter
+
 Show
   BaseType == "Quicksilver Flask"
   AreaLevel <= 15

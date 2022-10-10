@@ -1,3 +1,5 @@
+## filter-fragments/ssf-bases.filter
+
 #defaultcolors:
 #uniqueitem rgb(175,96,37)
 #rareitem rgb(255,255,119)
@@ -7,9 +9,6 @@
 #currencyitem rgb(170,158,130)
 #questitem rgb(74,230,58)
 #defaultfontsize: 32 (18-45)
-
-
-# SetBackgroundColor 84 237 44 255
 
 # Showing:
 # 1. T1 Spell Supp.
