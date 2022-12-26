@@ -84,19 +84,6 @@ Show
   MinimapIcon 2 Red Raindrop
   CustomAlertSound "sounds/life-flask-divine.mp3"
 
-#############################
-## 2 Weapons - Crafted DoT ##
-#############################
-
-Show
-  Class == "Sceptres" "Wands"
-  Corrupted False
-  Rarity <= Rare
-  ItemLevel = 2 # +1 <type> Spells
-  ##GoodBaseBorder
-  MinimapIcon 1 Pink Star
-  ##DefaultBackground
-
 ################################
 ## 82 Weapons - Elemental DoT ##
 ################################

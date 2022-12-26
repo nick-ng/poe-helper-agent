@@ -112,7 +112,11 @@ const fetchGggFilter = async (
 
 export const fetchAndSaveFilters = async () => {
   console.info("Removing old filters");
-  rmSync(resolve(".", "base-filters"), { recursive: true });
+  try {
+    rmSync(resolve(".", "base-filters"), { recursive: true });
+  } catch (e) {
+    console.log("e", e);
+  }
   console.info("Fetching filters");
   for (const filter of FILTER_BLAST) {
     for (const preset of filter.presets) {

@@ -17,18 +17,28 @@ Show
   SetBorderColor 255 55 255 255
 
 Show
-  Rarity Unique
-  BaseType == "Platinum Sceptre"
-  SetFontSize 45
-  PlayAlertSound 3 300
-  PlayEffect Brown
-  MinimapIcon 2 Brown Star
+  Class == "Sceptres" "Wands"
+  Corrupted False
+  Rarity <= Rare
+  ItemLevel = 2 # +1 <type> Spells
+  ##GoodBaseBorder
+  MinimapIcon 1 Pink Star
+  ##DefaultBackground
+
+Show
+  Class == "Sceptres" "Wands"
+  Corrupted False
+  Rarity <= Rare
+  ItemLevel = 4 # +1 <type> Spells
+  ##GoodBaseBorder
+  MinimapIcon 1 Pink Cross
+  ##DefaultBackground
 
 Show
   ItemLevel >= 84
   AreaLevel <= 80
   Rarity = Rare
-  BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
+  BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
   ##GoodBaseBorder
   ##DefaultBackground
@@ -39,7 +49,7 @@ Show
   ItemLevel >= 78
   AreaLevel <= 80
   Rarity <= Rare
-  BaseType "Profane Wand" "Heathen Wand" "Pagan Wand"
+  BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
   ##GoodBaseBorder
   ##DefaultBackground

@@ -13,6 +13,7 @@
     "uf": "node ./server.js --update-filters",
     "check-style": "pretty-quick --branch main",
     "hideout": "node ./tools/translate-hideout.js",
+    "publish": "git add . && git commit -m \"Update - $(date)\" && git push",
     "pre-commit": "pretty-quick --staged"
   },
   "repository": {
