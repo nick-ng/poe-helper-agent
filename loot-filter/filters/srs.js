@@ -24,6 +24,14 @@ Show
   MinimapIcon 2 Brown Star
 
 Show
+  BaseType == "Legion Boots"
+  BaseDefencePercentile >= 90
+  Corrupted False
+  SetFontSize 45
+  ##GoodBaseBorder
+  ##DefaultBackground
+
+Show
   Rarity = Unique
   Class "Rings"
   SetFontSize 45
