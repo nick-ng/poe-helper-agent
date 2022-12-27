@@ -25,7 +25,8 @@ Show
 
 Show
   BaseType == "Legion Boots"
-  BaseDefencePercentile >= 90
+  Rarity Normal
+  BaseDefencePercentile >= 70
   Corrupted False
   SetFontSize 45
   ##GoodBaseBorder
