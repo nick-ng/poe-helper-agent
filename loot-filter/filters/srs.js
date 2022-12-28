@@ -59,14 +59,25 @@ Show
   Continue
 
 Show
-  BaseType = "Bone Ring"
-  ItemLevel >= 85
+  BaseType = "Bone Ring" "Fossilised Spirit Shield" "Ivory Spirit Shield"
+  ItemLevel >= 81
   Rarity <= Rare
   Corrupted False
   SetFontSize 40
   ##GoodBaseBorder
   PlayEffect Red
   MinimapIcon 1 Yellow Cross
+  ##DefaultBackground
+
+
+Show
+  ItemLevel >= 81
+  Rarity <= Rare
+  Corrupted False
+  BaseType "Fossilised Spirit Shield" "Ivory Spirit Shield"
+  SetFontSize 45
+  PlayEffect Yellow
+  MinimapIcon 1 Yellow Star
   ##DefaultBackground
 
 Show
