@@ -56,15 +56,12 @@ Show
   PlayEffect Red
   MinimapIcon 1 Pink Star
 
-Show
-  Rarity >= Rare
+Hide
+  AreaLevel >= 55
+  Rarity < Rare
   BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
   SetFontSize 30
   ##DefaultBackground
-
-Hide
-  AreaLevel >= 70
-  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
 
 Hide
   AreaLevel > 3
