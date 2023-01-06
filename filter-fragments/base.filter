@@ -18,7 +18,7 @@ Hide # Red Maps
   BaseType "Scroll of Wisdom" "Portal Scroll"
   Class "Currency"
   AreaLevel > 77
-  StackSize < 10
+  StackSize < 8
   ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 45
@@ -27,7 +27,7 @@ Hide # White-Yellow Maps
   BaseType "Scroll of Wisdom" "Portal Scroll"
   Class "Currency"
   AreaLevel > 67
-  StackSize < 6
+  StackSize < 4
   ##CurrencyBorder
   ##DefaultBackground
   SetFontSize 45

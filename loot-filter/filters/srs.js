@@ -53,17 +53,17 @@ Show
 
 Show
   Corrupted False
-  BaseType "Bone Ring"
+  BaseType "Bone Ring" "Bone Ring" "Fossilised Spirit Shield" "Ivory Spirit Shield" "Ghastly Eye Jewel"
   ##GoodBaseBorder
   ##DefaultBackground
   Continue
 
 Show
-  BaseType = "Bone Ring" "Fossilised Spirit Shield" "Ivory Spirit Shield"
+  BaseType = "Bone Ring" "Fossilised Spirit Shield" "Ivory Spirit Shield" "Ghastly Eye Jewel"
   ItemLevel >= 81
   Rarity <= Rare
   Corrupted False
-  SetFontSize 40
+  SetFontSize 45
   ##GoodBaseBorder
   PlayEffect Red
   MinimapIcon 1 Yellow Cross
