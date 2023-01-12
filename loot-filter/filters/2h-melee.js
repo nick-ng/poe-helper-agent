@@ -62,6 +62,28 @@ Show
   SetFontSize 30
   ##DefaultBackground
 
+Show
+  Corrupted False
+  BaseType "Astral Plate"
+  ##GoodBaseBorder
+  ##DefaultBackground
+  Continue
+
+Show
+  ItemLevel == 77
+  Rarity <= Rare
+  Corrupted False
+  BaseType "Astral Plate"
+  SetFontSize 45
+  PlayEffect Yellow
+  MinimapIcon 1 Yellow Star
+  SetBackgroundColor 0 0 0 120
+
+Show
+  AreaLevel < 68
+  BaseType "Astral Plate"
+  SetFontSize 40
+
 Hide
   AreaLevel >= 70
   BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
