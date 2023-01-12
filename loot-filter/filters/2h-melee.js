@@ -76,6 +76,7 @@ Hide
 const weapons = [
   [12, "Longsword", false],
   [13, "Jade Chopper", true],
+  [18, "Mallet", true],
   [18, "Woodsplitter", false],
   [18, "Bastard Sword", false],
   [23, "Poleaxe", true],
