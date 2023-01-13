@@ -105,6 +105,15 @@ Show
   PlayEffect White
   MinimapIcon 2 White Circle
 
+Show
+  AreaLevel < 65
+  BaseType == "Divine Mana Flask"
+  Rarity == Magic
+  SetBorderColor 80 150 255 200
+  ##DefaultBackground
+  MinimapIcon 2 Blue Raindrop
+  CustomAlertSound "sounds/ding.mp3"
+
 Hide
   AreaLevel > 3
   ItemLevel < 43
