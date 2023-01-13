@@ -5,7 +5,9 @@ import {
   makeWeaponBlock,
 } from "../common/generators.js";
 import { getFilterFragment } from "../filter-loader.js";
-import getFlaskFilter from "../../filter-generators/flasks.js";
+import getFlaskFilter, {
+  getManaFlaskFilter,
+} from "../../filter-generators/flasks.js";
 
 const amulets = '"Jade Amulet" "Lapis Amulet" "Turquoise Amulet"';
 
@@ -158,5 +160,6 @@ export default function getFilter() {
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
     getFlaskFilter(),
+    getManaFlaskFilter(),
   ].join("\n\n");
 }
