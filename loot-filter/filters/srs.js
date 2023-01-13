@@ -1,5 +1,9 @@
 import { levelingBaseFilter } from "../filters.js";
-import { make3LinkFilter, make4LinkFilter } from "../common/generators.js";
+import {
+  make3LinkFilter,
+  make4LinkFilter,
+  makeWeaponBlock,
+} from "../common/generators.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
@@ -69,7 +73,6 @@ Show
   MinimapIcon 1 Yellow Cross
   ##DefaultBackground
 
-
 Show
   ItemLevel >= 81
   Rarity <= Rare
@@ -78,6 +81,15 @@ Show
   SetFontSize 45
   PlayEffect Yellow
   MinimapIcon 1 Yellow Star
+  ##DefaultBackground
+
+Show
+  AreaLevel < 68
+  Rarity <= Rare
+  Corrupted False
+  BaseType "Short Bow" "Grove Bow" "Thicket Bow" "Reflex Bow" "Steelwood Bow" "Maraketh Bow"
+  SetFontSize 40
+  ##GoodBaseBorder
   ##DefaultBackground
 
 Show
@@ -104,25 +116,44 @@ Hide
   Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Claws" "Warstaves"
 `;
 
+const weapons = [[12, "Longsword", false]];
+
 // https://textreader.pro/
 export default function getFilter() {
   return [
     custom,
-    make4LinkFilter("BBBB", "4b"),
-    make4LinkFilter("BBBR", "3b1r"),
+
+    ...weapons.map((weapon) => {
+      const [maxAreaLevel, baseType, sound] = weapon;
+      return makeWeaponBlock(maxAreaLevel, baseType, sound);
+    }),
+
+    make4LinkFilter("GGGR", "3g1r"),
+    make4LinkFilter("GGGG", "4g"),
+    // make4LinkFilter("BBBR", "3b1r"),
 
     // 3-Links
-    make3LinkFilter("BBB", "Boots", "3b boots"),
-    make3LinkFilter("BBB", "Gloves", "3b gloves"),
-    make3LinkFilter("BBB", "Helmets", "3b helm"),
-    make3LinkFilter("BBB", "Body Armours", "3b body"),
-    make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
+    make3LinkFilter("GGR", "Boots", "2g1r boots"),
+    make3LinkFilter("GGR", "Gloves", "2g1r gloves"),
+    make3LinkFilter("GGR", "Helmets", "2g1r helm"),
+    make3LinkFilter("GGR", "Body Armours", "2g1r body"),
 
-    make3LinkFilter("BBR", "Boots", "2b1r", 1, 62),
-    make3LinkFilter("BBR", "Gloves", "2b1r", 1, 62),
-    make3LinkFilter("BBR", "Helmets", "2b1r", 1, 62),
-    make3LinkFilter("BBR", "Body Armours", "2b1r", 1, 62),
-    make3LinkFilter("BBR", "Sceptre", "2b1r", 1, 62),
+    make3LinkFilter("GGG", "Boots", "3g boots"),
+    make3LinkFilter("GGG", "Gloves", "3g gloves"),
+    make3LinkFilter("GGG", "Helmets", "3g helm"),
+    make3LinkFilter("GGG", "Body Armours", "3g body"),
+
+    // make3LinkFilter("BBB", "Boots", "3b boots"),
+    // make3LinkFilter("BBB", "Gloves", "3b gloves"),
+    // make3LinkFilter("BBB", "Helmets", "3b helm"),
+    // make3LinkFilter("BBB", "Body Armours", "3b body"),
+    // make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
+
+    // make3LinkFilter("BBR", "Boots", "2b1r", 1, 62),
+    // make3LinkFilter("BBR", "Gloves", "2b1r", 1, 62),
+    // make3LinkFilter("BBR", "Helmets", "2b1r", 1, 62),
+    // make3LinkFilter("BBR", "Body Armours", "2b1r", 1, 62),
+    // make3LinkFilter("BBR", "Sceptre", "2b1r", 1, 62),
 
     levelingBaseFilter(),
     getFilterFragment("ssf-bases", { amulets }),
