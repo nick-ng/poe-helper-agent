@@ -66,7 +66,6 @@ function makeManaFlaskBlock(maxAreaLevel, baseType, big) {
   SetBorderColor 80 150 255 200
   ##DefaultBackground
   ${big ? "MinimapIcon 2 Blue Raindrop" : ""}
-  ${big ? `CustomAlertSound "sounds/ding.mp3"` : ""}
 `;
 }
 
