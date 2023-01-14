@@ -11,6 +11,7 @@
     "chaos-only": "node ./server.js --chaos-only",
     "update-filters": "npm run uf && echo \"\nYou can run 'npm run uf' instead\" ",
     "uf": "node ./server.js --update-filters",
+    "ufp": "npm run uf && npm run publish",
     "check-style": "pretty-quick --branch main",
     "hideout": "node ./tools/translate-hideout.js",
     "publish": "git add . && git commit -m \"Update - $(date)\" && git push",
