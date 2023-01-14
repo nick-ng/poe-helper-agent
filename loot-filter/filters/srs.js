@@ -114,6 +114,32 @@ Show
   MinimapIcon 2 Blue Raindrop
   CustomAlertSound "sounds/ding.mp3"
 
+Show
+  ItemLevel >= 50
+  Rarity <= Rare
+  BaseType "Large Cluster Jewel"
+  EnchantmentPassiveNode "Minion Damage"
+  SetFontSize 45
+  SetTextColor 150 0 255 255
+  ##DefaultBackground
+  SetBorderColor 240 100 0 255
+  MinimapIcon 0 Red Star
+  PlayEffect Red
+  CustomAlertSound "sounds/ding.mp3"
+
+Show
+  ItemLevel >= 68
+  Rarity <= Rare
+  BaseType "Medium Cluster Jewel"
+  EnchantmentPassiveNode "Minion Life"
+  SetFontSize 45
+  SetTextColor 150 0 255 255
+  ##DefaultBackground
+  SetBorderColor 240 100 0 255
+  MinimapIcon 0 Red Star
+  PlayEffect Red
+  CustomAlertSound "sounds/ding.mp3"
+
 Hide
   AreaLevel > 3
   ItemLevel < 43
