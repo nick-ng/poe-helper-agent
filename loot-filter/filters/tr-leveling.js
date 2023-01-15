@@ -43,13 +43,24 @@ Show
 
 Show
   AreaLevel < 68
-  ItemLevel >= 9
+  ItemLevel >= 25
   Rarity <= Rare
   Corrupted False
   BaseType "Short Bow" "Grove Bow" "Thicket Bow" "Reflex Bow" "Steelwood Bow" "Maraketh Bow"
   SetFontSize 40
   ##GoodBaseBorder
   ##DefaultBackground
+
+Show
+  Class "Divination"
+  BaseType == "The Porcupine"
+  SetFontSize 45
+  ##BrightBackground
+  SetTextColor 175 96 37 255
+  SetBorderColor 175 96 37 255
+  PlayEffect Brown
+  MinimapIcon 2 Brown Star
+  CustomAlertSound "sounds/brian-06-shing.mp3"
 
 Show
   AreaLevel < 65
@@ -73,7 +84,17 @@ Hide
   Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Two Hand" "Bows" "Claws" "Warstaves"
 `;
 
-const weapons = [[12, "Longsword", false]];
+const weapons = [
+  [12, "Longsword", false],
+  [18, "Woodsplitter", false],
+  [18, "Bastard Sword", false],
+  [22, "Two-Handed Sword", true],
+  [23, "Poleaxe", false],
+  [32, "Etched Greatsword", false],
+  [33, "Double Axe", false],
+  [36, "Ornate Sword", true],
+  [37, "Gilded Axe", false],
+];
 
 // https://textreader.pro/
 export default function getFilter() {
