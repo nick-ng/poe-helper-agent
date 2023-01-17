@@ -18,6 +18,7 @@
 ## Body Armour, Shields ##
 ##########################
 Show
+  Corrupted False
   ItemLevel > 77
   AreaLevel < 83
   BaseDefencePercentile >= 90
@@ -40,6 +41,7 @@ Show
 ## Helmet, Gloves, Boots ##
 ###########################
 Show
+  Corrupted False
   ItemLevel >= 76
   AreaLevel < 83
   BaseDefencePercentile >= 90

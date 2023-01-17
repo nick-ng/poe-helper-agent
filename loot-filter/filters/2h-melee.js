@@ -9,6 +9,14 @@ import getFlaskFilter from "../../filter-generators/flasks.js";
 
 const amulets = '"Jade Amulet" "Turquoise Amulet"';
 
+const ilvl86 = ["Astral Plate", "Glorious Plate"];
+const ilvl85 = [
+  "Titan Gauntlets",
+  "Spiked Gloves",
+  "Titan Greaves",
+  "Royal Burgonet",
+];
+
 const custom = `Show
   SetBorderColor 200 0 0
   SetFontSize 45
@@ -63,23 +71,6 @@ Show
   ##DefaultBackground
 
 Show
-  Corrupted False
-  BaseType "Astral Plate"
-  ##GoodBaseBorder
-  ##DefaultBackground
-  Continue
-
-Show
-  ItemLevel == 77
-  Rarity <= Rare
-  Corrupted False
-  BaseType "Astral Plate"
-  SetFontSize 45
-  PlayEffect Yellow
-  MinimapIcon 1 Yellow Star
-  SetBackgroundColor 0 0 0 120
-
-Show
   AreaLevel < 68
   BaseType "Astral Plate"
   SetFontSize 40
@@ -93,6 +84,89 @@ Hide
   ItemLevel < 43
   Rarity = Normal
   Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Bows" "Claws" "Warstaves" "Wand" "Sceptre"
+`;
+
+const armourBases = `
+Show
+  Corrupted False
+  BaseType "${ilvl86.join('" "')}" "${ilvl85.join('" "')}"
+  ##GoodBaseBorder
+  ##DefaultBackground
+  Continue
+
+  ## Body Armour
+Show
+  ItemLevel >= 86
+  Rarity <= Rare
+  Corrupted False
+  BaseType "${ilvl86.join('" "')}"
+  SetFontSize 45
+  PlayEffect Red
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  MinimapIcon 1 Yellow Star
+  ##DefaultBackground
+
+Show
+  Corrupted False
+  ItemLevel > 77
+  AreaLevel < 83
+  BaseDefencePercentile >= 90
+  Rarity <= Rare
+  BaseType "${ilvl86.join('" "')}"
+  SetFontSize 35
+  PlayEffect Grey
+  MinimapIcon 1 Yellow Star
+
+Show
+  BaseDefencePercentile >= 33
+  AreaLevel < 83
+  Rarity = Rare
+  BaseType "${ilvl86.join('" "')}"
+  SetFontSize 30
+  PlayEffect Grey Temp
+  MinimapIcon 1 Yellow Star
+
+Show
+  ItemLevel == 77
+  Rarity <= Rare
+  Corrupted False
+  BaseType "${ilvl86.join('" "')}"
+  SetFontSize 45
+  PlayEffect Yellow
+  MinimapIcon 1 Yellow Star
+  ##DefaultBackground
+
+  ## Other Armour
+Show
+  ItemLevel >= 85
+  Rarity <= Rare
+  Corrupted False
+  BaseType "${ilvl85.join('" "')}"
+  SetFontSize 40
+  PlayEffect Red
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+  MinimapIcon 1 Yellow Star
+  ##DefaultBackground
+
+Show
+  Corrupted False
+  ItemLevel >= 76
+  AreaLevel < 83
+  BaseDefencePercentile >= 90
+  Rarity <= Rare
+  BaseType "${ilvl85.join('" "')}"
+  SetFontSize 35
+  PlayEffect Grey
+  MinimapIcon 1 Yellow Star
+
+Show
+  BaseDefencePercentile >= 33
+  AreaLevel < 83
+  Rarity = Rare
+  BaseType "${ilvl85.join('" "')}"
+  SetFontSize 30
+  PlayEffect Grey Temp
+  MinimapIcon 1 Yellow Star
 `;
 
 const weapons = [
@@ -123,6 +197,7 @@ const weapons = [
 export default function getFilter() {
   return [
     custom,
+    armourBases,
     ...weapons.map((weapon) => {
       const [maxAreaLevel, baseType, sound] = weapon;
       return makeWeaponBlock(maxAreaLevel, baseType, sound);
