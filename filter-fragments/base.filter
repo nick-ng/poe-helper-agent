@@ -110,15 +110,15 @@ Show # T3 Currency (3+ to show)
 ## T4 Currency ##
 #################
 
-Hide # Yellow Maps
-  Class "Currency"
-  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
-  SetFontSize 45
-  AreaLevel > 72
-  StackSize < 6
-  ##T3CurrencyText
-  ##CurrencyBorder
-  ##DefaultBackground
+#Hide # Yellow Maps
+#  Class "Currency"
+#  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
+#  SetFontSize 45
+#  AreaLevel > 72
+#  StackSize < 6
+#  ##T3CurrencyText
+#  ##CurrencyBorder
+#  ##DefaultBackground
 
 Hide # White Maps
   Class "Currency"
@@ -139,7 +139,7 @@ Show # T4 Currency (6+ to show)
   ##DefaultBackground
   MinimapIcon 0 Green Star
   PlayEffect Green
-  CustomAlertSound "sounds/brian-02-doof.mp3"
+  # CustomAlertSound "sounds/brian-02-doof.mp3"
 
 ####################
 ## Other Currency ##

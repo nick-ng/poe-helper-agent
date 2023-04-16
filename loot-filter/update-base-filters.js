@@ -20,7 +20,7 @@ const FILTER_BLAST = [
     presets: [
       { filename: "nsss.filter", preset: "SEMI-STRICT", level: 10 },
       { filename: "nsvs.filter", preset: "VERY-STRICT", level: 20 },
-      // { filename: "nsub.filter", preset: "UBER-STRICT", level: 45 },
+      { filename: "nsub.filter", preset: "UBER-STRICT", level: 30 },
       // { filename: "nsup.filter", preset: "UBER-PLUS-STRICT", level: 50 },
     ],
   },

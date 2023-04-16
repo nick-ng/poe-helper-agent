@@ -4,17 +4,17 @@
   "hideout_name": "Enlightened Hideout",
   "hideout_hash": 8897,
   "doodads": {
-    "Stash": {
+    "Guild Stash": {
       "hash": 3230065491,
       "x": 156,
       "y": 132,
       "r": 24835,
       "fv": 0
     },
-    "Guild Stash": {
+    "Stash": {
       "hash": 139228481,
-      "x": 107,
-      "y": 141,
+      "x": 144,
+      "y": 116,
       "r": 0,
       "fv": 0
     },
@@ -36,7 +36,28 @@
       "hash": 2306038834,
       "x": 159,
       "y": 157,
-      "r": 61770,
+      "r": 17007,
+      "fv": 0
+    },
+    "Horticrafting Station": {
+      "hash": 1523447611,
+      "x": 127,
+      "y": 202,
+      "r": 65350,
+      "fv": 0
+    },
+    "Heist Locker": {
+      "hash": 1894447409,
+      "x": 107,
+      "y": 201,
+      "r": 0,
+      "fv": 0
+    },
+    "Expedition Locker": {
+      "hash": 1655178506,
+      "x": 146,
+      "y": 208,
+      "r": 0,
       "fv": 0
     },
     "Dannig, Warrior Skald": {
@@ -125,9 +146,9 @@
     },
     "Lilly Roth": {
       "hash": 261160331,
-      "x": 167,
-      "y": 131,
-      "r": 53778,
+      "x": 160,
+      "y": 158,
+      "r": 58038,
       "fv": 0
     },
     "The Last to Die": {
@@ -137,25 +158,11 @@
       "r": 7868,
       "fv": 0
     },
-    "Expedition Locker": {
-      "hash": 1655178506,
-      "x": 146,
-      "y": 208,
+    "Relic Locker": {
+      "hash": 12969733,
+      "x": 93,
+      "y": 153,
       "r": 0,
-      "fv": 0
-    },
-    "Heist Locker": {
-      "hash": 1894447409,
-      "x": 107,
-      "y": 201,
-      "r": 0,
-      "fv": 0
-    },
-    "Horticrafting Station": {
-      "hash": 1523447611,
-      "x": 127,
-      "y": 202,
-      "r": 65350,
       "fv": 0
     }
   }

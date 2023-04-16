@@ -38,13 +38,30 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
     }
 
     console.info(`Writing ${filterName}`);
-    writeFilters(
-      [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
-      outputDir,
-      { prefix: `0_${filterName}_`, suffix: "" },
-      isDebug,
-      [5, 11]
-    );
+    if (filterName.includes("maps")) {
+      writeFilters(
+        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        outputDir,
+        { prefix: `1_${filterName}_`, suffix: "" },
+        isDebug,
+        [19, 25]
+      );
+      writeFilters(
+        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        outputDir,
+        { prefix: `2_${filterName}_`, suffix: "" },
+        isDebug,
+        [26, 999]
+      );
+    } else {
+      writeFilters(
+        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        outputDir,
+        { prefix: `0_${filterName}_`, suffix: "" },
+        isDebug,
+        [5, 11]
+      );
+    }
   });
 
   writeFilters(
@@ -53,6 +70,13 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
     { prefix: "1_t16-maps_", suffix: "" },
     isDebug,
     [19, 25]
+  );
+  writeFilters(
+    [getCustomItemsFilter(), baseFilter(), getSsfUniquesFilter()],
+    outputDir,
+    { prefix: "2_t16-maps_", suffix: "" },
+    isDebug,
+    [26, 999]
   );
 
   writeFilters(

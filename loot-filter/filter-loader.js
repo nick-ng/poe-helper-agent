@@ -7,7 +7,7 @@ const fixComments = (filterFragment) => {
   return filterFragment.toString().replaceAll("//", "#");
 };
 
-const basesToFilter = (baseTypes) =>
+export const basesToFilter = (baseTypes) =>
   baseTypes.map((a) => `"${a.trim()}" `).join("");
 
 const defaultReplacements = {
@@ -37,6 +37,7 @@ const defaultReplacements = {
     // "Crusader Gloves", // Str/Int
     // "Crusader Boots", // Str/Int
     // "Prophet Crown", // Str/Int
+    "Murder Mitts", // Dex/Int
     "Lion Pelt", // Dex
     "Slink Boots", // Dex
     "Slink Gloves", // Dex
