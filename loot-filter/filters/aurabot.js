@@ -1,6 +1,7 @@
 import { getFilterFragment } from "../filter-loader.js";
+import { levelingBaseFilter } from "../filters.js";
 import { make3LinkFilter, make4LinkFilter } from "../common/generators.js";
-import { getFilter as getMapsFilter } from "./aurabot-maps.js";
+import getMapsFilter from "./aurabot-maps.js";
 
 const amulets = '"Jade Amulet" "Amber Amulet" "Citrine Amulet"';
 
