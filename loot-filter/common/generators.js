@@ -85,7 +85,7 @@ export const make3LinkFilter = (
     "  Rarity <= Rare",
     "  LinkedSockets <= 4",
     `  SocketGroup = ${socketGroup}`,
-    `  Class "${itemClass}"`,
+    itemClass ? `  Class "${itemClass}"` : null,
     "  SetFontSize 45",
     "  SetBorderColor 200 0 0 255",
     "  ##DefaultBackground",

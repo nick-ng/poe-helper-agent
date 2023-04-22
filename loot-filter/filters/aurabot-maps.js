@@ -1,7 +1,7 @@
 import { getFilterFragment, basesToFilter } from "../filter-loader.js";
 import { uniqueDivinationCards } from "../filters.js";
 
-const replacer = {
+export const replacer = {
   ilvl86a: basesToFilter([
     // "Carnal Armour", // Dex/Int
     "Full Dragonscale", // Str/Dex
@@ -20,15 +20,15 @@ const replacer = {
     // "Assassin's Garb", // Dex
     // "Crusader Buckler", // Dex
   ]),
-  ilvl85a: basesToFilter(["Hubris Circlet", "Murder Mitts"]),
+  ilvl85a: basesToFilter(["Hubris Circlet", "Sorcerer Gloves", "Murder Mitts"]),
   ilvl85b: basesToFilter(["Fingerless Silk Gloves"]),
 };
 
 // https://textreader.pro/
 export default function getFilter() {
   return [
+    uniqueDivinationCards,
     getFilterFragment("ssf-bases-top", replacer),
     getFilterFragment("base", replacer),
-    uniqueDivinationCards,
   ].join("\n\n");
 }
