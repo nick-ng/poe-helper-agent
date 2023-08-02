@@ -24,46 +24,6 @@ export const makeChaosFilter = (
 };
 
 export const autoMakeFilters = (outputDir, isDebug = false) => {
-  const moduleNames = readdirSync(resolve(".", "loot-filter", "filters"));
-
-  moduleNames.forEach(async (moduleName) => {
-    const { default: getFilter } = await import(`./filters/${moduleName}`);
-
-    const filterName = moduleName.replace(".js", "");
-
-    const filterText = getFilter();
-    if (!filterText) {
-      console.info(`Skipping ${filterName}`);
-      return;
-    }
-
-    console.info(`Writing ${filterName}`);
-    if (filterName.includes("maps")) {
-      writeFilters(
-        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
-        outputDir,
-        { prefix: `1_${filterName}_`, suffix: "" },
-        isDebug,
-        [19, 25]
-      );
-      writeFilters(
-        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
-        outputDir,
-        { prefix: `2_${filterName}_`, suffix: "" },
-        isDebug,
-        [26, 999]
-      );
-    } else {
-      writeFilters(
-        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
-        outputDir,
-        { prefix: `0_${filterName}_`, suffix: "" },
-        isDebug,
-        [5, 11]
-      );
-    }
-  });
-
   writeFilters(
     [getCustomItemsFilter(), baseFilter(), getSsfUniquesFilter()],
     outputDir,
@@ -86,4 +46,74 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
     isDebug,
     [0, 2]
   );
+
+  const moduleNames = readdirSync(resolve(".", "loot-filter", "filters"));
+
+  moduleNames.forEach(async (moduleName) => {
+    const { default: getFilter } = await import(`./filters/${moduleName}`);
+
+    const filterName = moduleName.replace(".js", "");
+
+    const filterText = getFilter();
+    if (!filterText) {
+      console.info(`Skipping ${filterName}`);
+      return;
+    }
+
+    if (filterName.includes("maps")) {
+      console.info(`Writing ${filterName}`);
+      writeFilters(
+        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        outputDir,
+        { prefix: `2_${filterName}_`, suffix: "" },
+        isDebug,
+        [19, 25]
+      );
+      writeFilters(
+        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        outputDir,
+        { prefix: `3_${filterName}_`, suffix: "" },
+        isDebug,
+        [26, 999]
+      );
+    } else if (filterName.includes("phase")) {
+      console.info(`Writing ${filterName}`);
+      // league start
+      let filterRange = [0, 999];
+
+      switch (filterName) {
+        case "phase-1": {
+          filterRange = [5, 11];
+          break;
+        }
+        case "phase-2": {
+          filterRange = [19, 25];
+          break;
+        }
+        default: {
+          filterRange = [26, 999];
+        }
+      }
+
+      writeFilters(
+        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        outputDir,
+        { prefix: `0_${filterName}_`, suffix: "" },
+        isDebug,
+        filterRange
+      );
+    } else if (filterName === "phase-2") {
+      // league start
+    } else {
+      console.info(`Skipping ${filterName}`);
+      return;
+      writeFilters(
+        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        outputDir,
+        { prefix: `0_${filterName}_`, suffix: "" },
+        isDebug,
+        [5, 11]
+      );
+    }
+  });
 };

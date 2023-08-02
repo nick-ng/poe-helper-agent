@@ -41,6 +41,6 @@ const main = ({ targetX, targetY }) => {
 };
 
 main({
-  targetX: 310,
-  targetY: 333,
+  targetX: 242,
+  targetY: 271,
 });

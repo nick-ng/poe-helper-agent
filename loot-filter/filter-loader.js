@@ -45,7 +45,7 @@ const defaultReplacements = {
   ]),
   ilvl85b: basesToFilter([
     "Nightmare Bascinet", // Str/Dex
-    "Fluted Bascinet", // Str/Dex
+    // "Fluted Bascinet", // Str/Dex
     "Deicide Mask", // Dex/Int
   ]),
 };

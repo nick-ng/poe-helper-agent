@@ -1,6 +1,32 @@
 import { getFilterFragment, basesToFilter } from "../filter-loader.js";
 import { uniqueDivinationCards } from "../filters.js";
 
+const custom = `
+Show # Aurabot - Redeemer Sceptre
+  ItemLevel = 82
+  Rarity <= Rare
+  Class "Sceptre"
+  HasInfluence "Redeemer"
+  SetFontSize 45
+  ##DefaultBackground
+  ##GoodBaseBorder
+  MinimapIcon 2 Pink Star
+  PlayEffect Red
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+
+Show # Aurabot - Crusader Sceptre
+  ItemLevel = 80
+  Rarity <= Rare
+  Class "Sceptre"
+  HasInfluence "Crusader"
+  SetFontSize 45
+  ##DefaultBackground
+  ##GoodBaseBorder
+  MinimapIcon 2 Pink Star
+  PlayEffect Red
+  CustomAlertSound "sounds/brian-05-woosh.mp3"
+`;
+
 export const replacer = {
   ilvl86a: basesToFilter([
     // "Carnal Armour", // Dex/Int
@@ -27,6 +53,7 @@ export const replacer = {
 // https://textreader.pro/
 export default function getFilter() {
   return [
+    custom,
     uniqueDivinationCards,
     getFilterFragment("ssf-bases-top", replacer),
     getFilterFragment("base", replacer),

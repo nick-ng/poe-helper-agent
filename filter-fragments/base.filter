@@ -122,7 +122,7 @@ Show # T3 Currency (3+ to show)
 
 Hide # White Maps
   Class "Currency"
-  BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
+  BaseType == "Blacksmith's Whetstone" "Armourer's Scrap"
   SetFontSize 45
   AreaLevel > 67
   StackSize < 3

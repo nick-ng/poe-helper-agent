@@ -15,6 +15,16 @@ Show
   SetBorderColor 255 55 255 255
 
 Show
+  Class "Divination"
+    BaseType == "Cursed Words"
+    SetFontSize 45
+    ##GoodBaseBorder
+    ##DefaultBackground
+    MinimapIcon 0 Yellow Triangle
+    PlayEffect Yellow
+    CustomAlertSound "sounds/brian-06-shing.mp3"
+
+Show
   Class "Currency"
   BaseType "of Fear"
   SetFontSize 45
@@ -31,7 +41,6 @@ Show
   Rarity = Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
-  SetTextColor 150 150 255 200
   ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star
@@ -42,7 +51,6 @@ Show
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
-  SetTextColor 150 150 255 200
   ##DefaultBackground
   PlayEffect Red
   MinimapIcon 1 Pink Star
@@ -53,7 +61,6 @@ Show
   Rarity <= Rare
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 35
-  SetTextColor 150 150 255 200
   ##DefaultBackground
   MinimapIcon 1 Pink Star
 

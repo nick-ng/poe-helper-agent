@@ -4,18 +4,10 @@ import {
   make3LinkFilter,
   make4LinkFilter,
 } from "../common/generators.js";
-import { getFilterFragment } from "../filter-loader.js";
+import { getFilterFragment, basesToFilter } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
 const amulets = '"Jade Amulet" "Turquoise Amulet"';
-
-const ilvl86 = ["Astral Plate", "Glorious Plate"];
-const ilvl85 = [
-  "Titan Gauntlets",
-  "Spiked Gloves",
-  "Titan Greaves",
-  "Royal Burgonet",
-];
 
 const custom = `Show
   SetBorderColor 200 0 0
@@ -86,104 +78,76 @@ Hide
   Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Bows" "Claws" "Warstaves" "Wand" "Sceptre"
 `;
 
-const armourBases = `
-Show
-  Corrupted False
-  BaseType "${ilvl86.join('" "')}" "${ilvl85.join('" "')}"
-  ##GoodBaseBorder
-  ##DefaultBackground
-  Continue
+export const replacer = {
+  ilvl86a: basesToFilter([
+    // "Carnal Armour", // Dex/Int
+    "Full Dragonscale", // Str/Dex
+    // "Cardinal Round Shield", // Str/Dex
+    // "Saint's Hauberk", // Str/Int
+    // "Supreme Spiked Shield", // Dex/Int
+    // "Mirrored Spiked Shield", // Dex/Int
+    // "Colossal Tower Shield", // Str
+    "Astral Plate", // Str
+    "Glorious Plate", // Str
+  ]),
+  ilvl86b: basesToFilter([
+    // "Sadist Garb", // Dex/Int
+    // "Blood Raiment", // Dex/Int
+    "General's Brigandine", // Str/Dex
+    "Triumphant Lamellar", // Str/Dex
+    // "Saintly Chainmail", // Str/Int
+    // "Assassin's Garb", // Dex
+    // "Crusader Buckler", // Dex
+  ]),
+  ilvl85a: basesToFilter([
+    "Pig-Faced Bascinet", // Str/Dex
+    "Dragonscale Gauntlets", // Str/Dex
+    "Dragonscale Boots", // Str/Dex
+    "Two-Toned Boots",
 
-  ## Body Armour
-Show
-  ItemLevel >= 86
-  Rarity <= Rare
-  Corrupted False
-  BaseType "${ilvl86.join('" "')}"
-  SetFontSize 45
-  PlayEffect Red
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
-  MinimapIcon 1 Yellow Star
-  ##DefaultBackground
+    // "Crusader Gloves", // Str/Int
+    // "Crusader Boots", // Str/Int
+    // "Prophet Crown", // Str/Int
 
-Show
-  Corrupted False
-  ItemLevel > 77
-  AreaLevel < 83
-  BaseDefencePercentile >= 90
-  Rarity <= Rare
-  BaseType "${ilvl86.join('" "')}"
-  SetFontSize 35
-  PlayEffect Grey
-  MinimapIcon 1 Yellow Star
+    // "Murder Mitts", // Dex/Int
+    // "Fugitive Boots", // Dex/Int
+    // "Murder Boots", // Dex/Int
+    // "Vaal Mask", // Dex/Int
+    // "Deicide Mask", // Dex/Int
 
-Show
-  BaseDefencePercentile >= 33
-  AreaLevel < 83
-  Rarity = Rare
-  BaseType "${ilvl86.join('" "')}"
-  SetFontSize 30
-  PlayEffect Grey Temp
-  MinimapIcon 1 Yellow Star
+    // "Sorcerer Gloves", // Int
+    // "Hubris Circlet", // Int
 
-Show
-  ItemLevel == 77
-  Rarity <= Rare
-  Corrupted False
-  BaseType "${ilvl86.join('" "')}"
-  SetFontSize 45
-  PlayEffect Yellow
-  MinimapIcon 1 Yellow Star
-  ##DefaultBackground
-
-  ## Other Armour
-Show
-  ItemLevel >= 85
-  Rarity <= Rare
-  Corrupted False
-  BaseType "${ilvl85.join('" "')}"
-  SetFontSize 40
-  PlayEffect Red
-  CustomAlertSound "sounds/brian-05-woosh.mp3"
-  MinimapIcon 1 Yellow Star
-  ##DefaultBackground
-
-Show
-  Corrupted False
-  ItemLevel >= 76
-  AreaLevel < 83
-  BaseDefencePercentile >= 90
-  Rarity <= Rare
-  BaseType "${ilvl85.join('" "')}"
-  SetFontSize 35
-  PlayEffect Grey
-  MinimapIcon 1 Yellow Star
-
-Show
-  BaseDefencePercentile >= 33
-  AreaLevel < 83
-  Rarity = Rare
-  BaseType "${ilvl85.join('" "')}"
-  SetFontSize 30
-  PlayEffect Grey Temp
-  MinimapIcon 1 Yellow Star
-`;
+    // "Lion Pelt", // Dex
+    // "Slink Boots", // Dex
+    // "Slink Gloves", // Dex
+    // "Gripped Gloves", // Dex
+  ]),
+  ilvl85b: basesToFilter([
+    // "Fingerless Silk Gloves", // Int, Spell Damage
+    // "Nightmare Bascinet", // Str/Dex
+    // "Deicide Mask", // Dex/Int
+    "Titan Gauntlets", // Str
+    "Spiked Gloves", // Str
+    "Titan Greaves", // Str
+    "Royal Burgonet", // Str
+  ]),
+};
 
 const weapons = [
-  [12, "Longsword", false],
-  [13, "Jade Chopper", true],
-  [18, "Mallet", true],
-  [18, "Woodsplitter", false],
-  [18, "Bastard Sword", false],
-  [23, "Poleaxe", true],
-  [33, "Double Axe", false],
-  [37, "Gilded Axe", true],
-  [41, "Shadow Axe", false],
+  [12, "Longsword", true],
+  [12, "Jade Chopper", true],
+  [23, "Woodsplitter", false],
+  [23, "Bastard Sword", false],
+  [23, "Poleaxe", false],
+  [33, "Double Axe", true],
+  [37, "Gilded Axe", false],
+  [45, "Shadow Axe", true],
   [45, "Jasper Chopper", false],
-  [49, "Timber Axe", true],
-  [52, "Headsman Axe", false],
-  [55, "Labrys", false],
-  [58, "Noble Axe", true],
+  [49, "Timber Axe", false],
+  [62, "Headsman Axe", true],
+  [62, "Labrys", true],
+  [58, "Noble Axe", false],
   [60, "Abyssal Axe", false],
   [67, "Karui Chopper", false],
   [67, "Sundering Axe", false],
@@ -197,7 +161,6 @@ const weapons = [
 export default function getFilter() {
   return [
     custom,
-    armourBases,
     ...weapons.map((weapon) => {
       const [maxAreaLevel, baseType, sound] = weapon;
       return makeWeaponBlock(maxAreaLevel, baseType, sound);
@@ -227,7 +190,9 @@ export default function getFilter() {
 
     // other stuff
     levelingBaseFilter(),
+    getFilterFragment("ssf-bases-top", replacer),
     getFilterFragment("ssf-bases", { amulets }),
+    getFilterFragment("base", replacer),
     getFlaskFilter(),
   ].join("\n\n");
 }
