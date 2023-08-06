@@ -54,7 +54,7 @@ Show
 export const make3LinkFilter = (
   socketGroup,
   itemClass,
-  sound,
+  sound = "",
   minLevel = 1,
   maxLevel = 44
 ) => {
@@ -62,20 +62,27 @@ export const make3LinkFilter = (
   let shape = "Pentagon";
 
   switch (itemClass) {
-    case "Wand":
+    case "Sword":
+    case "Axe":
+    case "Wand": {
       shape = "Cross";
       break;
-    case "Helmets":
+    }
+    case "Helmets": {
       shape = "Circle";
       break;
-    case "Gloves":
+    }
+    case "Gloves": {
       shape = "Triangle";
       break;
-    case "Boots":
+    }
+    case "Boots": {
       shape = "Square";
       break;
-    default:
+    }
+    default: {
       shape = "Pentagon";
+    }
   }
 
   const filterLines = [
@@ -91,7 +98,7 @@ export const make3LinkFilter = (
     "  ##DefaultBackground",
     "  SetBackgroundColor 88 0 87 255",
     `  MinimapIcon 0 Cyan ${shape}`,
-    `  CustomAlertSound "sounds/${sound}.mp3"`,
+    sound && `  CustomAlertSound "sounds/${sound}.mp3"`,
   ].filter((a) => a);
 
   return ["", "", "Show", ...filterLines, "", ""].join("\n");

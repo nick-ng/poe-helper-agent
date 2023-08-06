@@ -1,81 +1,62 @@
 import { levelingBaseFilter } from "../filters.js";
-import {
-  makeWeaponBlock,
-  make3LinkFilter,
-  make4LinkFilter,
-} from "../common/generators.js";
+import { make3LinkFilter, make4LinkFilter } from "../common/generators.js";
 import { getFilterFragment, basesToFilter } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
-const amulets = '"Jade Amulet" "Turquoise Amulet"';
+const fast1hSwords = [
+  "Rusted Sword",
+  "Copper Sword",
+  "Sabre",
+  "Rusted Spike",
+  "Whalebone Rapier",
+  "Battered Foil",
+];
+const fast1hAxes = ["Rusted Hatchet", "Jade Hatchet", "Boarding Axe"];
 
-const custom = `Show
-  SetBorderColor 200 0 0
-  SetFontSize 45
-  ItemLevel >= 1
-  BaseType "Rustic Sash"
-  ItemLevel <= 44
-  CustomAlertSound "sounds/rustic sash.mp3"
+const custom = `
+Show # Leap Slam swords
+	Rarity <= Rare
+	SocketGroup = RGB
+	BaseType == "${fast1hSwords.join('"  "')}"
+	SetFontSize 45
+	SetBorderColor 0 185 185 200
+	SetBackgroundColor 255 255 255 125
+	# SetTextColor 0 140 140 200
+	MinimapIcon 0 Cyan Cross
+	CustomAlertSound "sounds/brian-weapon.mp3"
+
+Show # Leap Slam axes
+	Rarity <= Rare
+	SocketGroup = RGB
+	BaseType == "${fast1hAxes.join('"  "')}"
+	SetFontSize 45
+	SetBorderColor 255 0 255 200
+	SetBackgroundColor 255 255 255 125
+	# SetTextColor 255 0 255 200
+	MinimapIcon 0 Magenta Cross
+	CustomAlertSound "sounds/brian-weapon.mp3"
+
+Show # Leap Slam axes
+	Rarity <= Rare
+	SocketGroup = RGB
+	BaseType == "Goat's Horn"
+	SetFontSize 45
+	SetBorderColor 0 0 255 200
+	SetBackgroundColor 255 255 255 125
+	MinimapIcon 0 Blue Cross
+	CustomAlertSound "sounds/brian-weapon.mp3"
 
 Show
   AreaLevel < 20
-  BaseType "Lapis Amulet" "Turquoise Amulet"
+  BaseType "Jade Amulet" "Amber Amulet"
   Corrupted False
   SetFontSize 45
   PlayAlertSound 16 200
   MinimapIcon 1 Blue Moon
   ##GoodBaseBorder
 
-Show
-  BaseType "Ezomyte Axe" "Despot Axe" #"Piledriver"
-  Corrupted False
-  ItemLevel >= 73 # T2 Phys %
-  Rarity <= Rare
-  SetFontSize 35
-  ##GoodBaseBorder
-  MinimapIcon 1 Pink Star
-
-Show
-  BaseType "Ezomyte Axe" "Sundering Axe" #"Piledriver"
-  Corrupted False
-  ItemLevel >= 73 # T2 Phys %
-  Rarity = Rare
-  SetFontSize 35
-  ##GoodBaseBorder
-  MinimapIcon 1 Pink Star
-
-Show
-  AreaLevel < 33
-  SetFontSize 35
-  Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
-  Sockets GRR
-
-Show
-  AreaLevel < 33
-  SetFontSize 35
-  Class "One Hand" "Daggers" "Rune Dagger" "Sceptre" "Claws" "Shields"
-  Sockets RRR
-
-Show
-  Rarity >= Rare
-  BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
-  SetFontSize 30
-  ##DefaultBackground
-
-Show
-  AreaLevel < 68
-  BaseType "Astral Plate"
-  SetFontSize 40
-
 Hide
-  AreaLevel >= 70
   BaseType "Calling Wand" "Convening Wand" "Convoking Wand"
-
-Hide
-  AreaLevel > 3
-  ItemLevel < 43
-  Rarity = Normal
-  Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Bows" "Claws" "Warstaves" "Wand" "Sceptre"
 `;
 
 export const replacer = {
@@ -161,10 +142,6 @@ const weapons = [
 export default function getFilter() {
   return [
     custom,
-    ...weapons.map((weapon) => {
-      const [maxAreaLevel, baseType, sound] = weapon;
-      return makeWeaponBlock(maxAreaLevel, baseType, sound);
-    }),
 
     // 4-Links
     make4LinkFilter("GGGR", "3g1r"),
@@ -190,8 +167,6 @@ export default function getFilter() {
 
     // other stuff
     levelingBaseFilter(),
-    getFilterFragment("ssf-bases-top", replacer),
-    getFilterFragment("ssf-bases", { amulets }),
     getFilterFragment("base", replacer),
     getFlaskFilter(),
   ].join("\n\n");

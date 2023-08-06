@@ -52,19 +52,8 @@ Show
   CustomAlertSound "sounds/brian-03-bong.mp3"
 
 Show
-  BaseType = "Bone Ring" "Fossilised Spirit Shield" "Ivory Spirit Shield" "Ghastly Eye Jewel"
-  ItemLevel >= 81
-  Rarity <= Rare
   Corrupted False
-  SetFontSize 45
-  ##GoodBaseBorder
-  PlayEffect Red
-  MinimapIcon 1 Yellow Cross
-  ##DefaultBackground
-
-Show
-  Corrupted False
-  BaseType "Bone Ring" "Bone Ring" "Fossilised Spirit Shield" "Ivory Spirit Shield" "Ghastly Eye Jewel"
+  BaseType "Fossilised Spirit Shield" "Ivory Spirit Shield" "Ghastly Eye Jewel"
   ItemLevel >= 60
   ##GoodBaseBorder
   ##DefaultBackground
@@ -78,6 +67,7 @@ Show
   SetFontSize 45
   PlayEffect Yellow
   MinimapIcon 1 Yellow Star
+  ##GoodBaseBorder
   ##DefaultBackground
 
 Show

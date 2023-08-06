@@ -63,14 +63,14 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
     if (filterName.includes("maps")) {
       console.info(`Writing ${filterName}`);
       writeFilters(
-        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        [getCustomItemsFilter(), filterText, getSsfUniquesFilter()],
         outputDir,
         { prefix: `2_${filterName}_`, suffix: "" },
         isDebug,
         [19, 25]
       );
       writeFilters(
-        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        [getCustomItemsFilter(), filterText, getSsfUniquesFilter()],
         outputDir,
         { prefix: `3_${filterName}_`, suffix: "" },
         isDebug,
@@ -96,19 +96,26 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
       }
 
       writeFilters(
-        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        [getCustomItemsFilter(), filterText, getSsfUniquesFilter()],
         outputDir,
         { prefix: `0_${filterName}_`, suffix: "" },
         isDebug,
         filterRange
       );
-    } else if (filterName === "phase-2") {
-      // league start
+    } else if (filterName.includes("act-5")) {
+      // act 5 any %
+      writeFilters(
+        [filterText],
+        outputDir,
+        { prefix: `9_${filterName}_`, suffix: "" },
+        isDebug,
+        [5, 11]
+      );
     } else {
       console.info(`Skipping ${filterName}`);
       return;
       writeFilters(
-        [getCustomItemsFilter(), getFilter(), getSsfUniquesFilter()],
+        [getCustomItemsFilter(), filterText, getSsfUniquesFilter()],
         outputDir,
         { prefix: `0_${filterName}_`, suffix: "" },
         isDebug,
