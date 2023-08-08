@@ -95,7 +95,6 @@ export const make3LinkFilter = (
     itemClass ? `  Class "${itemClass}"` : null,
     "  SetFontSize 45",
     "  SetBorderColor 200 0 0 255",
-    "  ##DefaultBackground",
     "  SetBackgroundColor 88 0 87 255",
     `  MinimapIcon 0 Cyan ${shape}`,
     sound && `  CustomAlertSound "sounds/${sound}.mp3"`,

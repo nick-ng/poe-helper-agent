@@ -3,20 +3,32 @@ import { make3LinkFilter, make4LinkFilter } from "../common/generators.js";
 import { getFilterFragment, basesToFilter } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
-const fast1hSwords = [
-  "Rusted Sword",
-  "Copper Sword",
+const fast1hSwords = ["Rusted Sword", "Copper Sword"];
+const highDex1hSwords = [
   "Sabre",
   "Rusted Spike",
   "Whalebone Rapier",
   "Battered Foil",
 ];
-const fast1hAxes = ["Rusted Hatchet", "Jade Hatchet", "Boarding Axe"];
+
+const fast1hAxes = ["Rusted Hatchet", "Jade Hatchet"];
+const highDex1hAxes = ["Boarding Axe"];
 
 const custom = `
 Show # Leap Slam swords
 	Rarity <= Rare
 	SocketGroup = RGB
+	BaseType == "${fast1hSwords.join('"  "')}"
+	SetFontSize 45
+	SetBorderColor 0 185 185 200
+	SetBackgroundColor 255 255 255 125
+	# SetTextColor 0 140 140 200
+	MinimapIcon 0 Cyan Cross
+	CustomAlertSound "sounds/brian-weapon.mp3"
+
+Show # Leap Slam swords
+	Rarity <= Rare
+	SocketGroup = RG
 	BaseType == "${fast1hSwords.join('"  "')}"
 	SetFontSize 45
 	SetBorderColor 0 185 185 200

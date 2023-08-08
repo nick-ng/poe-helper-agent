@@ -78,6 +78,64 @@ Hide
   Class "Quivers" "One Hand" "Daggers" "Rune Dagger" "Staves" "Bows" "Claws" "Warstaves" "Wand" "Sceptre"
 `;
 
+const custom2 = `
+Show
+	AreaLevel < 33
+	Class "Body Armours" "Boots" "Gloves" "Helmets"
+	Sockets < 6
+	Rarity <= Rare
+	LinkedSockets <= 3
+	SocketGroup = RR
+	Sockets B
+	SetFontSize 35
+	SetBorderColor 0 0 200 255
+	SetBackgroundColor 88 0 87 255
+
+Show
+	AreaLevel < 33
+	Class "Body Armours" "Boots" "Gloves" "Helmets"
+	Sockets < 6
+	Rarity <= Rare
+	LinkedSockets <= 3
+	SocketGroup = GR
+	Sockets B
+	SetFontSize 35
+	SetBorderColor 0 0 200 255
+	SetBackgroundColor 88 0 87 255
+
+Show # Leap Slam
+	AreaLevel < 33
+	Class "Body Armours" "Boots" "Gloves" "Helmets"
+	Sockets < 6
+	Rarity <= Rare
+	LinkedSockets <= 3
+	SocketGroup = GR
+	SetFontSize 35
+	SetBorderColor 200 200 0 255
+	SetBackgroundColor 88 0 87 255
+
+Show
+	AreaLevel < 33
+	Class "Body Armours" "Boots" "Gloves" "Helmets"
+	Sockets < 6
+	Rarity <= Rare
+	LinkedSockets <= 3
+	SocketGroup = RR
+	SetFontSize 35
+	SetBorderColor 200 0 0 255
+	SetBackgroundColor 88 0 87 255
+
+Show
+	AreaLevel < 33
+	Sockets < 6
+	Rarity <= Rare
+	LinkedSockets <= 3
+	SocketGroup = RR
+	SetFontSize 35
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 88 0 87 255
+`;
+
 export const replacer = {
   ilvl86a: basesToFilter([
     // "Carnal Armour", // Dex/Int
@@ -173,10 +231,15 @@ export default function getFilter() {
     // make4LinkFilter("RRRR", "4r"),
 
     // 3-Links
-    make3LinkFilter("GGR", "Boots", "2g1r boots", 1, 12),
-    make3LinkFilter("GGR", "Gloves", "2g1r gloves", 1, 12),
-    make3LinkFilter("GGR", "Helmets", "2g1r helm", 1, 12),
-    make3LinkFilter("GGR", "Body Armours", "2g1r body", 1, 12),
+    make3LinkFilter("GGG", "Boots", "3g boots"),
+    make3LinkFilter("GGG", "Gloves", "3g gloves"),
+    make3LinkFilter("GGG", "Helmets", "3g helm"),
+    make3LinkFilter("GGG", "Body Armours", "3g body"),
+
+    make3LinkFilter("GGR", "Boots", "2g1r boots"),
+    make3LinkFilter("GGR", "Gloves", "2g1r gloves"),
+    make3LinkFilter("GGR", "Helmets", "2g1r helm"),
+    make3LinkFilter("GGR", "Body Armours", "2g1r body"),
 
     // make3LinkFilter("RRR", "Boots", "3r boots"),
     // make3LinkFilter("RRR", "Gloves", "3r gloves"),
@@ -189,6 +252,7 @@ export default function getFilter() {
     make3LinkFilter("RRG", "Body Armours", "2r1g body"),
 
     // other stuff
+    custom2,
     levelingBaseFilter(),
     getFilterFragment("ssf-bases-top", replacer),
     getFilterFragment("ssf-bases", { amulets }),
