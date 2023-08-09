@@ -89,7 +89,6 @@ Show
 	Sockets B
 	SetFontSize 35
 	SetBorderColor 0 0 200 255
-	SetBackgroundColor 88 0 87 255
 
 Show
 	AreaLevel < 33
@@ -101,7 +100,6 @@ Show
 	Sockets B
 	SetFontSize 35
 	SetBorderColor 0 0 200 255
-	SetBackgroundColor 88 0 87 255
 
 Show # Leap Slam
 	AreaLevel < 33
@@ -112,7 +110,6 @@ Show # Leap Slam
 	SocketGroup = GR
 	SetFontSize 35
 	SetBorderColor 200 200 0 255
-	SetBackgroundColor 88 0 87 255
 
 Show
 	AreaLevel < 33
@@ -123,17 +120,17 @@ Show
 	SocketGroup = RR
 	SetFontSize 35
 	SetBorderColor 200 0 0 255
-	SetBackgroundColor 88 0 87 255
 
 Show
 	AreaLevel < 33
+  Class "One Hand" "Two Hand"
+  SetFontSize 35
 	Sockets < 6
 	Rarity <= Rare
 	LinkedSockets <= 3
 	SocketGroup = RR
 	SetFontSize 35
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 88 0 87 255
+	SetBorderColor 200 0 0 255
 `;
 
 export const replacer = {
