@@ -13,7 +13,7 @@ export const uniqueDivinationCards = makeBaseTypeFilter(
     "SetBorderColor 47 252 47 255",
     "MinimapIcon 2 Brown Star",
     "PlayEffect Brown",
-    'CustomAlertSound "sounds/brian-03-bong.mp3"',
+    'CustomAlertSound "sounds/imexile-ok.mp3"',
   ]
 );
 
@@ -27,7 +27,7 @@ Show
   SetBorderColor 47 252 47 255
   MinimapIcon 2 Brown Star
   PlayEffect Brown
-  CustomAlertSound "sounds/brian-03-bong.mp3"
+  CustomAlertSound "sounds/imexile-ok.mp3"
 
 Show
   Class "Currency"
