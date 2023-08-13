@@ -20,7 +20,7 @@ export const uniqueDivinationCards = makeBaseTypeFilter(
 const custom = `
 Show
   Rarity Unique
-  BaseType == "Carved Wand" "Ezomyte Dagger" "Serpentscale Gauntlets"
+  BaseType == "Carved Wand" "Ezomyte Dagger" "Serpentscale Gauntlets" "Wyrmscale Gauntlets" "Soldier Helmet"
   SetFontSize 45
   ##BrightBackground
   SetTextColor 255 140 54 255
