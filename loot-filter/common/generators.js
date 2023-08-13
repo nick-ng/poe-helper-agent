@@ -182,9 +182,9 @@ export const make4LinkFilter2 = (
   return allFilterLines.join("\n");
 };
 
-export const makeBaseTypeFilter = (baseTypes, filterStyles) =>
+export const makeBaseTypeFilter = (baseTypes, filterLines) =>
   [
     "Show",
     `  BaseType == "${baseTypes.join('" "')}"`,
-    ...filterStyles.map((s) => `  ${s.trim()}`),
+    ...filterLines.map((s) => ` ${s.trim()}`),
   ].join("\n");

@@ -152,39 +152,3 @@ Show
   ##T9CurrencyText
   SetBorderColor 190 178 135 255
   ##DefaultBackground
-
-######################
-## Divination Cards ##
-######################
-
-Show # 6-link Body Armour Divination Cards and The Jeweller's Boon
-Class "Divination"
-  BaseType == "Draped in Dreams" "Emperor of Purity" "Immortal Resolve" "The Celestial Justicar" "The Chains that Bind" "The Dapper Prodigy" "The Ethereal" "The Jeweller's Boon" "The Sacrifice" "The White Knight"
-  SetFontSize 45
-  ##GoodBaseBorder
-  ##DefaultBackground
-  MinimapIcon 0 Yellow Triangle
-  PlayEffect Yellow
-  CustomAlertSound "sounds/brian-06-shing.mp3"
-
-Show # T1 Currency Divination Cards
-  Class "Divination"
-  BaseType == "Abandoned Wealth" "Alluring Bounty" "Brother's Stash" "The Hoarder" "The Long Con" "The Saint's Treasure" "The Scout" "House of Mirrors" "Seven Years Bad Luck" "The Immortal" "Unrequited Love" "Darker Half" "Altered Perception" "Rebirth and Renewal" "The Sephirot" "The Fortunate" "Brother's Gift"
-  SetFontSize 45
-  ##T0CurrencyText
-  SetBorderColor 255 0 0 255
-  SetBackgroundColor 255 255 255 200
-  MinimapIcon 0 Red Star
-  PlayEffect Red
-  PlayAlertSound 6 300
-
-Show # T2 Currency Divination Cards
-  Class "Divination"
-  BaseType == "A Sea of Blue" "Acclimatisation" "Chaotic Disposition" "Coveted Possession" "Demigod's Wager" "Emperor's Luck" "Harmony of Souls" "Loyalty" "Lucky Connections" "Lucky Deck" "No Traces" "Parasitic Passengers" "Rain of Chaos" "Society's Remorse" "The Cacophony" "The Cartographer" "The Catalyst" "The Fool" "The Gemcutter" "The Heroic Shot" "The Innocent" "The Inventor" "The Journey" "The Master Artisan" "The Puzzle" "The Rabbit's Foot" "The Scholar" "The Seeker" "The Survivalist" "The Tinkerer's Table" "The Tireless Extractor" "The Union" "The Wrath" "Three Faces in the Dark" "Three Voices" "Underground Forest" "Vinia's Token" "Bowyer's Dream" "Draped in Dreams" "Emperor of Purity" "Humility" "Immortal Resolve" "Imperial Legacy" "Rebirth" "The Celestial Justicar" "The Chains that Bind" "The Dapper Prodigy" "The Dark Mage" "The Ethereal" "The Porcupine" "The Sacrifice" "The Warlord" "The White Knight" "Vanity"
-  SetFontSize 45
-  ##T2CurrencyText
-  SetBorderColor 47 252 47 255
-  ##DefaultBackground
-  MinimapIcon 2 Green Triangle
-  PlayEffect White
-  CustomAlertSound "sounds/brian-02-doof.mp3"

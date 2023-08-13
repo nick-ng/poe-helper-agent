@@ -1,4 +1,5 @@
 import { makeBaseTypeFilter } from "../common/generators.js";
+import { getDivCardFilter } from "../common/divination-cards.js";
 
 export const cortexDivinationCards = makeBaseTypeFilter(
   [
@@ -98,5 +99,5 @@ Show
 `;
 
 export default function getFilter() {
-  return [cortexDivinationCards, custom].join("\n\n");
+  return [cortexDivinationCards, custom, getDivCardFilter()].join("\n\n");
 }

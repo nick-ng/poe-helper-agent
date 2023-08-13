@@ -6,6 +6,7 @@ import {
 } from "../common/generators.js";
 import { getFilterFragment, basesToFilter } from "../filter-loader.js";
 import getFlaskFilter from "../../filter-generators/flasks.js";
+import { getDivCardFilter } from "../common/divination-cards.js";
 
 const amulets = '"Jade Amulet" "Turquoise Amulet"';
 
@@ -254,6 +255,7 @@ export default function getFilter() {
     getFilterFragment("ssf-bases-top", replacer),
     getFilterFragment("ssf-bases", { amulets }),
     getFilterFragment("base", replacer),
+    getDivCardFilter(),
     getFlaskFilter(),
   ].join("\n\n");
 }
