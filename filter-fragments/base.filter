@@ -148,6 +148,7 @@ Show # T4 Currency (6+ to show)
 Show
   Class "Currency"
   BaseType == "Alchemy Shard" "Alteration Shard" "Binding Shard" "Chaos Shard" "Horizon Shard" "Regal Shard"
+  StackSize > 1
   SetFontSize 45
   ##T9CurrencyText
   SetBorderColor 190 178 135 255
