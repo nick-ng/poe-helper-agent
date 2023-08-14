@@ -22,6 +22,24 @@ Show  # +1 all Physical Gems recipe
   MinimapIcon 1 Yellow Triangle
   PlayEffect Grey
   PlayAlertSound 2 300
+
+Show
+  BaseDefencePercentile >= 40
+  Rarity = Rare
+  BaseType == ##strdexBody9 ##strBody9
+  ItemLevel >= 77
+  SetFontSize 40
+  PlayEffect Grey Temp
+  MinimapIcon 1 Yellow Star
+
+Show
+  BaseDefencePercentile >= 40
+  Rarity = Rare
+  BaseType == ##strdexGloves9 ##strGloves9 ##strdexBoots9 ##strBoots9 ##strdexHelmet9 ##strHelmet9
+  ItemLevel >= 76
+  SetFontSize 40
+  PlayEffect Grey Temp
+  MinimapIcon 1 Yellow Star
 `;
 
 export default function getFilter() {

@@ -39,6 +39,15 @@ Show
   PlayAlertSound 2 50
   PlayEffect White
   MinimapIcon 2 White Circle
+
+Show
+  BaseDefencePercentile >= 50
+  Rarity = Rare
+  BaseType == ##strdexGloves1 ##strGloves1 ##strdexBoots1 ##strBoots1 ##strdexHelmet1 ##strHelmet1
+  ItemLevel >= 85
+  SetFontSize 40
+  PlayEffect Grey Temp
+  MinimapIcon 1 Yellow Star
 `;
 
 export default function getFilter() {
