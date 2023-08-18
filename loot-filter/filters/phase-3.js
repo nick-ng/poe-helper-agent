@@ -1,7 +1,7 @@
 import { makeBaseTypeFilter } from "../common/generators.js";
 import { getDivCardFilter } from "../common/divination-cards.js";
 
-export const cortexDivinationCards = makeBaseTypeFilter(
+const cortexDivinationCards = makeBaseTypeFilter(
   [
     "A Fate Worse Than Death", // Cortex
   ],
@@ -15,11 +15,28 @@ export const cortexDivinationCards = makeBaseTypeFilter(
   ]
 );
 
-export const uniqueDivinationCards = makeBaseTypeFilter(
+const uniqueDivinationCards = makeBaseTypeFilter(
   [
     "The Darkest Dream", // Severed in Sleep
   ],
   [
+    "SetFontSize 45",
+    "##BrightBackground",
+    "SetTextColor 255 140 54 255",
+    "SetBorderColor 47 252 47 255",
+    "MinimapIcon 2 Brown Star",
+    "PlayEffect Brown",
+    'CustomAlertSound "sounds/imexile-ok.mp3"',
+  ]
+);
+
+const uniques = makeBaseTypeFilter(
+  [
+    "Cutlass", // Severed in Sleep
+  ],
+
+  [
+    "Rarity Unique",
     "SetFontSize 45",
     "##BrightBackground",
     "SetTextColor 255 140 54 255",
@@ -99,5 +116,11 @@ Show
 `;
 
 export default function getFilter() {
-  return [cortexDivinationCards, custom, getDivCardFilter()].join("\n\n");
+  return [
+    cortexDivinationCards,
+    uniqueDivinationCards,
+    uniques,
+    custom,
+    getDivCardFilter(),
+  ].join("\n\n");
 }
