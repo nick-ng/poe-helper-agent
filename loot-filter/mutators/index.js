@@ -22,6 +22,7 @@ const mutations = {
   gloves: {
     str: ["Titan Gauntlets", ["Vaal Gauntlets", "Spiked Gloves"]],
     strdex: ["Dragonscale Gauntlets", "Hydrascale Gauntlets"],
+    dex: [["Slink Gloves", "Gripped Gloves"], "Stealth Gloves"],
   },
   boots: {
     str: [["Brimstone Treads", "Titan Greaves"], "Vaal Greaves"],
@@ -48,9 +49,9 @@ const mutations = {
 const applyReplacer = (replacer, filter) => {
   return replacer.reduce((accumulator, r) => {
     const [key, value] = r;
-    const re = new RegExp(`##${key}`, "ig");
+    const re0 = new RegExp(`##${key}(##)?`, "ig");
 
-    return accumulator.replaceAll(re, `${value}`);
+    return accumulator.replaceAll(re0, `${value}`);
   }, filter);
 };
 
@@ -142,7 +143,8 @@ const cleanComments = (filter) => {
   return nonCommentLines
     .join("\n")
     .replaceAll(/\r/g, "")
-    .replaceAll(/\n{2,}/g, "\n\n");
+    .replaceAll(/\n{2,}/g, "\n\n")
+    .replaceAll(/##[^#\s]+##/g, '"Fishscale Gauntlets" ');
 };
 
 /**

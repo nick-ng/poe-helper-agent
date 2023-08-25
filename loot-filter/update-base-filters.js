@@ -3,7 +3,7 @@ dotenv.config();
 import fetch from "node-fetch";
 import _ from "lodash";
 import { resolve } from "path";
-import { rmSync } from "fs";
+import { rmSync, copyFileSync } from "fs";
 
 import { writeFileSync } from "./write-filters.js";
 
@@ -47,7 +47,17 @@ const GGG_FILTERS = [
 ];
 
 export const presets = _.flatMap(
-  [...FILTER_BLAST, { presets: GGG_FILTERS }],
+  [
+    ...FILTER_BLAST,
+    { presets: GGG_FILTERS },
+    {
+      presets: [
+        { filename: "aaa.filter", preset: "SEMI-STRICT", level: 10 },
+        { filename: "aab.filter", preset: "VERY-STRICT", level: 20 },
+        { filename: "aac.filter", preset: "UBER-STRICT", level: 30 },
+      ],
+    },
+  ],
   (filterGroup) => filterGroup.presets
 );
 
@@ -132,6 +142,14 @@ export const fetchAndSaveFilters = async () => {
       await fetchGggFilter(process.env.POESESSID, filter);
     }
   }
+
+  ["10aaa.filter", "20aab.filter", "30aac.filter"].forEach((f) => {
+    console.info(`Copying ${f} custom base filter`);
+    copyFileSync(
+      resolve(".", "custom-base-filters", f),
+      resolve(".", "base-filters", f)
+    );
+  });
 
   console.info("Finished fetching filters");
 };

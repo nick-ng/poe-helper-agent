@@ -40,6 +40,16 @@ Show
   SetFontSize 40
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star
+
+Show
+  Class == "Rune Daggers"
+  SetFontSize 45
+  ItemLevel <= 11
+  SetBackgroundColor 255 255 255 255
+  SetBorderColor 200 200 255 255
+  CustomAlertSound "sounds/ding.mp3"
+  MinimapIcon 0 White Star
+
 `;
 
 export default function getFilter() {

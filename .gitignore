@@ -113,3 +113,6 @@ filter-fragments/!custom.filter
 filter-fragments/!custom*.filter
 
 poe-ninja-uniques.json
+
+custom-base-filters/
+!custom-base-filters/README.md

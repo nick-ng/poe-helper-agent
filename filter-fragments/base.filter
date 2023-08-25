@@ -153,3 +153,47 @@ Show
   ##T9CurrencyText
   SetBorderColor 190 178 135 255
   ##DefaultBackground
+
+###########
+## Misc. ##
+###########
+
+Show
+  BaseType "Divine Vessel"
+  SetFontSize 45
+  SetTextColor 0 0 0 255
+  SetBackgroundColor 159 15 213 255
+  SetBorderColor 0 0 0 255
+  MinimapIcon 1 Yellow Hexagon
+  PlayEffect Yellow
+  PlayAlertSound 2 300
+
+Show # Loreweave
+  Rarity = Unique
+  Class "Rings"
+  SetFontSize 45
+  SetTextColor 255 255 255 255
+  SetBackgroundColor 255 0 0 200
+  SetBorderColor 100 100 100 255
+  PlayEffect Red
+  MinimapIcon 2 Brown Star
+
+Show # Breach Rings
+  ItemLevel >= 83
+  Class "Rings"
+  BaseType "Breach"
+  SetFontSize 45
+  SetTextColor 0 240 190 255
+  SetBackgroundColor 0 0 0 255
+  SetBorderColor 0 240 190 255
+
+Show # Trigger weapon, Ailment duration helmet
+  HasExplicitMod = "of the Veil"
+  Class "One Hand" "Two Hand" "Claw" "Dagger" "Wand" "Bow" "Staff" "Sceptre" "Helmets"
+  SetFontSize 45
+  SetTextColor 0 0 255 255
+  SetBorderColor 0 0 255 255
+  SetBackgroundColor 200 200 200 255
+  MinimapIcon 2 Blue Diamond
+  PlayEffect Blue
+  PlayAlertSound 3 300

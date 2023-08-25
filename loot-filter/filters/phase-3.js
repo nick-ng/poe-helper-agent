@@ -1,5 +1,6 @@
 import { makeBaseTypeFilter } from "../common/generators.js";
 import { getDivCardFilter } from "../common/divination-cards.js";
+import { getFilterFragment } from "../filter-loader.js";
 
 const cortexDivinationCards = makeBaseTypeFilter(
   [
@@ -69,24 +70,24 @@ Show
   PlayEffect Brown
   CustomAlertSound "sounds/imexile-ok.mp3"
 
-Show
-  Corrupted False
-  BaseType "Fossilised Spirit Shield" "Ivory Spirit Shield" "Ghastly Eye Jewel"
-  ItemLevel >= 60
-  ##GoodBaseBorder
-  ##DefaultBackground
-  Continue
-
-Show
-  ItemLevel >= 81
-  Rarity <= Rare
-  Corrupted False
-  BaseType "Fossilised Spirit Shield" "Ivory Spirit Shield"
-  SetFontSize 45
-  PlayEffect Yellow
-  MinimapIcon 1 Yellow Star
-  ##GoodBaseBorder
-  ##DefaultBackground
+#Show
+#  Corrupted False
+#  BaseType "Fossilised Spirit Shield" "Ivory Spirit Shield" "Ghastly Eye Jewel"
+#  ItemLevel >= 60
+#  ##GoodBaseBorder
+#  ##DefaultBackground
+#  Continue
+#
+#Show
+#  ItemLevel >= 81
+#  Rarity <= Rare
+#  Corrupted False
+#  BaseType "Fossilised Spirit Shield" "Ivory Spirit Shield"
+#  SetFontSize 45
+#  PlayEffect Yellow
+#  MinimapIcon 1 Yellow Star
+#  ##GoodBaseBorder
+#  ##DefaultBackground
 
 Show
   ItemLevel >= 50
@@ -122,5 +123,14 @@ export default function getFilter() {
     uniques,
     custom,
     getDivCardFilter(),
+    getFilterFragment("ssf-bases-top", {
+      amulets: '"Turquoise Amulet" "Onyx Amulet"',
+    }),
+    getFilterFragment("ssf-bases", {
+      amulets: '"Turquoise Amulet" "Onyx Amulet"',
+    }),
+    getFilterFragment("base", {
+      amulets: '"Turquoise Amulet" "Onyx Amulet"',
+    }),
   ].join("\n\n");
 }

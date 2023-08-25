@@ -10,7 +10,7 @@ const fixComments = (filterFragment) => {
 export const basesToFilter = (baseTypes) =>
   baseTypes.map((a) => `"${a.trim()}" `).join("");
 
-const defaultReplacements = {
+export const defaultReplacements = {
   ilvl86a: basesToFilter([
     "Carnal Armour", // Dex/Int
     "Full Dragonscale", // Str/Dex
@@ -59,7 +59,6 @@ export const getFilterFragment = (fragmentName, replacements = {}) => {
   );
 
   const replacedFilter = Object.entries({
-    ...defaultReplacements,
     ...replacements,
   }).reduce((prev, curr) => {
     const [original, replacement] = curr;

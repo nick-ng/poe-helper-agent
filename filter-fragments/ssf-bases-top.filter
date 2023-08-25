@@ -58,7 +58,7 @@ Show
 ###############################
 
 Show
-  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask"
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask"
   ItemLevel >= 80
   ItemLevel <= 81 # includes a tier of resists during flask effect
   SetFontSize 45
@@ -66,6 +66,15 @@ Show
   SetTextColor 0 203 221 200
   SetBorderColor 255 255 0 200
   PlayEffect Red
+  ##DefaultBackground
+
+Show
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Quicksilver Flask"
+  ItemLevel > 81
+  SetFontSize 45
+  Rarity <= Magic
+  SetTextColor 0 203 221 200
+  SetBorderColor 55 55 0 200
   ##DefaultBackground
 
 ##########################

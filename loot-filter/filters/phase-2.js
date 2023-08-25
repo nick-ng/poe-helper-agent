@@ -58,11 +58,47 @@ Show
 Show
   BaseDefencePercentile >= 50
   Rarity = Rare
-  BaseType == ##strdexGloves1 ##strGloves1 ##strdexBoots1 ##strBoots1 ##strdexHelmet1 ##strHelmet1
+  BaseType == ##strdexGloves1 ##strGloves1 ##strdexBoots1 ##strBoots1 ##strdexHelmet1 ##strHelmet1 ##dexGloves1
   ItemLevel >= 85
+  LinkedSockets <= 5
   SetFontSize 40
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star
+
+Show
+  Rarity = Rare
+  BaseType == "Feathered Arrow Quiver"
+  ItemLevel >= 82
+  SetFontSize 40
+  PlayEffect Grey Temp
+  MinimapIcon 1 Yellow Star
+
+Show
+  ItemLevel >= 84
+  AreaLevel < 83
+  Rarity <= Rare
+  BaseType == "Turquoise Amulet" "Jade Amulet" "Lapis Amulet"
+  SetFontSize 40
+  PlayEffect Red
+  MinimapIcon 1 Yellow Cross
+
+Show
+  ItemLevel >= 72
+  AreaLevel < 83
+  Rarity <= Rare
+  BaseType == "Turquoise Amulet" "Jade Amulet" "Lapis Amulet"
+  SetFontSize 35
+  PlayEffect Yellow
+  MinimapIcon 1 Yellow Cross
+
+Show
+  ItemLevel >= 54
+  AreaLevel < 83
+  Rarity <= Rare
+  BaseType == "Turquoise Amulet" "Jade Amulet" "Lapis Amulet"
+  SetFontSize 30
+  PlayEffect Grey Temp
+  MinimapIcon 1 Yellow Cross
 `;
 
 export default function getFilter() {
