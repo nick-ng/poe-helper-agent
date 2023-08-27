@@ -16,11 +16,12 @@ xoffset := VirtualScreenWidth / 2
 yoffset := VirtualScreenHeight / 2
 
 initGui() {
-  Gui, Add, Button, y6 h30 w80 gReply, Reply
-  Gui, Add, Button, x90 y6 h30 w80 gInvite, Invite
+  Gui, Add, Button, y6 h20 w80 gReply, Reply
+  Gui, Add, Button, x90 y6 h20 w80 gInvite, Invite
   Gui, Add, Button, x170 y6 h30 w80 gThankYou, Thanks
   Gui, Add, Button, x250 y6 h30 w80 gHideout, Hideout
   Gui, Add, Button, x330 y6 h30 w80 gLeaveParty, Leave
+  ; +E0x20 = click through?
   Gui, +E0x20 +Lastfound +AlwaysOnTop -Caption +ToolWindow
   Gui, Show, y0
   return
@@ -79,8 +80,6 @@ ThankYou()
     }
     WinActivate
     Sleep, 150
-    Send ^{Enter}
-    Sleep, 150
     Send ^{v}
     Sleep, 150
     Send {Enter}
@@ -95,8 +94,6 @@ Invite()
     if WinActive("ahk_class POEWindowClass") {
     }
     WinActivate
-    Sleep, 150
-    Send ^{Enter}
     Sleep, 150
     Send {Home}
     Sleep, 100
