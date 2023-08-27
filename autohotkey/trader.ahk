@@ -116,3 +116,13 @@ PasteString(str)
   Send ^{v}
   return
 }
+
+#IfWinActive ahk_class POEWindowClass
+
+WheelDown::
+    Send ^{Click}
+  return
+
+WheelUp::
+  Send +{Click}
+return
