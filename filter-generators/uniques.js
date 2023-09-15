@@ -217,13 +217,13 @@ Show
   PlayEffect Brown
   MinimapIcon 0 Brown Star
 
-Show
-  Rarity Unique
-  Sockets < 6
-  SetFontSize 40
-  SetTextColor 175 96 37 255
-  SetBorderColor 175 96 37 255
-  PlayEffect Brown
-  MinimapIcon 2 Brown Star
+#Show
+#  Rarity Unique
+#  Sockets < 6
+#  SetFontSize 40
+#  SetTextColor 175 96 37 255
+#  SetBorderColor 175 96 37 255
+#  PlayEffect Brown
+#  MinimapIcon 2 Brown Star
 `;
 };

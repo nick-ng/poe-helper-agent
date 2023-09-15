@@ -3,7 +3,7 @@ dotenv.config();
 import fetch from "node-fetch";
 import _ from "lodash";
 import { resolve } from "path";
-import { rmSync, copyFileSync } from "fs";
+import { rmSync, copyFileSync, mkdirSync } from "fs";
 
 import { writeFileSync } from "./write-filters.js";
 
@@ -22,6 +22,15 @@ const FILTER_BLAST = [
       { filename: "nsvs.filter", preset: "VERY-STRICT", level: 20 },
       { filename: "nsub.filter", preset: "UBER-STRICT", level: 30 },
       // { filename: "nsup.filter", preset: "UBER-PLUS-STRICT", level: 50 },
+    ],
+  },
+  {
+    group: "StupidFatHobbit",
+    url: "https://filterblast.xyz/api/FilterFile/?filter=StupidFatHobbit",
+    presets: [
+      { filename: "sfh1.filter", preset: "General", level: 10 },
+      { filename: "sfh2.filter", preset: "Strict", level: 20 },
+      { filename: "shf3.filter", preset: "Uberstrict", level: 30 },
     ],
   },
   {
@@ -44,17 +53,38 @@ const GGG_FILTERS = [
   //   filterUrl: "https://www.pathofexile.com/item-filter/wvPeTJ",
   //   level: 44,
   // },
+  // {
+  // 	filename: "sfh1.filter",
+  // 	preset: "stupidfathobbit-general",
+  // 	filterUrl: "https://www.pathofexile.com/item-filter/A3BxSM",
+  // 	level: 10,
+  // },
+  // {
+  // 	filename: "sfh2.filter",
+  // 	preset: "stupidfathobbit-strict",
+  // 	filterUrl: "https://www.pathofexile.com/item-filter/zOv6Hz",
+  // 	level: 20,
+  // },
+  // {
+  // 	filename: "sfh3.filter",
+  // 	preset: "stupidfathobbit-uberstrict",
+  // 	filterUrl: "https://www.pathofexile.com/item-filter/Mpxoi0",
+  // 	level: 30,
+  // },
 ];
 
 export const presets = _.flatMap(
   [
-    ...FILTER_BLAST,
-    { presets: GGG_FILTERS },
+    // ...FILTER_BLAST, // RIP filterblast.xyz ?
+    // { presets: GGG_FILTERS },
     {
       presets: [
         { filename: "aaa.filter", preset: "SEMI-STRICT", level: 10 },
         { filename: "aab.filter", preset: "VERY-STRICT", level: 20 },
         { filename: "aac.filter", preset: "UBER-STRICT", level: 30 },
+        { filename: "baa.filter", preset: "General", level: 10 },
+        { filename: "bab.filter", preset: "Strict", level: 20 },
+        { filename: "bac.filter", preset: "Uberstrict", level: 30 },
       ],
     },
   ],
@@ -102,6 +132,7 @@ const fetchGggFilter = async (
         .replaceAll("&#039;", "'");
 
       if (resText.includes("!DOCTYPE")) {
+        console.log("resText", resText);
         throw new Error("It looks like your POESESSID has expired");
       }
       writeFileSync(
@@ -124,26 +155,40 @@ export const fetchAndSaveFilters = async () => {
   console.info("Removing old filters");
   try {
     rmSync(resolve(".", "base-filters"), { recursive: true });
+    mkdirSync(resolve(".", "base-filters"));
   } catch (e) {
     console.log("e", e);
   }
+
+  mkdirSync(resolve(".", "base-filters"), { recursive: true });
+
   console.info("Fetching filters");
-  for (const filter of FILTER_BLAST) {
-    for (const preset of filter.presets) {
-      console.info(`Fetching ${filter.group} ${preset.preset}`);
-      const presetQuery = preset.preset ? `&preset=${preset.preset}` : "";
-      const fullUrl = `${filter.url}${presetQuery}`;
-      await fetchAndSaveFilter(fullUrl, `${preset.level}${preset.filename}`);
-    }
-  }
+  // RIP filterblast.xyz ?
+  // for (const filter of FILTER_BLAST) {
+  // 	for (const preset of filter.presets) {
+  // 		console.info(`Fetching ${filter.group} ${preset.preset}`);
+  // 		const presetQuery = preset.preset ? `&preset=${preset.preset}` : "";
+  // 		const fullUrl = `${filter.url}${presetQuery}`;
+  // 		await fetchAndSaveFilter(fullUrl, `${preset.level}${preset.filename}`);
+  // 	}
+  // }
 
-  if (process.env.POESESSID) {
-    for (const filter of GGG_FILTERS) {
-      await fetchGggFilter(process.env.POESESSID, filter);
-    }
-  }
+  // if (process.env.POESESSID) {
+  // 	for (const filter of GGG_FILTERS) {
+  // 		await fetchGggFilter(process.env.POESESSID, filter);
+  // 	}
+  // }
 
-  ["10aaa.filter", "20aab.filter", "30aac.filter"].forEach((f) => {
+  [
+    // Neversink
+    "10aaa.filter",
+    "20aab.filter",
+    "30aac.filter",
+    // StupidFatHobbit
+    "10baa.filter",
+    "20bab.filter",
+    "30bac.filter",
+  ].forEach((f) => {
     console.info(`Copying ${f} custom base filter`);
     copyFileSync(
       resolve(".", "custom-base-filters", f),

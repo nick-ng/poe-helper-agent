@@ -30,14 +30,14 @@ initGui() {
 
 initGui()
 
-SetTimer, CheckPoE, 200
+SetTimer, CheckPoE, 500
 
 CheckPoE()
 {
   if (WinActive("ahk_class POEWindowClass")) {
     Gui, Show, x1867 y930 NoActivate, Korean Trader
   } else {
-    Sleep, 1000
+    Sleep, 300
     Gui, Hide
   }
 }
@@ -50,13 +50,13 @@ Hideout() {
     WinActivate
     Sleep, 150
     Send ^{Enter}
-    Sleep, 150
+    Sleep, 20
     Send {Home}
-    Sleep, 100
+    Sleep, 20
     Send {Delete}
-    Sleep, 100
+    Sleep, 20
     Send ^{v}
-    Sleep, 100
+    Sleep, 20
     Send {Enter}
   }
   return
@@ -71,9 +71,9 @@ ThankYou()
     WinActivate
     Sleep, 150
     Send ^{Enter}
-    Sleep, 150
+    Sleep, 50
     Send ^{v}
-    Sleep, 150
+    Sleep, 50
     Send {Enter}
   }
   return
@@ -88,13 +88,13 @@ Invite()
     WinActivate
     Sleep, 150
     Send ^{Enter}
-    Sleep, 150
+    Sleep, 20
     Send {Home}
-    Sleep, 100
+    Sleep, 20
     Send {Delete}
-    Sleep, 100
+    Sleep, 20
     Send ^{v}
-    Sleep, 100
+    Sleep, 20
     Send {Enter}
   }
   return

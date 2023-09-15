@@ -13,30 +13,65 @@ const mutations = {
     GoodBaseBorder: "SetBorderColor 255 88 255 200",
   },
   bodyArmour: {
-    str: [["Glorious Plate", "Astral Plate"], "Gladiator Plate"],
+    str: ["Glorious Plate", ["Gladiator Plate", "Astral Plate"]],
+    dex: ["Zodiac Leather", "Assassin's Garb"],
+    int: ["Vaal Regalia", "Widowsilk Robe"],
     strdex: [
       ["Triumphant Lamellar", "General's Brigandine", "Full Dragonscale"],
       "Desert Brigandine",
     ],
+    strint: [["Saintly Chainmail", "Saint's Hauberk"], "Elegant Ringmail"],
+    dexint: [
+      ["Carnal Armour", "Sadist Garb", "Blood Raiment"],
+      "Varnished Coat",
+    ],
   },
   gloves: {
-    str: ["Titan Gauntlets", ["Vaal Gauntlets", "Spiked Gloves"]],
+    str: [
+      ["Titan Gauntlets", "Debilitation Gauntlets"],
+      ["Vaal Gauntlets", "Spiked Gloves"],
+    ],
+    dex: [
+      ["Slink Gloves", "Gripped Gloves", "Sinistral Gloves"],
+      "Stealth Gloves",
+    ],
+    int: [
+      "Sorcerer Gloves",
+      ["Nexus Gloves", "Fingerless Silk Gloves", "Arcanist Gloves"],
+    ],
     strdex: ["Dragonscale Gauntlets", "Hydrascale Gauntlets"],
-    dex: [["Slink Gloves", "Gripped Gloves"], "Stealth Gloves"],
+    strint: ["Crusader Gloves", ["Apothecary's Gloves", "Legion Gloves"]],
+    dexint: ["Murder Mitts", "Assassin's Mitts"],
   },
   boots: {
     str: [["Brimstone Treads", "Titan Greaves"], "Vaal Greaves"],
+    dex: [["Stormrider Boots", "Slink Boots"], "Stealth Boots"],
+    int: [["Dreamquest Slippers", "Sorcerer Boots"], "Arcanist Slippers"],
     strdex: [["Two-Toned Boots", "Dragonscale Boots"], "Hydrascale Boots"],
+    strint: [["Two-Toned Boots", "Crusader Boots"], "Legion Boots"],
+    dexint: [
+      ["Two-Toned Boots", "Fugitive Boots", "Murder Boots"],
+      "Assassin's Boots",
+    ],
   },
   helmets: {
-    str: [
-      ["Royal Burgonet", "Eternal Burgonet"],
-      ["Ezomyte Burgonet", "Samnite Helmet"],
-    ],
+    str: [["Royal Burgonet", "Eternal Burgonet"], "Ezomyte Burgonet"],
+    dex: ["Lion Pelt", "Sinner Tricorne"],
+    int: ["Hubris Circlet", "Mind Cage"],
     strdex: [
-      ["Nightmare Bascinet", "Pig-Faced Bascinet", "Fluted Bascinet"],
+      [
+        "Nightmare Bascinet",
+        "Pig-Faced Bascinet",
+        "Fluted Bascinet",
+        "Penitent Mask",
+      ],
       "Lacquered Helmet",
     ],
+    strint: [
+      ["Archdemon Crown", "Bone Helmet", "Praetor Crown", "Prophet Crown"],
+      "Magistrate Crown",
+    ],
+    dexint: [["Blizzard Crown", "Deicide Mask", "Vaal Mask"], "Harlequin Mask"],
   },
 };
 
@@ -92,6 +127,20 @@ const getTiered = (tiers, tier) => {
   return `"${tempTiers.join('" "')}"`;
 };
 
+const tempFunc = (r, level, label, bases) => {
+  if (!r[level]) {
+    r[level] = {};
+  }
+
+  if (!r[level][label]) {
+    r[level][label] = [];
+  }
+
+  r[level][label].push(...bases);
+
+  return r;
+};
+
 /**
  * @param {string} filter
  *
@@ -99,24 +148,38 @@ const getTiered = (tiers, tier) => {
  */
 const applyArmour = (filter) => {
   const armourReplacer = [];
+  const statReplacer = {};
   for (let n = 0; n < 10; n++) {
     Object.entries(mutations.bodyArmour).forEach(([label, tiers]) => {
       armourReplacer.push([`${label}body${n}`, getTiered(tiers, n)]);
+
+      tempFunc(statReplacer, n, label, tiers);
     });
 
     Object.entries(mutations.gloves).forEach(([label, tiers]) => {
       armourReplacer.push([`${label}gloves${n}`, getTiered(tiers, n)]);
-      armourReplacer.push([`${label}golves${n}`, getTiered(tiers, n)]);
+
+      tempFunc(statReplacer, n, label, tiers);
     });
 
     Object.entries(mutations.boots).forEach(([label, tiers]) => {
       armourReplacer.push([`${label}boots${n}`, getTiered(tiers, n)]);
+
+      tempFunc(statReplacer, n, label, tiers);
     });
 
     Object.entries(mutations.helmets).forEach(([label, tiers]) => {
       armourReplacer.push([`${label}helmet${n}`, getTiered(tiers, n)]);
+
+      tempFunc(statReplacer, n, label, tiers);
     });
   }
+
+  Object.keys(statReplacer).forEach((n) => {
+    Object.entries(statReplacer[n]).forEach(([label, tiers]) => {
+      armourReplacer.push([`${label}${n}`, getTiered(tiers, n)]);
+    });
+  });
 
   return applyReplacer(armourReplacer, filter);
 };

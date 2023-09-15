@@ -4,6 +4,7 @@
 
 Show
   Corrupted False
+  Mirrored False
   BaseType "Amethyst Ring" "Unset Ring" "Two-Stone Ring" "Leather Belt" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Onyx Amulet" "Turquoise Amulet" "Agate Amulet" "Citrine Amulet" "Marble Amulet" ##ilvl85a####ilvl86a####ilvl86b##
   ##GoodBaseBorder
   ##DefaultBackground
@@ -16,6 +17,7 @@ Show
 Show
   BaseType "Vermillion Ring"
   Corrupted False
+  Mirrored False
   SetFontSize 45
   SetTextColor 0 0 255 255
   SetBackgroundColor 255 255 255 255
@@ -33,10 +35,26 @@ Show
   ItemLevel >= 85
   Rarity <= Rare
   Corrupted False
+  Mirrored False
   SetFontSize 40
   ##GoodBaseBorder
   PlayEffect Red
   MinimapIcon 1 Yellow Cross
+  ##DefaultBackground
+
+Show # Influenced Rings
+  HasInfluence Crusader Hunter Redeemer Warlord
+  BaseType "Ring"
+  ItemLevel >= 75
+  Rarity <= Rare
+  Corrupted False
+  Mirrored False
+  SetFontSize 45
+  ##GoodBaseBorder
+  SetTextColor 100 0 122 255
+  PlayEffect Cyan
+  PlayAlertSound 1 300
+  MinimapIcon 1 Cyan Cross
   ##DefaultBackground
 
 ########################
@@ -44,13 +62,13 @@ Show
 ########################
 
 Show
-  BaseType == "Quicksilver Flask" "Granite Flask" "Jade Flask" "Quartz Flask" "Silver Flask"
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Quicksilver Flask"
   ItemLevel >= 85
   SetFontSize 45
   Rarity <= Magic
   SetTextColor 0 203 221 200
-  SetBorderColor 0 203 221 200
   PlayEffect Red
+  ##GoodBaseBorder
   ##DefaultBackground
 
 ###############################
@@ -59,7 +77,7 @@ Show
 
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask"
-  ItemLevel >= 80
+  ItemLevel >= 80 # Best Flagellant Chance
   ItemLevel <= 81 # includes a tier of resists during flask effect
   SetFontSize 45
   Rarity <= Magic
@@ -70,7 +88,7 @@ Show
 
 Show
   BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Quicksilver Flask"
-  ItemLevel > 81
+  ItemLevel >= 80 # Any Flagellant Chance
   SetFontSize 45
   Rarity <= Magic
   SetTextColor 0 203 221 200
@@ -100,6 +118,7 @@ Show
 Show
   BaseType "Void Sceptre" "Opal Sceptre"
   Corrupted False
+  Mirrored False
   Rarity <= Rare
   ItemLevel = 82 # T1 Generic DoT multi
   ##GoodBaseBorder
@@ -113,6 +132,7 @@ Show
 Show
   BaseType "Despot Axe" "Piledriver" "Pagan Wand" "Heathen Wand"
   Corrupted False
+  Mirrored False
   Rarity <= Rare
   ItemLevel = 83 # T1 Phys, T1 Cast Speed
   ##GoodBaseBorder
@@ -126,6 +146,7 @@ Show
 Show
   BaseType "Imperial Claw" "Runic Hatchet"
   Corrupted False
+  Mirrored False
   Rarity <= Rare
   ItemLevel = 82 # T1 Flat Ele
   ##GoodBaseBorder
@@ -140,6 +161,7 @@ Show
   ItemLevel >= 85
   Rarity <= Rare
   Corrupted False
+  Mirrored False
   BaseType ##ilvl85a##
   SetFontSize 40
   PlayEffect Red
@@ -157,6 +179,7 @@ Show
   ItemLevel >= 86
   Rarity <= Rare
   Corrupted False
+  Mirrored False
   BaseType ##ilvl86a####ilvl86b##
   SetFontSize 45
   PlayEffect Red
@@ -169,8 +192,79 @@ Show
   ItemLevel == 77
   Rarity <= Rare
   Corrupted False
+  Mirrored False
   BaseType ##ilvl86a####ilvl86b##
   SetFontSize 45
   PlayEffect Yellow
   MinimapIcon 1 Yellow Star
   ##DefaultBackground
+
+#####################
+## Labyrinth Bases ##
+#####################
+
+Show
+  ItemLevel >= 85
+  Rarity <= Rare
+  Corrupted False
+  Mirrored False
+  BaseType == ##strhelmets0 ##dexhelmets0 ##inthelmets0 ##strdexhelmets0 ##strinthelmets0 ##dexinthelmets0 ##strboots0 ##dexboots0 ##intboots0 ##strdexboots0 ##strintboots0 ##dexintboots0
+  SetFontSize 40
+  MinimapIcon 1 Yellow Star
+  ##DefaultBackground
+
+###############
+## Fractured ##
+###############
+
+Show
+  Corrupted False
+	FracturedItem True
+  Mirrored False
+	Identified False
+  BaseType == ##str1 ##dex1 ##int1 ##strdex1 ##strint1 ##dexint1
+	SetFontSize 45
+	SetTextColor 190 240 0 255
+	SetBorderColor 255 100 100 255
+	##DefaultBackground
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 0 Blue Diamond
+
+Show  # %D6 $type->exotic->fractured $tier->fractselected
+	Corrupted False
+	Mirrored False
+	FracturedItem True
+	Identified False
+	BaseType "Alder Spiked Shield" "Archon Kite Shield" "Cardinal Round Shield" "Carnal Sceptre" "Champion Kite Shield" "Citadel Bow" "Colossal Tower Shield" "Convening Wand" "Convoking Wand" "Copper Kris" "Corsair Sword" "Crusader Buckler" "Crystal Wand" "Demon Dagger" "Demon's Horn" "Despot Axe" "Eclipse Staff" "Elegant Round Shield" "Exquisite Blade" "Ezomyte Spiked Shield" "Ezomyte Tower Shield" "Fiend Dagger" "Fleshripper" "Fossilised Spirit Shield" "Gemini Claw" "Golden Kris" "Harbinger Bow" "Harmonic Spirit Shield" "Heathen Wand" "Heavy Arrow Quiver" "Imbued Wand" "Imp Dagger" "Imperial Bow" "Imperial Buckler" "Imperial Claw" "Ironwood Buckler" "Jewelled Foil" "Lacquered Buckler" "Lion Pelt" "Maraketh Bow" "Mirrored Spiked Shield" "Omen Wand" "Opal Sceptre" "Opal Wand" "Pagan Wand" "Penetrating Arrow Quiver" "Piledriver" "Pinnacle Tower Shield" "Platinum Kris" "Primal Arrow Quiver" "Profane Wand" "Prophecy Wand" "Runic Hatchet" "Sambar Sceptre" "Short Bow" "Siege Axe" "Skean" "Sovereign Spiked Shield" "Spike-Point Arrow Quiver" "Spine Bow" "Spiny Round Shield" "Spiraled Foil" "Supreme Spiked Shield" "Thicket Bow" "Titanium Spirit Shield" "Tornado Wand" "Vaal Buckler" "Vaal Sceptre" "Vaal Spirit Shield" "Void Sceptre"
+	SetFontSize 45
+	SetTextColor 190 240 0 255
+	SetBorderColor 255 100 100 255
+	##DefaultBackground
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 0 Blue Diamond
+
+Show
+  Corrupted False
+	FracturedItem True
+  Mirrored False
+	Identified False
+  Class == "Amulets" "Belts" "Heist Brooches" "Heist Cloaks" "Heist Gear" "Heist Tools" "Jewels" "Maps" "Rings" "Utility Flasks"
+	SetFontSize 45
+	SetTextColor 190 240 0 255
+	SetBorderColor 255 100 100 255
+	##DefaultBackground
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 0 Blue Diamond
+
+Show
+  Corrupted False
+	FracturedItem True
+	Identified False
+  Class "Body Armours" "Boots" "Gloves" "Helmets"
+	SetFontSize 30
+	SetTextColor 190 240 0 180
+	SetBorderColor 200 50 50 255
+	##DefaultBackground
