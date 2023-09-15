@@ -208,7 +208,7 @@ Show
   Rarity <= Rare
   Corrupted False
   Mirrored False
-  BaseType == ##strhelmets0 ##dexhelmets0 ##inthelmets0 ##strdexhelmets0 ##strinthelmets0 ##dexinthelmets0 ##strboots0 ##dexboots0 ##intboots0 ##strdexboots0 ##strintboots0 ##dexintboots0
+  BaseType == ##strhelmet0 ##dexhelmet0 ##inthelmet0 ##strdexhelmet0 ##strinthelmet0 ##dexinthelmet0 ##strboots0 ##dexboots0 ##intboots0 ##strdexboots0 ##strintboots0 ##dexintboots0
   SetFontSize 40
   MinimapIcon 1 Yellow Star
   ##DefaultBackground

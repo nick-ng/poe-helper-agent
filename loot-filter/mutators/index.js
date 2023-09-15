@@ -54,7 +54,7 @@ const mutations = {
       "Assassin's Boots",
     ],
   },
-  helmets: {
+  helmet: {
     str: [["Royal Burgonet", "Eternal Burgonet"], "Ezomyte Burgonet"],
     dex: ["Lion Pelt", "Sinner Tricorne"],
     int: ["Hubris Circlet", "Mind Cage"],
@@ -168,7 +168,7 @@ const applyArmour = (filter) => {
       tempFunc(statReplacer, n, label, tiers);
     });
 
-    Object.entries(mutations.helmets).forEach(([label, tiers]) => {
+    Object.entries(mutations.helmet).forEach(([label, tiers]) => {
       armourReplacer.push([`${label}helmet${n}`, getTiered(tiers, n)]);
 
       tempFunc(statReplacer, n, label, tiers);
