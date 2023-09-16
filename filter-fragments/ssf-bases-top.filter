@@ -160,6 +160,7 @@ Show
 Show
   ItemLevel >= 85
   Rarity <= Rare
+  BaseDefencePercentile >= 80
   Corrupted False
   Mirrored False
   BaseType ##ilvl85a##
@@ -178,6 +179,7 @@ Show
 Show
   ItemLevel >= 86
   Rarity <= Rare
+  BaseDefencePercentile >= 60
   Corrupted False
   Mirrored False
   BaseType ##ilvl86a####ilvl86b##
@@ -190,7 +192,8 @@ Show
 # T2 Spell Suppression ##
 Show
   ItemLevel == 77
-  Rarity <= Rare
+  Rarity = Rare
+  BaseDefencePercentile >= 80
   Corrupted False
   Mirrored False
   BaseType ##ilvl86a####ilvl86b##
@@ -206,11 +209,13 @@ Show
 Show
   ItemLevel >= 85
   Rarity <= Rare
+  BaseDefencePercentile >= 80
   Corrupted False
   Mirrored False
   BaseType == ##strhelmet0 ##dexhelmet0 ##inthelmet0 ##strdexhelmet0 ##strinthelmet0 ##dexinthelmet0 ##strboots0 ##dexboots0 ##intboots0 ##strdexboots0 ##strintboots0 ##dexintboots0
-  SetFontSize 40
-  MinimapIcon 1 Yellow Star
+  SetFontSize 45
+  MinimapIcon 1 Green Pentagon
+  SetBorderColor 0 80 0 255
   ##DefaultBackground
 
 ###############
@@ -222,14 +227,15 @@ Show
 	FracturedItem True
   Mirrored False
 	Identified False
-  BaseType == ##str1 ##dex1 ##int1 ##strdex1 ##strint1 ##dexint1
+  ItemLevel >= 85
+  BaseType == ##str2 ##dex2 ##int2 ##strdex2 ##strint2 ##dexint2
 	SetFontSize 45
 	SetTextColor 190 240 0 255
 	SetBorderColor 255 100 100 255
 	##DefaultBackground
 	PlayAlertSound 3 300
 	PlayEffect Blue
-	MinimapIcon 0 Blue Diamond
+	MinimapIcon 0 Red Diamond
 
 Show  # %D6 $type->exotic->fractured $tier->fractselected
 	Corrupted False
@@ -243,7 +249,7 @@ Show  # %D6 $type->exotic->fractured $tier->fractselected
 	##DefaultBackground
 	PlayAlertSound 3 300
 	PlayEffect Blue
-	MinimapIcon 0 Blue Diamond
+	MinimapIcon 0 Red Diamond
 
 Show
   Corrupted False
@@ -257,14 +263,14 @@ Show
 	##DefaultBackground
 	PlayAlertSound 3 300
 	PlayEffect Blue
-	MinimapIcon 0 Blue Diamond
+	MinimapIcon 0 Red Diamond
 
 Show
   Corrupted False
 	FracturedItem True
 	Identified False
   Class "Body Armours" "Boots" "Gloves" "Helmets"
-	SetFontSize 30
+	SetFontSize 25
 	SetTextColor 190 240 0 180
 	SetBorderColor 200 50 50 255
 	##DefaultBackground

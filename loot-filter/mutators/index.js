@@ -17,12 +17,14 @@ const mutations = {
     dex: ["Zodiac Leather", "Assassin's Garb"],
     int: ["Vaal Regalia", "Widowsilk Robe"],
     strdex: [
-      ["Triumphant Lamellar", "General's Brigandine", "Full Dragonscale"],
+      "General's Brigandine",
+      ["Triumphant Lamellar", "Full Dragonscale"],
       "Desert Brigandine",
     ],
-    strint: [["Saintly Chainmail", "Saint's Hauberk"], "Elegant Ringmail"],
+    strint: ["Saint's Hauberk", "Saintly Chainmail", "Elegant Ringmail"],
     dexint: [
-      ["Carnal Armour", "Sadist Garb", "Blood Raiment"],
+      "Blood Raiment",
+      ["Carnal Armour", "Sadist Garb"],
       "Varnished Coat",
     ],
   },
@@ -55,23 +57,20 @@ const mutations = {
     ],
   },
   helmet: {
-    str: [["Royal Burgonet", "Eternal Burgonet"], "Ezomyte Burgonet"],
+    str: ["Royal Burgonet", "Eternal Burgonet", "Ezomyte Burgonet"],
     dex: ["Lion Pelt", "Sinner Tricorne"],
     int: ["Hubris Circlet", "Mind Cage"],
     strdex: [
-      [
-        "Nightmare Bascinet",
-        "Pig-Faced Bascinet",
-        "Fluted Bascinet",
-        "Penitent Mask",
-      ],
+      "Pig-Faced Bascinet",
+      ["Nightmare Bascinet", "Fluted Bascinet", "Penitent Mask"],
       "Lacquered Helmet",
     ],
     strint: [
-      ["Archdemon Crown", "Bone Helmet", "Praetor Crown", "Prophet Crown"],
+      ["Archdemon Crown", "Bone Helmet", "Prophet Crown"],
+      "Praetor Crown",
       "Magistrate Crown",
     ],
-    dexint: [["Blizzard Crown", "Deicide Mask", "Vaal Mask"], "Harlequin Mask"],
+    dexint: [["Blizzard Crown", "Vaal Mask"], "Deicide Mask", "Harlequin Mask"],
   },
 };
 
