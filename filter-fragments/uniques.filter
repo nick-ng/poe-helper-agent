@@ -1,35 +1,35 @@
 ## filter-fragments/uniques.filter
 
 # Top Uniques
-Show
-  BaseType == ##-top-uniques-##
-  Rarity = Unique
-  AreaLevel > 69
-  SetFontSize 45
-  SetTextColor 255 0 0 255
-  SetBackgroundColor 255 255 255 255
-  SetBorderColor 255 0 0 255
-  MinimapIcon 0 Red Star
-  PlayEffect Red
-  PlayAlertSound 6 300
-
-# Unsure Uniques
-Show
-  BaseType == ##-unsure-uniques-##
-  Rarity = Unique
-  AreaLevel > 69
-  SetFontSize 45
-  LinkedSockets < 5
-  SetTextColor 255 0 0 255
-  SetBackgroundColor 130 130 130 255
-  SetBorderColor 255 0 0 255
-  MinimapIcon 0 Red Cross
-  PlayEffect Red
-  PlayAlertSound 2 300
-
-# Hidden Uniques
-Hide
-  BaseType == ##-hidden-uniques-##
-  Rarity = Unique
-  AreaLevel > 69
-  LinkedSockets < 5
+#Show
+#  BaseType == ##-top-uniques-##
+#  Rarity = Unique
+#  AreaLevel > 69
+#  SetFontSize 45
+#  SetTextColor 255 0 0 255
+#  SetBackgroundColor 255 255 255 255
+#  SetBorderColor 255 0 0 255
+#  MinimapIcon 0 Red Star
+#  PlayEffect Red
+#  PlayAlertSound 6 300
+#
+## Unsure Uniques
+#Show
+#  BaseType == ##-unsure-uniques-##
+#  Rarity = Unique
+#  AreaLevel > 69
+#  SetFontSize 45
+#  LinkedSockets < 5
+#  SetTextColor 255 0 0 255
+#  SetBackgroundColor 130 130 130 255
+#  SetBorderColor 255 0 0 255
+#  MinimapIcon 0 Red Cross
+#  PlayEffect Red
+#  PlayAlertSound 2 300
+#
+## Hidden Uniques
+#Hide
+#  BaseType == ##-hidden-uniques-##
+#  Rarity = Unique
+#  AreaLevel > 69
+#  LinkedSockets < 5
