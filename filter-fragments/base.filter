@@ -198,3 +198,13 @@ Show  # %DS5 $type->exoticmods $tier->t1veil
   MinimapIcon 2 Purple Diamond
   PlayEffect Purple
   PlayAlertSound 3 300
+
+Show  # %D4 $type->gems-generic $tier->qt4lvl
+	AreaLevel >= 75
+	Quality >= 7
+  Quality < 20
+	Class "Gems"
+	SetFontSize 35
+	SetTextColor 30 190 190 255
+	SetBorderColor 30 190 190 255
+	MinimapIcon 1 White Triangle

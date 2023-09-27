@@ -62,7 +62,7 @@ Show # Influenced Rings
 ########################
 
 Show
-  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Quicksilver Flask"
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Quicksilver Flask" "Amethyst Flask"
   ItemLevel >= 85
   SetFontSize 45
   Rarity <= Magic
@@ -76,7 +76,7 @@ Show
 ###############################
 
 Show
-  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask"
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Amethyst Flask"
   ItemLevel >= 80 # Best Flagellant Chance
   ItemLevel <= 81 # includes a tier of resists during flask effect
   SetFontSize 45
@@ -87,7 +87,7 @@ Show
   ##DefaultBackground
 
 Show
-  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Quicksilver Flask"
+  BaseType == "Granite Flask" "Jade Flask" "Quartz Flask" "Topaz Flask" "Ruby Flask" "Sapphire Flask" "Silver Flask" "Quicksilver Flask" "Amethyst Flask"
   ItemLevel >= 80 # Any Flagellant Chance
   SetFontSize 45
   Rarity <= Magic
