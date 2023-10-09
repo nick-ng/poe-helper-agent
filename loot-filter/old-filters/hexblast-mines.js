@@ -3,7 +3,7 @@ import { make3LinkFilter, make4LinkFilter } from "../common/generators.js";
 import { claws } from "../common/weapons.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter, {
-  getManaFlaskFilter,
+	getManaFlaskFilter,
 } from "../../filter-generators/flasks.js";
 
 const amulets = '"Amber Amulet" "Citrine Amulet"';
@@ -52,26 +52,26 @@ Hide
 
 // https://textreader.pro/
 export default function getFilter() {
-  return [
-    claws(60),
-    make4LinkFilter("BBBG", "3b1g"),
+	return [
+		claws(60),
+		make4LinkFilter("BBBG", "3b1g"),
 
-    // 3-Links
-    make3LinkFilter("GGG", "Boots", "3g boots"),
-    make3LinkFilter("GGG", "Gloves", "3g gloves"),
-    make3LinkFilter("GGG", "Helmets", "3g helm"),
-    make3LinkFilter("GGG", "Body Armours", "3g body"),
+		// 3-Links
+		make3LinkFilter("GGG", "Boots", "3g boots"),
+		make3LinkFilter("GGG", "Gloves", "3g gloves"),
+		make3LinkFilter("GGG", "Helmets", "3g helm"),
+		make3LinkFilter("GGG", "Body Armours", "3g body"),
 
-    make3LinkFilter("BGG", "Boots", "2g1b boots"),
-    make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
-    make3LinkFilter("BGG", "Helmets", "2g1b helm"),
-    make3LinkFilter("BGG", "Body Armours", "2g1b body"),
-    make3LinkFilter("BGG", "Wand", "2g1b wand"),
+		make3LinkFilter("BGG", "Boots", "2g1b boots"),
+		make3LinkFilter("BGG", "Gloves", "2g1b gloves"),
+		make3LinkFilter("BGG", "Helmets", "2g1b helm"),
+		make3LinkFilter("BGG", "Body Armours", "2g1b body"),
+		make3LinkFilter("BGG", "Wand", "2g1b wand"),
 
-    levelingBaseFilter(),
-    getFilterFragment("ssf-bases", { amulets }),
-    getFlaskFilter(),
-    getManaFlaskFilter(),
-    custom,
-  ].join("\n\n");
+		levelingBaseFilter(),
+		getFilterFragment("ssf-bases", { amulets }),
+		getFlaskFilter(),
+		getManaFlaskFilter(),
+		custom,
+	].join("\n\n");
 }

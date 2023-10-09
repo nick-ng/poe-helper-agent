@@ -3,49 +3,49 @@ import { getDivCardFilter } from "../common/divination-cards.js";
 import { getFilterFragment } from "../filter-loader.js";
 
 const cortexDivinationCards = makeBaseTypeFilter(
-  [
-    "A Fate Worse Than Death", // Cortex
-  ],
-  [
-    "SetFontSize 45",
-    "SetTextColor 255 140 54 255",
-    "SetBorderColor 47 252 47 255",
-    "MinimapIcon 2 Green Triangle",
-    "PlayEffect Brown",
-    'CustomAlertSound "sounds/brian-03-bong.mp3"',
-  ]
+	[
+		"A Fate Worse Than Death", // Cortex
+	],
+	[
+		"SetFontSize 45",
+		"SetTextColor 255 140 54 255",
+		"SetBorderColor 47 252 47 255",
+		"MinimapIcon 2 Green Triangle",
+		"PlayEffect Brown",
+		'CustomAlertSound "sounds/brian-03-bong.mp3"',
+	]
 );
 
 const uniqueDivinationCards = makeBaseTypeFilter(
-  [
-    "The Darkest Dream", // Severed in Sleep
-  ],
-  [
-    "SetFontSize 45",
-    "##BrightBackground",
-    "SetTextColor 255 140 54 255",
-    "SetBorderColor 47 252 47 255",
-    "MinimapIcon 2 Brown Star",
-    "PlayEffect Brown",
-    'CustomAlertSound "sounds/imexile-ok.mp3"',
-  ]
+	[
+		"The Darkest Dream", // Severed in Sleep
+	],
+	[
+		"SetFontSize 45",
+		"##BrightBackground",
+		"SetTextColor 255 140 54 255",
+		"SetBorderColor 47 252 47 255",
+		"MinimapIcon 2 Brown Star",
+		"PlayEffect Brown",
+		'CustomAlertSound "sounds/imexile-ok.mp3"',
+	]
 );
 
 const uniques = makeBaseTypeFilter(
-  [
-    "Cutlass", // Severed in Sleep
-  ],
+	[
+		"Cutlass", // Severed in Sleep
+	],
 
-  [
-    "Rarity Unique",
-    "SetFontSize 45",
-    "##BrightBackground",
-    "SetTextColor 255 140 54 255",
-    "SetBorderColor 47 252 47 255",
-    "MinimapIcon 2 Brown Star",
-    "PlayEffect Brown",
-    'CustomAlertSound "sounds/imexile-ok.mp3"',
-  ]
+	[
+		"Rarity Unique",
+		"SetFontSize 45",
+		"##BrightBackground",
+		"SetTextColor 255 140 54 255",
+		"SetBorderColor 47 252 47 255",
+		"MinimapIcon 2 Brown Star",
+		"PlayEffect Brown",
+		'CustomAlertSound "sounds/imexile-ok.mp3"',
+	]
 );
 
 const custom = `
@@ -117,20 +117,20 @@ Show
 `;
 
 export default function getFilter() {
-  return [
-    cortexDivinationCards,
-    uniqueDivinationCards,
-    uniques,
-    custom,
-    getDivCardFilter(),
-    getFilterFragment("ssf-bases-top", {
-      amulets: '"Turquoise Amulet" "Onyx Amulet"',
-    }),
-    getFilterFragment("ssf-bases", {
-      amulets: '"Turquoise Amulet" "Onyx Amulet"',
-    }),
-    getFilterFragment("base", {
-      amulets: '"Turquoise Amulet" "Onyx Amulet"',
-    }),
-  ].join("\n\n");
+	return [
+		cortexDivinationCards,
+		uniqueDivinationCards,
+		uniques,
+		custom,
+		getDivCardFilter(),
+		getFilterFragment("ssf-bases-top", {
+			amulets: '"Turquoise Amulet" "Onyx Amulet"',
+		}),
+		getFilterFragment("ssf-bases", {
+			amulets: '"Turquoise Amulet" "Onyx Amulet"',
+		}),
+		getFilterFragment("base", {
+			amulets: '"Turquoise Amulet" "Onyx Amulet"',
+		}),
+	].join("\n\n");
 }

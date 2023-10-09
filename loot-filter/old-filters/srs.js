@@ -106,5 +106,5 @@ Show
 
 // https://textreader.pro/
 export default function getFilter() {
-  return [custom, getTRLeveling()].join("\n\n");
+	return [custom, getTRLeveling()].join("\n\n");
 }

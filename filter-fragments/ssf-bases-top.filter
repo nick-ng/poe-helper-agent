@@ -215,7 +215,7 @@ Show
   BaseType == ##strhelmet0 ##dexhelmet0 ##inthelmet0 ##strdexhelmet0 ##strinthelmet0 ##dexinthelmet0 ##strboots0 ##dexboots0 ##intboots0 ##strdexboots0 ##strintboots0 ##dexintboots0
   SetFontSize 45
   MinimapIcon 1 Green Pentagon
-  SetBorderColor 0 120 0 255
+  SetBorderColor 0 255 0 255
   ##DefaultBackground
 
 ###############

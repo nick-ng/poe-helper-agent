@@ -1,12 +1,12 @@
 import { levelingBaseFilter } from "../filters.js";
 import {
-  make3LinkFilter,
-  make4LinkFilter,
-  makeWeaponBlock,
+	make3LinkFilter,
+	make4LinkFilter,
+	makeWeaponBlock,
 } from "../common/generators.js";
 import { getFilterFragment } from "../filter-loader.js";
 import getFlaskFilter, {
-  getManaFlaskFilter,
+	getManaFlaskFilter,
 } from "../../filter-generators/flasks.js";
 
 const amulets = '"Jade Amulet" "Lapis Amulet" "Turquoise Amulet"';
@@ -85,57 +85,57 @@ Hide
 `;
 
 const weapons = [
-  [12, "Longsword", false],
-  [18, "Woodsplitter", false],
-  [18, "Bastard Sword", false],
-  [22, "Two-Handed Sword", true],
-  [23, "Poleaxe", false],
-  [32, "Etched Greatsword", false],
-  [33, "Double Axe", false],
-  [36, "Ornate Sword", true],
-  [37, "Gilded Axe", false],
+	[12, "Longsword", false],
+	[18, "Woodsplitter", false],
+	[18, "Bastard Sword", false],
+	[22, "Two-Handed Sword", true],
+	[23, "Poleaxe", false],
+	[32, "Etched Greatsword", false],
+	[33, "Double Axe", false],
+	[36, "Ornate Sword", true],
+	[37, "Gilded Axe", false],
 ];
 
 // https://textreader.pro/
 export default function getFilter() {
-  return [
-    custom,
+	return [
+		custom,
 
-    ...weapons.map((weapon) => {
-      const [maxAreaLevel, baseType, sound] = weapon;
-      return makeWeaponBlock(maxAreaLevel, baseType, sound);
-    }),
+		...weapons.map((weapon) => {
+			const [maxAreaLevel, baseType, sound] = weapon;
+			return makeWeaponBlock(maxAreaLevel, baseType, sound);
+		}),
 
-    make4LinkFilter("GGGR", "3g1r"),
-    make4LinkFilter("GGGG", "4g"),
-    // make4LinkFilter("BBBR", "3b1r"),
+		make4LinkFilter("GGGR", "3g1r"),
+		make4LinkFilter("GGGG", "4g"),
+		// make4LinkFilter("BBBR", "3b1r"),
 
-    // 3-Links
-    make3LinkFilter("GGR", "Boots", "2g1r boots"),
-    make3LinkFilter("GGR", "Gloves", "2g1r gloves"),
-    make3LinkFilter("GGR", "Helmets", "2g1r helm"),
-    make3LinkFilter("GGR", "Body Armours", "2g1r body"),
+		// 3-Links
+		make3LinkFilter("GGR", "Boots", "2g1r boots"),
+		make3LinkFilter("GGR", "Gloves", "2g1r gloves"),
+		make3LinkFilter("GGR", "Helmets", "2g1r helm"),
+		make3LinkFilter("GGR", "Body Armours", "2g1r body"),
 
-    make3LinkFilter("GGG", "Boots", "3g boots"),
-    make3LinkFilter("GGG", "Gloves", "3g gloves"),
-    make3LinkFilter("GGG", "Helmets", "3g helm"),
-    make3LinkFilter("GGG", "Body Armours", "3g body"),
+		make3LinkFilter("GGG", "Boots", "3g boots"),
+		make3LinkFilter("GGG", "Gloves", "3g gloves"),
+		make3LinkFilter("GGG", "Helmets", "3g helm"),
+		make3LinkFilter("GGG", "Body Armours", "3g body"),
 
-    // make3LinkFilter("BBB", "Boots", "3b boots"),
-    // make3LinkFilter("BBB", "Gloves", "3b gloves"),
-    // make3LinkFilter("BBB", "Helmets", "3b helm"),
-    // make3LinkFilter("BBB", "Body Armours", "3b body"),
-    // make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
+		// make3LinkFilter("BBB", "Boots", "3b boots"),
+		// make3LinkFilter("BBB", "Gloves", "3b gloves"),
+		// make3LinkFilter("BBB", "Helmets", "3b helm"),
+		// make3LinkFilter("BBB", "Body Armours", "3b body"),
+		// make3LinkFilter("BBB", "Sceptre", "3b sceptre"),
 
-    // make3LinkFilter("BBR", "Boots", "2b1r", 1, 62),
-    // make3LinkFilter("BBR", "Gloves", "2b1r", 1, 62),
-    // make3LinkFilter("BBR", "Helmets", "2b1r", 1, 62),
-    // make3LinkFilter("BBR", "Body Armours", "2b1r", 1, 62),
-    // make3LinkFilter("BBR", "Sceptre", "2b1r", 1, 62),
+		// make3LinkFilter("BBR", "Boots", "2b1r", 1, 62),
+		// make3LinkFilter("BBR", "Gloves", "2b1r", 1, 62),
+		// make3LinkFilter("BBR", "Helmets", "2b1r", 1, 62),
+		// make3LinkFilter("BBR", "Body Armours", "2b1r", 1, 62),
+		// make3LinkFilter("BBR", "Sceptre", "2b1r", 1, 62),
 
-    levelingBaseFilter(),
-    getFilterFragment("ssf-bases", { amulets }),
-    getFlaskFilter(),
-    getManaFlaskFilter(),
-  ].join("\n\n");
+		levelingBaseFilter(),
+		getFilterFragment("ssf-bases", { amulets }),
+		getFlaskFilter(),
+		getManaFlaskFilter(),
+	].join("\n\n");
 }

@@ -97,7 +97,7 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
 			writeFilters(
 				[getCustomItemsFilter(), filterText],
 				outputDir,
-				{ prefix: `0_${filterName}_`, suffix: "" },
+				{ prefix: `0_${filterName.replace("phase", "p")}_`, suffix: "" },
 				isDebug,
 				filterRange
 			);

@@ -34,35 +34,35 @@ Show
 `;
 
 const replacer = {
-  ilvl86a: basesToFilter([
-    "Full Dragonscale", // Str/Dex
-    "Saint's Hauberk", // Str/Int
-    "Titanium Spirit Shield", // Int - Max ES
-    "Harmonic Spirit Shield", // Int - Spell Power
-  ]),
-  ilvl86b: basesToFilter([
-    "General's Brigandine", // Str/Dex
-    "Triumphant Lamellar", // Str/Dex
-    "Saintly Chainmail", // Str/Int
-  ]),
-  ilvl85a: basesToFilter([
-    "Pig-Faced Bascinet", // Str/Dex
-    "Dragonscale Gauntlets", // Str/Dex
-    "Dragonscale Boots", // Str/Dex
-    "Two-Toned Boots",
-  ]),
-  ilvl85b: basesToFilter([
-    "Nightmare Bascinet", // Str/Dex
-    "Fluted Bascinet", // Str/Dex
-  ]),
+	ilvl86a: basesToFilter([
+		"Full Dragonscale", // Str/Dex
+		"Saint's Hauberk", // Str/Int
+		"Titanium Spirit Shield", // Int - Max ES
+		"Harmonic Spirit Shield", // Int - Spell Power
+	]),
+	ilvl86b: basesToFilter([
+		"General's Brigandine", // Str/Dex
+		"Triumphant Lamellar", // Str/Dex
+		"Saintly Chainmail", // Str/Int
+	]),
+	ilvl85a: basesToFilter([
+		"Pig-Faced Bascinet", // Str/Dex
+		"Dragonscale Gauntlets", // Str/Dex
+		"Dragonscale Boots", // Str/Dex
+		"Two-Toned Boots",
+	]),
+	ilvl85b: basesToFilter([
+		"Nightmare Bascinet", // Str/Dex
+		"Fluted Bascinet", // Str/Dex
+	]),
 };
 
 // https://textreader.pro/
 export default function getFilter() {
-  return [
-    weapons,
-    getFilterFragment("ssf-bases-top", replacer),
-    getFilterFragment("base", replacer),
-    uniqueDivinationCards,
-  ].join("\n\n");
+	return [
+		weapons,
+		getFilterFragment("ssf-bases-top", replacer),
+		getFilterFragment("base", replacer),
+		uniqueDivinationCards,
+	].join("\n\n");
 }

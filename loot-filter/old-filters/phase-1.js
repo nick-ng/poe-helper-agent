@@ -53,5 +53,5 @@ Show
 `;
 
 export default function getFilter() {
-  return [getPhase2(), custom, get2hMeleeFilter()].join("\n\n");
+	return [getPhase2(), custom, get2hMeleeFilter()].join("\n\n");
 }
