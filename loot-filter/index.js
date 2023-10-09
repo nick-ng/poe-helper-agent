@@ -80,18 +80,12 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
 			// league start
 			let filterRange = [0, 999];
 
-			switch (filterName) {
-				case "phase-1": {
-					filterRange = [5, 11];
-					break;
-				}
-				case "phase-2": {
-					filterRange = [19, 25];
-					break;
-				}
-				default: {
-					filterRange = [26, 999];
-				}
+			if (filterName.includes("phase-1")) {
+				filterRange = [5, 11];
+			} else if (filterName.includes("phase-2")) {
+				filterRange = [19, 25];
+			} else if (filterName.includes("phase-3")) {
+				filterRange = [26, 999];
 			}
 
 			writeFilters(

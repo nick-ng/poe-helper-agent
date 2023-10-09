@@ -80,9 +80,9 @@ export const presets = _.flatMap(
 		{
 			presets: [
 				// Neversink
-				{ filename: "ns1.filter", preset: "SEMI-STRICT", level: 10 },
-				{ filename: "ns2.filter", preset: "VERY-STRICT", level: 20 },
-				{ filename: "ns3.filter", preset: "UBER-STRICT", level: 30 },
+				// { filename: "ns1.filter", preset: "SEMI-STRICT", level: 10 },
+				// { filename: "ns2.filter", preset: "VERY-STRICT", level: 20 },
+				// { filename: "ns3.filter", preset: "UBER-STRICT", level: 30 },
 				// StupidFatHobbit https://www.pathofexile.com/forum/view-thread/1595976
 				{ filename: "sov1.filter", preset: "General", level: 10 },
 				{ filename: "sov2.filter", preset: "Strict", level: 20 },
