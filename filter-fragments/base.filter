@@ -46,14 +46,14 @@ Show # Red Maps
 
 Show # T1 Currency
   Class "Currency"
-  BaseType == "Orb of Alteration" "Chaos Orb" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
+  BaseType == "Chaos Orb" "Orb of Scouring" "Orb of Regret" "Orb of Unmaking" "Regal Orb" "Instilling Orb"
   SetFontSize 45
   ##T1CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Circle
   PlayEffect Green
-  CustomAlertSound "sounds/brian-02-doof.mp3"
+  CustomAlertSound "sounds/haa-jj-all-stars.mp3"
 
 Show
   Class "Currency"
@@ -72,14 +72,14 @@ Show
 
 Show # T2 Currency
   Class "Currency"
-  BaseType == "Orb of Alchemy" "Orb of Binding"  "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb"
+  BaseType == "Orb of Alteration" "Orb of Alchemy" "Orb of Binding" "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb"
   SetFontSize 45
   ##T2CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Green Raindrop
   PlayEffect Green
-  CustomAlertSound "sounds/brian-02-doof.mp3"
+  CustomAlertSound "sounds/oof-joey.mp3"
 
 #################
 ## T3 Currency ##
@@ -104,7 +104,7 @@ Show # T3 Currency (3+ to show)
   ##DefaultBackground
   MinimapIcon 0 Green Cross
   PlayEffect Green
-  CustomAlertSound "sounds/brian-02-doof.mp3"
+  CustomAlertSound "sounds/clack-v2-3blue1brown.mp3"
 
 #################
 ## T4 Currency ##
