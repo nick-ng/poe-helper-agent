@@ -123,6 +123,32 @@ Show
 `;
 };
 
+export const makeLinkFilter = (
+	socketGroup,
+	soundPattern = "",
+	minLevel = 1,
+	maxLevel = 44
+) => {
+	const slots = [
+		{ baseType: "Boots", soundName: "boots" },
+		{ baseType: "Gloves", soundName: "gloves" },
+		{ baseType: "Helmets", soundName: "helm" },
+		{ baseType: "Body Armours", soundName: "body" },
+	];
+
+	return slots
+		.map(({ baseType, soundName }) =>
+			make3LinkFilter(
+				socketGroup,
+				baseType,
+				soundPattern.replace("slot", soundName),
+				minLevel,
+				maxLevel
+			)
+		)
+		.join("\n\n");
+};
+
 export const make4LinkFilter = (
 	socketGroup,
 	sound,

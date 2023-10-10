@@ -17,7 +17,6 @@ const uniqueDivinationCards = makeBaseTypeFilter(
 
 const uniques = makeBaseTypeFilter(
 	[],
-
 	[
 		"Rarity Unique",
 		"SetFontSize 45",
@@ -67,4 +66,13 @@ export default function getFilter() {
 			amulets: '"Jade Amulet" "Amber Amulet" "Citrine Amulet"',
 		}),
 	].join("\n\n");
+}
+
+export function preProcessBase(baseFilter) {
+	return baseFilter
+		.replace(
+			/##### Section 15 - Summoner Levelling ##(.|\n)+### Section 18 - Armour ###/,
+			""
+		)
+		.replaceAll(/^#{2,}$/gm, "");
 }

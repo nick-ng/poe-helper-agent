@@ -49,7 +49,9 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
 	const moduleNames = readdirSync(resolve(".", "loot-filter", "filters"));
 
 	moduleNames.forEach(async (moduleName) => {
-		const { default: getFilter } = await import(`./filters/${moduleName}`);
+		const { default: getFilter, preProcessBase } = await import(
+			`./filters/${moduleName}`
+		);
 
 		const filterName = moduleName.replace(".js", "");
 
@@ -64,14 +66,18 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
 			writeFilters(
 				[getCustomItemsFilter(), filterText],
 				outputDir,
-				{ prefix: `2_${filterName}_`, suffix: "" },
+				{ prefix: `2_${filterName}_`, suffix: "", preProcessBase },
 				isDebug,
 				[19, 25]
 			);
 			writeFilters(
 				[getCustomItemsFilter(), filterText],
 				outputDir,
-				{ prefix: `3_${filterName}_`, suffix: "" },
+				{
+					prefix: `3_${filterName}_`,
+					suffix: "",
+					preProcessBase,
+				},
 				isDebug,
 				[26, 999]
 			);
@@ -91,7 +97,11 @@ export const autoMakeFilters = (outputDir, isDebug = false) => {
 			writeFilters(
 				[getCustomItemsFilter(), filterText],
 				outputDir,
-				{ prefix: `0_${filterName.replace("phase", "p")}_`, suffix: "" },
+				{
+					prefix: `0_${filterName.replace("phase", "p")}_`,
+					suffix: "",
+					preProcessBase,
+				},
 				isDebug,
 				filterRange
 			);

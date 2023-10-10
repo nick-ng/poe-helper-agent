@@ -96,3 +96,12 @@ Show
 export default function getFilter() {
 	return [getPhase3(), uniqueDivinationCards, uniques, custom].join("\n\n");
 }
+
+export function preProcessBase(baseFilter) {
+	return baseFilter
+		.replace(
+			/##### Section 15 - Summoner Levelling ##(.|\n)+### Section 18 - Armour ###/,
+			""
+		)
+		.replaceAll(/^#{2,}$/gm, "");
+}
