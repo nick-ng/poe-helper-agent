@@ -104,7 +104,7 @@ Show # T3 Currency (3+ to show)
   ##DefaultBackground
   MinimapIcon 0 Green Cross
   PlayEffect Green
-  CustomAlertSound "sounds/clack-v2-3blue1brown.mp3"
+  CustomAlertSound "sounds/water-drop.mp3"
 
 #################
 ## T4 Currency ##
@@ -139,7 +139,7 @@ Show # T4 Currency (6+ to show)
   ##DefaultBackground
   MinimapIcon 0 Green Star
   PlayEffect Green
-  # CustomAlertSound "sounds/brian-02-doof.mp3"
+  # CustomAlertSound "sounds/water-drop.mp3"
 
 ####################
 ## Other Currency ##
