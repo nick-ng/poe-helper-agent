@@ -13,7 +13,7 @@ Show
   SetFontSize 45
   MinimapIcon 0 Blue Kite
   PlayEffect Blue
-  CustomAlertSound "sounds/brian-06-shing.mp3"
+  CustomAlertSound "sounds/zana-what-are-you-doing.mp3"
 
 Show
   Rarity < Unique
@@ -96,7 +96,7 @@ Show # T16
   SetFontSize 45
   MinimapIcon 0 Blue Square
   PlayEffect Blue
-  CustomAlertSound "sounds/top-map.mp3"
+  CustomAlertSound "sounds/zana-you-idiot.mp3"
 
 Show # High Reds
   Rarity < Unique
