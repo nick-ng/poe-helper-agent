@@ -46,6 +46,7 @@ Show
   BaseType "Void Sceptre" "Opal Sceptre"
   SetFontSize 40
   ##DefaultBackground
+  ##GoodBaseBorder
   PlayEffect Red
   MinimapIcon 1 Pink Star
 `;

@@ -25,6 +25,7 @@ Show
   BaseType "Goat's Horn"
   SetFontSize 45
   ##DefaultBackground
+  ##GoodBaseBorder
   PlayEffect Red
   CustomAlertSound "sounds/brian-goat-horn.mp3"
   MinimapIcon 1 Pink Star
@@ -34,6 +35,7 @@ Show
   BaseType "Faun's Horn"
   SetFontSize 45
   ##DefaultBackground
+  ##GoodBaseBorder
   PlayEffect Red
   CustomAlertSound "sounds/brian-faun-horn.mp3"
   MinimapIcon 1 Pink Star
@@ -43,12 +45,13 @@ export default function getFilter() {
 	return [
 		getPhase2(),
 		custom,
-		makeLinkFilter("BBBB", "brian-slot-4-link", 1, 44),
-		makeLinkFilter("BBBG", "brian-slot-4-link", 1, 44),
-		makeLinkFilter("BBBR", "brian-slot-4-link", 1, 44),
-		makeLinkFilter("RRGB", "brian-slot-4-link", 1, 44),
-		makeLinkFilter("RGBB", "brian-slot-4-link", 1, 44),
-		makeLinkFilter("RGGB", "brian-slot-4-link", 1, 44),
+		makeLinkFilter("BBBB", "brian-slot-4-link", 1, 44), // Arma. Brand
+		makeLinkFilter("BBBR", "brian-slot-4-link", 1, 44), // Arma. Brand
+		makeLinkFilter("BBBG", "brian-slot-4-link", 1, 44), // Cremation
+		makeLinkFilter("RRGB", "brian-slot-4-link", 1, 44), // Cremation
+		makeLinkFilter("RGBB", "brian-slot-4-link", 1, 44), // Cremation
+		makeLinkFilter("RGGB", "brian-slot-4-link", 1, 44), // Cremation
+		makeLinkFilter("GGBB", "brian-slot-4-link", 1, 44), // Cremation
 		make3LinkFilter("BBB", "Boots", "3b boots"),
 		make3LinkFilter("BBB", "Gloves", "3b gloves"),
 		make3LinkFilter("BBB", "Helmets", "3b helm"),
