@@ -65,7 +65,7 @@ Show # Imprint - You're waiting for it to drop.
 
 Show # T0 Currency
   Class "Currency"
-  BaseType == "Exalted Orb" "Divine Orb" "Eldritch Chaos" "Orb of Conflict"
+  BaseType "Exalted Orb" "Divine Orb" "Eldritch Chaos" "Orb of Conflict"
   SetFontSize 45
   ##T0CurrencyText
   ##CurrencyBorder
