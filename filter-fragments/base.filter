@@ -40,9 +40,50 @@ Show # Red Maps
   SetFontSize 40
   MinimapIcon 0 Grey Raindrop
 
-#################
-## T1 Currency ##
-#################
+####################
+## T0/T1 Currency ##
+####################
+
+Show # T-1 Currency
+	BaseType "Eternal Orb" "Mirror of Kalandra" "Fishing Rod" "Albino Rhoa Feather" "Mirror Shard" "Awakener's Orb" "Orb of Dominance"
+	SetBackgroundColor 250 250 250
+	SetBorderColor 0 0 0
+	SetTextColor 250 0 0
+	SetFontSize 45
+	CustomAlertSound "sounds/ai_rue-aaaaaa.mp3"
+	MinimapIcon 0 White Diamond
+	PlayEffect White
+
+Show # Imprint - You're waiting for it to drop.
+	BaseType "Imprint"
+	SetBackgroundColor 250 250 250
+	SetBorderColor 0 0 0
+	SetTextColor 250 0 0
+	SetFontSize 45
+	MinimapIcon 0 White Diamond
+	PlayEffect White
+
+Show # T0 Currency
+  Class "Currency"
+  BaseType == "Exalted Orb" "Divine Orb" "Eldritch Chaos" "Orb of Conflict"
+  SetFontSize 45
+  ##T0CurrencyText
+  ##CurrencyBorder
+  ##DefaultBackground
+  MinimapIcon 0 Pink UpsideDownHouse
+  PlayEffect Green
+  CustomAlertSound "sounds/ai_rue-oh-my-god.mp3"
+
+Show # T0 Currency
+  Class "Currency"
+  BaseType == "Orb of Annulment" "Harbinger's Orb" "Ancient Orb" "Elevated Sextant" "Sacred Orb" "Fracturing Orb"
+  SetFontSize 45
+  ##T1CurrencyText
+  ##CurrencyBorder
+  ##DefaultBackground
+  MinimapIcon 0 Orange UpsideDownHouse
+  PlayEffect Green
+  CustomAlertSound "sounds/haa-jj-all-stars.mp3"
 
 Show # T1 Currency
   Class "Currency"
@@ -51,7 +92,7 @@ Show # T1 Currency
   ##T1CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
-  MinimapIcon 0 Green Circle
+  MinimapIcon 0 Orange UpsideDownHouse
   PlayEffect Green
   CustomAlertSound "sounds/haa-jj-all-stars.mp3"
 
@@ -62,7 +103,7 @@ Show
   ##T1CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
-  MinimapIcon 0 Green Circle
+  MinimapIcon 0 Orange UpsideDownHouse
   PlayEffect Green
   CustomAlertSound "sounds/brian-02-doof.mp3"
 
@@ -77,8 +118,7 @@ Show # T2 Currency
   ##T2CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
-  MinimapIcon 0 Green Raindrop
-  PlayEffect Green
+  MinimapIcon 0 Yellow UpsideDownHouse
   CustomAlertSound "sounds/oof-joey.mp3"
 
 #################
@@ -102,8 +142,7 @@ Show # T3 Currency (3+ to show)
   ##T3CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
-  MinimapIcon 0 Green Cross
-  PlayEffect Green
+  MinimapIcon 0 White UpsideDownHouse
   CustomAlertSound "sounds/water-drop.mp3"
 
 #################
@@ -137,8 +176,7 @@ Show # T4 Currency (6+ to show)
   ##T3CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
-  MinimapIcon 0 Green Star
-  PlayEffect Green
+  MinimapIcon 0 Grey UpsideDownHouse
   # CustomAlertSound "sounds/water-drop.mp3"
 
 ####################
