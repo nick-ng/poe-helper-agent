@@ -142,7 +142,7 @@ Show # T3 Currency (3+ to show)
   ##T3CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
-  MinimapIcon 0 White UpsideDownHouse
+  MinimapIcon 0 Green UpsideDownHouse
   CustomAlertSound "sounds/water-drop.mp3"
 
 #################
@@ -169,7 +169,7 @@ Hide # White Maps
   ##CurrencyBorder
   ##DefaultBackground
 
-Show # T4 Currency (6+ to show)
+Show # T4 Currency (4+ to show)
   Class "Currency"
   BaseType == "Blacksmith's Whetstone" "Glassblower's Bauble" "Armourer's Scrap"
   SetFontSize 45
