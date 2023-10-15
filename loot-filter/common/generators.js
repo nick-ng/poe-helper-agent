@@ -64,6 +64,7 @@ export const make3LinkFilter = (
 	switch (itemClass) {
 		case "Sword":
 		case "Axe":
+		case "Mace":
 		case "Wand": {
 			shape = "Cross";
 			break;
@@ -162,7 +163,7 @@ export const make4LinkFilter = (
 		minLevel ? `  AreaLevel >= ${minLevel}` : null,
 		"  Sockets < 6",
 		"  Rarity <= Rare",
-		"  LinkedSockets >= 4",
+		"  LinkedSockets <= 4",
 		`  SocketGroup = ${socketGroup}`,
 		'  Class "Body Armours" "Boots" "Gloves" "Helmets"',
 		"  SetFontSize 45",
@@ -189,7 +190,7 @@ export const make4LinkFilter2 = (
 			`  DropLevel >= ${n - 5}`,
 			"  Sockets < 6",
 			"  Rarity <= Rare",
-			"  LinkedSockets >= 4",
+			"  LinkedSockets <= 4",
 			'  Class "Body Armours" "Boots" "Gloves" "Helmets"',
 			"  SetFontSize 45",
 			armour ? `  BaseArmour >= ${armour}` : null,

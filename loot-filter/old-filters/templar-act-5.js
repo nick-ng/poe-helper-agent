@@ -48,7 +48,7 @@ Show # Leap Slam axes
 	MinimapIcon 0 Magenta Cross
 	CustomAlertSound "sounds/brian-weapon.mp3"
 
-Show # Leap Slam axes
+Show # Goat Horn
 	Rarity <= Rare
 	SocketGroup = RGB
 	BaseType == "Goat's Horn"
@@ -56,7 +56,7 @@ Show # Leap Slam axes
 	SetBorderColor 0 0 255 200
 	SetBackgroundColor 255 255 255 125
 	MinimapIcon 0 Blue Cross
-	CustomAlertSound "sounds/brian-weapon.mp3"
+	CustomAlertSound "sounds/brian-goat-horn.mp3"
 
 Show
   AreaLevel < 20

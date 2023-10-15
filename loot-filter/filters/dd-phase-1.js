@@ -1,4 +1,5 @@
 import { make3LinkFilter, makeLinkFilter } from "../common/generators.js";
+import { getLeapSlamFilter } from "../../filter-generators/leap-slam-weapons.js";
 import getPhase2 from "./dd-phase-2.js";
 
 const custom = `
@@ -39,6 +40,8 @@ Show
   PlayEffect Red
   CustomAlertSound "sounds/brian-faun-horn.mp3"
   MinimapIcon 1 Pink Star
+
+${getLeapSlamFilter({ maxAreaLevel: 47, minItemLevel: 43 })}
 `;
 
 export default function getFilter() {
