@@ -44,6 +44,19 @@ Show
 ${getLeapSlamFilter({ maxAreaLevel: 47, minItemLevel: 43 })}
 `;
 
+// 3-links
+// RGB: Cremation + Cruelty + Arcane Surge/Concentrated Effect
+// GBB: Cremation + Arcane Surge + Concentrated Effect
+// GGB: Cremation + Arcane Surge/Concentrated Effect + LMP/GMP
+// BBB: Armageddon Brand + Combustion + Ele. Prolif./Ignite Prolif.
+// 4-links
+// RRGB: Cremation + Cruelty + Arcane Surge/Concentrated Effect + Burning Damage
+// RGBB: Cremation + Cruelty + Arcane Surge + Concentrated Effect
+// RGGB: Cremation + Cruelty + Arcane Surge/Concentrated Effect + LMP/GMP
+// GGBB: Cremation + Arcane Surge + Concentrated Effect + LMP/GMP
+// GBBB: Cremation + Arcane Surge + Concentrated Effect + Pinpoint
+// BBBB: Armageddon Brand + Combustion + Ele. Prolif./Ignite Prolif. + Faster Casting
+// RBBB: Armageddon Brand + Combustion + Ele. Prolif./Ignite Prolif. + Cruelty
 export default function getFilter() {
 	return [
 		getPhase2(),
@@ -59,10 +72,10 @@ export default function getFilter() {
 		make3LinkFilter("BBB", "Gloves", "3b gloves"),
 		make3LinkFilter("BBB", "Helmets", "3b helm"),
 		make3LinkFilter("BBB", "Body Armours", "3b body"),
-		make3LinkFilter("BBG", "Boots", "2b1g boots"),
-		make3LinkFilter("BBG", "Gloves", "2b1g gloves"),
-		make3LinkFilter("BBG", "Helmets", "2b1g helm"),
-		make3LinkFilter("BBG", "Body Armours", "2b1g body"),
+		make3LinkFilter("GBB", "Boots", "2b1g boots"),
+		make3LinkFilter("GBB", "Gloves", "2b1g gloves"),
+		make3LinkFilter("GBB", "Helmets", "2b1g helm"),
+		make3LinkFilter("GBB", "Body Armours", "2b1g body"),
 	].join("\n\n");
 }
 
