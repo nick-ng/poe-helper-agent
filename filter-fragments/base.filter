@@ -65,7 +65,7 @@ Show # Imprint - You're waiting for it to drop.
 
 Show # T0 Currency
   Class "Currency"
-  BaseType "Exalted Orb" "Divine Orb" "Eldritch Chaos" "Orb of Conflict"
+  BaseType "Exalted Orb" "Divine Orb" "Eldritch Chaos" "Orb of Conflict" "Fracturing Orb"
   SetFontSize 45
   ##T0CurrencyText
   ##CurrencyBorder
@@ -76,14 +76,14 @@ Show # T0 Currency
 
 Show # T0 Currency
   Class "Currency"
-  BaseType == "Orb of Annulment" "Harbinger's Orb" "Ancient Orb" "Elevated Sextant" "Sacred Orb" "Fracturing Orb"
+  BaseType "Orb of Annulment" "Harbinger's Orb" "Ancient Orb" "Elevated Sextant" "Sacred Orb"
   SetFontSize 45
   ##T1CurrencyText
   ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Orange UpsideDownHouse
   PlayEffect Green
-  CustomAlertSound "sounds/haa-jj-all-stars.mp3"
+  CustomAlertSound "sounds/martin-brundle-is-that-glock.mp3"
 
 Show # T1 Currency
   Class "Currency"
