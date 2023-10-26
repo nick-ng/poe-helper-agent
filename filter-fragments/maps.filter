@@ -16,6 +16,15 @@ Show
   CustomAlertSound "sounds/zana-what-are-you-doing.mp3"
 
 Show
+  Rarity = Unique
+  Class "Maps"
+  SetTextColor 100 255 133 255
+  SetFontSize 45
+  MinimapIcon 0 Blue Square
+  PlayEffect Blue
+  CustomAlertSound "sounds/zana-you-idiot.mp3"
+
+Show
   Rarity < Unique
   Class "Maps"
   ##DefaultBackground
