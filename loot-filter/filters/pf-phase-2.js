@@ -8,6 +8,7 @@ const uniqueDivinationCards = makeBaseTypeFilter(
 		"Alivia's Grace", // Queen of the Forest
 		"The Gladiator", // Devoto's Devotion
 		"Broken Truce", // Cold Iron Point
+		"Dark Temptation", // Obliteration
 	],
 	[
 		"SetFontSize 45",
@@ -28,6 +29,7 @@ const uniques = makeBaseTypeFilter(
 		"Nightmare Bascinet", // Devoto's Devotion
 		"Sentinel Jacket", // Dendrobate
 		"Ezomyte Dagger", // Cold Iron Point
+		"Imbued Wand", // Obliteration
 	],
 	[
 		"Rarity Unique",
