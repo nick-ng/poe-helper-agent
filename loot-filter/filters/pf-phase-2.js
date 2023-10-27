@@ -4,6 +4,10 @@ import getPhase3, { preProcessBase as preProcessBaseA } from "./pf-phase-3.js";
 const uniqueDivinationCards = makeBaseTypeFilter(
 	[
 		"The Porcupine", // 6-link Short Bow
+		"The Escape", // Seven-League Step
+		"Alivia's Grace", // Queen of the Forest
+		"The Gladiator", // Devoto's Devotion
+		"Broken Truce", // Cold Iron Point
 	],
 	[
 		"SetFontSize 45",
@@ -22,6 +26,8 @@ const uniques = makeBaseTypeFilter(
 		"Destiny Leather", // Queen of the Forest
 		"Stibnite Flask", // Witchfire Brew
 		"Nightmare Bascinet", // Devoto's Devotion
+		"Sentinel Jacket", // Dendrobate
+		"Ezomyte Dagger", // Cold Iron Point
 	],
 	[
 		"Rarity Unique",

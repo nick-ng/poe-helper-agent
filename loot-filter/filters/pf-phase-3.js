@@ -3,7 +3,10 @@ import { getDivCardFilter } from "../common/divination-cards.js";
 import { getFilterFragment } from "../filter-loader.js";
 
 const uniqueDivinationCards = makeBaseTypeFilter(
-	[],
+	[
+		"The Coming Storm", // Lightning Coil
+		"Gift of Asenath", // Asenath's Gentle Touch
+	],
 	[
 		"SetFontSize 45",
 		"##BrightBackground",
@@ -16,7 +19,10 @@ const uniqueDivinationCards = makeBaseTypeFilter(
 );
 
 const uniques = makeBaseTypeFilter(
-	[],
+	[
+		"Desert Brigandine", // Lightning Coil
+		"Silk Gloves", // Asenath's Gentle Touch
+	],
 	[
 		"Rarity Unique",
 		"SetFontSize 45",
