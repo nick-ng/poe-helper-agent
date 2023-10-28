@@ -170,7 +170,18 @@ Show
   MinimapIcon 1 Yellow Star
   ##DefaultBackground
 
-# ilvl 85 can drop in normal T16s so no need a lower tier
+# T2 Spell Suppression ##
+Show
+  ItemLevel >= 76
+  Rarity = Rare
+  BaseDefencePercentile >= 80
+  Corrupted False
+  Mirrored False
+  BaseType ##ilvl86a####ilvl86b##
+  SetFontSize 45
+  PlayEffect Yellow
+  MinimapIcon 1 Yellow Star
+  ##DefaultBackground
 
 ##########################
 ## Body Armour, Shields ##
@@ -191,7 +202,7 @@ Show
 
 # T2 Spell Suppression ##
 Show
-  ItemLevel == 77
+  ItemLevel >= 77
   Rarity = Rare
   BaseDefencePercentile >= 80
   Corrupted False

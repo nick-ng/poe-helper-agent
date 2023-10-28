@@ -76,9 +76,74 @@ Hide
   Rarity Rare
   AreaLevel > 24
   Class == "One hand axes" "Claw" "Thrusting one hand swords" "Staff" "One hand swords" "Two hand swords" "Two hand maces" "Two hand axes" "One hand maces" "Daggers" "Warstaves"
+  Corrupted False
   FracturedItem False
   Identified False
+  HasInfluence None
   SetFontSize 45
+  SetBorderColor 0 200 157 255
+  Sockets < 6
+
+Hide
+  Rarity Magic
+  AreaLevel > 24
+  Class == "One hand axes" "Claw" "Thrusting one hand swords" "Staff" "One hand swords" "Two hand swords" "Two hand maces" "Two hand axes" "One hand maces" "Daggers" "Warstaves"
+  Corrupted False
+  FracturedItem False
+  Identified False
+  HasInfluence None
+  SetBorderColor 0 200 157 255
+  Sockets < 6
+
+Hide
+  Rarity Normal
+  AreaLevel > 24
+  Class == "One hand axes" "Claw" "Thrusting one hand swords" "Staff" "One hand swords" "Two hand swords" "Two hand maces" "Two hand axes" "One hand maces" "Daggers" "Warstaves"
+  Corrupted False
+  HasInfluence None
+  SetBorderColor 0 200 157 255
+  Sockets < 6
+
+Hide
+  Rarity Magic
+  AreaLevel > 24
+  Class == "One hand axes" "Claw" "Thrusting one hand swords" "Staff" "One hand swords" "Two hand swords" "Two hand maces" "Two hand axes" "One hand maces" "Daggers" "Warstaves"
+  Corrupted False
+  FracturedItem False
+  Identified False
+  HasInfluence None
+  SetBorderColor 0 200 157 255
+  Sockets < 6
+
+Hide
+  Rarity Normal
+  AreaLevel > 24
+  Class == "One hand axes" "Claw" "Thrusting one hand swords" "Staff" "One hand swords" "Two hand swords" "Two hand maces" "Two hand axes" "One hand maces" "Daggers" "Warstaves"
+  Corrupted False
+  HasInfluence None
+  SetBorderColor 0 200 157 255
+  Sockets < 6
+
+Hide
+  Rarity Magic
+  AreaLevel > 65
+  ItemLevel < 83
+  Class "Helmets" "Gloves" "Boots" "Body Armour"
+  Corrupted False
+  FracturedItem False
+  Identified False
+  HasInfluence None
+  SetBorderColor 0 200 157 255
+  Sockets < 6
+
+Hide
+  Rarity Normal
+  AreaLevel > 65
+  ItemLevel < 83
+  Class "Helmets" "Gloves" "Boots" "Body Armour"
+  Corrupted False
+  FracturedItem False
+  HasInfluence None
   SetBorderColor 0 200 157 255
   Sockets < 6
 `;
