@@ -1,4 +1,5 @@
 import { makeLinkFilter } from "../common/generators.js";
+import getFlaskFilter from "../../filter-generators/flasks.js";
 
 import getPhase2, { preProcessBase as preProcessBaseA } from "./pf-phase-2.js";
 
@@ -20,6 +21,14 @@ Show
   SetFontSize 40
   PlayEffect Grey Temp
   MinimapIcon 1 Yellow Star
+
+Show
+  AreaLevel >= 65
+  BaseType == "Divine Life Flask"
+  SetFontSize 45
+  Rarity <= Rare
+  SetBorderColor 255 0 0 200
+  ##DefaultBackground
 `;
 
 export default function getFilter() {
@@ -29,6 +38,7 @@ export default function getFilter() {
 		makeLinkFilter("RGGG", "3g1r", 1, 44),
 		makeLinkFilter("RGG", "2g1r slot", 1, 44),
 		makeLinkFilter("GGG", "3g slot", 1, 44),
+		getFlaskFilter(),
 	].join("\n\n");
 }
 

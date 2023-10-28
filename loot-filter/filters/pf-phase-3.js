@@ -45,6 +45,42 @@ Show
   SetBorderColor 100 100 100 255
   PlayEffect Red
   MinimapIcon 2 Brown Star
+
+Show
+  Rarity Rare
+  Class == "One hand axes" "Claw" "Thrusting one hand swords" "Staff" "One hand swords" "Two hand swords" "Two hand maces" "Two hand axes" "One hand maces" "Dagger" "Warstaves"
+  FracturedItem False
+  Identified False
+  SetFontSize 30
+  SetBorderColor 0 200 157 255
+  SocketGroup RGB
+  Sockets < 6
+  Height <= 2
+  SetBackgroundColor 40 40 40
+  SetBorderColor 150 150 150
+
+Show
+  Rarity Rare
+  Class == "One hand axes" "Claw" "Thrusting one hand swords" "Staff" "One hand swords" "Two hand swords" "Two hand maces" "Two hand axes" "One hand maces" "Dagger" "Warstaves"
+  FracturedItem False
+  Identified False
+  SetFontSize 30
+  SetBorderColor 0 200 157 255
+  SocketGroup RGB
+  Sockets < 6
+  Width <= 1
+  SetBackgroundColor 40 40 40
+  SetBorderColor 150 150 150
+
+Hide
+  Rarity Rare
+  AreaLevel > 24
+  Class == "One hand axes" "Claw" "Thrusting one hand swords" "Staff" "One hand swords" "Two hand swords" "Two hand maces" "Two hand axes" "One hand maces" "Daggers" "Warstaves"
+  FracturedItem False
+  Identified False
+  SetFontSize 45
+  SetBorderColor 0 200 157 255
+  Sockets < 6
 `;
 
 export default function getFilter() {
