@@ -272,4 +272,4 @@ Show
 	SetFontSize 45
 	MinimapIcon 0 Green UpsideDownHouse
 	PlayEffect Green
-  CustomAlertSound "sounds/rue-quest.mp3"
+  CustomAlertSound "sounds/clack-v2-3blue1brown.mp3"
