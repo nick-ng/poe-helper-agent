@@ -1,7 +1,7 @@
 const mutations = {
 	colours: {
 		DefaultBackground: "SetBackgroundColor 0 0 0 120",
-		BrightBackground: "SetBackgroundColor 255 255 255 200",
+		BrightBackground: "SetBackgroundColor 255 255 255 255",
 		ScrollOfWisdomText: "SetTextColor 210 178 135 220",
 		PortalScrollText: "SetTextColor 50 240 240 220",
 		T0CurrencyText: "SetTextColor 250 0 125 255",

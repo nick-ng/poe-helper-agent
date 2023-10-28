@@ -8,7 +8,7 @@ const cortexDivinationCards = makeBaseTypeFilter(
 	],
 	[
 		"SetFontSize 45",
-		"SetTextColor 255 140 54 255",
+		"SetTextColor 232 99 0 255",
 		"SetBorderColor 47 252 47 255",
 		"MinimapIcon 2 Green Triangle",
 		"PlayEffect Brown",
@@ -23,7 +23,7 @@ const uniqueDivinationCards = makeBaseTypeFilter(
 	[
 		"SetFontSize 45",
 		"##BrightBackground",
-		"SetTextColor 255 140 54 255",
+		"SetTextColor 232 99 0 255",
 		"SetBorderColor 47 252 47 255",
 		"MinimapIcon 2 Brown Star",
 		"PlayEffect Brown",
@@ -40,7 +40,7 @@ const uniques = makeBaseTypeFilter(
 		"Rarity Unique",
 		"SetFontSize 45",
 		"##BrightBackground",
-		"SetTextColor 255 140 54 255",
+		"SetTextColor 232 99 0 255",
 		"SetBorderColor 47 252 47 255",
 		"MinimapIcon 2 Brown Star",
 		"PlayEffect Brown",
@@ -64,7 +64,7 @@ Show
   BaseType == "Cutlass"
   SetFontSize 45
   ##BrightBackground
-  SetTextColor 255 140 54 255
+  SetTextColor 232 99 0 255
   SetBorderColor 47 252 47 255
   MinimapIcon 2 Brown Star
   PlayEffect Brown
