@@ -1,5 +1,7 @@
 import { make3LinkFilter, makeLinkFilter } from "../common/generators.js";
 import { getLeapSlamFilter } from "../../filter-generators/leap-slam-weapons.js";
+import getFlaskFilter from "../../filter-generators/flasks.js";
+
 import getPhase2 from "./dd-phase-2.js";
 
 const custom = `
@@ -76,6 +78,7 @@ export default function getFilter() {
 		make3LinkFilter("GBB", "Gloves", "2b1g gloves"),
 		make3LinkFilter("GBB", "Helmets", "2b1g helm"),
 		make3LinkFilter("GBB", "Body Armours", "2b1g body"),
+		getFlaskFilter(),
 	].join("\n\n");
 }
 
