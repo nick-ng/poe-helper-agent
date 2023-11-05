@@ -108,7 +108,7 @@ Show # T1 Currency
   ##DefaultBackground
   MinimapIcon 0 Orange UpsideDownHouse
   PlayEffect Green
-  CustomAlertSound "sounds/haa-jj-all-stars.mp3"
+  CustomAlertSound "sounds/intel-thanks-steve.mp3"
 
 Show
   Class "Currency"
@@ -119,7 +119,7 @@ Show
   ##DefaultBackground
   MinimapIcon 0 Orange UpsideDownHouse
   PlayEffect Green
-  CustomAlertSound "sounds/brian-02-doof.mp3"
+  CustomAlertSound "sounds/gamersnexus-thanks-intel.mp3"
 
 #################
 ## T2 Currency ##
@@ -133,7 +133,7 @@ Show # T2 Currency
   ##CurrencyBorder
   ##DefaultBackground
   MinimapIcon 0 Yellow UpsideDownHouse
-  CustomAlertSound "sounds/oof-joey.mp3"
+  CustomAlertSound "sounds/aoe2-britons-villager-female-chop.mp3"
 
 #################
 ## T3 Currency ##
