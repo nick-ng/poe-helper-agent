@@ -121,7 +121,7 @@ const getT2CurrencyDivCardsFilter = () => {
 		"##DefaultBackground",
 		"MinimapIcon 2 Green Triangle",
 		"PlayEffect White",
-		'CustomAlertSound "sounds/oof-joey.mp3"',
+		'CustomAlertSound "sounds/aoe2-britons-villager-female-chop.mp3"',
 	]);
 };
 
