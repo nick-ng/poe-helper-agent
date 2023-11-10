@@ -128,7 +128,7 @@ Show
 Show # Orb of Chance is important until yellow maps
   Class "Currency"
   BaseType == "Orb of Chance"
-  AreaLevel > 73
+  AreaLevel < 74
   SetFontSize 45
   ##T2CurrencyText
   ##CurrencyBorder
