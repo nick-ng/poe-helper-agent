@@ -43,7 +43,7 @@ Show
 Show
   ItemLevel >= 84
   Rarity = Rare
-  BaseType "Void Sceptre" "Opal Sceptre"
+  BaseType "Grinning Fetish" "Blood Sceptre" "Karui Sceptre" "Vaal Sceptre"
   SetFontSize 40
   ##DefaultBackground
   ##GoodBaseBorder

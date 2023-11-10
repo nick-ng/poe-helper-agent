@@ -2,9 +2,7 @@ import { makeBaseTypeFilter } from "../common/generators.js";
 import getPhase3 from "./srs-phase-3.js";
 
 const uniqueDivinationCards = makeBaseTypeFilter(
-	[
-		"The Porcupine", // 6-link Short Bow
-	],
+	[],
 	[
 		"SetFontSize 45",
 		"##BrightBackground",
@@ -18,10 +16,6 @@ const uniqueDivinationCards = makeBaseTypeFilter(
 
 const uniques = makeBaseTypeFilter(
 	[
-		"Rawhide Boots", // Seven-League Step
-		"Destiny Leather", // Queen of the Forest
-		"Stibnite Flask", // Witchfire Brew
-		"Nightmare Bascinet", // Devoto's Devotion
 		"Tyrant's Sekhem", // Sign of the Sin Eater
 		"Legion Boots", // March of the Legion
 	],
@@ -78,7 +72,7 @@ Show
   ItemLevel >= 72
   AreaLevel < 83
   Rarity <= Rare
-  BaseType "Void Sceptre" "Opal Sceptre"
+  BaseType "Grinning Fetish" "Blood Sceptre" "Karui Sceptre" "Vaal Sceptre"
   SetFontSize 40
   ##DefaultBackground
   ##GoodBaseBorder
@@ -89,20 +83,10 @@ Show
   ItemLevel >= 55
   AreaLevel <= 72
   Rarity <= Rare
-  BaseType "Void Sceptre" "Opal Sceptre"
+  BaseType "Grinning Fetish" "Blood Sceptre" "Karui Sceptre" "Vaal Sceptre"
   SetFontSize 35
   ##DefaultBackground
   ##GoodBaseBorder
-  MinimapIcon 1 Pink Star
-
-Show
-  Rarity = Rare
-  BaseType == "Feathered Arrow Quiver"
-  ItemLevel >= 77
-  SetFontSize 40
-  ##DefaultBackground
-  ##GoodBaseBorder
-  PlayEffect Red
   MinimapIcon 1 Pink Star
 
 Show
