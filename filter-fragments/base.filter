@@ -125,9 +125,20 @@ Show
 ## T2 Currency ##
 #################
 
+Show # Orb of Chance is important until yellow maps
+  Class "Currency"
+  BaseType == "Orb of Chance"
+  AreaLevel > 73
+  SetFontSize 45
+  ##T2CurrencyText
+  ##CurrencyBorder
+  ##DefaultBackground
+  MinimapIcon 0 Yellow UpsideDownHouse
+  CustomAlertSound "sounds/chance.mp3"
+
 Show # T2 Currency
   Class "Currency"
-  BaseType == "Orb of Alteration" "Orb of Alchemy" "Orb of Binding" "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb" "Orb of Chance"
+  BaseType == "Orb of Alteration" "Orb of Alchemy" "Orb of Binding" "Cartographer's Chisel" "Orb of Horizons" "Annulment Shard" "Harbinger's Shard" "Enkindling Orb" "Vaal Orb" "Orb of Fusing" "Blessed Orb"
   SetFontSize 45
   ##T2CurrencyText
   ##CurrencyBorder
@@ -141,7 +152,7 @@ Show # T2 Currency
 
 Hide # Red Maps
   Class "Currency"
-  BaseType == "Jeweller's Orb" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation"
+  BaseType == "Jeweller's Orb" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation" "Orb of Chance"
   SetFontSize 45
   AreaLevel > 77
   StackSize < 3
@@ -151,7 +162,7 @@ Hide # Red Maps
 
 Show # T3 Currency (3+ to show)
   Class "Currency"
-  BaseType == "Jeweller's Orb" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation"
+  BaseType == "Jeweller's Orb" "Chromatic Orb" "Orb of Augmentation" "Orb of Transmutation" "Orb of Chance"
   SetFontSize 45
   ##T3CurrencyText
   ##CurrencyBorder

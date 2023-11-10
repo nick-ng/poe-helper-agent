@@ -43,7 +43,7 @@ Show
   CustomAlertSound "sounds/brian-faun-horn.mp3"
   MinimapIcon 1 Pink Star
 
-${getLeapSlamFilter({ maxAreaLevel: 47, minItemLevel: 1 })}
+${getLeapSlamFilter({ maxAreaLevel: 47, minItemLevel: 40 })}
 `;
 
 // 3-links
