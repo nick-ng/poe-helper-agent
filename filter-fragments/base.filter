@@ -14,6 +14,46 @@ Show
 	MinimapIcon 0 White UpsideDownHouse
 	PlayEffect White
 
+Show
+	BaseType "Power Core"
+	SetBackgroundColor 0 150 250
+	SetBorderColor 200 200 200
+	SetFontSize 40
+
+Show
+	Class "Sentinel Drone"
+  BaseType "Apex Sentinel"
+	SetBackgroundColor 200 200 0
+	SetBorderColor 200 200 200
+	SetFontSize 30
+
+Show
+	Class "Sentinel Drone"
+	Rarity Unique
+	SetBackgroundColor 0 150 250
+	SetBorderColor 225 100 0
+	SetFontSize 45
+	PlayAlertSound 11 200
+	MinimapIcon 0 Orange Triangle
+	PlayEffect Orange
+
+Show
+	Class "Sentinel Drone"
+	Rarity Magic Rare
+	SetBackgroundColor 0 150 250
+	SetBorderColor 200 200 200
+	SetFontSize 45
+	PlayAlertSound 11 200
+	MinimapIcon 0 Blue Triangle
+	PlayEffect Blue
+
+Show
+	Class "Sentinel Drone"
+	Rarity Normal
+	SetBackgroundColor 0 150 250
+	SetBorderColor 200 200 200
+	SetFontSize 40
+
 #######################
 ## Wisdom and Portal ##
 #######################
