@@ -16,7 +16,7 @@ const uniqueDivinationCards = makeBaseTypeFilter(
 );
 
 const uniques = makeBaseTypeFilter(
-	["Wyrmscale Gauntlets", "Ezomyte Axe"],
+	["Wyrmscale Gauntlets", "Ezomyte Axe", "Amethyst Ring"],
 	[
 		"Rarity Unique",
 		"SetFontSize 45",
