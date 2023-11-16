@@ -1,6 +1,6 @@
 import { makeBaseTypeFilter } from "../common/generators.js";
 import { getDivCardFilter } from "../common/divination-cards.js";
-import { getFilterFragment } from "../filter-loader.js";
+import { getFilterFragment, basesToFilter } from "../filter-loader.js";
 
 const uniqueDivinationCards = makeBaseTypeFilter(
 	["Earth Drinker"],
@@ -155,21 +155,73 @@ Hide
   Sockets < 6
 `;
 
+export const replacer = {
+	ilvl86a: basesToFilter([
+		// "Carnal Armour", // Dex/Int
+		// "Full Dragonscale", // Str/Dex
+		// "Cardinal Round Shield", // Str/Dex
+		// "Saint's Hauberk", // Str/Int
+		// "Supreme Spiked Shield", // Dex/Int
+		// "Mirrored Spiked Shield", // Dex/Int
+		// "Colossal Tower Shield", // Str
+		// "Astral Plate", // Str
+		"Glorious Plate", // Str
+	]),
+	ilvl86b: basesToFilter([
+		// "Sadist Garb", // Dex/Int
+		// "Blood Raiment", // Dex/Int
+		// "General's Brigandine", // Str/Dex
+		// "Triumphant Lamellar", // Str/Dex
+		// "Saintly Chainmail", // Str/Int
+		// "Assassin's Garb", // Dex
+		// "Crusader Buckler", // Dex
+	]),
+	ilvl85a: basesToFilter([
+		"Titan Gauntlets", // Str
+		"Spiked Gloves", // Str
+		"Titan Greaves", // Str
+		"Royal Burgonet", // Str
+
+		// "Pig-Faced Bascinet", // Str/Dex
+		// "Dragonscale Gauntlets", // Str/Dex
+		// "Dragonscale Boots", // Str/Dex
+		// "Two-Toned Boots",
+
+		// "Crusader Gloves", // Str/Int
+		// "Crusader Boots", // Str/Int
+		// "Prophet Crown", // Str/Int
+
+		// "Murder Mitts", // Dex/Int
+		// "Fugitive Boots", // Dex/Int
+		// "Murder Boots", // Dex/Int
+		// "Vaal Mask", // Dex/Int
+		// "Deicide Mask", // Dex/Int
+
+		// "Sorcerer Gloves", // Int
+		// "Hubris Circlet", // Int
+
+		// "Lion Pelt", // Dex
+		// "Slink Boots", // Dex
+		// "Slink Gloves", // Dex
+		// "Gripped Gloves", // Dex
+	]),
+	ilvl85b: basesToFilter([
+		// "Fingerless Silk Gloves", // Int, Spell Damage
+		// "Nightmare Bascinet", // Str/Dex
+		// "Deicide Mask", // Dex/Int
+	]),
+	amulets: '"Jade Amulet" "Turquoise Amulet"',
+};
+
 export default function getFilter() {
 	return [
 		uniqueDivinationCards,
 		uniques,
 		custom,
 		getDivCardFilter(),
-		getFilterFragment("ssf-bases-top", {
-			amulets: '"Jade Amulet" "Turquoise Amulet"',
-		}),
-		getFilterFragment("ssf-bases", {
-			amulets: '"Jade Amulet" "Turquoise Amulet"',
-		}),
-		getFilterFragment("base", {
-			amulets: '"Jade Amulet" "Turquoise Amulet"',
-		}),
+		getFilterFragment("ssf-bases-top", replacer),
+		getFilterFragment("ssf-bases", replacer),
+		getFilterFragment("base", replacer),
 	].join("\n\n");
 }
 
