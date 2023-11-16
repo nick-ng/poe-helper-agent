@@ -3,7 +3,7 @@ import { getDivCardFilter } from "../common/divination-cards.js";
 import { getFilterFragment } from "../filter-loader.js";
 
 const uniqueDivinationCards = makeBaseTypeFilter(
-	[],
+	["Earth Drinker"],
 	[
 		"SetFontSize 45",
 		"##BrightBackground",
@@ -16,7 +16,7 @@ const uniqueDivinationCards = makeBaseTypeFilter(
 );
 
 const uniques = makeBaseTypeFilter(
-	["Wyrmscale Gauntlets", "Ezomyte Axe", "Amethyst Ring"],
+	["Wyrmscale Gauntlets", "Ezomyte Axe", "Amethyst Ring", "Granite Flask"],
 	[
 		"Rarity Unique",
 		"SetFontSize 45",

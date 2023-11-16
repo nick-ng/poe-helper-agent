@@ -7,8 +7,6 @@ import {
 
 import getFlaskFilter from "../../filter-generators/flasks.js";
 
-const amulets = '"Jade Amulet" "Turquoise Amulet"';
-
 const weapons = [
 	[12, "Longsword", true],
 	[12, "Jade Chopper", false],
@@ -47,10 +45,10 @@ export default function getFilter() {
 		make4LinkFilter("RRRR", "4r"),
 
 		// 3-Links
-		make3LinkFilter("GGR", "Boots", "2g1r boots"),
-		make3LinkFilter("GGR", "Gloves", "2g1r gloves"),
-		make3LinkFilter("GGR", "Helmets", "2g1r helm"),
-		make3LinkFilter("GGR", "Body Armours", "2g1r body"),
+		make3LinkFilter("GGR", "Boots", "2g1r boots", 1, 12),
+		make3LinkFilter("GGR", "Gloves", "2g1r gloves", 1, 12),
+		make3LinkFilter("GGR", "Helmets", "2g1r helm", 1, 12),
+		make3LinkFilter("GGR", "Body Armours", "2g1r body", 1, 12),
 
 		make3LinkFilter("RRR", "Boots", "3r boots"),
 		make3LinkFilter("RRR", "Gloves", "3r gloves"),
