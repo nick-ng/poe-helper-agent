@@ -33,6 +33,17 @@ const weapons = [
 export default function getFilter() {
 	return [
 		getPhase3(),
+		`Show
+	BaseType "Wyrmscale Gauntlets"
+	Rarity Normal
+	HasInfluence None
+	Corrupted False
+	FracturedItem False
+	Mirrored False
+	Sockets < 6
+	SetBorderColor 200 80 0
+	ItemLevel >= 45
+	SetFontSize 45`,
 		...weapons.map((weapon) => {
 			const [maxAreaLevel, baseType, sound] = weapon;
 			return makeWeaponBlock(maxAreaLevel, baseType, sound);
