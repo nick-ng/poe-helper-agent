@@ -16,8 +16,8 @@ xoffset := VirtualScreenWidth / 2
 yoffset := VirtualScreenHeight / 2
 
 initGui() {
+  Gui, Add, Button, h30 w40 gHideout, HO
   Gui, Add, Button, h30 w40 gInvite, INV
-  Gui, Add, Button, h30 w40 gTrade, TRD
   Gui, Add, Button, h30 w40 gThankYou, TY
   ; +E0x20 = click through?
   Gui, +Lastfound +AlwaysOnTop -Caption +ToolWindow
@@ -74,27 +74,6 @@ ThankYou()
     Sleep, 50
     Send ^{v}
     Sleep, 50
-    Send {Enter}
-  }
-  return
-}
-
-Trade()
-{
-  Clipboard := "/trade "
-  if WinExist("ahk_class POEWindowClass") {
-    if WinActive("ahk_class POEWindowClass") {
-    }
-    WinActivate
-    Sleep, 150
-    Send ^{Enter}
-    Sleep, 20
-    Send {Home}
-    Sleep, 20
-    Send {Delete}
-    Sleep, 20
-    Send ^{v}
-    Sleep, 20
     Send {Enter}
   }
   return
